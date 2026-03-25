@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli | Diş Kliniği | Sincan, Ankara</title>
-    <meta name="description" content="Sincan, Ankara'da profesyonel diş kliniği. İmplant, zirkonyum, ortodonti, diş beyazlatma ve çocuk diş hekimliği hizmetleri. Sağlıklı gülüşler için bize ulaşın.">
+    <title>Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği | Sincan, Ankara</title>
+    <meta name="description" content="Sincan'da modern teknoloji ve uzman kadromuzla implant, zirkonyum, ortodonti ve diş beyazlatma hizmetleri. Sağlıklı gülüşler için hemen randevu alın.">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Modern & Profesyonel Diş Kliniği | Sincan, Ankara">
-    <meta property="og:description" content="Sincan, Ankara'da profesyonel diş kliniği. İmplant, zirkonyum, ortodonti ve estetik diş hekimliği hizmetleri.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği">
+    <meta property="og:description" content="Ankara Sincan'da profesyonel diş sağlığı ve estetiği hizmetleri.">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="tr_TR">
-
-    <!-- Google Fonts -->
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
-    <!-- Schema.org LocalBusiness JSON-LD -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Dentist",
       "name": "Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği",
+      "image": "",
+      "@id": "",
+      "url": "",
+      "telephone": "+905073039434",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No:7/3 Apt, İstasyon, Polatlı 1. Cd.",
@@ -36,686 +42,109 @@
         "latitude": 39.9658141,
         "longitude": 32.5859333
       },
-      "telephone": "+905073039434",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Monday", "Tuesday"],
+          "opens": "12:00",
+          "closes": "20:00"
+        }
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
         "reviewCount": "194"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "12:00",
-          "closes": "20:00"
-        }
-      ]
+      }
     }
     </script>
 
     <style>
-        /* CSS Variables */
         :root {
             --primary: #0EA5E9;
             --primary-dark: #0C4A6E;
             --primary-light: #E0F2FE;
             --accent: #06B6D4;
             --neutral: #F8FAFC;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
-            --white: #FFFFFF;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
             --transition: all 0.3s ease;
         }
 
-        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: var(--font-body);
-            color: var(--text-main);
-            background-color: var(--neutral);
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background-color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-playfair {
+            font-family: 'Playfair Display', serif;
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            transition: var(--transition);
         }
 
         ul {
             list-style: none;
         }
 
+        img, svg {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            color: var(--primary-dark);
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 3rem auto;
-            font-size: 1.1rem;
-        }
-
-        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 28px;
-            font-weight: 600;
+            gap: 8px;
+            padding: 14px 28px;
             border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
             transition: var(--transition);
             border: none;
-            font-size: 1rem;
         }
 
-        .btn-primary {
+        .btn-gradient {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: var(--white);
             box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
+        .btn-gradient:hover {
+            transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
         }
 
-        .btn-outline {
+        .btn-outline-white {
             background: transparent;
             color: var(--white);
             border: 2px solid var(--white);
         }
 
-        .btn-outline:hover {
+        .btn-outline-white:hover {
             background: var(--white);
             color: var(--primary-dark);
-        }
-
-        /* Animations */
-        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-right { opacity: 0; transform: translateX(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        
-        .is-visible { opacity: 1; transform: translate(0); }
-
-        /* 1. Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 20px 0;
-            transition: var(--transition);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        .navbar.scrolled .logo, .navbar.scrolled .nav-links a, .navbar.scrolled .nav-phone {
-            color: var(--primary-dark);
-        }
-
-        .navbar.scrolled .hamburger rect {
-            fill: var(--primary-dark);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            transition: var(--transition);
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .nav-phone {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--white);
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        /* 2. Hero Section */
-        .hero {
-            height: 100vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: radial-gradient(circle at top right, var(--primary-dark), #042031);
-            overflow: hidden;
-            padding-top: 80px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-
-        /* Decorative SVG Shapes CSS Art */
-        .hero-shape {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            z-index: 0;
-            animation: float 8s ease-in-out infinite alternate;
-        }
-
-        .shape-1 {
-            width: 400px; height: 400px;
-            background: rgba(14, 165, 233, 0.2);
-            top: -100px; right: -100px;
-        }
-
-        .shape-2 {
-            width: 300px; height: 300px;
-            background: rgba(6, 182, 212, 0.2);
-            bottom: -50px; left: -50px;
-            animation-delay: -4s;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0) scale(1); }
-            100% { transform: translateY(-30px) scale(1.05); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            color: var(--white);
-        }
-
-        .hero-title {
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-title span {
-            color: var(--accent);
-        }
-
-        .hero-desc {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .rating-badge {
-            position: absolute;
-            bottom: 40px;
-            right: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px 25px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--white);
-            z-index: 1;
-        }
-
-        .rating-score {
-            font-size: 2rem;
-            font-weight: 700;
-            font-family: var(--font-heading);
-        }
-
-        .rating-stars svg {
-            width: 18px; height: 18px;
-            fill: #FBBF24;
-        }
-
-        .rating-text {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* 3. Stats Bar */
-        .stats-section {
-            padding: 0;
-            position: relative;
-            z-index: 10;
-            margin-top: -50px;
-        }
-
-        .stats-grid {
-            background: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            padding: 40px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stats-grid::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-
-        .stat-item {
-            text-align: center;
-            border-right: 1px solid var(--neutral);
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-icon {
-            width: 40px; height: 40px;
-            margin: 0 auto 10px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--primary-light);
-            border-radius: 50%;
-            color: var(--primary);
-        }
-
-        .stat-number {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            color: var(--primary-dark);
-            line-height: 1;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        /* 4. About Us */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text-muted);
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .feature-icon {
-            width: 40px; height: 40px;
-            background: var(--primary-light);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-
-        .feature-text {
-            font-weight: 600;
-            color: var(--primary-dark);
-            font-size: 0.95rem;
-        }
-
-        .about-visual {
-            position: relative;
-            height: 500px;
-        }
-
-        .visual-card {
-            position: absolute;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .visual-card-1 {
-            width: 80%; height: 80%;
-            top: 0; left: 0;
-            background: linear-gradient(135deg, var(--primary-light), #ffffff);
-            z-index: 1;
-            border: 1px solid rgba(255,255,255,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .visual-card-2 {
-            width: 60%; height: 60%;
-            bottom: 0; right: 0;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .visual-icon svg {
-            width: 100px; height: 100px;
-            opacity: 0.2;
-        }
-        .visual-card-2 .visual-icon svg {
-            opacity: 0.5;
-            fill: white;
-        }
-
-        /* 5. Services */
-        .services-section {
-            background-color: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--neutral);
-            padding: 40px 30px;
-            border-radius: 15px;
-            transition: var(--transition);
-            border-top: 4px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-            border-top-color: var(--primary);
-            background: var(--white);
-        }
-
-        .service-icon {
-            width: 60px; height: 60px;
-            background: var(--primary-light);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-icon {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .service-title {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-        }
-
-        .service-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* 6. Process */
-        .process-timeline {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-top: 4rem;
-        }
-
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            top: 30px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-light);
-            z-index: 0;
-        }
-
-        .process-step {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            width: 25%;
-            padding: 0 15px;
-        }
-
-        .step-number {
-            width: 60px; height: 60px;
-            background: var(--white);
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem auto;
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 700;
-            transition: var(--transition);
-            box-shadow: 0 0 0 5px var(--neutral);
-        }
-
-        .process-step:hover .step-number {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .step-title {
-            font-weight: 600;
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .step-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* 7. Testimonials */
-        .testimonials-section {
-            background-color: var(--white);
-        }
-
-        .testi-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .testi-card {
-            background: var(--neutral);
-            padding: 40px 30px;
-            border-radius: 15px;
-            border-left: 4px solid var(--accent);
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-        }
-
-        .quote-icon {
-            position: absolute;
-            top: 20px; right: 20px;
-            width: 40px; height: 40px;
-            color: var(--primary-light);
-            opacity: 0.5;
-        }
-
-        .testi-text {
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testi-author {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .author-name {
-            font-weight: 600;
-            color: var(--primary-dark);
-        }
-
-        .author-stars {
-            display: flex;
-            gap: 2px;
-            color: #FBBF24;
-        }
-
-        .author-stars svg { width: 16px; height: 16px; fill: currentColor; }
-
-        /* 8. CTA Banner */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            text-align: center;
-            color: var(--white);
-        }
-
-        .cta-title {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-phone {
-            display: block;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: var(--white);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transition: var(--transition);
-        }
-        
-        .cta-phone:hover {
-            color: var(--primary-light);
         }
 
         .btn-white {
@@ -726,70 +155,651 @@
         .btn-white:hover {
             background: var(--neutral);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .bg-neutral {
+            background-color: var(--neutral);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Animations */
+        .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .is-visible { opacity: 1; transform: translate(0); }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @keyframes float-reverse {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(20px) rotate(-5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        /* 1. Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar.scrolled {
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            color: var(--white);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .nav-logo span {
+            font-size: 0.8rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .navbar.scrolled .nav-logo { color: var(--primary-dark); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .navbar.scrolled .nav-links a { color: var(--text); }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .navbar.scrolled .nav-phone { color: var(--primary-dark); }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--white);
+        }
+
+        .navbar.scrolled .hamburger { color: var(--primary-dark); }
+
+        /* 2. Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(circle at center, var(--primary-dark) 0%, #020617 100%);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-shapes svg {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .shape-1 { top: 10%; left: 5%; width: 300px; animation: float 8s infinite ease-in-out; }
+        .shape-2 { bottom: 10%; right: 5%; width: 400px; animation: float-reverse 10s infinite ease-in-out; }
+        .shape-3 { top: 40%; right: 20%; width: 150px; animation: float 6s infinite ease-in-out; }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            color: #ffffff;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #ffffff;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 16px 24px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 2;
+        }
+
+        .hero-badge-stars { display: flex; color: #FBBF24; gap: 4px; }
+        .hero-badge-text { color: #ffffff; }
+        .hero-badge-text strong { font-size: 1.2rem; display: block; }
+        .hero-badge-text span { font-size: 0.875rem; opacity: 0.8; }
+
+        /* 3. Stats */
+        .stats {
+            background: linear-gradient(to right, var(--neutral), #ffffff);
+            padding: 60px 0;
+            border-bottom: 1px solid var(--primary-light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            color: var(--primary);
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* 4. About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-item span {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .about-visual {
+            position: relative;
+            height: 500px;
+        }
+
+        .visual-card-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80%;
+            height: 80%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 24px;
+            z-index: 1;
+        }
+
+        .visual-card-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70%;
+            height: 70%;
+            background: var(--primary-dark);
+            border-radius: 24px;
+            z-index: 2;
+            border: 8px solid var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .visual-pattern {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(var(--accent) 2px, transparent 2px);
+            background-size: 16px 16px;
+            z-index: 0;
+        }
+
+        /* 5. Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid var(--neutral);
+            border-top: 4px solid var(--primary-light);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-top-color: var(--primary);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 6. Process */
+        .process-wrapper {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-line {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-light);
+            z-index: 1;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 auto 24px;
+            box-shadow: 0 0 0 8px var(--white);
+            transition: var(--transition);
+        }
+
+        .process-step:hover .step-number {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 7. Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-left: 4px solid var(--accent);
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            color: var(--primary-light);
+            opacity: 0.5;
+        }
+
+        .stars {
+            display: flex;
+            color: #FBBF24;
+            margin-bottom: 20px;
+            gap: 4px;
+        }
+
+        .stars svg { width: 20px; height: 20px; }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+        }
+
+        /* 8. CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 80px 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .cta-phone {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 40px;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
         }
 
         /* 9. Contact */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 60px;
         }
 
-        .contact-info-item {
+        .contact-info-card {
+            background: var(--neutral);
+            padding: 40px;
+            border-radius: 16px;
+            height: 100%;
+        }
+
+        .info-item {
             display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 16px;
+            margin-bottom: 32px;
         }
 
         .info-icon {
-            width: 50px; height: 50px;
-            background: var(--primary-light);
+            width: 48px;
+            height: 48px;
+            background: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary);
             flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .info-content h4 {
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
             font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
         }
 
-        .info-content p, .info-content a, .info-content li {
-            color: var(--text-muted);
+        .info-content p, .info-content a {
+            color: var(--text-light);
+        }
+
+        .hours-list {
+            margin-top: 8px;
         }
 
         .hours-list li {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 0.5rem;
-            border-bottom: 1px dashed var(--primary-light);
-            padding-bottom: 0.5rem;
+            padding: 4px 0;
+            border-bottom: 1px dashed #cbd5e1;
+            color: var(--text-light);
+            font-size: 0.9rem;
         }
-
-        .hours-list li.closed { color: #ef4444; }
 
         .contact-form {
             background: var(--white);
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid var(--neutral);
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-dark);
         }
 
         .form-control {
             width: 100%;
-            padding: 15px;
-            border: 1px solid #E2E8F0;
-            border-radius: 10px;
-            font-family: var(--font-body);
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
             transition: var(--transition);
             background: var(--neutral);
@@ -803,57 +813,49 @@
         }
 
         textarea.form-control {
-            height: 150px;
+            height: 120px;
             resize: vertical;
-        }
-
-        .btn-submit {
-            width: 100%;
         }
 
         /* 10. Footer */
         .footer {
-            background: #021a2c;
-            color: rgba(255,255,255,0.7);
-            padding: 80px 0 30px 0;
+            background: #020617;
+            color: var(--text-light);
+            padding: 80px 0 24px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
+            gap: 60px;
+            margin-bottom: 60px;
         }
 
-        .footer-logo {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
+        .footer-brand h3 {
             color: var(--white);
-            margin-bottom: 1rem;
-            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
         }
 
-        .footer-logo span { color: var(--accent); }
-
-        .footer-desc {
-            margin-bottom: 2rem;
+        .footer-brand p {
+            margin-bottom: 24px;
             max-width: 400px;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 16px;
         }
 
         .social-link {
-            width: 40px; height: 40px;
-            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            background: rgba(255,255,255,0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            transition: var(--transition);
         }
 
         .social-link:hover {
@@ -863,528 +865,539 @@
 
         .footer-title {
             color: var(--white);
-            font-family: var(--font-heading);
             font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
         }
 
         .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            transition: var(--transition);
+            margin-bottom: 12px;
         }
 
         .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
+            color: var(--primary);
+            padding-left: 8px;
         }
 
         .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.9rem;
         }
 
-        .footer-bottom a {
-            color: var(--white);
+        /* Trust Badge */
+        .trust-badge {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 9999;
+            background: var(--white);
+            padding: 10px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--neutral);
+            transition: var(--transition);
         }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 30px; }
-            .stat-item { border-right: none; }
-            .about-grid, .contact-grid { grid-template-columns: 1fr; }
-            .about-visual { height: 400px; margin-top: 3rem; }
-            .services-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
+        .trust-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .trust-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .trust-text {
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .process-line { display: none; }
+            .process-grid { grid-template-columns: 1fr; gap: 40px; }
+            .process-step { display: flex; align-items: flex-start; text-align: left; gap: 24px; }
+            .step-number { margin: 0; flex-shrink: 0; width: 60px; height: 60px; font-size: 1.2rem; }
         }
 
         @media (max-width: 768px) {
-            .nav-links, .nav-right .btn { display: none; }
+            .nav-links, .nav-right { display: none; }
             .hamburger { display: block; }
             
-            /* Mobile Menu Active State */
-            .nav-links.active {
+            .mobile-menu {
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100vh;
+                background: var(--white);
+                z-index: 999;
                 display: flex;
                 flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
             }
-            .nav-links.active a { color: var(--text-main); }
-            .navbar.scrolled .nav-phone { display: none; }
+            .mobile-menu.active { transform: translateX(0); }
+            .mobile-menu a { font-size: 1.5rem; color: var(--primary-dark); font-weight: 600; }
 
             .hero-title { font-size: 2.5rem; }
-            .hero-btns { flex-direction: column; }
-            .rating-badge { bottom: 20px; right: 20px; padding: 10px 15px; }
-            
-            .services-grid, .testi-grid { grid-template-columns: 1fr; }
-            
-            .process-timeline { flex-direction: column; gap: 2rem; margin-top: 2rem; }
-            .process-timeline::before { top: 0; left: 30px; width: 2px; height: 100%; }
-            .process-step { width: 100%; display: flex; text-align: left; align-items: flex-start; gap: 1rem; padding: 0; }
-            .step-number { margin: 0; flex-shrink: 0; }
-            
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-buttons { flex-direction: column; }
+            .hero-badge { bottom: 20px; right: 20px; padding: 12px; }
+
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+
+            .about-visual { height: 350px; margin-top: 40px; }
+            .cta-content h2 { font-size: 2rem; }
             .cta-phone { font-size: 2rem; }
+            .cta-buttons { flex-direction: column; }
+            
+            .trust-badge { bottom: 20px; left: 20px; padding: 8px 16px; }
         }
 
         @media (max-width: 480px) {
             .stats-grid { grid-template-columns: 1fr; }
             .about-features { grid-template-columns: 1fr; }
-            .contact-form { padding: 20px; }
+            .hero-badge { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. NAVBAR -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Dt. Ayşe & Dt. Faruk<span>.</span></a>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hakkimizda" class="mobile-link">Hakkımızda</a>
+        <a href="#hizmetler" class="mobile-link">Hizmetler</a>
+        <a href="#yorumlar" class="mobile-link">Yorumlar</a>
+        <a href="#iletisim" class="mobile-link">İletişim</a>
+        <a href="https://wa.me/905073039434?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-gradient mobile-link" style="color:white; font-size:1.1rem;">Randevu Al</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo font-playfair">
+                Kaleli & Sarıyerli
+                <span>Diş Kliniği</span>
+            </a>
             
-            <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#hakkimizda">Hakkımızda</a></li>
-                    <li><a href="#hizmetler">Hizmetler</a></li>
-                    <li><a href="#surec">Süreç</a></li>
-                    <li><a href="#yorumlar">Yorumlar</a></li>
-                    <li><a href="#iletisim">İletişim</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#yorumlar">Yorumlar</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
 
             <div class="nav-right">
                 <a href="tel:+905073039434" class="nav-phone">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     0507 303 94 34
                 </a>
-                <a href="#iletisim" class="btn btn-primary">Randevu Al</a>
-                <button class="hamburger" id="hamburger" aria-label="Menü">
-                    <svg width="30" height="30" viewBox="0 0 24 24">
-                        <rect y="4" width="24" height="2" fill="#ffffff" rx="1"></rect>
-                        <rect y="11" width="24" height="2" fill="#ffffff" rx="1"></rect>
-                        <rect y="18" width="24" height="2" fill="#ffffff" rx="1"></rect>
-                    </svg>
-                </button>
+                <a href="https://wa.me/905073039434?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-gradient">Randevu Al</a>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menü">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-shapes">
+            <svg class="shape-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#0EA5E9" d="M42.7,-73.4C55.9,-67.2,67.7,-57.1,76.6,-44.6C85.5,-32.1,91.5,-17.1,90.8,-2.4C90,-12.3,82.5,27.1,71.2,38.6C59.9,50.1,44.8,58.7,30.3,64.4C15.8,70.1,1.9,72.9,-12.3,71.9C-26.5,70.9,-41,66.1,-52.3,57.1C-63.6,48.1,-71.7,34.9,-76.3,20.7C-80.9,6.5,-82,-8.7,-77.8,-22.6C-73.6,-36.5,-64.1,-49.1,-51.9,-56.3C-39.7,-63.5,-24.8,-65.3,-10.1,-69.1C4.6,-72.9,19.2,-78.7,29.5,-79.6C39.8,-80.5,45.8,-76.5,42.7,-73.4Z" transform="translate(100 100)" /></svg>
+            <svg class="shape-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#06B6D4" d="M51.8,-73.4C66.1,-63.9,75.9,-47.9,81.1,-30.9C86.3,-13.9,86.9,4.1,81.7,20.6C76.5,37.1,65.5,52.1,51.4,62.8C37.3,73.5,20.1,79.9,1.7,77.5C-16.7,75.1,-33.4,63.9,-47.3,51.2C-61.2,38.5,-72.3,24.3,-76.8,8.2C-81.3,-7.9,-79.2,-25.9,-69.8,-40.4C-60.4,-54.9,-43.7,-65.9,-27.4,-72.1C-11.1,-78.3,4.8,-79.7,21.1,-76.1C37.4,-72.5,54.1,-64,51.8,-73.4Z" transform="translate(100 100)" /></svg>
+        </div>
+
+        <div class="container relative">
+            <div class="hero-content fade-up">
+                <h1 class="hero-title font-playfair">Sağlıklı Gülüşler,<br>Güvenli Yarınlar</h1>
+                <p class="hero-subtitle">Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli ile Sincan'da modern teknoloji, hijyenik ortam ve uzman kadromuzla yanınızdayız.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/905073039434?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-gradient">Hemen Randevu Al</a>
+                    <a href="#hakkimizda" class="btn btn-outline-white">Bizi Tanıyın</a>
+                </div>
             </div>
         </div>
-    </header>
 
-    <main>
-        <!-- 2. HERO -->
-        <section class="hero" id="home">
-            <div class="hero-shape shape-1"></div>
-            <div class="hero-shape shape-2"></div>
-            
-            <div class="container">
-                <div class="hero-content fade-up">
-                    <h1 class="hero-title">Sağlıklı ve Estetik Bir Gülüş İçin <span>Doğru Adres</span></h1>
-                    <p class="hero-desc">Sincan'da modern teknoloji ve uzman kadromuzla, size ve ailenize en iyi diş sağlığı hizmetini sunmak için buradayız. Gülümsemenizi şansa bırakmayın.</p>
-                    <div class="hero-btns">
-                        <a href="#iletisim" class="btn btn-primary">Randevu Al</a>
-                        <a href="#hakkimizda" class="btn btn-outline">Bizi Tanıyın</a>
-                    </div>
-                </div>
+        <div class="hero-badge fade-left stagger-3">
+            <div class="hero-badge-stars">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1v9.3z"/><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" fill="none"/></svg>
             </div>
-
-            <div class="rating-badge fade-left">
-                <div class="rating-score">4.7</div>
-                <div>
-                    <div class="rating-stars">
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <div class="rating-text">194 Gerçek Yorum</div>
-                </div>
+            <div class="hero-badge-text">
+                <strong>4.7 / 5.0</strong>
+                <span>194 Google Yorumu</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 3. STATS BAR -->
-        <section class="stats-section container animate-on-scroll fade-up">
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-item fade-up">
                     <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
-                    <div class="stat-number" data-target="194">0</div>
-                    <div class="stat-label">Mutlu Müşteri Yorumu</div>
+                    <div class="stat-number"><span class="counter" data-target="194">0</span>+</div>
+                    <div class="stat-label">Mutlu Müşteri</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item fade-up stagger-1">
                     <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </div>
-                    <div class="stat-number" data-target="4.7" data-decimal="true">0</div>
+                    <div class="stat-number"><span class="counter-float" data-target="4.7">0</span></div>
                     <div class="stat-label">Google Puanı</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item fade-up stagger-2">
                     <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                     </div>
-                    <div class="stat-number" data-target="15">0</div>
-                    <div class="stat-label">Yıllık Tecrübe</div>
+                    <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
+                    <div class="stat-label">Yıl Tecrübe</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item fade-up stagger-3">
                     <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     </div>
-                    <div class="stat-number" data-target="5000">0</div>
-                    <div class="stat-label">Başarılı Tedavi</div>
+                    <div class="stat-number"><span class="counter" data-target="6">0</span></div>
+                    <div class="stat-label">Uzmanlık Alanı</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 4. HAKKIMIZDA -->
-        <section id="hakkimizda" class="container">
+    <!-- About -->
+    <section id="hakkimizda" class="section-padding">
+        <div class="container">
             <div class="about-grid">
-                <div class="about-text animate-on-scroll fade-right">
-                    <h2 class="section-title" style="text-align: left;">Modern Diş Hekimliğinde Güvenilir Adresiniz</h2>
-                    <p>Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli yönetimindeki kliniğimizde, ağız ve diş sağlığınızı en üst düzeyde korumak ve tedavi etmek için çalışıyoruz. Hastalarımızın konforu ve memnuniyeti bizim için her zaman ön plandadır.</p>
-                    <p>Güncel tıbbi yaklaşımları, modern teknoloji ile birleştirerek; implantolojiden estetik diş hekimliğine, ortodontiden çocuk diş hekimliğine kadar geniş bir yelpazede hizmet sunmaktayız.</p>
-                    <p>Sıcak, hijyenik ve samimi ortamımızda, korkularınızı geride bırakarak sağlıklı gülüşlere kavuşmanız için sizi kliniğimize bekliyoruz.</p>
+                <div class="about-text fade-right">
+                    <h2 class="font-playfair">Gülüşünüz Bizim İçin Değerli</h2>
+                    <p>Sincan'da yer alan kliniğimizde, Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli öncülüğünde, hastalarımıza en üst düzeyde ağız ve diş sağlığı hizmeti sunmaktan gurur duyuyoruz.</p>
+                    <p>Modern diş hekimliğinin tüm yeniliklerini takip ederek, sterilizasyon ve hijyen kurallarına en üst düzeyde dikkat ediyoruz. Amacımız, her hastamızın kliniğimizden sağlıklı ve mutlu bir gülümsemeyle ayrılmasını sağlamaktır.</p>
+                    <p>İmplant cerrahisinden estetik diş hekimliğine, ortodontiden çocuk diş hekimliğine kadar geniş bir yelpazede, kişiye özel tedavi planları oluşturarak güvenilir ve kalıcı çözümler üretiyoruz.</p>
                     
                     <div class="about-features">
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            </div>
-                            <span class="feature-text">Deneyimli Ekip</span>
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                            <span>Deneyimli Ekip</span>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                            </div>
-                            <span class="feature-text">Modern Teknoloji</span>
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                            <span>Modern Teknoloji</span>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            </div>
-                            <span class="feature-text">Hijyenik Ortam</span>
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                            <span>Hijyenik Ortam</span>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
-                            </div>
-                            <span class="feature-text">Uygun Çözümler</span>
+                            <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div>
+                            <span>Uygun Fiyat</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="about-visual animate-on-scroll fade-left">
-                    <div class="visual-card visual-card-1">
-                        <div class="visual-icon">
-                            <!-- Abstract shape representing care -->
-                            <svg viewBox="0 0 100 100" fill="var(--primary)"><path d="M50 10 C 20 10, 10 40, 50 90 C 90 40, 80 10, 50 10 Z"/></svg>
-                        </div>
-                    </div>
-                    <div class="visual-card visual-card-2">
-                        <div class="visual-icon">
-                            <!-- Tooth abstract -->
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C8.5,2,7,4.5,7,7c0,1.5,0.5,3,1.5,4.5C9.5,13,10,14.5,10,16v3c0,1.7,1.3,3,3,3s3-1.3,3-3v-3 c0-1.5,0.5-3,1.5-4.5C18.5,10,19,8.5,19,7C19,4.5,17.5,2,12,2z M12,20c-0.6,0-1-0.4-1-1v-3c0-2-1-3.5-2.5-5.5C7.5,9.5,7,8.5,7,7 c0-1.5,1-3,5-3s5,1.5,5,3c0,1.5-0.5,2.5-1.5,3.5C14,12.5,13,14,13,16v3C13,19.6,12.6,20,12,20z"/></svg>
-                        </div>
+                
+                <div class="about-visual fade-left">
+                    <div class="visual-pattern"></div>
+                    <div class="visual-card-1"></div>
+                    <div class="visual-card-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:16px;"><path d="M12 2s-4 2.5-4 7c0 2.5 1.5 4.5 3 6l1 5 1-5c1.5-1.5 3-3.5 3-6 0-4.5-4-7-4-7z"></path><path d="M9 13s1-1 3-1 3 1 3 1"></path></svg>
+                        <h3 class="font-playfair" style="font-size: 1.8rem; margin-bottom: 8px;">15+ Yıllık</h3>
+                        <p style="color: var(--primary-light);">Mesleki Deneyim ve Güven</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 5. HİZMETLER -->
-        <section id="hizmetler" class="services-section">
-            <div class="container">
-                <h2 class="section-title">Uzmanlık Alanlarımız</h2>
-                <p class="section-subtitle">Gülüşünüzü baştan yaratmak ve ağız sağlığınızı korumak için sunduğumuz profesyonel diş hekimliği hizmetleri.</p>
+    <!-- Services -->
+    <section id="hizmetler" class="section-padding bg-neutral">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Tedavi ve Hizmetlerimiz</h2>
+                <p>Sağlıklı ve estetik bir gülüş için ihtiyaç duyduğunuz tüm modern diş hekimliği uygulamalarını tek çatı altında sunuyoruz.</p>
+            </div>
 
-                <div class="services-grid">
-                    <!-- Hizmet 1 -->
-                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.1s">
-                        <div class="service-icon">
-                            <!-- İmplant İkonu (Vida/Diş) -->
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v12M17 10v12M12 2v8M5 10h14M8 14h8M9 18h6"/></svg>
-                        </div>
-                        <h3 class="service-title">İmplant Tedavisi</h3>
-                        <p class="service-desc">Eksik dişlerinizin yerine çene kemiğine yerleştirilen titanyum vidalarla kalıcı ve doğal görünümlü çözümler.</p>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card fade-up stagger-1">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s-4 2.5-4 7c0 2.5 1.5 4.5 3 6l1 5 1-5c1.5-1.5 3-3.5 3-6 0-4.5-4-7-4-7z"></path><path d="M9 13s1-1 3-1 3 1 3 1"></path></svg>
+                    <h3>İmplant Tedavisi</h3>
+                    <p>Eksik dişlerinizi doğal dişinize en yakın hissi veren, uzun ömürlü titanyum implantlarla tamamlıyoruz.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card fade-up stagger-2">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 19 21 12 17 5 21 12 2"></polygon></svg>
+                    <h3>Zirkonyum Kaplama</h3>
+                    <p>Estetik ve dayanıklılığı bir arada sunan zirkonyum ile doğal ve mükemmel görünen dişlere sahip olun.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card fade-up stagger-3">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                    <h3>Ortodonti</h3>
+                    <p>Çapraşık dişlerinizi şeffaf plaklar veya modern tel tedavisi yöntemleriyle kalıcı olarak düzeltiyoruz.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card fade-up stagger-4">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="22" y1="12" x2="20" y2="12"></line><line x1="4" y1="12" x2="2" y2="12"></line></svg>
+                    <h3>Diş Beyazlatma</h3>
+                    <p>Güvenli ve etkili beyazlatma yöntemleriyle dişlerinizin doğal beyazlığına ve parlaklığına kavuşmasını sağlıyoruz.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card fade-up stagger-5">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+                    <h3>Kanal Tedavisi</h3>
+                    <p>Ağrılı ve enfekte olmuş dişlerinizi çekilmekten kurtararak, ağrısız bir şekilde sağlığına kavuşturuyoruz.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card fade-up stagger-6">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M3 21v-2a7 7 0 0 1 14 0v2"></path><circle cx="18" cy="18" r="3"></circle></svg>
+                    <h3>Pedodonti (Çocuk)</h3>
+                    <p>Çocuklarınızın diş sağlığını koruyor, diş hekimi korkusu yaşamadan eğlenceli bir tedavi süreci sunuyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Tedavi Sürecimiz</h2>
+                <p>Size en iyi hizmeti sunabilmek için şeffaf, planlı ve hasta odaklı bir süreç izliyoruz.</p>
+            </div>
+
+            <div class="process-wrapper fade-up">
+                <div class="process-line"></div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Randevu & Muayene</h3>
+                        <p>Kapsamlı ilk muayene ile mevcut diş sağlığı durumunuz detaylıca analiz edilir.</p>
                     </div>
-
-                    <!-- Hizmet 2 -->
-                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.2s">
-                        <div class="service-icon">
-                            <!-- Zirkonyum (Taç) -->
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg>
-                        </div>
-                        <h3 class="service-title">Zirkonyum Kaplama</h3>
-                        <p class="service-desc">Işık geçirgenliği yüksek, metale alerjisi olanlar için ideal, estetik ve dayanıklı diş kaplama yöntemi.</p>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Teşhis & Planlama</h3>
+                        <p>Röntgen ve analizler sonucunda size en uygun, kişiselleştirilmiş tedavi planı oluşturulur.</p>
                     </div>
-
-                    <!-- Hizmet 3 -->
-                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.3s">
-                        <div class="service-icon">
-                            <!-- Ortodonti (Diş teli/Gülümseme) -->
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                        </div>
-                        <h3 class="service-title">Ortodonti</h3>
-                        <p class="service-desc">Çapraşık dişlerin ve çene uyumsuzluklarının modern yöntemlerle düzeltilmesi ve estetik gülüş tasarımı.</p>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Tedavi Süreci</h3>
+                        <p>Uzman hekimlerimiz tarafından, hijyenik ortamda ağrısız ve konforlu tedavi uygulanır.</p>
                     </div>
-
-                    <!-- Hizmet 4 -->
-                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.4s">
-                        <div class="service-icon">
-                            <!-- Diş Beyazlatma (Ayna/Işıltı) -->
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/></svg>
-                        </div>
-                        <h3 class="service-title">Diş Beyazlatma</h3>
-                        <p class="service-desc">Zamanla sararan veya lekelenen dişleriniz için güvenli ve hızlı ofis tipi profesyonel beyazlatma işlemi.</p>
-                    </div>
-
-                    <!-- Hizmet 5 -->
-                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.5s">
-                        <div class="service-icon">
-                            <!-- Kanal Tedavisi (Kalkan/Koruma) -->
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
-                        </div>
-                        <h3 class="service-title">Kanal Tedavisi</h3>
-                        <p class="service-desc">İltihaplanmış veya hasar görmüş dişlerin kurtarılması için uygulanan ağrısız endodontik tedavi yöntemi.</p>
-                    </div>
-
-                    <!-- Hizmet 6 -->
-                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.6s">
-                        <div class="service-icon">
-                            <!-- Pedodonti (Çocuk) -->
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 14 0v2"/></svg>
-                        </div>
-                        <h3 class="service-title">Pedodonti (Çocuk)</h3>
-                        <p class="service-desc">Çocukların süt ve daimi dişlerinin sağlıklı gelişimi için koruyucu ve tedavi edici diş hekimliği uygulamaları.</p>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Kontrol & Takip</h3>
+                        <p>Tedavi sonrası düzenli kontrollerle ağız sağlığınızın kalıcılığı ve devamlılığı sağlanır.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 6. SÜREÇ -->
-        <section id="surec" class="container">
-            <h2 class="section-title">Tedavi Sürecimiz</h2>
-            <p class="section-subtitle">Size en iyi hizmeti sunmak için planlı ve şeffaf bir yol izliyoruz.</p>
+    <!-- Testimonials -->
+    <section id="yorumlar" class="section-padding bg-neutral">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Hastalarımız Ne Diyor?</h2>
+                <p>Bizim için en büyük ödül, kliniğimizden mutlu ve sağlıklı bir gülümsemeyle ayrılan hastalarımızdır.</p>
+            </div>
 
-            <div class="process-timeline animate-on-scroll fade-up">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4 class="step-title">Muayene</h4>
-                    <p class="step-desc">Ağız ve diş sağlığınızın genel durumu uzman hekimlerimizce detaylıca incelenir.</p>
+            <div class="testimonials-grid">
+                <!-- Review 1 -->
+                <div class="testimonial-card fade-up stagger-1">
+                    <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Gayet ilgili insanlar, işlerini iyi yapıyorlar..20lik diş çektirdim ve dolgu yaptıracağım fiyat performans kliniği diyebiliriz."</p>
+                    <h4 class="testimonial-author">Zeki Can Özer</h4>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h4 class="step-title">Teşhis</h4>
-                    <p class="step-desc">Gerekli röntgen ve analizler yapılarak problemin kaynağı kesin olarak belirlenir.</p>
+                
+                <!-- Review 2 -->
+                <div class="testimonial-card fade-up stagger-2">
+                    <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Doktorları da calısanları da çok ilgili , işlerini çok titiz ve düzenli yapıyolar. Çok memnun kaldım gitmek isteyenler hiç düşünmeden gidebilirler."</p>
+                    <h4 class="testimonial-author">esila kürkaya</h4>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h4 class="step-title">Tedavi</h4>
-                    <p class="step-desc">Sizinle paylaşılan plan doğrultusunda, modern ve ağrısız yöntemlerle tedavi uygulanır.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h4 class="step-title">Kontrol</h4>
-                    <p class="step-desc">Tedavi sonrası düzenli kontrollerle ağız sağlığınızın kalıcılığı güvence altına alınır.</p>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card fade-up stagger-3">
+                    <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Kliniğe ilk muayene için gittigimde bilgilendirmeyi açıklayıcı ve ilgiyi gayet samimi buldum. Verilen güven ile implant yaptırmaya karar verdim. Gayet hijyenik."</p>
+                    <h4 class="testimonial-author">Azize sungur</h4>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 7. REFERANSLAR -->
-        <section id="yorumlar" class="testimonials-section">
-            <div class="container">
-                <h2 class="section-title">Hastalarımız Ne Diyor?</h2>
-                <p class="section-subtitle">Google üzerinde bizi değerlendiren gerçek hastalarımızın deneyimleri.</p>
-
-                <div class="testi-grid">
-                    <!-- Yorum 1 -->
-                    <div class="testi-card animate-on-scroll fade-up" style="transition-delay: 0.1s">
-                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <p class="testi-text">"Gayet ilgili insanlar, işlerini iyi yapıyorlar..20lik diş çektirdim ve dolgu yaptıracağım fiyat performans kliniği diyebiliriz"</p>
-                        <div class="testi-author">
-                            <span class="author-name">Zeki Can Özer</span>
-                            <div class="author-stars">
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Yorum 2 -->
-                    <div class="testi-card animate-on-scroll fade-up" style="transition-delay: 0.2s">
-                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <p class="testi-text">"Doktorları da calısanları da çok ilgili , işlerini çok titiz ve düzenli yapıyolar ayrıca Taner beyin ilgisine de çok teşekkür ediyorum çok memnun kaldım gitmek isteyenler hiç düşünmeden gidebilirler"</p>
-                        <div class="testi-author">
-                            <span class="author-name">esila kürkaya</span>
-                            <div class="author-stars">
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Yorum 3 -->
-                    <div class="testi-card animate-on-scroll fade-up" style="transition-delay: 0.3s">
-                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <p class="testi-text">"Kliniğe ilk muayene için gittigimde muayene sonrası bilgilendirmeyi açıklayıcı ve ilgiyi gayet samimi buldum. Verilen güven ile çalışmaya ve implant yaptırmaya karar verdim. Gayet hijyenik ve güvenli"</p>
-                        <div class="testi-author">
-                            <span class="author-name">Azize sungur</span>
-                            <div class="author-stars">
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. CTA BANNER -->
-        <section class="cta-section">
-            <div class="container animate-on-scroll fade-up">
-                <h2 class="cta-title">Sağlıklı Gülüşler İçin İlk Adımı Atın</h2>
-                <p style="margin-bottom: 20px; font-size: 1.1rem; color: rgba(255,255,255,0.8);">Randevu almak veya detaylı bilgi edinmek için hemen bizi arayın.</p>
+    <!-- CTA Banner -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2 class="font-playfair">Sağlıklı Bir Gülüş İçin İlk Adımı Atın</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 24px; opacity: 0.9;">Randevu almak veya ücretsiz ön görüşme sağlamak için bizi hemen arayın.</p>
                 <a href="tel:+905073039434" class="cta-phone">0507 303 94 34</a>
-                <a href="#iletisim" class="btn btn-white">Online Randevu Talebi</a>
+                
+                <div class="cta-buttons">
+                    <a href="tel:+905073039434" class="btn btn-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Hemen Ara
+                    </a>
+                    <a href="https://wa.me/905073039434?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-whatsapp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp ile Randevu
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 9. İLETİŞİM -->
-        <section id="iletisim" class="container">
-            <h2 class="section-title">İletişim & Randevu</h2>
-            <p class="section-subtitle">Kliniğimize ulaşmak, yol tarifi almak veya mesaj bırakmak için aşağıdaki bilgileri kullanabilirsiniz.</p>
+    <!-- Contact -->
+    <section id="iletisim" class="section-padding">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>İletişim & Ulaşım</h2>
+                <p>Sorularınız, randevu talepleriniz veya kliniğimize ulaşım için aşağıdaki bilgileri kullanabilirsiniz.</p>
+            </div>
 
             <div class="contact-grid">
-                <!-- Sol Kolon: Bilgiler -->
-                <div class="contact-info animate-on-scroll fade-right">
-                    <div class="contact-info-item">
+                <!-- Info -->
+                <div class="contact-info-card fade-right">
+                    <div class="info-item">
                         <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         </div>
                         <div class="info-content">
                             <h4>Adres</h4>
-                            <p>No:7/3 Apt, İstasyon, Polatlı 1. Cd.<br>06935 Sincan/Ankara, Türkiye</p>
-                            <a href="https://www.google.com/maps/dir//39.9658141,32.5859333" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; color:var(--primary); font-weight:600; text-decoration:underline;">Haritada Yol Tarifi Al</a>
+                            <p>No:7/3 Apt, İstasyon, Polatlı 1. Cd.,<br>06935 Sincan/Ankara, Türkiye</p>
                         </div>
                     </div>
 
-                    <div class="contact-info-item">
+                    <div class="info-item">
                         <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         </div>
                         <div class="info-content">
-                            <h4>Telefon</h4>
-                            <a href="tel:+905073039434">+90 507 303 94 34</a>
+                            <h4>Telefon & WhatsApp</h4>
+                            <a href="tel:+905073039434" style="display:block; margin-bottom:4px; font-weight:500;">+90 507 303 94 34</a>
                         </div>
                     </div>
 
-                    <div class="contact-info-item">
+                    <div class="info-item">
                         <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         </div>
                         <div class="info-content" style="width: 100%;">
                             <h4>Çalışma Saatleri</h4>
                             <ul class="hours-list">
-                                <li><span>Pazartesi</span> <span>12:00 - 20:00</span></li>
-                                <li><span>Salı</span> <span>12:00 - 20:00</span></li>
-                                <li><span>Çarşamba</span> <span>12:00 - 20:00</span></li>
-                                <li><span>Perşembe</span> <span>12:00 - 20:00</span></li>
-                                <li><span>Cuma</span> <span>12:00 - 20:00</span></li>
-                                <li><span>Cumartesi</span> <span>12:00 - 20:00</span></li>
-                                <li class="closed"><span>Pazar</span> <span>Kapalı</span></li>
+                                <li><span>Pazartesi - Cumartesi</span> <span>12:00 - 20:00</span></li>
+                                <li><span>Pazar</span> <span>Kapalı</span></li>
                             </ul>
                         </div>
                     </div>
+
+                    <a href="https://www.google.com/maps/dir//39.9658141,32.5859333" target="_blank" class="btn btn-gradient" style="width: 100%; margin-top: 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+                        Yol Tarifi Al
+                    </a>
                 </div>
 
-                <!-- Sağ Kolon: Form -->
-                <div class="contact-form animate-on-scroll fade-left">
-                    <h3 style="margin-bottom: 20px; font-family: var(--font-heading); color: var(--primary-dark);">Bize Mesaj Gönderin</h3>
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla alınmıştır. En kısa sürede size dönüş yapacağız.');">
+                <!-- Form -->
+                <div class="contact-form fade-left">
+                    <h3 class="font-playfair" style="font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 24px;">Bize Mesaj Gönderin</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla iletildi. En kısa sürede size dönüş yapacağız.');">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Adınız Soyadınız" required>
+                            <label class="form-label">Adınız Soyadınız</label>
+                            <input type="text" class="form-control" required placeholder="Örn: Ahmet Yılmaz">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Telefon Numaranız" required>
+                            <label class="form-label">Telefon Numaranız</label>
+                            <input type="tel" class="form-control" required placeholder="05XX XXX XX XX">
                         </div>
                         <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="" disabled selected>İlgilendiğiniz Tedavi (İsteğe Bağlı)</option>
-                                <option value="implant">İmplant</option>
-                                <option value="zirkonyum">Zirkonyum Kaplama</option>
-                                <option value="ortodonti">Ortodonti</option>
-                                <option value="beyazlatma">Diş Beyazlatma</option>
-                                <option value="diger">Diğer / Genel Muayene</option>
-                            </select>
+                            <label class="form-label">Mesajınız</label>
+                            <textarea class="form-control" required placeholder="Nasıl yardımcı olabiliriz?"></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Mesajınız veya Randevu Talebiniz..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Gönder</button>
+                        <button type="submit" class="btn btn-gradient" style="width: 100%;">Mesajı Gönder</button>
                     </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- 10. FOOTER -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Kolon 1 -->
-                <div>
-                    <a href="#" class="footer-logo">Dt. Ayşe & Dt. Faruk<span>.</span></a>
-                    <p class="footer-desc">Sincan, Ankara'da modern diş hekimliği uygulamaları ile ağız ve diş sağlığınızı güvenle emanet edebileceğiniz uzman kadro.</p>
+                <div class="footer-brand">
+                    <h3 class="font-playfair">Kaleli & Sarıyerli Diş Kliniği</h3>
+                    <p>Sincan'da modern, hijyenik ve güvenilir diş sağlığı hizmetleri sunan, hasta memnuniyeti odaklı profesyonel diş kliniği.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        </a>
                         <a href="#" class="social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
                         <a href="#" class="social-link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- Kolon 2 -->
                 <div>
-                    <h4 class="footer-title">Hızlı Linkler</h4>
+                    <h4 class="footer-title font-playfair">Hızlı Linkler</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">Ana Sayfa</a></li>
                         <li><a href="#hakkimizda">Hakkımızda</a></li>
                         <li><a href="#hizmetler">Hizmetlerimiz</a></li>
                         <li><a href="#yorumlar">Hasta Yorumları</a></li>
-                        <li><a href="#iletisim">İletişim & Randevu</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
                     </ul>
                 </div>
 
-                <!-- Kolon 3 -->
                 <div>
-                    <h4 class="footer-title">İletişim</h4>
+                    <h4 class="footer-title font-playfair">İletişim</h4>
                     <ul class="footer-links">
-                        <li style="display: flex; gap: 10px; margin-bottom: 15px;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" style="flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>İstasyon, Polatlı 1. Cd. No:7/3 Sincan/Ankara</span>
+                        <li style="display: flex; gap: 8px; align-items: flex-start;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:4px; flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Sincan / Ankara</span>
                         </li>
-                        <li style="display: flex; gap: 10px;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <li style="display: flex; gap: 8px; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             <a href="tel:+905073039434">0507 303 94 34</a>
                         </li>
                     </ul>
@@ -1392,128 +1405,136 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği - Tüm Hakları Saklıdır | Powered by <a href="#" style="font-weight: 600; color: var(--accent);">Galzura Digital</a></p>
+                <p>&copy; 2024 Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği. Tüm Hakları Saklıdır.</p>
+                <p>Powered by Galzura Digital</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Trust Badge -->
+    <a href="#yorumlar" class="trust-badge">
+        <svg class="trust-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span class="trust-text">Google 4.7 Puan</span>
+    </a>
+
+    <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // 1. Mobile Menu Toggle
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('nav-links');
-            
-            hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
+        // Lenis Smooth Scroll Initialization
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
 
-            // Close mobile menu when a link is clicked
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                });
-            });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
 
-            // 2. Sticky Navbar & Scroll Background
-            const navbar = document.getElementById('navbar');
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    
+                    // Trigger Counter Animation if it's a stats section
+                    if(entry.target.classList.contains('stat-item') && !entry.target.classList.contains('counted')) {
+                        const counterInt = entry.target.querySelector('.counter');
+                        const counterFloat = entry.target.querySelector('.counter-float');
+                        
+                        if(counterInt) animateCounter(counterInt, false);
+                        if(counterFloat) animateCounter(counterFloat, true);
+                        
+                        entry.target.classList.add('counted');
+                    }
+                    
+                    observer.unobserve(entry.target);
                 }
             });
+        }, observerOptions);
 
-            // 3. Smooth Scroll for Anchor Links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    if(targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
-                        e.preventDefault();
-                        const headerOffset = 80;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                        });
-                    }
-                });
+        document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter Animation Logic
+        function animateCounter(element, isFloat) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const frameDuration = 1000 / 60;
+            const totalFrames = Math.round(duration / frameDuration);
+            let frame = 0;
+
+            const counter = setInterval(() => {
+                frame++;
+                const progress = frame / totalFrames;
+                // Easing out function
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const currentVal = target * easeOut;
+
+                if (isFloat) {
+                    element.innerText = currentVal.toFixed(1);
+                } else {
+                    element.innerText = Math.round(currentVal);
+                }
+
+                if (frame === totalFrames) {
+                    clearInterval(counter);
+                    element.innerText = isFloat ? target.toFixed(1) : target;
+                }
+            }, frameDuration);
+        }
+
+        // Smooth scroll for anchor links (fallback/integration with Lenis)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    lenis.scrollTo(targetElement, { offset: -80 });
+                }
             });
-
-            // 4. Intersection Observer for Scroll Animations & Counters
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
-            let animatedCounters = false;
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Add visible class for CSS animations
-                        entry.target.classList.add('is-visible');
-                        
-                        // Check if it's the stats section to trigger counters
-                        if (entry.target.classList.contains('stats-section') && !animatedCounters) {
-                            animatedCounters = true;
-                            startCounters();
-                        }
-                        
-                        // Optional: Stop observing once animated
-                        // observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
-
-            // 5. Counter Animation Function
-            function startCounters() {
-                const counters = document.querySelectorAll('.stat-number');
-                const speed = 2000; // Total duration in ms
-
-                counters.forEach(counter => {
-                    const target = parseFloat(counter.getAttribute('data-target'));
-                    const isDecimal = counter.getAttribute('data-decimal') === 'true';
-                    const startTime = performance.now();
-                    
-                    function updateCount(currentTime) {
-                        const elapsedTime = currentTime - startTime;
-                        const progress = Math.min(elapsedTime / speed, 1);
-                        
-                        // Ease out quad function
-                        const easeProgress = progress * (2 - progress);
-                        
-                        const currentVal = target * easeProgress;
-
-                        if (isDecimal) {
-                            counter.innerText = currentVal.toFixed(1);
-                        } else {
-                            counter.innerText = Math.floor(currentVal) + "+";
-                        }
-
-                        if (progress < 1) {
-                            requestAnimationFrame(updateCount);
-                        } else {
-                            counter.innerText = isDecimal ? target.toFixed(1) : target + "+";
-                        }
-                    }
-
-                    requestAnimationFrame(updateCount);
-                });
-            }
         });
     </script>
 </body>
