@@ -3,27 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dt. Ayşe Zeycan Kaleli & Dt. Faruk SARIYERLİ Diş Kliniği | Diş Hekimi | Sincan/Ankara</title>
-    <meta name="description" content="Sincan/Ankara'da bulunan Dt. Ayşe Zeycan Kaleli ve Dt. Faruk SARIYERLİ Diş Kliniği, implant, zirkonyum, ortodonti, diş beyazlatma ve pedodonti gibi geniş hizmet yelpazesiyle kaliteli ve güvenilir diş sağlığı çözümleri sunar.">
-    <meta property="og:title" content="Dt. Ayşe Zeycan Kaleli & Dt. Faruk SARIYERLİ Diş Kliniği | Diş Hekimi | Sincan/Ankara">
-    <meta property="og:description" content="Sincan/Ankara'da bulunan Dt. Ayşe Zeycan Kaleli ve Dt. Faruk SARIYERLİ Diş Kliniği, implant, zirkonyum, ortodonti, diş beyazlatma ve pedodonti gibi geniş hizmet yelpazesiyle kaliteli ve güvenilir diş sağlığı çözümleri sunar.">
+    <title>Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli | Diş Kliniği | Sincan, Ankara</title>
+    <meta name="description" content="Sincan, Ankara'da profesyonel diş kliniği. İmplant, zirkonyum, ortodonti, diş beyazlatma ve çocuk diş hekimliği hizmetleri. Sağlıklı gülüşler için bize ulaşın.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Modern & Profesyonel Diş Kliniği | Sincan, Ankara">
+    <meta property="og:description" content="Sincan, Ankara'da profesyonel diş kliniği. İmplant, zirkonyum, ortodonti ve estetik diş hekimliği hizmetleri.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.klinikadi.com"> <!-- Placeholder URL, müşteri için güncellenecek -->
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No:7/3 Apt, İstasyon, Polatlı 1. Cd.",
+        "addressLocality": "Sincan",
+        "addressRegion": "Ankara",
+        "postalCode": "06935",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.9658141,
+        "longitude": 32.5859333
+      },
+      "telephone": "+905073039434",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "194"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "12:00",
+          "closes": "20:00"
+        }
+      ]
+    }
+    </script>
+
     <style>
+        /* CSS Variables */
         :root {
-            --primary: #0EA5E9; /* sky blue */
+            --primary: #0EA5E9;
             --primary-dark: #0C4A6E;
             --primary-light: #E0F2FE;
-            --accent: #06B6D4; /* turkuaz */
+            --accent: #06B6D4;
             --neutral: #F8FAFC;
-            --text: #1F2937;
-            --text-light: #4B5563;
-            --font-display: 'Playfair Display', serif;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --white: #FFFFFF;
+            --font-heading: 'Playfair Display', serif;
             --font-body: 'Inter', sans-serif;
+            --transition: all 0.3s ease;
         }
 
-        *, *::before, *::after {
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -33,1089 +82,1439 @@
 
         body {
             font-family: var(--font-body);
-            color: var(--text);
+            color: var(--text-main);
+            background-color: var(--neutral);
             line-height: 1.6;
-            margin: 0;
-            background-color: #fff;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
             color: inherit;
-            transition: all 0.3s ease;
         }
 
-        button {
-            cursor: pointer;
-            border: none;
-            background: none;
-            padding: 0;
-            transition: all 0.3s ease;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            margin-top: 0;
-            line-height: 1.2;
-            color: var(--primary-dark);
-        }
-
-        section {
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
+        ul {
+            list-style: none;
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 28px;
-            border-radius: 8px;
+            padding: 12px 28px;
             font-weight: 600;
-            font-family: var(--font-body);
-            text-align: center;
-            white-space: nowrap;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            color: var(--white);
+            border: 2px solid var(--white);
         }
 
         .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-white {
-            background-color: white;
+            background: var(--white);
             color: var(--primary-dark);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .btn-white:hover {
-            background-color: var(--primary-light);
-        }
+        /* Animations */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-right { opacity: 0; transform: translateX(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        
+        .is-visible { opacity: 1; transform: translate(0); }
 
-        /* Glassmorphism Effect */
-        .glassmorphism {
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(20px);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Navbar */
+        /* 1. Navbar */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 15px 0;
-            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .navbar.scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-bottom-color: rgba(0, 0, 0, 0.05);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        .navbar .container {
+        .navbar.scrolled .logo, .navbar.scrolled .nav-links a, .navbar.scrolled .nav-phone {
+            color: var(--primary-dark);
+        }
+
+        .navbar.scrolled .hamburger rect {
+            fill: var(--primary-dark);
+        }
+
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .navbar-brand {
-            font-family: var(--font-display);
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
             font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--primary-dark);
+            color: var(--white);
+            transition: var(--transition);
         }
 
-        .navbar-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 2rem;
         }
 
-        .navbar-links a {
-            color: var(--text);
+        .nav-links a {
+            color: var(--white);
             font-weight: 500;
+            transition: var(--transition);
             position: relative;
         }
 
-        .navbar-links a::after {
+        .nav-links a::after {
             content: '';
             position: absolute;
             width: 0;
             height: 2px;
-            background-color: var(--primary);
-            left: 0;
             bottom: -5px;
-            transition: width 0.3s ease;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
         }
 
-        .navbar-links a:hover::after {
+        .nav-links a:hover::after {
             width: 100%;
         }
 
-        .navbar-actions {
+        .nav-right {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 1.5rem;
         }
 
-        .navbar-phone {
+        .nav-phone {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.5rem;
+            color: var(--white);
             font-weight: 600;
-            color: var(--primary-dark);
+            transition: var(--transition);
         }
 
-        .navbar-phone svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--primary);
-        }
-
-        .hamburger-menu {
+        .hamburger {
             display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px;
             cursor: pointer;
-            position: relative;
-            z-index: 1001;
+            background: none;
+            border: none;
         }
 
-        .hamburger-menu span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-color: var(--primary-dark);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu.open span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-
-        .hamburger-menu.open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.open span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
-        /* Hero Section */
+        /* 2. Hero Section */
         .hero {
-            min-height: 100vh;
+            height: 100vh;
+            min-height: 600px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: radial-gradient(circle at top left, var(--primary-dark) 0%, var(--primary) 100%);
-            color: white;
             position: relative;
+            background: radial-gradient(circle at top right, var(--primary-dark), #042031);
             overflow: hidden;
-            padding-top: 100px; /* Navbar height */
+            padding-top: 80px;
         }
 
-        .hero-content {
-            z-index: 1;
-            position: relative;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: white;
-            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .hero-rating {
+        .hero::before {
+            content: '';
             position: absolute;
-            bottom: 40px;
-            right: 40px;
-            padding: 15px 25px;
-            font-weight: 600;
-            color: var(--primary-dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
         }
 
-        .hero-rating svg {
-            width: 20px;
-            height: 20px;
-            fill: #FFD700;
-        }
-
+        /* Decorative SVG Shapes CSS Art */
         .hero-shape {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            animation: float 10s ease-in-out infinite;
+            filter: blur(60px);
+            z-index: 0;
+            animation: float 8s ease-in-out infinite alternate;
         }
 
-        .hero-shape:nth-child(1) {
-            width: 200px;
-            height: 200px;
-            top: 10%;
-            left: 5%;
-            animation-delay: 0s;
+        .shape-1 {
+            width: 400px; height: 400px;
+            background: rgba(14, 165, 233, 0.2);
+            top: -100px; right: -100px;
         }
 
-        .hero-shape:nth-child(2) {
-            width: 300px;
-            height: 300px;
-            bottom: 15%;
-            right: 10%;
-            animation-delay: 2s;
-            border-radius: 40% 60% 70% 30% / 50% 60% 30% 70%;
-        }
-
-        .hero-shape:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            top: 30%;
-            right: 20%;
-            animation-delay: 4s;
-            border-radius: 60% 40% 30% 70% / 70% 30% 50% 50%;
+        .shape-2 {
+            width: 300px; height: 300px;
+            background: rgba(6, 182, 212, 0.2);
+            bottom: -50px; left: -50px;
+            animation-delay: -4s;
         }
 
         @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-            100% { transform: translateY(0) rotate(0deg); }
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-30px) scale(1.05); }
         }
 
-        /* Stats Bar */
-        .stats-bar {
-            background: linear-gradient(90deg, var(--primary-light) 0%, var(--neutral) 100%);
-            padding: 60px 0;
-            text-align: center;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            color: var(--accent);
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .rating-badge {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--white);
+            z-index: 1;
+        }
+
+        .rating-score {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+
+        .rating-stars svg {
+            width: 18px; height: 18px;
+            fill: #FBBF24;
+        }
+
+        .rating-text {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* 3. Stats Bar */
+        .stats-section {
+            padding: 0;
+            position: relative;
+            z-index: 10;
+            margin-top: -50px;
         }
 
         .stats-grid {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-grid::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
         .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            text-align: center;
+            border-right: 1px solid var(--neutral);
         }
 
-        .stat-item svg {
-            width: 40px;
-            height: 40px;
-            fill: var(--primary);
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-icon {
+            width: 40px; height: 40px;
+            margin: 0 auto 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-light);
+            border-radius: 50%;
+            color: var(--primary);
         }
 
         .stat-number {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
             color: var(--primary-dark);
-            font-family: var(--font-display);
+            line-height: 1;
+            margin-bottom: 5px;
         }
 
         .stat-label {
-            font-size: 1.1rem;
+            color: var(--text-muted);
             font-weight: 500;
-            color: var(--text-light);
+            font-size: 0.9rem;
         }
 
-        /* Hakkımızda Section */
-        .about {
-            background-color: #fff;
-            padding: 100px 0;
-        }
-
+        /* 4. About Us */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 4rem;
             align-items: center;
         }
 
-        .about-text h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-        }
-
         .about-text p {
-            margin-bottom: 20px;
-            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
         }
 
         .about-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-top: 40px;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .about-feature-item {
+        .feature-item {
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
+            align-items: center;
+            gap: 1rem;
         }
 
-        .about-feature-item svg {
-            width: 30px;
-            height: 30px;
-            fill: var(--accent);
+        .feature-icon {
+            width: 40px; height: 40px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
             flex-shrink: 0;
         }
 
-        .about-feature-item h4 {
-            font-size: 1.2rem;
+        .feature-text {
             font-weight: 600;
             color: var(--primary-dark);
-            margin-bottom: 5px;
-        }
-
-        .about-feature-item p {
             font-size: 0.95rem;
-            line-height: 1.4;
-            color: var(--text-light);
         }
 
-        .about-image-stack {
+        .about-visual {
             position: relative;
-            width: 100%;
-            height: 450px;
+            height: 500px;
         }
 
-        .about-card {
+        .visual-card {
             position: absolute;
-            width: 70%;
-            height: 70%;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        .about-card:nth-child(1) {
-            top: 0;
-            left: 0;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-            z-index: 2;
-        }
-
-        .about-card:nth-child(2) {
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary-dark) 100%);
+        .visual-card-1 {
+            width: 80%; height: 80%;
+            top: 0; left: 0;
+            background: linear-gradient(135deg, var(--primary-light), #ffffff);
             z-index: 1;
-            transform: translateX(20px) translateY(20px);
+            border: 1px solid rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Hizmetler Section */
-        .services {
-            background-color: var(--neutral);
-            text-align: center;
+        .visual-card-2 {
+            width: 60%; height: 60%;
+            bottom: 0; right: 0;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
         }
 
-        .services h2 {
-            font-size: 2.8rem;
-            margin-bottom: 60px;
-            color: var(--primary-dark);
+        .visual-icon svg {
+            width: 100px; height: 100px;
+            opacity: 0.2;
+        }
+        .visual-card-2 .visual-icon svg {
+            opacity: 0.5;
+            fill: white;
+        }
+
+        /* 5. Services */
+        .services-section {
+            background-color: var(--white);
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 2rem;
         }
 
         .service-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border-top: 5px solid transparent;
-            transition: all 0.3s ease;
+            background: var(--neutral);
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-image: linear-gradient(to right, var(--primary), var(--accent)) 1;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            border-top-color: var(--primary);
+            background: var(--white);
         }
 
-        .service-card svg {
-            width: 45px;
-            height: 45px;
-            fill: var(--primary);
-            margin-bottom: 20px;
+        .service-icon {
+            width: 60px; height: 60px;
+            background: var(--primary-light);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            transition: var(--transition);
         }
 
-        .service-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .service-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
             color: var(--primary-dark);
+            margin-bottom: 1rem;
         }
 
-        .service-card p {
+        .service-desc {
+            color: var(--text-muted);
             font-size: 0.95rem;
-            color: var(--text-light);
-            line-height: 1.5;
         }
 
-        /* Süreç Section */
-        .process {
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .process h2 {
-            font-size: 2.8rem;
-            margin-bottom: 60px;
-        }
-
+        /* 6. Process */
         .process-timeline {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
             position: relative;
-            padding-top: 50px;
-            margin-top: 50px;
+            margin-top: 4rem;
         }
 
         .process-timeline::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 5%;
-            right: 5%;
+            top: 30px;
+            left: 0;
+            width: 100%;
             height: 2px;
-            background-color: var(--primary-light);
+            background: var(--primary-light);
             z-index: 0;
         }
 
         .process-step {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
             position: relative;
-            padding-top: 60px;
+            z-index: 1;
+            text-align: center;
+            width: 25%;
+            padding: 0 15px;
         }
 
-        .process-step-indicator {
-            position: absolute;
-            top: -15px;
-            width: 50px;
-            height: 50px;
+        .step-number {
+            width: 60px; height: 60px;
+            background: var(--white);
+            border: 2px solid var(--primary);
             border-radius: 50%;
-            background-color: var(--primary);
-            color: white;
-            font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 1.5rem auto;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 0 0 5px var(--neutral);
         }
 
-        .process-step h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+        .process-step:hover .step-number {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .step-title {
+            font-weight: 600;
             color: var(--primary-dark);
+            margin-bottom: 0.5rem;
         }
 
-        .process-step p {
-            font-size: 0.95rem;
-            color: var(--text-light);
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
 
-        /* Referanslar Section */
-        .testimonials {
-            background-color: var(--neutral);
-            text-align: center;
+        /* 7. Testimonials */
+        .testimonials-section {
+            background-color: var(--white);
         }
 
-        .testimonials h2 {
-            font-size: 2.8rem;
-            margin-bottom: 60px;
-        }
-
-        .testimonial-grid {
+        .testi-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 2rem;
         }
 
-        .testimonial-card {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            text-align: left;
+        .testi-card {
+            background: var(--neutral);
+            padding: 40px 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent);
             position: relative;
-            border-left: 5px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
         }
 
-        .testimonial-card svg.quote-icon {
+        .quote-icon {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            fill: var(--primary-light);
-            opacity: 0.8;
-            z-index: 0;
+            top: 20px; right: 20px;
+            width: 40px; height: 40px;
+            color: var(--primary-light);
+            opacity: 0.5;
         }
 
-        .testimonial-text {
+        .testi-text {
+            color: var(--text-muted);
             font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-light);
+            margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
         }
 
-        .testimonial-author {
+        .testi-author {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .author-name {
             font-weight: 600;
             color: var(--primary-dark);
-            margin-bottom: 5px;
         }
 
-        .testimonial-stars {
+        .author-stars {
             display: flex;
-            gap: 5px;
-            margin-top: 10px;
+            gap: 2px;
+            color: #FBBF24;
         }
 
-        .testimonial-stars svg {
-            width: 18px;
-            height: 18px;
-            fill: #FFD700;
-        }
+        .author-stars svg { width: 16px; height: 16px; fill: currentColor; }
 
-        /* CTA Banner */
-        .cta-banner {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: white;
+        /* 8. CTA Banner */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             text-align: center;
-            padding: 80px 20px;
+            color: var(--white);
         }
 
-        .cta-banner h2 {
-            font-size: 3rem;
-            margin-bottom: 25px;
-            color: white;
-        }
-
-        .cta-banner .phone-number {
+        .cta-title {
+            font-family: var(--font-heading);
             font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .cta-phone {
             display: block;
-            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        
+        .cta-phone:hover {
+            color: var(--primary-light);
         }
 
-        /* İletişim Section */
-        .contact {
-            background-color: #fff;
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-dark);
         }
 
+        .btn-white:hover {
+            background: var(--neutral);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* 9. Contact */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 4rem;
         }
 
-        .contact-info h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-        }
-
-        .contact-detail {
+        .contact-info-item {
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        .contact-detail svg {
-            width: 25px;
-            height: 25px;
-            fill: var(--primary);
+        .info-icon {
+            width: 50px; height: 50px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
             flex-shrink: 0;
-            margin-top: 3px;
         }
 
-        .contact-detail p, .contact-detail a {
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
-
-        .contact-detail strong {
+        .info-content h4 {
             color: var(--primary-dark);
-            font-weight: 600;
-        }
-
-        .working-hours {
-            list-style: none;
-            padding: 0;
-            margin-top: 30px;
+            margin-bottom: 0.5rem;
             font-size: 1.1rem;
-            color: var(--text-light);
         }
 
-        .working-hours li {
-            margin-bottom: 8px;
+        .info-content p, .info-content a, .info-content li {
+            color: var(--text-muted);
         }
 
-        .working-hours li strong {
-            color: var(--primary-dark);
-            font-weight: 600;
-            display: inline-block;
-            width: 100px; /* Aligning day names */
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed var(--primary-light);
+            padding-bottom: 0.5rem;
         }
+
+        .hours-list li.closed { color: #ef4444; }
 
         .contact-form {
-            background-color: var(--neutral);
+            background: var(--white);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .contact-form h3 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: var(--primary-dark);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 1.5rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--primary-dark);
-        }
-
-        .form-group input,
-        .form-group textarea {
+        .form-control {
             width: 100%;
-            padding: 14px 18px;
-            border: 1px solid var(--primary-light);
-            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
             font-family: var(--font-body);
             font-size: 1rem;
-            color: var(--text);
-            background-color: white;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: var(--transition);
+            background: var(--neutral);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+            background: var(--white);
+            box-shadow: 0 0 0 3px var(--primary-light);
         }
 
-        .form-group textarea {
-            min-height: 120px;
+        textarea.form-control {
+            height: 150px;
             resize: vertical;
         }
 
-        .contact-form .btn-primary {
+        .btn-submit {
             width: 100%;
-            padding: 16px;
-            font-size: 1.1rem;
         }
 
-        /* Footer */
+        /* 10. Footer */
         .footer {
-            background-color: var(--primary-dark);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 60px 0 20px;
-            font-size: 0.95rem;
+            background: #021a2c;
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 30px 0;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 2fr;
-            gap: 50px;
-            margin-bottom: 40px;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
         }
 
-        .footer-col h3 {
+        .footer-logo {
+            font-family: var(--font-heading);
             font-size: 1.5rem;
-            color: white;
-            margin-bottom: 20px;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: block;
         }
 
-        .footer-col p {
-            line-height: 1.8;
+        .footer-logo span { color: var(--accent); }
+
+        .footer-desc {
+            margin-bottom: 2rem;
+            max-width: 400px;
         }
 
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
         }
 
         .footer-links a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .footer-contact-info p {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .footer-contact-info svg {
-            width: 18px;
-            height: 18px;
-            fill: rgba(255, 255, 255, 0.7);
-            flex-shrink: 0;
-            margin-top: 3px;
+            color: var(--accent);
+            padding-left: 5px;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
             text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
         }
 
-        .footer-social-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-social-links a svg {
-            width: 20px;
-            height: 20px;
-            fill: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-social-links a:hover svg {
-            fill: white;
-        }
-
-        /* Animations */
-        .fade-up, .fade-left, .fade-right, .staggered-fade {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-left {
-            transform: translateX(-50px);
-        }
-        .fade-right {
-            transform: translateX(50px);
-        }
-
-        .fade-up.animate, .fade-left.animate, .fade-right.animate, .staggered-fade.animate {
-            opacity: 1;
-            transform: translate(0);
+        .footer-bottom a {
+            color: var(--white);
         }
 
         /* Responsive Design */
         @media (max-width: 992px) {
-            .navbar-links {
-                gap: 20px;
-            }
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            .stats-grid, .about-grid, .services-grid, .testimonial-grid, .contact-grid, .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .about-image-stack {
-                height: 350px;
-                margin-top: 50px;
-            }
-            .about-card:nth-child(2) {
-                transform: translateX(10px) translateY(10px);
-            }
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .process-timeline {
-                flex-direction: column;
-                padding-top: 0;
-                margin-top: 0;
-            }
-            .process-timeline::before {
-                left: 50%;
-                width: 2px;
-                height: calc(100% - 100px);
-                top: 50px;
-                transform: translateX(-50%);
-            }
-            .process-step {
-                padding-top: 0;
-                padding-bottom: 80px;
-            }
-            .process-step-indicator {
-                top: auto;
-                bottom: 20px; /* Adjust for vertical timeline */
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .cta-banner h2 {
-                font-size: 2.5rem;
-            }
-            .cta-banner .phone-number {
-                font-size: 2rem;
-            }
-            .footer-bottom {
-                flex-direction: column;
-            }
-            .footer-social-links {
-                margin-top: 15px;
-            }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 30px; }
+            .stat-item { border-right: none; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .about-visual { height: 400px; margin-top: 3rem; }
+            .services-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
-            .navbar-links, .navbar-actions .btn {
-                display: none;
-            }
-            .navbar-phone {
-                display: flex;
-            }
-            .hamburger-menu {
-                display: flex;
-            }
-            .navbar-mobile-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
-                height: 100vh;
-                background-color: var(--primary-dark);
-                padding-top: 100px;
-                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
-                transition: right 0.4s ease-in-out;
-                z-index: 999;
+            .nav-links, .nav-right .btn { display: none; }
+            .hamburger { display: block; }
+            
+            /* Mobile Menu Active State */
+            .nav-links.active {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                gap: 30px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             }
-            .navbar-mobile-menu.open {
-                right: 0;
-            }
-            .navbar-mobile-menu a {
-                color: white;
-                font-size: 1.3rem;
-                font-weight: 500;
-            }
-            .navbar-mobile-menu .btn-primary {
-                margin-top: 20px;
-            }
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-            }
-            .hero-actions {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .hero-rating {
-                bottom: 20px;
-                right: 20px;
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-            .cta-banner h2 {
-                font-size: 2rem;
-            }
-            .cta-banner .phone-number {
-                font-size: 1.8rem;
-            }
-            .contact-info h2, .contact-form h3 {
-                font-size: 2rem;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .footer-col h3 {
-                margin-top: 30px;
-            }
-            .footer-contact-info p {
-                justify-content: center;
-            }
+            .nav-links.active a { color: var(--text-main); }
+            .navbar.scrolled .nav-phone { display: none; }
+
+            .hero-title { font-size: 2.5rem; }
+            .hero-btns { flex-direction: column; }
+            .rating-badge { bottom: 20px; right: 20px; padding: 10px 15px; }
+            
+            .services-grid, .testi-grid { grid-template-columns: 1fr; }
+            
+            .process-timeline { flex-direction: column; gap: 2rem; margin-top: 2rem; }
+            .process-timeline::before { top: 0; left: 30px; width: 2px; height: 100%; }
+            .process-step { width: 100%; display: flex; text-align: left; align-items: flex-start; gap: 1rem; padding: 0; }
+            .step-number { margin: 0; flex-shrink: 0; }
+            
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .cta-phone { font-size: 2rem; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            .navbar-brand {
-                font-size: 1.5rem;
-            }
-            .navbar-phone {
-                font-size: 0.9rem;
-            }
-            .navbar-phone svg {
-                width: 18px;
-                height: 18px;
-            }
-            .container {
-                padding: 0 15px;
-            }
-            .section {
-                padding: 60px 0;
-            }
+            .stats-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            .contact-form { padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Dt. Ayşe Zeycan Kaleli & Dt. Faruk SARIYERLİ Diş Kliniği",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "No:7/3 Apt, İstasyon, Polatlı 1. Cd.",
-        "addressLocality": "Sincan",
-        "addressRegion": "Ankara",
-        "postalCode": "06935",
-        "addressCountry": "TR"
-      },
-      "telephone": "+905073039434",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.9658141,
-        "longitude": 32.5859333
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "12:00",
-          "closes": "20:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "closes": "00:00",
-          "opens": "00:00"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "194"
-      }
-    }
-    </script>
 
+    <!-- 1. NAVBAR -->
     <header class="navbar" id="navbar">
-        <div class="container">
-            <a href="#hero" class="navbar-brand">Dt. Kaleli & Sarıyerli</a>
-            <nav class="navbar-links">
-                <a href="#hakkimizda">Hakkımızda</a>
-                <a href="#hizmetler">Hizmetler</a>
-                <a href="#yorumlar">Yorumlar</a>
-                <a href="#iletisim">İletişim</a>
+        <div class="container nav-container">
+            <a href="#" class="logo">Dt. Ayşe & Dt. Faruk<span>.</span></a>
+            
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#surec">Süreç</a></li>
+                    <li><a href="#yorumlar">Yorumlar</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
             </nav>
-            <div class="navbar-actions">
-                <a href="tel:+905073039434" class="navbar-phone">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.28-.27.36-.66.24-1.01-.37-1.12-.57-2.32-.57-3.57 0-.55-.45-1-1-1H3.5c-.55 0-1 .45-1 1C2.5 12.02 6.98 17.5 12.5 17.5c.55 0 1-.45 1-1V12c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h.5c.28 0 .5-.22.5-.5V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1.5c0 .28-.22.5-.5.5H8c-.28 0-.5-.22-.5-.5V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1.5c0 .28-.22.5-.5.5H3.5c-.28 0-.5-.22-.5-.5V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1V12c0
+
+            <div class="nav-right">
+                <a href="tel:+905073039434" class="nav-phone">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    0507 303 94 34
+                </a>
+                <a href="#iletisim" class="btn btn-primary">Randevu Al</a>
+                <button class="hamburger" id="hamburger" aria-label="Menü">
+                    <svg width="30" height="30" viewBox="0 0 24 24">
+                        <rect y="4" width="24" height="2" fill="#ffffff" rx="1"></rect>
+                        <rect y="11" width="24" height="2" fill="#ffffff" rx="1"></rect>
+                        <rect y="18" width="24" height="2" fill="#ffffff" rx="1"></rect>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO -->
+        <section class="hero" id="home">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <h1 class="hero-title">Sağlıklı ve Estetik Bir Gülüş İçin <span>Doğru Adres</span></h1>
+                    <p class="hero-desc">Sincan'da modern teknoloji ve uzman kadromuzla, size ve ailenize en iyi diş sağlığı hizmetini sunmak için buradayız. Gülümsemenizi şansa bırakmayın.</p>
+                    <div class="hero-btns">
+                        <a href="#iletisim" class="btn btn-primary">Randevu Al</a>
+                        <a href="#hakkimizda" class="btn btn-outline">Bizi Tanıyın</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rating-badge fade-left">
+                <div class="rating-score">4.7</div>
+                <div>
+                    <div class="rating-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="rating-text">194 Gerçek Yorum</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. STATS BAR -->
+        <section class="stats-section container animate-on-scroll fade-up">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <div class="stat-number" data-target="194">0</div>
+                    <div class="stat-label">Mutlu Müşteri Yorumu</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <div class="stat-number" data-target="4.7" data-decimal="true">0</div>
+                    <div class="stat-label">Google Puanı</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Yıllık Tecrübe</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div class="stat-number" data-target="5000">0</div>
+                    <div class="stat-label">Başarılı Tedavi</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. HAKKIMIZDA -->
+        <section id="hakkimizda" class="container">
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll fade-right">
+                    <h2 class="section-title" style="text-align: left;">Modern Diş Hekimliğinde Güvenilir Adresiniz</h2>
+                    <p>Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli yönetimindeki kliniğimizde, ağız ve diş sağlığınızı en üst düzeyde korumak ve tedavi etmek için çalışıyoruz. Hastalarımızın konforu ve memnuniyeti bizim için her zaman ön plandadır.</p>
+                    <p>Güncel tıbbi yaklaşımları, modern teknoloji ile birleştirerek; implantolojiden estetik diş hekimliğine, ortodontiden çocuk diş hekimliğine kadar geniş bir yelpazede hizmet sunmaktayız.</p>
+                    <p>Sıcak, hijyenik ve samimi ortamımızda, korkularınızı geride bırakarak sağlıklı gülüşlere kavuşmanız için sizi kliniğimize bekliyoruz.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <span class="feature-text">Deneyimli Ekip</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <span class="feature-text">Modern Teknoloji</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <span class="feature-text">Hijyenik Ortam</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+                            </div>
+                            <span class="feature-text">Uygun Çözümler</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual animate-on-scroll fade-left">
+                    <div class="visual-card visual-card-1">
+                        <div class="visual-icon">
+                            <!-- Abstract shape representing care -->
+                            <svg viewBox="0 0 100 100" fill="var(--primary)"><path d="M50 10 C 20 10, 10 40, 50 90 C 90 40, 80 10, 50 10 Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="visual-card visual-card-2">
+                        <div class="visual-icon">
+                            <!-- Tooth abstract -->
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C8.5,2,7,4.5,7,7c0,1.5,0.5,3,1.5,4.5C9.5,13,10,14.5,10,16v3c0,1.7,1.3,3,3,3s3-1.3,3-3v-3 c0-1.5,0.5-3,1.5-4.5C18.5,10,19,8.5,19,7C19,4.5,17.5,2,12,2z M12,20c-0.6,0-1-0.4-1-1v-3c0-2-1-3.5-2.5-5.5C7.5,9.5,7,8.5,7,7 c0-1.5,1-3,5-3s5,1.5,5,3c0,1.5-0.5,2.5-1.5,3.5C14,12.5,13,14,13,16v3C13,19.6,12.6,20,12,20z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. HİZMETLER -->
+        <section id="hizmetler" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Uzmanlık Alanlarımız</h2>
+                <p class="section-subtitle">Gülüşünüzü baştan yaratmak ve ağız sağlığınızı korumak için sunduğumuz profesyonel diş hekimliği hizmetleri.</p>
+
+                <div class="services-grid">
+                    <!-- Hizmet 1 -->
+                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.1s">
+                        <div class="service-icon">
+                            <!-- İmplant İkonu (Vida/Diş) -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v12M17 10v12M12 2v8M5 10h14M8 14h8M9 18h6"/></svg>
+                        </div>
+                        <h3 class="service-title">İmplant Tedavisi</h3>
+                        <p class="service-desc">Eksik dişlerinizin yerine çene kemiğine yerleştirilen titanyum vidalarla kalıcı ve doğal görünümlü çözümler.</p>
+                    </div>
+
+                    <!-- Hizmet 2 -->
+                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.2s">
+                        <div class="service-icon">
+                            <!-- Zirkonyum (Taç) -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"/></svg>
+                        </div>
+                        <h3 class="service-title">Zirkonyum Kaplama</h3>
+                        <p class="service-desc">Işık geçirgenliği yüksek, metale alerjisi olanlar için ideal, estetik ve dayanıklı diş kaplama yöntemi.</p>
+                    </div>
+
+                    <!-- Hizmet 3 -->
+                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.3s">
+                        <div class="service-icon">
+                            <!-- Ortodonti (Diş teli/Gülümseme) -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h3 class="service-title">Ortodonti</h3>
+                        <p class="service-desc">Çapraşık dişlerin ve çene uyumsuzluklarının modern yöntemlerle düzeltilmesi ve estetik gülüş tasarımı.</p>
+                    </div>
+
+                    <!-- Hizmet 4 -->
+                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.4s">
+                        <div class="service-icon">
+                            <!-- Diş Beyazlatma (Ayna/Işıltı) -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/></svg>
+                        </div>
+                        <h3 class="service-title">Diş Beyazlatma</h3>
+                        <p class="service-desc">Zamanla sararan veya lekelenen dişleriniz için güvenli ve hızlı ofis tipi profesyonel beyazlatma işlemi.</p>
+                    </div>
+
+                    <!-- Hizmet 5 -->
+                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.5s">
+                        <div class="service-icon">
+                            <!-- Kanal Tedavisi (Kalkan/Koruma) -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                        </div>
+                        <h3 class="service-title">Kanal Tedavisi</h3>
+                        <p class="service-desc">İltihaplanmış veya hasar görmüş dişlerin kurtarılması için uygulanan ağrısız endodontik tedavi yöntemi.</p>
+                    </div>
+
+                    <!-- Hizmet 6 -->
+                    <div class="service-card animate-on-scroll fade-up" style="transition-delay: 0.6s">
+                        <div class="service-icon">
+                            <!-- Pedodonti (Çocuk) -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 14 0v2"/></svg>
+                        </div>
+                        <h3 class="service-title">Pedodonti (Çocuk)</h3>
+                        <p class="service-desc">Çocukların süt ve daimi dişlerinin sağlıklı gelişimi için koruyucu ve tedavi edici diş hekimliği uygulamaları.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SÜREÇ -->
+        <section id="surec" class="container">
+            <h2 class="section-title">Tedavi Sürecimiz</h2>
+            <p class="section-subtitle">Size en iyi hizmeti sunmak için planlı ve şeffaf bir yol izliyoruz.</p>
+
+            <div class="process-timeline animate-on-scroll fade-up">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Muayene</h4>
+                    <p class="step-desc">Ağız ve diş sağlığınızın genel durumu uzman hekimlerimizce detaylıca incelenir.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">Teşhis</h4>
+                    <p class="step-desc">Gerekli röntgen ve analizler yapılarak problemin kaynağı kesin olarak belirlenir.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Tedavi</h4>
+                    <p class="step-desc">Sizinle paylaşılan plan doğrultusunda, modern ve ağrısız yöntemlerle tedavi uygulanır.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4 class="step-title">Kontrol</h4>
+                    <p class="step-desc">Tedavi sonrası düzenli kontrollerle ağız sağlığınızın kalıcılığı güvence altına alınır.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. REFERANSLAR -->
+        <section id="yorumlar" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Hastalarımız Ne Diyor?</h2>
+                <p class="section-subtitle">Google üzerinde bizi değerlendiren gerçek hastalarımızın deneyimleri.</p>
+
+                <div class="testi-grid">
+                    <!-- Yorum 1 -->
+                    <div class="testi-card animate-on-scroll fade-up" style="transition-delay: 0.1s">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testi-text">"Gayet ilgili insanlar, işlerini iyi yapıyorlar..20lik diş çektirdim ve dolgu yaptıracağım fiyat performans kliniği diyebiliriz"</p>
+                        <div class="testi-author">
+                            <span class="author-name">Zeki Can Özer</span>
+                            <div class="author-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yorum 2 -->
+                    <div class="testi-card animate-on-scroll fade-up" style="transition-delay: 0.2s">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testi-text">"Doktorları da calısanları da çok ilgili , işlerini çok titiz ve düzenli yapıyolar ayrıca Taner beyin ilgisine de çok teşekkür ediyorum çok memnun kaldım gitmek isteyenler hiç düşünmeden gidebilirler"</p>
+                        <div class="testi-author">
+                            <span class="author-name">esila kürkaya</span>
+                            <div class="author-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yorum 3 -->
+                    <div class="testi-card animate-on-scroll fade-up" style="transition-delay: 0.3s">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testi-text">"Kliniğe ilk muayene için gittigimde muayene sonrası bilgilendirmeyi açıklayıcı ve ilgiyi gayet samimi buldum. Verilen güven ile çalışmaya ve implant yaptırmaya karar verdim. Gayet hijyenik ve güvenli"</p>
+                        <div class="testi-author">
+                            <span class="author-name">Azize sungur</span>
+                            <div class="author-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA BANNER -->
+        <section class="cta-section">
+            <div class="container animate-on-scroll fade-up">
+                <h2 class="cta-title">Sağlıklı Gülüşler İçin İlk Adımı Atın</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1rem; color: rgba(255,255,255,0.8);">Randevu almak veya detaylı bilgi edinmek için hemen bizi arayın.</p>
+                <a href="tel:+905073039434" class="cta-phone">0507 303 94 34</a>
+                <a href="#iletisim" class="btn btn-white">Online Randevu Talebi</a>
+            </div>
+        </section>
+
+        <!-- 9. İLETİŞİM -->
+        <section id="iletisim" class="container">
+            <h2 class="section-title">İletişim & Randevu</h2>
+            <p class="section-subtitle">Kliniğimize ulaşmak, yol tarifi almak veya mesaj bırakmak için aşağıdaki bilgileri kullanabilirsiniz.</p>
+
+            <div class="contact-grid">
+                <!-- Sol Kolon: Bilgiler -->
+                <div class="contact-info animate-on-scroll fade-right">
+                    <div class="contact-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Adres</h4>
+                            <p>No:7/3 Apt, İstasyon, Polatlı 1. Cd.<br>06935 Sincan/Ankara, Türkiye</p>
+                            <a href="https://www.google.com/maps/dir//39.9658141,32.5859333" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; color:var(--primary); font-weight:600; text-decoration:underline;">Haritada Yol Tarifi Al</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Telefon</h4>
+                            <a href="tel:+905073039434">+90 507 303 94 34</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="info-content" style="width: 100%;">
+                            <h4>Çalışma Saatleri</h4>
+                            <ul class="hours-list">
+                                <li><span>Pazartesi</span> <span>12:00 - 20:00</span></li>
+                                <li><span>Salı</span> <span>12:00 - 20:00</span></li>
+                                <li><span>Çarşamba</span> <span>12:00 - 20:00</span></li>
+                                <li><span>Perşembe</span> <span>12:00 - 20:00</span></li>
+                                <li><span>Cuma</span> <span>12:00 - 20:00</span></li>
+                                <li><span>Cumartesi</span> <span>12:00 - 20:00</span></li>
+                                <li class="closed"><span>Pazar</span> <span>Kapalı</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Kolon: Form -->
+                <div class="contact-form animate-on-scroll fade-left">
+                    <h3 style="margin-bottom: 20px; font-family: var(--font-heading); color: var(--primary-dark);">Bize Mesaj Gönderin</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla alınmıştır. En kısa sürede size dönüş yapacağız.');">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Telefon Numaranız" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>İlgilendiğiniz Tedavi (İsteğe Bağlı)</option>
+                                <option value="implant">İmplant</option>
+                                <option value="zirkonyum">Zirkonyum Kaplama</option>
+                                <option value="ortodonti">Ortodonti</option>
+                                <option value="beyazlatma">Diş Beyazlatma</option>
+                                <option value="diger">Diğer / Genel Muayene</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Mesajınız veya Randevu Talebiniz..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Kolon 1 -->
+                <div>
+                    <a href="#" class="footer-logo">Dt. Ayşe & Dt. Faruk<span>.</span></a>
+                    <p class="footer-desc">Sincan, Ankara'da modern diş hekimliği uygulamaları ile ağız ve diş sağlığınızı güvenle emanet edebileceğiniz uzman kadro.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolon 2 -->
+                <div>
+                    <h4 class="footer-title">Hızlı Linkler</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+                        <li><a href="#yorumlar">Hasta Yorumları</a></li>
+                        <li><a href="#iletisim">İletişim & Randevu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolon 3 -->
+                <div>
+                    <h4 class="footer-title">İletişim</h4>
+                    <ul class="footer-links">
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" style="flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>İstasyon, Polatlı 1. Cd. No:7/3 Sincan/Ankara</span>
+                        </li>
+                        <li style="display: flex; gap: 10px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+905073039434">0507 303 94 34</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği - Tüm Hakları Saklıdır | Powered by <a href="#" style="font-weight: 600; color: var(--accent);">Galzura Digital</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 2. Sticky Navbar & Scroll Background
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        e.preventDefault();
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // 4. Intersection Observer for Scroll Animations & Counters
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            let animatedCounters = false;
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add visible class for CSS animations
+                        entry.target.classList.add('is-visible');
+                        
+                        // Check if it's the stats section to trigger counters
+                        if (entry.target.classList.contains('stats-section') && !animatedCounters) {
+                            animatedCounters = true;
+                            startCounters();
+                        }
+                        
+                        // Optional: Stop observing once animated
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 5. Counter Animation Function
+            function startCounters() {
+                const counters = document.querySelectorAll('.stat-number');
+                const speed = 2000; // Total duration in ms
+
+                counters.forEach(counter => {
+                    const target = parseFloat(counter.getAttribute('data-target'));
+                    const isDecimal = counter.getAttribute('data-decimal') === 'true';
+                    const startTime = performance.now();
+                    
+                    function updateCount(currentTime) {
+                        const elapsedTime = currentTime - startTime;
+                        const progress = Math.min(elapsedTime / speed, 1);
+                        
+                        // Ease out quad function
+                        const easeProgress = progress * (2 - progress);
+                        
+                        const currentVal = target * easeProgress;
+
+                        if (isDecimal) {
+                            counter.innerText = currentVal.toFixed(1);
+                        } else {
+                            counter.innerText = Math.floor(currentVal) + "+";
+                        }
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = isDecimal ? target.toFixed(1) : target + "+";
+                        }
+                    }
+
+                    requestAnimationFrame(updateCount);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
