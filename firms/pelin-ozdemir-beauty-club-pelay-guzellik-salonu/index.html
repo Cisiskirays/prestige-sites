@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelin Özdemir Beauty Club - Pelay Güzellik Salonu | Yenimahalle, Ankara</title>
-    <meta name="description" content="Ankara Yenimahalle'de premium güzellik salonu. Protez tırnak, kirpik lifting, lazer epilasyon ve cilt bakımı hizmetleri. Güzelliğinize değer katın.">
+    <title>Pelin Özdemir Beauty Club | Ankara Yenimahalle Güzellik Salonu</title>
+    <meta name="description" content="Ankara Yenimahalle'de Pelin Özdemir Beauty Club ile güzelliğinize değer katın. Protez tırnak, kirpik lifting, lazer epilasyon ve cilt bakımı hizmetlerimizle tanışın.">
     <meta name="theme-color" content="#882255">
+    <link rel="canonical" href="https://pelinozdemirbeauty.com">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Pelin Özdemir Beauty Club - Premium Güzellik Salonu">
-    <meta property="og:description" content="Ankara'nın en iyi güzellik salonunda protez tırnak, lazer ve cilt bakımı hizmetleri.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1200&auto=format&fit=crop">
-    <meta property="og:url" content="https://www.google.com/maps/search/?api=1&query=Pelin%20%C3%96zdemir%20Beauty%20Club%20-%20Pelay%20G%C3%BCzellik%20Salonu&query_place_id=ChIJcenhoNFJ0xQRGSUYCn_J3KQ">
+    <meta property="og:description" content="Uzman kadromuz ve premium ürünlerimizle Yenimahalle'de hizmetinizdeyiz. Hemen randevu alın.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://pelinozdemirbeauty.com">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Schema.org JSON-LD -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "name": "Pelin Özdemir Beauty Club - Pelay Güzellik Salonu",
-      "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1200&auto=format&fit=crop",
+      "image": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep4Skict2nqYr4tNFgc2mDfbnLKn6rZEB1aXfCdPv8ZfwJ6ehLeZJ-BtpQvfebZHQoeZ-xOyqqwlUB-J7acu8S9vQYcZnii8acLWKUX1hXr75S0bqbJ1KAS4DApkc2VtcJLyFBv=w408-h544-k-no",
       "@id": "",
-      "url": "https://www.google.com/maps/search/?api=1&query=Pelin%20%C3%96zdemir%20Beauty%20Club",
+      "url": "https://pelinozdemirbeauty.com",
       "telephone": "+905075024602",
       "address": {
         "@type": "PostalAddress",
@@ -43,7 +45,12 @@
         "longitude": 32.7763372
       },
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "19:00" }
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -54,35 +61,37 @@
     </script>
 
     <style>
-        /* CSS Variables */
         :root {
             --color-primary: #882255;
+            --color-primary-light: #a3326b;
             --color-accent: #D4A853;
+            --color-accent-hover: #e5b964;
             --color-bg: #FFF5F5;
+            --color-surface: #FFFFFF;
             --color-dark: #1A1A2E;
             --color-text: #4A4A5A;
-            --color-white: #FFFFFF;
+            --color-text-light: #7A7A8A;
             
             --font-heading: 'Cormorant Garamond', serif;
             --font-body: 'Outfit', sans-serif;
             
-            --shadow-premium: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04);
-            --shadow-hover: 0 2px 4px rgba(0,0,0,0.04), 0 8px 16px rgba(0,0,0,0.05), 0 16px 32px rgba(0,0,0,0.08), 0 32px 64px rgba(0,0,0,0.06);
-            --shadow-glow: 0 0 20px rgba(212, 168, 83, 0.4);
+            --shadow-premium: 0 1px 2px rgba(136, 34, 85, 0.04), 
+                              0 4px 8px rgba(136, 34, 85, 0.04), 
+                              0 12px 24px rgba(136, 34, 85, 0.06), 
+                              0 24px 48px rgba(136, 34, 85, 0.04);
+            --shadow-premium-hover: 0 2px 4px rgba(136, 34, 85, 0.06), 
+                                    0 8px 16px rgba(136, 34, 85, 0.08), 
+                                    0 16px 32px rgba(136, 34, 85, 0.1), 
+                                    0 32px 64px rgba(136, 34, 85, 0.08);
             
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --radius-full: 999px;
-            
+            --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 16px;
             --container-width: 1280px;
-            --section-padding: clamp(4rem, 8vw, 8rem) 0;
         }
 
         /* Reset & Base */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: auto; /* Handled by Lenis/JS */ }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-body);
             background-color: var(--color-bg);
@@ -92,186 +101,397 @@
             -webkit-font-smoothing: antialiased;
         }
         
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--color-dark); font-weight: 600; line-height: 1.2; }
-        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1rem; }
-        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1.5rem; }
-        h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1rem; }
-        p { font-size: clamp(0.95rem, 1.2vw, 1.1rem); margin-bottom: 1rem; }
-        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-dark);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+        p { font-size: clamp(0.95rem, 1.2vw, 1.1rem); }
+        
+        a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; }
         
-        /* Accessibility */
-        .skip-link { position: absolute; top: -40px; left: 0; background: var(--color-primary); color: white; padding: 8px; z-index: 9999; transition: top 0.3s; }
-        .skip-link:focus { top: 0; }
-        :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
-        @media (prefers-reduced-motion: reduce) {
-            * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-            .gs-reveal { opacity: 1 !important; transform: none !important; }
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        /* GSAP Fallback */
-        .gs-reveal { opacity: 1; transform: none; transition: opacity 0.6s ease, transform 0.6s ease; }
-        .gsap-ready .gs-reveal { opacity: 0; transform: translateY(40px); }
-
-        /* Layout */
-        .container { width: 90%; max-width: var(--container-width); margin: 0 auto; }
-        section { padding: var(--section-padding); }
+        section { padding: 100px 0; position: relative; }
+        
         .text-center { text-align: center; }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
-        .section-header p { color: var(--color-primary); font-weight: 500; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .mb-1 { margin-bottom: 8px; }
+        .mb-2 { margin-bottom: 16px; }
+        .mb-3 { margin-bottom: 24px; }
+        .mb-4 { margin-bottom: 32px; }
+        .mb-5 { margin-bottom: 48px; }
+        
+        .section-subtitle {
+            color: var(--color-accent);
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute; top: -40px; left: 0; background: var(--color-primary);
+            color: white; padding: 8px; z-index: 10000; transition: top 0.3s;
+        }
+        .skip-link:focus { top: 0; }
+        :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+        /* GSAP Fallback */
+        .gs-reveal { opacity: 1; transform: none; }
+        .gsap-ready .gs-reveal { opacity: 0; transform: translateY(40px); }
 
         /* Buttons */
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
-            padding: 1rem 2rem; border-radius: var(--radius-full);
-            font-weight: 500; cursor: pointer; border: none; transition: var(--transition);
-            font-family: var(--font-body); gap: 0.5rem;
+            padding: 14px 32px; border-radius: 50px; font-weight: 500;
+            cursor: pointer; transition: var(--transition-smooth);
+            border: none; gap: 10px; font-family: var(--font-body);
+            font-size: 1rem; position: relative; overflow: hidden;
         }
-        .btn-primary { background: var(--color-primary); color: var(--color-white); box-shadow: var(--shadow-premium); }
-        .btn-primary:hover { transform: scale(1.03) translateY(-2px); box-shadow: var(--shadow-hover), var(--shadow-glow); background: #701c46; }
-        .btn-outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
-        .btn-outline:hover { background: var(--color-primary); color: var(--color-white); transform: scale(1.03); }
+        .btn-primary {
+            background-color: var(--color-primary); color: white;
+            box-shadow: 0 4px 15px rgba(136, 34, 85, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: var(--color-primary-light);
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 8px 25px rgba(136, 34, 85, 0.4);
+        }
+        .btn-accent {
+            background-color: var(--color-accent); color: white;
+            box-shadow: 0 4px 15px rgba(212, 168, 83, 0.3);
+        }
+        .btn-accent:hover {
+            background-color: var(--color-accent-hover);
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 168, 83, 0.4);
+        }
+        .btn-outline {
+            background-color: transparent; color: var(--color-surface);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .btn-outline:hover {
+            background-color: white; color: var(--color-dark);
+            transform: scale(1.03);
+        }
+        .btn-outline-dark {
+            background-color: transparent; color: var(--color-primary);
+            border: 1px solid var(--color-primary);
+        }
+        .btn-outline-dark:hover {
+            background-color: var(--color-primary); color: white;
+            transform: scale(1.03);
+        }
 
-        /* Header & Nav */
-        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 1.5rem 0; transition: var(--transition); background: rgba(255, 245, 245, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(136, 34, 85, 0.1); }
-        header.scrolled { padding: 1rem 0; box-shadow: var(--shadow-premium); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem; }
-        .logo span { color: var(--color-accent); }
-        .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-links a { position: relative; font-weight: 500; color: var(--color-dark); }
-        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--color-accent); transition: var(--transition); }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        /* Floating Buttons */
+        .floating-wa, .floating-phone {
+            position: fixed; bottom: 24px; z-index: 9999;
+            width: 56px; height: 56px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease; animation: floatPulse 2s infinite;
+        }
+        .floating-wa { right: 24px; background: #25D366; color: #fff; }
+        .floating-phone { left: 24px; background: var(--color-primary); color: #fff; }
+        .floating-wa:hover, .floating-phone:hover { transform: scale(1.12); }
+        .floating-wa svg, .floating-phone svg { width: 28px; height: 28px; fill: currentColor; }
         
-        /* Language Switcher */
-        .lang-switcher { display: flex; gap: 0.5rem; background: var(--color-white); padding: 0.25rem; border-radius: var(--radius-full); box-shadow: var(--shadow-premium); }
-        .lang-btn { background: none; border: none; padding: 0.5rem 0.75rem; border-radius: var(--radius-full); cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--color-text); transition: var(--transition); }
-        .lang-btn.active { background: var(--color-primary); color: var(--color-white); }
+        @keyframes floatPulse {
+            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 8px rgba(37,211,102,0.2); }
+        }
+        .floating-phone { animation: floatPulsePhone 2s infinite; animation-delay: 1s; }
+        @keyframes floatPulsePhone {
+            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 8px rgba(136,34,85,0.2); }
+        }
 
-        .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .hamburger span { display: block; width: 25px; height: 2px; background: var(--color-dark); transition: var(--transition); }
+        /* Navbar */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            padding: 20px 0; transition: var(--transition-smooth);
+            background: rgba(255, 245, 245, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .navbar.scrolled {
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700;
+            color: var(--color-primary); display: flex; flex-direction: column; line-height: 1;
+        }
+        .logo span { font-size: 0.8rem; font-family: var(--font-body); font-weight: 400; color: var(--color-accent); letter-spacing: 1px; margin-top: 4px; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-weight: 500; color: var(--color-dark); position: relative; padding: 5px 0;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+            background: var(--color-accent); transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-right { display: flex; align-items: center; gap: 24px; }
+        .nav-phone { font-weight: 600; color: var(--color-primary); display: flex; align-items: center; gap: 8px; }
+        .lang-switch { display: flex; gap: 8px; }
+        .lang-btn {
+            background: none; border: none; cursor: pointer; font-family: var(--font-body);
+            font-size: 0.9rem; color: var(--color-text-light); transition: 0.3s;
+        }
+        .lang-btn.active { color: var(--color-primary); font-weight: 600; }
+        .menu-toggle { display: none; background: none; border: none; cursor: pointer; width: 30px; height: 20px; position: relative; z-index: 1001; }
+        .menu-toggle span { display: block; width: 100%; height: 2px; background: var(--color-primary); position: absolute; transition: 0.3s; }
+        .menu-toggle span:nth-child(1) { top: 0; }
+        .menu-toggle span:nth-child(2) { top: 9px; }
+        .menu-toggle span:nth-child(3) { top: 18px; }
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg); top: 9px; }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
 
-        /* Hero Section */
-        #hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 5rem; overflow: hidden; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
-        .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255,245,245,0.95) 0%, rgba(255,245,245,0.7) 50%, rgba(255,245,245,0.2) 100%); z-index: -1; }
-        .hero-content { max-width: 600px; }
-        .google-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-white); padding: 0.5rem 1rem; border-radius: var(--radius-full); box-shadow: var(--shadow-premium); margin-bottom: 1.5rem; font-weight: 600; }
-        .google-badge svg { width: 20px; height: 20px; color: #FBBC05; }
-        .hero-btns { display: flex; gap: 1rem; margin-top: 2rem; }
+        /* Hero */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; position: relative;
+            padding-top: 80px; overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+            background: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop') center/cover no-range;
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: linear-gradient(to right, rgba(26,26,46,0.9) 0%, rgba(26,26,46,0.6) 50%, rgba(26,26,46,0.2) 100%);
+        }
+        .hero-content { max-width: 700px; color: white; }
+        .hero h1 { color: white; margin-bottom: 24px; }
+        .hero p { color: rgba(255,255,255,0.9); margin-bottom: 40px; font-size: 1.2rem; }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
         
-        /* Scroll Indicator */
-        .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); width: 24px; height: 40px; border: 2px solid var(--color-primary); border-radius: 12px; display: flex; justify-content: center; padding-top: 6px; }
-        .scroll-dot { width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(10px); } 60% { transform: translateY(5px); } }
+        .google-badge {
+            display: inline-flex; align-items: center; gap: 12px;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+            padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 24px; font-size: 0.95rem; font-weight: 500;
+        }
+        .google-badge svg { width: 20px; height: 20px; }
+
+        .scroll-indicator {
+            position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+            width: 28px; height: 44px; border: 2px solid rgba(255,255,255,0.4); border-radius: 14px;
+        }
+        .scroll-indicator::after {
+            content: ''; width: 4px; height: 10px; background: rgba(255,255,255,0.7);
+            border-radius: 2px; position: absolute; top: 6px; left: 50%; transform: translateX(-50%);
+            animation: scrollBounce 1.5s ease-in-out infinite;
+        }
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            50% { transform: translateX(-50%) translateY(14px); opacity: 0.2; }
+        }
 
         /* Counters */
-        #counters { background: var(--color-white); padding: 4rem 0; margin-top: -2rem; position: relative; z-index: 10; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium); }
-        .counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
-        .counter-item h4 { font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem; font-family: var(--font-body); }
-        .counter-item p { margin: 0; font-size: 1rem; font-weight: 500; }
+        .counters { padding: 60px 0; background: var(--color-surface); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+        .counter-item h4 { font-size: 3rem; color: var(--color-primary); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+        .counter-item p { color: var(--color-text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
 
-        /* About Section */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .about-img { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-premium); }
-        .about-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-premium); }
+        .about-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
         .about-img:hover img { transform: scale(1.05); }
-        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-        .feature-item { display: flex; flex-direction: column; gap: 1rem; }
-        .feature-icon { width: 50px; height: 50px; background: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-accent); box-shadow: var(--shadow-premium); }
-        .feature-item h4 { font-size: 1.2rem; margin-bottom: 0.25rem; }
+        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+        .feature-card { display: flex; align-items: flex-start; gap: 16px; }
+        .feature-icon {
+            width: 48px; height: 48px; background: var(--color-bg); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center; color: var(--color-primary);
+            flex-shrink: 0; border: 1px solid rgba(136,34,85,0.1);
+        }
+        .feature-icon svg { width: 24px; height: 24px; stroke-width: 1.5; }
+        .feature-card h5 { margin-bottom: 4px; font-family: var(--font-body); font-size: 1.1rem; }
+        .feature-card p { font-size: 0.9rem; color: var(--color-text-light); }
 
-        /* Services Section */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .service-card { background: var(--color-white); padding: 2.5rem 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium); transition: var(--transition); text-align: center; position: relative; overflow: hidden; border: 1px solid transparent; }
-        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--color-accent); transform: scaleX(0); transition: var(--transition); transform-origin: left; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-color: rgba(212, 168, 83, 0.2); }
+        /* Services */
+        .services { background: var(--color-surface); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+        .service-card {
+            background: white; border-radius: var(--border-radius); padding: 40px 32px;
+            box-shadow: var(--shadow-premium); transition: var(--transition-smooth);
+            border: 1px solid rgba(0,0,0,0.02); text-align: center; position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--color-accent); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-premium-hover); }
         .service-card:hover::before { transform: scaleX(1); }
-        .service-icon { width: 64px; height: 64px; margin: 0 auto 1.5rem; color: var(--color-primary); }
-        .service-icon svg { width: 100%; height: 100%; stroke-width: 1.5; }
+        .service-icon {
+            width: 80px; height: 80px; margin: 0 auto 24px; background: var(--color-bg);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--color-primary); transition: var(--transition-smooth);
+        }
+        .service-card:hover .service-icon { background: var(--color-primary); color: white; }
+        .service-icon svg { width: 40px; height: 40px; stroke-width: 1.5; fill: none; stroke: currentColor; }
+        .service-card h3 { margin-bottom: 16px; font-size: 1.5rem; }
 
-        /* Process Section */
-        #surec { background: var(--color-dark); color: var(--color-white); }
-        #surec h2, #surec h3 { color: var(--color-white); }
-        #surec .section-header p { color: var(--color-accent); }
-        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
-        .process-step { text-align: center; position: relative; z-index: 2; }
-        .step-number { width: 60px; height: 60px; background: var(--color-accent); color: var(--color-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem; box-shadow: var(--shadow-glow); font-family: var(--font-heading); }
-        .process-grid::after { content: ''; position: absolute; top: 30px; left: 10%; width: 80%; height: 2px; background: rgba(255,255,255,0.1); z-index: 1; }
-
-        /* Gallery Section */
-        .gallery-filters { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
-        .filter-btn { padding: 0.5rem 1.5rem; border: 1px solid var(--color-primary); background: transparent; color: var(--color-primary); border-radius: var(--radius-full); cursor: pointer; transition: var(--transition); font-weight: 500; }
-        .filter-btn.active, .filter-btn:hover { background: var(--color-primary); color: var(--color-white); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
-        .gallery-item { border-radius: var(--radius-md); overflow: hidden; position: relative; aspect-ratio: 4/5; box-shadow: var(--shadow-premium); transition: var(--transition); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .gallery-item:hover img { transform: scale(1.08); }
-        .gallery-item::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,26,46,0.8), transparent); opacity: 0; transition: var(--transition); }
-        .gallery-item:hover::after { opacity: 1; }
+        /* Gallery */
+        .gallery-filters { display: flex; justify-content: center; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+        .filter-btn {
+            background: transparent; border: 1px solid var(--color-text-light); padding: 8px 24px;
+            border-radius: 50px; font-family: var(--font-body); cursor: pointer; transition: var(--transition-smooth);
+            color: var(--color-text);
+        }
+        .filter-btn.active, .filter-btn:hover { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+        .gallery-item {
+            position: relative; border-radius: var(--border-radius); overflow: hidden; aspect-ratio: 4/5;
+            box-shadow: var(--shadow-premium); cursor: pointer;
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .gallery-overlay {
+            position: absolute; inset: 0; background: rgba(26,26,46,0.6); opacity: 0;
+            display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth);
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay h4 { color: white; transform: translateY(20px); transition: var(--transition-smooth); }
+        .gallery-item:hover .gallery-overlay h4 { transform: translateY(0); }
         .gallery-item.hidden { display: none; }
 
-        /* Testimonials Section */
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .testimonial-card { background: var(--color-white); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium); position: relative; }
-        .quote-icon { position: absolute; top: 1.5rem; right: 1.5rem; width: 40px; height: 40px; color: var(--color-accent); opacity: 0.2; }
-        .stars { color: #FBBC05; margin-bottom: 1rem; display: flex; gap: 2px; }
-        .stars svg { width: 16px; height: 16px; fill: currentColor; }
-        .client-name { font-family: var(--font-heading); font-weight: 700; color: var(--color-primary); font-size: 1.2rem; margin-top: 1rem; }
+        /* Process */
+        .process { background: var(--color-dark); color: white; }
+        .process h2, .process h3 { color: white; }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px; position: relative; }
+        .process-grid::before {
+            content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 2px;
+            background: rgba(255,255,255,0.1); z-index: 1;
+        }
+        .process-step { text-align: center; position: relative; z-index: 2; }
+        .step-num {
+            width: 80px; height: 80px; margin: 0 auto 24px; background: var(--color-primary);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: white;
+            box-shadow: 0 0 0 10px var(--color-dark), 0 0 0 12px rgba(255,255,255,0.2);
+        }
+        .process-step p { color: rgba(255,255,255,0.7); margin-top: 12px; }
 
-        /* Contact Section */
-        .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; background: var(--color-white); padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium); }
-        .contact-info-item { display: flex; gap: 1rem; margin-bottom: 2rem; }
-        .contact-icon { width: 48px; height: 48px; background: var(--color-bg); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
-        .form-group { position: relative; }
-        .form-control { width: 100%; padding: 1rem 1.5rem; border: 1px solid rgba(0,0,0,0.1); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 1rem; background: var(--color-bg); transition: var(--transition); }
-        .form-control:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(136, 34, 85, 0.1); }
-        textarea.form-control { min-height: 120px; resize: vertical; }
-        .map-container { margin-top: 4rem; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-premium); height: 400px; }
-        .map-container iframe { width: 100%; height: 100%; border: none; }
+        /* Testimonials */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+        .review-card {
+            background: white; padding: 40px 32px; border-radius: var(--border-radius);
+            box-shadow: var(--shadow-premium); position: relative; transition: var(--transition-smooth);
+        }
+        .review-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-premium-hover); }
+        .quote-icon { color: var(--color-accent); opacity: 0.2; margin-bottom: 16px; width: 40px; height: 40px; }
+        .stars { color: #FFD700; margin-bottom: 16px; font-size: 1.2rem; }
+        .review-text { font-style: italic; margin-bottom: 24px; color: var(--color-text); }
+        .reviewer { font-weight: 600; color: var(--color-dark); font-family: var(--font-heading); font-size: 1.2rem; }
+
+        /* CTA Band */
+        .cta-band {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 80px 0; text-align: center; color: white;
+        }
+        .cta-band h2 { color: white; margin-bottom: 16px; }
+        .cta-band p { color: rgba(255,255,255,0.8); margin-bottom: 32px; font-size: 1.2rem; }
+        .cta-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info-card { background: white; padding: 32px; border-radius: var(--border-radius); box-shadow: var(--shadow-premium); margin-bottom: 24px; }
+        .info-item { display: flex; gap: 16px; margin-bottom: 24px; }
+        .info-item:last-child { margin-bottom: 0; }
+        .info-icon { width: 48px; height: 48px; background: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-primary); flex-shrink: 0; }
+        .info-icon svg { width: 24px; height: 24px; }
+        .info-content h5 { font-family: var(--font-body); font-size: 1.1rem; margin-bottom: 4px; }
+        .info-content p, .info-content a { color: var(--color-text-light); }
+        .info-content a:hover { color: var(--color-primary); }
+        .hours-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.05); color: var(--color-text-light); }
+        .hours-list li:last-child { border: none; }
+        
+        .contact-form { background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--shadow-premium); }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--color-dark); }
+        .form-control {
+            width: 100%; padding: 14px 16px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;
+            font-family: var(--font-body); font-size: 1rem; transition: var(--transition-smooth);
+            background: var(--color-bg);
+        }
+        .form-control:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(136,34,85,0.1); background: white; }
+        textarea.form-control { resize: vertical; min-height: 120px; }
+        
+        .map-container { margin-top: 60px; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-premium); }
 
         /* Footer */
-        footer { background: var(--color-dark); color: var(--color-white); padding: 4rem 0 2rem; text-align: center; }
-        .footer-logo { font-family: var(--font-heading); font-size: 2rem; color: var(--color-white); margin-bottom: 1rem; display: inline-block; }
-        .footer-logo span { color: var(--color-accent); }
-        .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
-        .footer-links a:hover { color: var(--color-accent); }
-        .copyright { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; }
+        .footer { background: var(--color-dark); color: rgba(255,255,255,0.7); padding: 80px 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+        .footer-logo { color: white; margin-bottom: 16px; }
+        .footer h4 { color: white; font-family: var(--font-body); font-size: 1.2rem; margin-bottom: 24px; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a:hover { color: var(--color-accent); padding-left: 8px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; }
+        .footer-bottom a { color: var(--color-accent); }
 
         /* RTL Support */
-        [dir="rtl"] { text-align: right; }
-        [dir="rtl"] .nav-links { flex-direction: row-reverse; }
-        [dir="rtl"] .hero-overlay { background: linear-gradient(to left, rgba(255,245,245,0.95) 0%, rgba(255,245,245,0.7) 50%, rgba(255,245,245,0.2) 100%); }
-        [dir="rtl"] .contact-info-item { flex-direction: row; }
-        [dir="rtl"] .btn { flex-direction: row-reverse; }
+        [dir="rtl"] .nav-links a::after { left: auto; right: 0; }
+        [dir="rtl"] .service-card::before { transform-origin: right; }
+        [dir="rtl"] .info-item { flex-direction: row; }
+        [dir="rtl"] .feature-card { flex-direction: row; }
+        [dir="rtl"] .footer-links a:hover { padding-left: 0; padding-right: 8px; }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .about-grid, .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
-            .counters-grid, .process-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-            .process-grid::after { display: none; }
+            .counters-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .process-grid::before { display: none; }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
+
         @media (max-width: 768px) {
-            :root { --section-padding: 4rem 0; }
-            .hamburger { display: flex; }
-            .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-white); flex-direction: column; padding: 2rem; gap: 1.5rem; box-shadow: var(--shadow-premium); clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: clip-path 0.4s ease-in-out; }
-            .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-            [dir="rtl"] .nav-links { flex-direction: column; }
-            .lang-switcher { margin-right: 1rem; }
-            [dir="rtl"] .lang-switcher { margin-right: 0; margin-left: 1rem; }
-            .hero-content { text-align: center; margin: 0 auto; }
-            .hero-overlay { background: rgba(255,245,245,0.85); }
-            .hero-btns { justify-content: center; flex-direction: column; }
-            .counters-grid { grid-template-columns: 1fr; }
-            #counters { margin: 2rem 5% 0; padding: 2rem; }
-            .about-features { grid-template-columns: 1fr; }
+            section { padding: 60px 0; }
+            .nav-links, .nav-right .btn, .nav-phone { display: none; }
+            .menu-toggle { display: block; }
+            .nav-right { gap: 16px; }
+            .hero h1 { font-size: 2.5rem; }
+            .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .contact-wrap { padding: 2rem 1.5rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            
+            /* Mobile Menu Overlay */
+            .mobile-menu {
+                position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+                background: var(--color-surface); z-index: 999;
+                display: flex; flex-direction: column; justify-content: center; align-items: center;
+                transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .mobile-menu.active { transform: translateY(0); }
+            .mobile-menu a { font-size: 1.5rem; font-family: var(--font-heading); margin: 12px 0; color: var(--color-dark); }
+            .mobile-menu .btn { margin-top: 24px; }
         }
     </style>
 </head>
@@ -279,212 +499,214 @@
 
     <a href="#main" class="skip-link" data-tr="İçeriğe Geç" data-en="Skip to Content" data-ar="تخطي إلى المحتوى">İçeriğe Geç</a>
 
-    <header id="header">
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/905075024602?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="floating-wa" aria-label="WhatsApp ile iletişim">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.614-.087-.112-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.567-10.563 5.824 0 10.564 4.74 10.564 10.564 0 5.827-4.739 10.563-10.564 10.563z"/></svg>
+    </a>
+    <a href="tel:+905075024602" class="floating-phone" aria-label="Telefon ile ara">
+        <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="#hero" class="logo">
-                Pelay <span>Beauty</span>
+                Pelin Özdemir 
+                <span data-tr="BEAUTY CLUB" data-en="BEAUTY CLUB" data-ar="نادي التجميل">BEAUTY CLUB</span>
             </a>
             
-            <div style="display: flex; align-items: center;">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="tr" aria-label="Türkçe">TR</button>
-                    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-                    <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
-                </div>
-                
-                <nav class="nav-links" id="navLinks">
-                    <a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us" data-ar="معلومات عنا">Hakkımızda</a>
-                    <a href="#hizmetler" data-tr="Hizmetler" data-en="Services" data-ar="خدمات">Hizmetler</a>
-                    <a href="#galeri" data-tr="Galeri" data-en="Gallery" data-ar="صالة عرض">Galeri</a>
-                    <a href="#referanslar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a>
-                    <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصل بنا">İletişim</a>
-                </nav>
+            <ul class="nav-links">
+                <li><a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us" data-ar="معلومات عنا">Hakkımızda</a></li>
+                <li><a href="#hizmetler" data-tr="Hizmetler" data-en="Services" data-ar="خدمات">Hizmetler</a></li>
+                <li><a href="#galeri" data-tr="Galeri" data-en="Gallery" data-ar="صالة عرض">Galeri</a></li>
+                <li><a href="#referanslar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a></li>
+                <li><a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</a></li>
+            </ul>
 
-                <button class="hamburger" id="hamburger" aria-label="Menu">
+            <div class="nav-right">
+                <a href="tel:+905075024602" class="nav-phone">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    0507 502 46 02
+                </a>
+                <a href="#iletisim" class="btn btn-primary" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الان">Randevu Al</a>
+                <div class="lang-switch">
+                    <button class="lang-btn active" onclick="switchLang('tr')">TR</button>
+                    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLang('ar')">AR</button>
+                </div>
+                <button class="menu-toggle" aria-label="Menü">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
-    </header>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#hakkimizda" class="mobile-link" data-tr="Hakkımızda" data-en="About Us" data-ar="معلومات عنا">Hakkımızda</a>
+        <a href="#hizmetler" class="mobile-link" data-tr="Hizmetler" data-en="Services" data-ar="خدمات">Hizmetler</a>
+        <a href="#galeri" class="mobile-link" data-tr="Galeri" data-en="Gallery" data-ar="صالة عرض">Galeri</a>
+        <a href="#referanslar" class="mobile-link" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a>
+        <a href="#iletisim" class="mobile-link" data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</a>
+        <a href="#iletisim" class="btn btn-primary mobile-link" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الان">Randevu Al</a>
+    </div>
 
     <main id="main">
         <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-bg">
-                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop" alt="Beauty Salon Background">
-            </div>
+        <section id="hero" class="hero">
+            <div class="hero-bg"></div>
             <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content gs-reveal">
                     <div class="google-badge">
-                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        <span data-tr="Google'da 4.8 Puan" data-en="4.8 Rating on Google" data-ar="تقييم 4.8 على جوجل">Google'da 4.8 Puan</span>
-                        <span style="color:var(--color-text); font-weight:400; font-size:0.9rem;">(149 Yorum)</span>
+                        <svg viewBox="0 0 24 24" fill="#FFD700"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <span data-tr="4.8/5 — 149 Google Yorumu" data-en="4.8/5 — 149 Google Reviews" data-ar="4.8/5 — 149 مراجعة جوجل">4.8/5 — 149 Google Yorumu</span>
                     </div>
                     <h1 data-tr="Güzelliğinize Değer Katın" data-en="Add Value to Your Beauty" data-ar="أضف قيمة لجمالك">Güzelliğinize Değer Katın</h1>
-                    <p data-tr="Ankara Yenimahalle'de premium hizmet anlayışıyla, uzman kadromuz eşliğinde kendinizi özel hissedeceğiniz bir deneyim sizi bekliyor." data-en="A premium experience awaits you in Ankara Yenimahalle with our expert staff where you will feel special." data-ar="تجربة متميزة في انتظارك في أنقرة يني محلة مع طاقم الخبراء لدينا حيث ستشعر بالتميز.">Ankara Yenimahalle'de premium hizmet anlayışıyla, uzman kadromuz eşliğinde kendinizi özel hissedeceğiniz bir deneyim sizi bekliyor.</p>
+                    <p data-tr="Ankara Yenimahalle'de uzman kadromuz ve premium hizmet anlayışımızla kendinizi özel hissetmeniz için buradayız." data-en="We are here to make you feel special with our expert team and premium service approach in Ankara Yenimahalle." data-ar="نحن هنا لنجعلك تشعر بالتميز مع فريق الخبراء لدينا ونهج الخدمة المتميزة في أنقرة يني محلة.">Ankara Yenimahalle'de uzman kadromuz ve premium hizmet anlayışımızla kendinizi özel hissetmeniz için buradayız.</p>
                     <div class="hero-btns">
-                        <a href="https://wa.me/905075024602?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" rel="noopener noreferrer">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            <span data-tr="Randevu Al" data-en="Book Appointment" data-ar="احجز موعداً">Randevu Al</span>
+                        <a href="https://wa.me/905075024602?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.614-.087-.112-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.567-10.563 5.824 0 10.564 4.74 10.564 10.564 0 5.827-4.739 10.563-10.564 10.563z"/></svg>
+                            <span data-tr="WhatsApp Randevu" data-en="WhatsApp Booking" data-ar="حجز واتساب">WhatsApp Randevu</span>
                         </a>
-                        <a href="#hizmetler" class="btn btn-outline" data-tr="Hizmetleri İncele" data-en="View Services" data-ar="عرض الخدمات">Hizmetleri İncele</a>
+                        <a href="#hizmetler" class="btn btn-outline" data-tr="Hizmetlerimizi Keşfedin" data-en="Explore Services" data-ar="اكتشف الخدمات">Hizmetlerimizi Keşfedin</a>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <div class="scroll-dot"></div>
-            </div>
+            <div class="scroll-indicator"></div>
         </section>
 
-        <!-- Counters Section -->
-        <div class="container">
-            <section id="counters" class="gs-reveal">
-                <div class="counters-grid">
-                    <div class="counter-item">
-                        <h4 class="counter" data-target="2500" data-suffix="+">0</h4>
-                        <p data-tr="Mutlu Danışan" data-en="Happy Clients" data-ar="عملاء سعداء">Mutlu Danışan</p>
-                    </div>
-                    <div class="counter-item">
-                        <h4 class="counter" data-target="4.8" data-decimal="true">0</h4>
-                        <p data-tr="Google Puanı" data-en="Google Rating" data-ar="تقييم جوجل">Google Puanı</p>
-                    </div>
-                    <div class="counter-item">
-                        <h4 class="counter" data-target="10" data-suffix="+">0</h4>
-                        <p data-tr="Yıllık Tecrübe" data-en="Years Experience" data-ar="سنوات الخبرة">Yıllık Tecrübe</p>
-                    </div>
-                    <div class="counter-item">
-                        <h4 class="counter" data-target="15000" data-suffix="+">0</h4>
-                        <p data-tr="Başarılı İşlem" data-en="Successful Procedures" data-ar="عمليات ناجحة">Başarılı İşlem</p>
-                    </div>
+        <!-- Counters -->
+        <div class="counters">
+            <div class="container counters-grid gs-reveal">
+                <div class="counter-item">
+                    <h4><span class="counter" data-target="5000" data-suffix="+">0</span></h4>
+                    <p data-tr="Mutlu Danışan" data-en="Happy Clients" data-ar="عملاء سعداء">Mutlu Danışan</p>
                 </div>
-            </section>
+                <div class="counter-item">
+                    <h4><span class="counter" data-target="4.8" data-decimal="true" data-suffix="">0</span></h4>
+                    <p data-tr="Google Puanı" data-en="Google Rating" data-ar="تقييم جوجل">Google Puanı</p>
+                </div>
+                <div class="counter-item">
+                    <h4><span class="counter" data-target="10" data-suffix="+">0</span></h4>
+                    <p data-tr="Yıllık Tecrübe" data-en="Years Experience" data-ar="سنوات الخبرة">Yıllık Tecrübe</p>
+                </div>
+                <div class="counter-item">
+                    <h4><span class="counter" data-target="15000" data-suffix="+">0</span></h4>
+                    <p data-tr="Başarılı İşlem" data-en="Successful Procs" data-ar="عمليات ناجحة">Başarılı İşlem</p>
+                </div>
+            </div>
         </div>
 
         <!-- About Section -->
         <section id="hakkimizda">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-img gs-reveal">
-                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1974&auto=format&fit=crop" alt="Pelin Özdemir Beauty Club Salon">
-                    </div>
-                    <div class="about-content gs-reveal">
-                        <div class="section-header" style="text-align:left; margin-bottom:2rem; margin-left:0;">
-                            <p data-tr="Hakkımızda" data-en="About Us" data-ar="معلومات عنا">Hakkımızda</p>
-                            <h2 data-tr="Zarafet ve Güzelliğin Buluşma Noktası" data-en="Meeting Point of Elegance and Beauty" data-ar="نقطة التقاء الأناقة والجمال">Zarafet ve Güzelliğin Buluşma Noktası</h2>
-                        </div>
-                        <p data-tr="Pelin Özdemir Beauty Club olarak, güzellik ve bakımın sadece dış görünüşle değil, içsel iyi hissetmeyle de ilgili olduğuna inanıyoruz. Anne-kız enerjisiyle kurduğumuz salonumuzda, her danışanımızı ailemizin bir parçası gibi ağırlıyoruz." data-en="As Pelin Özdemir Beauty Club, we believe beauty is about feeling good inside. In our salon built with mother-daughter energy, we welcome every client like family." data-ar="بصفتنا نادي بيلين أوزديمير للتجميل، نعتقد أن الجمال يتعلق بالشعور الداخلي الجيد. في صالوننا المبني بطاقة الأم وابنتها، نرحب بكل عميل كعائلة.">Pelin Özdemir Beauty Club olarak, güzellik ve bakımın sadece dış görünüşle değil, içsel iyi hissetmeyle de ilgili olduğuna inanıyoruz. Anne-kız enerjisiyle kurduğumuz salonumuzda, her danışanımızı ailemizin bir parçası gibi ağırlıyoruz.</p>
-                        
-                        <div class="about-features">
-                            <div class="feature-item">
-                                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg></div>
-                                <div>
-                                    <h4 data-tr="Maksimum Hijyen" data-en="Maximum Hygiene" data-ar="أقصى درجات النظافة">Maksimum Hijyen</h4>
-                                    <p style="font-size:0.9rem; margin:0;" data-tr="Sterilizasyon standartlarına tam uyum." data-en="Full compliance with sterilization." data-ar="الامتثال الكامل لمعايير التعقيم.">Sterilizasyon standartlarına tam uyum.</p>
-                                </div>
+            <div class="container about-grid">
+                <div class="about-content gs-reveal">
+                    <span class="section-subtitle" data-tr="HAKKIMIZDA" data-en="ABOUT US" data-ar="معلومات عنا">HAKKIMIZDA</span>
+                    <h2 class="mb-3" data-tr="Güzelliğiniz İçin Kusursuz Dokunuşlar" data-en="Flawless Touches for Your Beauty" data-ar="لمسات خالية من العيوب لجمالك">Güzelliğiniz İçin Kusursuz Dokunuşlar</h2>
+                    <p class="mb-4" data-tr="Pelin Özdemir Beauty Club olarak, estetik ve sağlığı ön planda tutarak sizlere en iyi hizmeti sunmayı amaçlıyoruz. Deneyimli kadromuzla, steril ortamlarda, dünyaca ünlü markaların ürünlerini kullanarak güzelliğinizi ortaya çıkarıyoruz." data-en="As Pelin Özdemir Beauty Club, we aim to provide you with the best service by prioritizing aesthetics and health. With our experienced staff, we reveal your beauty in sterile environments using products of world-famous brands." data-ar="بصفتنا نادي بيلين أوزدمير للتجميل، نهدف إلى تزويدك بأفضل خدمة من خلال إعطاء الأولوية للجماليات والصحة. مع طاقمنا ذو الخبرة، نكشف عن جمالك في بيئات معقمة باستخدام منتجات من ماركات عالمية شهيرة.">Pelin Özdemir Beauty Club olarak, estetik ve sağlığı ön planda tutarak sizlere en iyi hizmeti sunmayı amaçlıyoruz. Deneyimli kadromuzla, steril ortamlarda, dünyaca ünlü markaların ürünlerini kullanarak güzelliğinizi ortaya çıkarıyoruz.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor"/><path d="M12 8V12L15 15" stroke="currentColor" stroke-linecap="round"/></svg>
                             </div>
-                            <div class="feature-item">
-                                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                                <div>
-                                    <h4 data-tr="Uzman Kadro" data-en="Expert Team" data-ar="فريق خبير">Uzman Kadro</h4>
-                                    <p style="font-size:0.9rem; margin:0;" data-tr="Alanında deneyimli ve eğitimli uzmanlar." data-en="Experienced and trained experts." data-ar="خبراء مدربون وذوو خبرة.">Alanında deneyimli ve eğitimli uzmanlar.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
-                                <div>
-                                    <h4 data-tr="Premium Ürünler" data-en="Premium Products" data-ar="منتجات متميزة">Premium Ürünler</h4>
-                                    <p style="font-size:0.9rem; margin:0;" data-tr="Dünyaca ünlü, kaliteli kozmetik markaları." data-en="World-famous, quality cosmetic brands." data-ar="ماركات مستحضرات تجميل عالمية وعالية الجودة.">Dünyaca ünlü, kaliteli kozmetik markaları.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div>
-                                <div>
-                                    <h4 data-tr="%100 Memnuniyet" data-en="100% Satisfaction" data-ar="100٪ رضا">100% Memnuniyet</h4>
-                                    <p style="font-size:0.9rem; margin:0;" data-tr="Güleryüzlü hizmet ve garantili sonuçlar." data-en="Friendly service and guaranteed results." data-ar="خدمة ودية ونتائج مضمونة.">Güleryüzlü hizmet ve garantili sonuçlar.</p>
-                                </div>
+                            <div>
+                                <h5 data-tr="Üstün Hijyen" data-en="Superior Hygiene" data-ar="نظافة فائقة">Üstün Hijyen</h5>
+                                <p data-tr="Tek kullanımlık malzemeler ve medikal sterilizasyon." data-en="Disposable materials and medical sterilization." data-ar="مواد يمكن التخلص منها وتعقيم طبي.">Tek kullanımlık malzemeler ve medikal sterilizasyon.</p>
                             </div>
                         </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" stroke-linecap="round"/><path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-linecap="round"/><path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-linecap="round"/><path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-linecap="round"/></svg>
+                            </div>
+                            <div>
+                                <h5 data-tr="Uzman Kadro" data-en="Expert Staff" data-ar="طاقم خبراء">Uzman Kadro</h5>
+                                <p data-tr="Sertifikalı ve deneyimli güzellik uzmanları." data-en="Certified and experienced beauty experts." data-ar="خبراء تجميل معتمدون وذوو خبرة.">Sertifikalı ve deneyimli güzellik uzmanları.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h5 data-tr="Premium Ürünler" data-en="Premium Products" data-ar="منتجات متميزة">Premium Ürünler</h5>
+                                <p data-tr="Dünyaca kabul görmüş, kaliteli kozmetik markaları." data-en="Globally recognized, high-quality cosmetic brands." data-ar="علامات تجارية لمستحضرات التجميل عالية الجودة معترف بها عالميًا.">Dünyaca kabul görmüş, kaliteli kozmetik markaları.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h5 data-tr="%100 Memnuniyet" data-en="100% Satisfaction" data-ar="100٪ رضا">Memnuniyet</h5>
+                                <p data-tr="Kişiye özel analizlerle garantili sonuçlar." data-en="Guaranteed results with personalized analysis." data-ar="نتائج مضمونة مع تحليل شخصي.">Kişiye özel analizlerle garantili sonuçlar.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="about-img gs-reveal">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1470&auto=format&fit=crop" alt="Güzellik Salonu Ankara">
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="hizmetler">
+        <section id="hizmetler" class="services">
             <div class="container">
-                <div class="section-header gs-reveal">
-                    <p data-tr="Neler Yapıyoruz?" data-en="What We Do?" data-ar="ماذا نفعل؟">Neler Yapıyoruz?</p>
-                    <h2 data-tr="Premium Hizmetlerimiz" data-en="Our Premium Services" data-ar="خدماتنا المتميزة">Premium Hizmetlerimiz</h2>
+                <div class="text-center gs-reveal">
+                    <span class="section-subtitle" data-tr="HİZMETLERİMİZ" data-en="OUR SERVICES" data-ar="خدماتنا">HİZMETLERİMİZ</span>
+                    <h2 data-tr="Size Özel Premium Çözümler" data-en="Premium Solutions Just for You" data-ar="حلول متميزة خصيصا لك">Size Özel Premium Çözümler</h2>
                 </div>
-                <div class="services-grid">
+                
+                <div class="services-grid gs-reveal">
                     <!-- Service 1 -->
-                    <div class="service-card gs-reveal">
-                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
                         <h3 data-tr="Protez Tırnak" data-en="Prosthetic Nails" data-ar="أظافر صناعية">Protez Tırnak</h3>
-                        <p data-tr="Kusursuz, dayanıklı ve estetik tırnak tasarımlarıyla ellerinize zarafet katın." data-en="Add elegance to your hands with flawless, durable nail designs." data-ar="أضف الأناقة إلى يديك بتصميمات أظافر خالية من العيوب ومتينة.">Kusursuz, dayanıklı ve estetik tırnak tasarımlarıyla ellerinize zarafet katın.</p>
+                        <p data-tr="Estetik ve kalıcı çözümlerle ellerinize zarafet katın. İstenilen form ve uzunlukta kusursuz tırnaklar." data-en="Add elegance to your hands with aesthetic and permanent solutions. Flawless nails in desired form and length." data-ar="أضف الأناقة ليديك مع حلول جمالية ودائمة. أظافر خالية من العيوب بالشكل والطول المطلوبين.">Estetik ve kalıcı çözümlerle ellerinize zarafet katın. İstenilen form ve uzunlukta kusursuz tırnaklar.</p>
                     </div>
                     <!-- Service 2 -->
-                    <div class="service-card gs-reveal">
-                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
                         <h3 data-tr="Kirpik Lifting" data-en="Lash Lifting" data-ar="رفع الرموش">Kirpik Lifting</h3>
-                        <p data-tr="Doğal kirpiklerinizi kıvırarak daha uzun ve hacimli bir görünüm elde edin." data-en="Get a longer and voluminous look by curling your natural lashes." data-ar="احصلي على مظهر أطول وكثافة عن طريق تجعيد رموشك الطبيعية.">Doğal kirpiklerinizi kıvırarak daha uzun ve hacimli bir görünüm elde edin.</p>
+                        <p data-tr="Kendi kirpiklerinizi kökten uca kıvırarak daha uzun ve hacimli görünmesini sağlayan doğal işlem." data-en="A natural process that curls your own lashes from root to tip, making them look longer and more voluminous." data-ar="عملية طبيعية تعمل على تجعيد رموشك من الجذور إلى الأطراف، مما يجعلها تبدو أطول وأكثر كثافة.">Kendi kirpiklerinizi kökten uca kıvırarak daha uzun ve hacimli görünmesini sağlayan doğal işlem.</p>
                     </div>
                     <!-- Service 3 -->
-                    <div class="service-card gs-reveal">
-                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
                         <h3 data-tr="Lazer Epilasyon" data-en="Laser Epilation" data-ar="إزالة الشعر بالليزر">Lazer Epilasyon</h3>
-                        <p data-tr="Son teknoloji cihazlarımızla istenmeyen tüylerden kalıcı ve acısız kurtulun." data-en="Get rid of unwanted hair permanently and painlessly with our latest technology." data-ar="تخلصي من الشعر غير المرغوب فيه بشكل دائم وبدون ألم بأحدث التقنيات.">Son teknoloji cihazlarımızla istenmeyen tüylerden kalıcı ve acısız kurtulun.</p>
+                        <p data-tr="En son teknoloji cihazlarımızla acısız, güvenilir ve kalıcı pürüzsüzlüğe kavuşun." data-en="Achieve painless, reliable and permanent smoothness with our state-of-the-art devices." data-ar="احصل على نعومة خالية من الألم وموثوقة ودائمة مع أحدث أجهزتنا.">En son teknoloji cihazlarımızla acısız, güvenilir ve kalıcı pürüzsüzlüğe kavuşun.</p>
                     </div>
                     <!-- Service 4 -->
-                    <div class="service-card gs-reveal">
-                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-                        <h3 data-tr="Cilt Bakımı" data-en="Skin Care" data-ar="العناية بالبشرة">Cilt Bakımı</h3>
-                        <p data-tr="Cildinizin ihtiyacına özel profesyonel bakımlarla ışıltınızı geri kazanın." data-en="Regain your glow with professional care tailored to your skin's needs." data-ar="استعيدي توهجك بعناية احترافية مصممة لاحتياجات بشرتك.">Cildinizin ihtiyacına özel profesyonel bakımlarla ışıltınızı geri kazanın.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+                        </div>
+                        <h3 data-tr="Saç Boyama" data-en="Hair Coloring" data-ar="تلوين الشعر">Saç Boyama</h3>
+                        <p data-tr="Yüz hatlarınıza ve teninize en uygun renk analizleriyle saçlarınıza yeni bir soluk getirin." data-en="Bring a new breath to your hair with color analysis that best suits your facial features and skin." data-ar="أضف نفسًا جديدًا لشعرك من خلال تحليل الألوان الذي يناسب ملامح وجهك وبشرتك.">Yüz hatlarınıza ve teninize en uygun renk analizleriyle saçlarınıza yeni bir soluk getirin.</p>
                     </div>
                     <!-- Service 5 -->
-                    <div class="service-card gs-reveal">
-                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/></svg></div>
-                        <h3 data-tr="Kalıcı Oje" data-en="Permanent Polish" data-ar="طلاء أظافر دائم">Kalıcı Oje</h3>
-                        <p data-tr="Haftalarca ilk günkü parlaklığını koruyan, soyulmayan oje uygulamaları." data-en="Polish applications that keep their shine for weeks without peeling." data-ar="تطبيقات طلاء تحافظ على لمعانها لأسابيع دون تقشير.">Haftalarca ilk günkü parlaklığını koruyan, soyulmayan oje uygulamaları.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"/><path d="M9 9.5C9 10.3284 8.32843 11 7.5 11C6.67157 11 6 10.3284 6 9.5C6 8.67157 6.67157 8 7.5 8C8.32843 8 9 8.67157 9 9.5Z"/><path d="M18 9.5C18 10.3284 17.3284 11 16.5 11C15.6716 11 15 10.3284 15 9.5C15 8.67157 15.6716 8 16.5 8C17.3284 8 18 8.67157 18 9.5Z"/><path d="M12 17C14.2091 17 16 15.2091 16 13H8C8 15.2091 9.79086 17 12 17Z"/></svg>
+                        </div>
+                        <h3 data-tr="Cilt Bakımı" data-en="Skin Care" data-ar="العناية بالبشرة">Cilt Bakımı</h3>
+                        <p data-tr="Derinlemesine temizlik ve medikal bakımlarla cildinizin doğal ışıltısını geri kazandırın." data-en="Restore your skin's natural glow with deep cleaning and medical care." data-ar="استعيدي التوهج الطبيعي لبشرتك من خلال التنظيف العميق والرعاية الطبية.">Derinlemesine temizlik ve medikal bakımlarla cildinizin doğal ışıltısını geri kazandırın.</p>
                     </div>
                     <!-- Service 6 -->
-                    <div class="service-card gs-reveal">
-                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
-                        <h3 data-tr="Kaş Tasarımı" data-en="Eyebrow Design" data-ar="تصميم الحواجب">Kaş Tasarımı</h3>
-                        <p data-tr="Yüz hatlarınıza en uygun, doğal formda kaş alımı ve şekillendirme." data-en="Eyebrow shaping in a natural form best suited to your facial features." data-ar="تشكيل الحواجب بشكل طبيعي يناسب ملامح وجهك.">Yüz hatlarınıza en uygun, doğal formda kaş alımı ve şekillendirme.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section id="surec">
-            <div class="container">
-                <div class="section-header gs-reveal">
-                    <p data-tr="Nasıl Çalışıyoruz?" data-en="How We Work?" data-ar="كيف نعمل؟">Nasıl Çalışıyoruz?</p>
-                    <h2 data-tr="Güzellik Yolculuğunuz" data-en="Your Beauty Journey" data-ar="رحلة جمالك">Güzellik Yolculuğunuz</h2>
-                </div>
-                <div class="process-grid gs-reveal">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3 data-tr="Randevu" data-en="Appointment" data-ar="موعد">Randevu</h3>
-                        <p data-tr="İstediğiniz gün ve saat için kolayca randevunuzu oluşturun." data-en="Easily create your appointment for your desired day and time." data-ar="قم بإنشاء موعدك بسهولة في اليوم والوقت المفضلين لديك.">İstediğiniz gün ve saat için kolayca randevunuzu oluşturun.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3 data-tr="Danışmanlık" data-en="Consultation" data-ar="استشارة">Danışmanlık</h3>
-                        <p data-tr="Uzmanlarımızla beklentilerinizi ve size en uygun işlemleri belirleyin." data-en="Determine your expectations and the most suitable procedures with our experts." data-ar="حدد توقعاتك والإجراءات الأنسب مع خبرائنا.">Uzmanlarımızla beklentilerinizi ve size en uygun işlemleri belirleyin.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3 data-tr="İşlem" data-en="Procedure" data-ar="إجراء">İşlem</h3>
-                        <p data-tr="Hijyenik ortamda, premium ürünlerle işleminizi keyifle tamamlayalım." data-en="Let's complete your procedure with premium products in a hygienic environment." data-ar="دعنا نكمل الإجراء بمنتجات متميزة في بيئة صحية.">Hijyenik ortamda, premium ürünlerle işleminizi keyifle tamamlayalım.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h3 data-tr="Sonuç" data-en="Result" data-ar="نتيجة">Sonuç</h3>
-                        <p data-tr="Aynaya baktığınızda hissettiğiniz mutluluk ve yenilenmiş özgüven." data-en="The happiness and renewed self-confidence you feel when you look in the mirror." data-ar="السعادة والثقة بالنفس المتجددة التي تشعر بها عندما تنظر في المرآة.">Aynaya baktığınızda hissettiğiniz mutluluk ve yenilenmiş özgüven.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                        </div>
+                        <h3 data-tr="Manikür" data-en="Manicure" data-ar="مانيكير">Manikür</h3>
+                        <p data-tr="Temiz ve özenli manikür işlemleriyle elleriniz her zaman bakımlı ve şık görünsün." data-en="Let your hands always look well-groomed and elegant with clean and careful manicure procedures." data-ar="اجعل يديك تبدو دائمًا أنيقة ومهندمة مع إجراءات المانيكير النظيفة والدقيقة.">Temiz ve özenli manikür işlemleriyle elleriniz her zaman bakımlı ve şık görünsün.</p>
                     </div>
                 </div>
             </div>
@@ -493,90 +715,148 @@
         <!-- Gallery Section -->
         <section id="galeri">
             <div class="container">
-                <div class="section-header gs-reveal">
-                    <p data-tr="Çalışmalarımız" data-en="Our Works" data-ar="أعمالنا">Çalışmalarımız</p>
-                    <h2 data-tr="Güzellik Galerisi" data-en="Beauty Gallery" data-ar="معرض الجمال">Güzellik Galerisi</h2>
+                <div class="text-center gs-reveal mb-5">
+                    <span class="section-subtitle" data-tr="GALERİ" data-en="GALLERY" data-ar="صالة عرض">GALERİ</span>
+                    <h2 data-tr="Güzelliğin Yansımaları" data-en="Reflections of Beauty" data-ar="انعكاسات الجمال">Güzelliğin Yansımaları</h2>
                 </div>
-                
+
                 <div class="gallery-filters gs-reveal">
                     <button class="filter-btn active" data-filter="all" data-tr="Tümü" data-en="All" data-ar="الجميع">Tümü</button>
+                    <button class="filter-btn" data-filter="sac" data-tr="Saç" data-en="Hair" data-ar="شعر">Saç</button>
                     <button class="filter-btn" data-filter="tirnak" data-tr="Tırnak" data-en="Nails" data-ar="أظافر">Tırnak</button>
-                    <button class="filter-btn" data-filter="kirpik" data-tr="Kirpik & Kaş" data-en="Lashes & Brows" data-ar="رموش وحواجب">Kirpik & Kaş</button>
-                    <button class="filter-btn" data-filter="cilt" data-tr="Cilt Bakımı" data-en="Skin Care" data-ar="العناية بالبشرة">Cilt Bakımı</button>
+                    <button class="filter-btn" data-filter="cilt" data-tr="Cilt" data-en="Skin" data-ar="بشرة">Cilt</button>
                     <button class="filter-btn" data-filter="salon" data-tr="Salonumuz" data-en="Our Salon" data-ar="صالوننا">Salonumuz</button>
                 </div>
 
                 <div class="gallery-grid gs-reveal">
-                    <div class="gallery-item" data-category="tirnak">
-                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop" alt="Protez Tırnak Uygulaması">
+                    <div class="gallery-item sac">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop" alt="Saç Boyama" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Saç Tasarımı" data-en="Hair Design" data-ar="تصميم الشعر">Saç Tasarımı</h4></div>
                     </div>
-                    <div class="gallery-item" data-category="kirpik">
-                        <img src="https://images.unsplash.com/photo-1587775535313-080c51b75b9f?q=80&w=800&auto=format&fit=crop" alt="Kirpik Lifting">
+                    <div class="gallery-item tirnak">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Protez Tırnak" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Protez Tırnak" data-en="Prosthetic Nails" data-ar="أظافر صناعية">Protez Tırnak</h4></div>
                     </div>
-                    <div class="gallery-item" data-category="cilt">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop" alt="Cilt Bakımı">
+                    <div class="gallery-item cilt">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" alt="Cilt Bakımı" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Cilt Bakımı" data-en="Skin Care" data-ar="العناية بالبشرة">Cilt Bakımı</h4></div>
                     </div>
-                    <div class="gallery-item" data-category="salon">
-                        <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800&auto=format&fit=crop" alt="Salon İçi">
+                    <div class="gallery-item salon">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop" alt="Salonumuz" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Salonumuz" data-en="Our Salon" data-ar="صالوننا">Salonumuz</h4></div>
                     </div>
-                    <div class="gallery-item" data-category="tirnak">
-                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=800&auto=format&fit=crop" alt="Kalıcı Oje">
+                    <div class="gallery-item tirnak">
+                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=800&auto=format&fit=crop" alt="Manikür" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Kalıcı Oje" data-en="Permanent Polish" data-ar="طلاء دائم">Kalıcı Oje</h4></div>
                     </div>
-                    <div class="gallery-item" data-category="salon">
-                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop" alt="Salon Detay">
+                    <div class="gallery-item sac">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bfc17484d20?q=80&w=800&auto=format&fit=crop" alt="Saç Bakım" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Saç Bakımı" data-en="Hair Care" data-ar="العناية بالشعر">Saç Bakımı</h4></div>
+                    </div>
+                    <div class="gallery-item cilt">
+                        <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=800&auto=format&fit=crop" alt="Lifting" loading="lazy">
+                        <div class="gallery-overlay"><h4 data-tr="Kirpik Lifting" data-en="Lash Lifting" data-ar="رفع الرموش">Kirpik Lifting</h4></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="referanslar" style="background-color: #fff;">
+        <!-- Process Section -->
+        <section id="surec" class="process">
             <div class="container">
-                <div class="section-header gs-reveal">
-                    <p data-tr="Müşteri Yorumları" data-en="Customer Reviews" data-ar="تعليقات العملاء">Müşteri Yorumları</p>
-                    <h2 data-tr="Sizden Gelenler" data-en="What You Say" data-ar="ماذا تقولون">Sizden Gelenler</h2>
+                <div class="text-center gs-reveal">
+                    <span class="section-subtitle" style="color:var(--color-accent);" data-tr="İŞLEYİŞ" data-en="PROCESS" data-ar="عملية">İŞLEYİŞ</span>
+                    <h2 data-tr="Güzellik Yolculuğunuz" data-en="Your Beauty Journey" data-ar="رحلة جمالك">Güzellik Yolculuğunuz</h2>
                 </div>
                 
+                <div class="process-grid gs-reveal">
+                    <div class="process-step">
+                        <div class="step-num">1</div>
+                        <h3 data-tr="Randevu" data-en="Appointment" data-ar="موعد">Randevu</h3>
+                        <p data-tr="Size en uygun tarih ve saat için hızlıca randevu oluşturun." data-en="Quickly create an appointment for the most suitable date and time." data-ar="قم بإنشاء موعد بسرعة للتاريخ والوقت الأنسب.">Size en uygun tarih ve saat için hızlıca randevu oluşturun.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">2</div>
+                        <h3 data-tr="Danışmanlık" data-en="Consultation" data-ar="استشارة">Danışmanlık</h3>
+                        <p data-tr="Uzmanlarımızla ihtiyaçlarınızı belirleyin ve size özel planı yapalım." data-en="Determine your needs with our experts and let's make a personalized plan." data-ar="حدد احتياجاتك مع خبرائنا ودعنا نضع خطة مخصصة.">Uzmanlarımızla ihtiyaçlarınızı belirleyin ve size özel planı yapalım.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">3</div>
+                        <h3 data-tr="İşlem" data-en="Procedure" data-ar="إجراء">İşlem</h3>
+                        <p data-tr="Premium ürünler ve hijyenik ortamda işleminizi gerçekleştirelim." data-en="Let's perform your procedure with premium products in a hygienic environment." data-ar="دعونا نقوم بإجراءك باستخدام منتجات متميزة في بيئة صحية.">Premium ürünler ve hijyenik ortamda işleminizi gerçekleştirelim.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">4</div>
+                        <h3 data-tr="Sonuç" data-en="Result" data-ar="نتيجة">Sonuç</h3>
+                        <p data-tr="Aynaya baktığınızda kusursuz değişimin keyfini çıkarın." data-en="Enjoy the flawless change when you look in the mirror." data-ar="استمتع بالتغيير الخالي من العيوب عندما تنظر في المرآة.">Aynaya baktığınızda kusursuz değişimin keyfini çıkarın.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="referanslar">
+            <div class="container">
+                <div class="text-center gs-reveal">
+                    <span class="section-subtitle" data-tr="MUTLU DANIŞANLAR" data-en="HAPPY CLIENTS" data-ar="عملاء سعداء">MUTLU DANIŞANLAR</span>
+                    <h2 data-tr="Gerçek Google Yorumları" data-en="Real Google Reviews" data-ar="مراجعات جوجل الحقيقية">Gerçek Google Yorumları</h2>
+                </div>
+
                 <div class="testimonials-grid gs-reveal">
-                    <!-- Review 1 -->
-                    <div class="testimonial-card">
+                    <div class="review-card">
                         <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <div class="stars">
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        </div>
-                        <p>"Kal alımı protez tırnak ve kirpik lifting işlemleri için gittim gerçekten anne kız çok yetenekli ve çok tatlı insanlar kaşlarım özellikle çok sorunluydu ilk alımda bile oldukça toparladı ikisininde ellerine kollarına sağlık gerçekten ❣️❣️"</p>
-                        <div class="client-name">Ayşe Köksal</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Kal alımı protez tırnak ve kirpik lifting işlemleri için gittim gerçekten anne kız çok yetenekli ve çok tatlı insanlar kaşlarım özellikle çok sorunluydu ilk alımda bile oldukça toparladı ikisininde ellerine kollarına sağlık gerçekten ❣️❣️"</p>
+                        <div class="reviewer">— Ayşe Köksal</div>
                     </div>
-                    <!-- Review 2 -->
-                    <div class="testimonial-card">
+                    <div class="review-card">
                         <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <div class="stars">
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        </div>
-                        <p>"Gerçekten iyi ki gelmişim dediğim bir yer oldu. Hem çok güler yüzlüler hem de inanılmaz ilgililer. İşlem boyunca kendimi çok rahat hissettim, her şey tertemiz ve çok özenliydi. Sonuçtan da aşırı memnun kaldım 💕"</p>
-                        <div class="client-name">Sıla Demirbaş</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Çok güler yüzlüler hizmetlerinden çok memnunum 1 buçuk yıldır tırnaklarıma kalıcı ojeye geliyorum Pelin hanıma çok memnunum,ayrıca lazerede geliyorum Aysun hanıma hizmet kalite çok memnun kaldım teşekkür ederim 🙏"</p>
+                        <div class="reviewer">— Serap Güler</div>
                     </div>
-                    <!-- Review 3 -->
-                    <div class="testimonial-card">
+                    <div class="review-card">
                         <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                        <div class="stars">
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                        </div>
-                        <p>"Kaş alımı ve manikür için gittim çok memnun kaldım. Hijyen, ilgi ve profesyonellik üst düzeydi. Kaşlarım doğal formunda alındı, manikürüm ise çok temiz ve özenliydi. Gönül rahatlığıyla tavsiye ederim."</p>
-                        <div class="client-name">Nihal Öztaş</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Kaş alımı ve manikür için gittim çok memnun kaldım. Hijyen, ilgi ve profesyonellik üst düzeydi. Kaşlarım doğal formunda alındı, manikürüm ise çok temiz ve özenliydi. Gönül rahatlığıyla tavsiye ederim."</p>
+                        <div class="reviewer">— Nihal Öztaş</div>
                     </div>
+                    <div class="review-card">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Gerçekten iyi ki gelmişim dediğim bir yer oldu. Hem çok güler yüzlüler hem de inanılmaz ilgililer. İşlem boyunca kendimi çok rahat hissettim, her şey tertemiz ve çok özenliydi. Sonuçtan da aşırı memnun kaldım 💕 Bundan sonra tek adresim burası..."</p>
+                        <div class="reviewer">— Sıla Demirbaş</div>
+                    </div>
+                    <div class="review-card">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Çok uzun zamandır hem kaş alımı hem de lazer, kalıcı oje için geliyorum inanılmaz memnunum çok tatlı insanlar çevremde herkese öneriyorum"</p>
+                        <div class="reviewer">— Aysıla</div>
+                    </div>
+                    <div class="review-card">
+                        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Kısa Bi Sürede İstediğimden Daha Güzel Bi Sonuç İçin Teşekkürler Pelin Özdemir Beauty Club 💐☺️"</p>
+                        <div class="reviewer">— Burhan Tümer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Band -->
+        <section class="cta-band">
+            <div class="container gs-reveal">
+                <h2 data-tr="Güzelliğinizi Ertelemeyin" data-en="Don't Postpone Your Beauty" data-ar="لا تؤجل جمالك">Güzelliğinizi Ertelemeyin</h2>
+                <p data-tr="Hemen bizi arayın veya WhatsApp'tan yazın, size en uygun zamanı planlayalım." data-en="Call us now or write on WhatsApp, let's plan the best time for you." data-ar="اتصل بنا الآن أو اكتب على واتساب، دعنا نخطط لأفضل وقت لك.">Hemen bizi arayın veya WhatsApp'tan yazın, size en uygun zamanı planlayalım.</p>
+                <div class="cta-btns">
+                    <a href="tel:+905075024602" class="btn btn-accent">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span data-tr="Hemen Ara" data-en="Call Now" data-ar="اتصل الان">Hemen Ara</span>
+                    </a>
+                    <a href="https://wa.me/905075024602?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.614-.087-.112-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.567-10.563 5.824 0 10.564 4.74 10.564 10.564 0 5.827-4.739 10.563-10.564 10.563z"/></svg>
+                        <span data-tr="WhatsApp" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -584,288 +864,293 @@
         <!-- Contact Section -->
         <section id="iletisim">
             <div class="container">
-                <div class="section-header gs-reveal">
-                    <p data-tr="Bize Ulaşın" data-en="Contact Us" data-ar="اتصل بنا">Bize Ulaşın</p>
-                    <h2 data-tr="Randevu & İletişim" data-en="Appointment & Contact" data-ar="الموعد والاتصال">Randevu & İletişim</h2>
+                <div class="text-center gs-reveal mb-5">
+                    <span class="section-subtitle" data-tr="İLETİŞİM" data-en="CONTACT" data-ar="اتصال">İLETİŞİM</span>
+                    <h2 data-tr="Bizimle İletişime Geçin" data-en="Get in Touch with Us" data-ar="تواصل معنا">Bizimle İletişime Geçin</h2>
                 </div>
-                
-                <div class="contact-wrap gs-reveal">
-                    <div class="contact-info">
-                        <h3 data-tr="İletişim Bilgileri" data-en="Contact Information" data-ar="معلومات الاتصال">İletişim Bilgileri</h3>
-                        <p style="margin-bottom: 2rem;" data-tr="Sorularınız ve randevu talepleriniz için bize ulaşabilirsiniz." data-en="You can contact us for your questions and appointment requests." data-ar="يمكنك الاتصال بنا لطرح أسئلتك وطلبات المواعيد.">Sorularınız ve randevu talepleriniz için bize ulaşabilirsiniz.</p>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-                            <div>
-                                <h4 data-tr="Adres" data-en="Address" data-ar="عنوان">Adres</h4>
-                                <p style="margin:0;">Effect Residence, Mehmet Akif Ersoy, 354/1. Sk. No:2 Kat No:145, 06200 Yenimahalle/Ankara</p>
+
+                <div class="contact-grid">
+                    <div class="contact-info gs-reveal">
+                        <div class="contact-info-card">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="info-content">
+                                    <h5 data-tr="Adres" data-en="Address" data-ar="عنوان">Adres</h5>
+                                    <p>Effect Residence, Mehmet Akif Ersoy, 354/1. Sk. No:2 Kat No:145, 06200 Yenimahalle/Ankara</p>
+                                    <a href="https://www.google.com/maps/dir//39.9709422,32.7763372" target="_blank" class="btn btn-outline-dark mt-3" style="padding: 8px 16px; font-size: 0.9rem;">
+                                        📍 <span data-tr="Yol Tarifi Al" data-en="Get Directions" data-ar="احصل على الاتجاهات">Yol Tarifi Al</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div class="info-content">
+                                    <h5 data-tr="Telefon" data-en="Phone" data-ar="هاتف">Telefon</h5>
+                                    <a href="tel:+905075024602">+90 507 502 46 02</a>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-                            <div>
-                                <h4 data-tr="Telefon & WhatsApp" data-en="Phone & WhatsApp" data-ar="الهاتف وواتساب">Telefon & WhatsApp</h4>
-                                <a href="tel:+905075024602" style="font-size:1.1rem; font-weight:500;">+90 507 502 46 02</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-                            <div>
-                                <h4 data-tr="Çalışma Saatleri" data-en="Working Hours" data-ar="ساعات العمل">Çalışma Saatleri</h4>
-                                <p style="margin:0;" data-tr="Pzt - Cts: 09:00 - 19:00<br>Pazar: Kapalı" data-en="Mon - Sat: 09:00 - 19:00<br>Sunday: Closed" data-ar="الاثنين - السبت: 09:00 - 19:00<br>الأحد: مغلق">Pzt - Cts: 09:00 - 19:00<br>Pazar: Kapalı</p>
-                            </div>
+
+                        <div class="contact-info-card">
+                            <h5 class="mb-3" data-tr="Çalışma Saatleri" data-en="Working Hours" data-ar="ساعات العمل">Çalışma Saatleri</h5>
+                            <ul class="hours-list">
+                                <li><span data-tr="Pazartesi - Cumartesi" data-en="Monday - Saturday" data-ar="الاثنين - السبت">Pazartesi - Cumartesi</span> <span>09:00 - 19:00</span></li>
+                                <li><span data-tr="Pazar" data-en="Sunday" data-ar="الأحد">Pazar</span> <span data-tr="Kapalı" data-en="Closed" data-ar="مغلق">Kapalı</span></li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <div>
-                        <h3 style="margin-bottom: 2rem;" data-tr="Hızlı Randevu Al" data-en="Book Fast Appointment" data-ar="احجز موعداً سريعاً">Hızlı Randevu Al</h3>
-                        <form id="waForm" class="contact-form">
+
+                    <div class="contact-form gs-reveal">
+                        <h4 class="mb-4" data-tr="Hızlı Randevu Formu" data-en="Quick Appointment Form" data-ar="نموذج موعد سريع">Hızlı Randevu Formu</h4>
+                        <form id="waForm">
                             <div class="form-group">
-                                <label for="name" class="sr-only" style="display:none;">Ad Soyad</label>
-                                <input type="text" id="name" class="form-control" required placeholder="Adınız Soyadınız" data-tr="Adınız Soyadınız" data-en="Full Name" data-ar="الاسم الكامل">
+                                <label class="form-label" data-tr="Adınız Soyadınız" data-en="Full Name" data-ar="الاسم الكامل">Adınız Soyadınız</label>
+                                <input type="text" id="waName" class="form-control" required placeholder="Adınız Soyadınız">
                             </div>
                             <div class="form-group">
-                                <label for="service" class="sr-only" style="display:none;">Hizmet</label>
-                                <select id="service" class="form-control" required>
-                                    <option value="" disabled selected data-tr="İlgilendiğiniz Hizmet" data-en="Service of Interest" data-ar="الخدمة المطلوبة">İlgilendiğiniz Hizmet</option>
+                                <label class="form-label" data-tr="İlgilendiğiniz Hizmet" data-en="Service of Interest" data-ar="الخدمة المطلوبة">İlgilendiğiniz Hizmet</label>
+                                <select id="waService" class="form-control" required>
                                     <option value="Protez Tırnak">Protez Tırnak</option>
                                     <option value="Kirpik Lifting">Kirpik Lifting</option>
                                     <option value="Lazer Epilasyon">Lazer Epilasyon</option>
+                                    <option value="Saç Boyama">Saç Boyama</option>
                                     <option value="Cilt Bakımı">Cilt Bakımı</option>
+                                    <option value="Manikür">Manikür</option>
                                     <option value="Diğer">Diğer</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="message" class="sr-only" style="display:none;">Mesaj</label>
-                                <textarea id="message" class="form-control" required placeholder="Mesajınız veya tercih ettiğiniz tarih/saat" data-tr="Mesajınız veya tercih ettiğiniz tarih/saat" data-en="Your message or preferred date/time" data-ar="رسالتك أو التاريخ / الوقت المفضل"></textarea>
+                                <label class="form-label" data-tr="Mesajınız" data-en="Your Message" data-ar="رسالتك">Mesajınız</label>
+                                <textarea id="waMessage" class="form-control" placeholder="Eklemek istedikleriniz..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width:100%;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                                <span data-tr="WhatsApp ile Gönder" data-en="Send via WhatsApp" data-ar="أرسل عبر واتساب">WhatsApp ile Gönder</span>
+                            <button type="submit" class="btn btn-primary w-100" style="width:100%;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.614-.087-.112-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z"/></svg>
+                                <span data-tr="WhatsApp'tan Gönder" data-en="Send via WhatsApp" data-ar="أرسل عبر واتساب">WhatsApp'tan Gönder</span>
                             </button>
                         </form>
                     </div>
                 </div>
 
                 <div class="map-container gs-reveal">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.498260408422!2d32.77376227653205!3d39.97094628238122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d349d1a0e1e971%3A0x29dcc97f0a182519!2sPelin%20%C3%96zdemir%20Beauty%20Club%20-%20Pelay%20G%C3%BCzellik%20Salonu!5e0!3m2!1str!2str!4v1715000000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps Location"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=39.9709422,32.7763372&z=15&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps Konum"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <a href="#hero" class="footer-logo">Pelay <span>Beauty</span></a>
-            <p data-tr="Güzelliğinize değer katan dokunuşlar." data-en="Touches that add value to your beauty." data-ar="لمسات تضيف قيمة لجمالك.">Güzelliğinize değer katan dokunuşlar.</p>
-            
-            <div class="footer-links">
-                <a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us" data-ar="معلومات عنا">Hakkımızda</a>
-                <a href="#hizmetler" data-tr="Hizmetler" data-en="Services" data-ar="خدمات">Hizmetler</a>
-                <a href="#galeri" data-tr="Galeri" data-en="Gallery" data-ar="صالة عرض">Galeri</a>
-                <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصل بنا">İletişim</a>
+            <div class="footer-grid">
+                <div>
+                    <a href="#hero" class="logo footer-logo">
+                        Pelin Özdemir 
+                        <span style="color:var(--color-accent);" data-tr="BEAUTY CLUB" data-en="BEAUTY CLUB" data-ar="نادي التجميل">BEAUTY CLUB</span>
+                    </a>
+                    <p data-tr="Ankara Yenimahalle'de premium güzellik ve kişisel bakım deneyimi. Uzman kadro, kaliteli ürünler ve yüksek hijyen standartları." data-en="Premium beauty and personal care experience in Ankara Yenimahalle. Expert staff, quality products and high hygiene standards." data-ar="تجربة متميزة للجمال والعناية الشخصية في أنقرة يني محلة. طاقم خبراء، منتجات عالية الجودة ومعايير نظافة عالية.">Ankara Yenimahalle'de premium güzellik ve kişisel bakım deneyimi. Uzman kadro, kaliteli ürünler ve yüksek hijyen standartları.</p>
+                </div>
+                <div>
+                    <h4 data-tr="Hızlı Menü" data-en="Quick Menu" data-ar="قائمة سريعة">Hızlı Menü</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us" data-ar="معلومات عنا">Hakkımızda</a></li>
+                        <li><a href="#hizmetler" data-tr="Hizmetler" data-en="Services" data-ar="خدمات">Hizmetler</a></li>
+                        <li><a href="#galeri" data-tr="Galeri" data-en="Gallery" data-ar="صالة عرض">Galeri</a></li>
+                        <li><a href="#referanslar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+905075024602">+90 507 502 46 02</a></li>
+                        <li><a href="https://wa.me/905075024602" target="_blank">WhatsApp Destek</a></li>
+                        <li>Yenimahalle / Ankara</li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="copyright">
-                &copy; 2026 Pelin Özdemir Beauty Club. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved." data-ar="كل الحقوق محفوظة.">Tüm hakları saklıdır.</span>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Pelin Özdemir Beauty Club. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved." data-ar="كل الحقوق محفوظة.">Tüm hakları saklıdır.</span></div>
+                <div>Powered by <a href="https://galzura.com" target="_blank" rel="noopener">Galzura Digital</a></div>
             </div>
         </div>
     </footer>
 
-    <!-- CDNs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
-
-    <!-- Custom Logic -->
-    <script defer>
-        document.addEventListener("DOMContentLoaded", () => {
-            
-            // --- 1. LANGUAGE SWITCHER ---
-            const langBtns = document.querySelectorAll('.lang-btn');
-            const translatableElements = document.querySelectorAll('[data-tr]');
-            const placeholders = document.querySelectorAll('input[placeholder][data-tr], textarea[placeholder][data-tr]');
-            const options = document.querySelectorAll('option[data-tr]');
-            
-            let currentLang = localStorage.getItem('siteLang') || 'tr';
-
-            function switchLang(lang) {
-                currentLang = lang;
-                localStorage.setItem('siteLang', lang);
-                document.documentElement.lang = lang;
-                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-                langBtns.forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.lang === lang);
-                });
-
-                translatableElements.forEach(el => {
-                    if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && el.tagName !== 'OPTION') {
-                        if(el.dataset[lang]) el.innerHTML = el.dataset[lang];
-                    }
-                });
-
-                placeholders.forEach(el => {
-                    if(el.dataset[lang]) el.placeholder = el.dataset[lang];
-                });
-                
-                options.forEach(el => {
-                    if(el.dataset[lang]) el.textContent = el.dataset[lang];
-                });
-            }
-
-            langBtns.forEach(btn => {
-                btn.addEventListener('click', () => switchLang(btn.dataset.lang));
-            });
-            switchLang(currentLang); // Init
-
-            // --- 2. MOBILE MENU & HEADER ---
-            const header = document.getElementById('header');
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            const navItems = navLinks.querySelectorAll('a');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) header.classList.add('scrolled');
-                else header.classList.remove('scrolled');
-            });
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-
-            navItems.forEach(item => {
-                item.addEventListener('click', () => navLinks.classList.remove('active'));
-            });
-
-            // --- 3. SMOOTH SCROLL (No href="#") ---
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetEl = document.getElementById(targetId);
-                    if (targetEl) {
-                        targetEl.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-
-            // --- 4. COUNTERS (IntersectionObserver) ---
-            const counters = document.querySelectorAll('.counter');
-            const counterObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = parseFloat(entry.target.dataset.target);
-                        const isDecimal = entry.target.dataset.decimal === "true";
-                        const suffix = entry.target.dataset.suffix || "";
-                        let start = 0;
-                        const duration = 2000; // ms
-                        let startTime = null;
-
-                        function easeOutExpo(t) {
-                            return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-                        }
-
-                        function updateCounter(time) {
-                            if (!startTime) startTime = time;
-                            const progress = (time - startTime) / duration;
-                            
-                            if (progress < 1) {
-                                const current = target * easeOutExpo(progress);
-                                entry.target.innerText = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                entry.target.innerText = (isDecimal ? target.toFixed(1) : target) + suffix;
-                            }
-                        }
-                        requestAnimationFrame(updateCounter);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            counters.forEach(counter => counterObserver.observe(counter));
-
-            // --- 5. GALLERY FILTER ---
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    const filter = btn.dataset.filter;
-
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.dataset.category === filter) {
-                            item.classList.remove('hidden');
-                        } else {
-                            item.classList.add('hidden');
-                        }
-                    });
-                });
-            });
-
-            // --- 6. FORM TO WHATSAPP ---
-            const waForm = document.getElementById('waForm');
-            waForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const name = document.getElementById('name').value;
-                const service = document.getElementById('service').value;
-                const message = document.getElementById('message').value;
-                
-                const text = `Merhaba, ben ${name}. ${service} hizmetiniz hakkında bilgi almak veya randevu oluşturmak istiyorum. Mesajım: ${message}`;
-                const encodedText = encodeURIComponent(text);
-                const waUrl = `https://wa.me/905075024602?text=${encodedText}`;
-                
-                window.open(waUrl, '_blank');
-            });
-
-            // --- 7. LENIS & GSAP INTEGRATION ---
-            // Wait a tiny bit to ensure scripts are fully parsed if deferred
-            setTimeout(() => {
-                if (typeof Lenis !== 'undefined') {
-                    const lenis = new Lenis({ 
-                        duration: 1.2, 
-                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
-                    });
-                    
-                    function raf(time) { 
-                        lenis.raf(time); 
-                        requestAnimationFrame(raf); 
-                    }
-                    requestAnimationFrame(raf);
-                    
-                    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-                        document.documentElement.classList.add('gsap-ready');
-                        gsap.registerPlugin(ScrollTrigger);
-                        
-                        lenis.on('scroll', ScrollTrigger.update);
-                        gsap.ticker.add((time) => { lenis.raf(time * 1000); });
-                        gsap.ticker.lagSmoothing(0, 0);
-
-                        // Reveal Animations
-                        gsap.utils.toArray('.gs-reveal').forEach(el => {
-                            gsap.fromTo(el, 
-                                { opacity: 0, y: 40 }, 
-                                { 
-                                    opacity: 1, 
-                                    y: 0, 
-                                    duration: 0.8, 
-                                    ease: 'power2.out',
-                                    scrollTrigger: { 
-                                        trigger: el, 
-                                        start: 'top 85%', 
-                                        once: true 
-                                    }
-                                }
-                            );
-                        });
+    <script>
+        // Language Switcher
+        function switchLang(lang) {
+            document.querySelectorAll('[data-tr]').forEach(el => {
+                if(el.getAttribute(`data-${lang}`)) {
+                    if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = el.getAttribute(`data-${lang}`);
+                    } else {
+                        el.innerHTML = el.getAttribute(`data-${lang}`);
                     }
                 }
-            }, 100);
+            });
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Init Lang
+        const savedLang = localStorage.getItem('preferredLang') || 'tr';
+        if(savedLang !== 'tr') {
+            const btn = document.querySelector(`.lang-btn[onclick="switchLang('${savedLang}')"]`);
+            if(btn) btn.click();
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if(window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+
+        // Gallery Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                galleryItems.forEach(item => {
+                    if(filter === 'all' || item.classList.contains(filter)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Form to WhatsApp
+        document.getElementById('waForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('waName').value;
+            const service = document.getElementById('waService').value;
+            const msg = document.getElementById('waMessage').value;
+            
+            const text = `Merhaba, randevu almak istiyorum.%0A%0A*Ad Soyad:* ${name}%0A*İlgilendiğim Hizmet:* ${service}%0A*Mesaj:* ${msg}`;
+            window.open(`https://wa.me/905075024602?text=${text}`, '_blank');
+        });
+
+        // Smooth Scroll for Anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if(target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Counters (IntersectionObserver)
+        const counters = document.querySelectorAll('.counter');
+        const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseFloat(counter.getAttribute('data-target'));
+                    const suffix = counter.getAttribute('data-suffix') || '';
+                    const isDecimal = counter.getAttribute('data-decimal') === 'true';
+                    const duration = 2000;
+                    let start = null;
+
+                    const step = (timestamp) => {
+                        if (!start) start = timestamp;
+                        const progress = Math.min((timestamp - start) / duration, 1);
+                        const current = easeOutExpo(progress) * target;
+                        
+                        counter.innerText = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+                        
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => observer.observe(counter));
+
+        // GSAP & Lenis Init
+        window.addEventListener('load', () => {
+            if(typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                document.documentElement.classList.add('gsap-ready');
+                
+                gsap.registerPlugin(ScrollTrigger);
+                
+                // Reveal Animations
+                const revealElements = document.querySelectorAll('.gs-reveal');
+                revealElements.forEach(el => {
+                    gsap.to(el, {
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%",
+                            toggleActions: "play none none reverse"
+                        },
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power3.out"
+                    });
+                });
+
+                // Lenis Smooth Scroll
+                if(typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smoothWheel: true
+                    });
+
+                    function raf(time) {
+                        lenis.raf(time);
+                        requestAnimationFrame(raf);
+                    }
+                    requestAnimationFrame(raf);
+
+                    lenis.on('scroll', ScrollTrigger.update);
+                    gsap.ticker.add((time) => {
+                        lenis.raf(time * 1000);
+                    });
+                    gsap.ticker.lagSmoothing(0, 0);
+                }
+            }
         });
     </script>
 </body>
