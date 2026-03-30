@@ -3,1150 +3,1106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği | Sincan, Ankara</title>
-    
-    <!-- SEO & Meta -->
-    <meta name="description" content="Ankara Sincan'da 194+ mutlu hastasıyla hizmet veren Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli Diş Kliniği. Estetik, implant ve genel diş hekimliği.">
-    <meta property="og:title" content="Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği — Diş Hekimi | Ankara">
-    <meta property="og:description" content="Ankara Sincan'da 194+ mutlu hastasıyla hizmet veren güvenilir diş kliniğiniz.">
-    <meta property="og:url" content="https://www.kalelisariyerlident.com">
-    <link rel="canonical" href="https://www.kalelisariyerlident.com">
-    <meta name="theme-color" content="#1B3A5C">
+    <title>Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği | Ankara Sincan</title>
+    <meta name="description" content="Ankara Sincan'da Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli ile sıcak, kapsamlı ve güvenilir ağız ve diş sağlığı hizmeti. İmplant, ortodonti, estetik diş hekimliği.">
+    <meta property="og:title" content="Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği | Ankara">
+    <meta property="og:description" content="Ankara Sincan'da güvenilir diş kliniği. Gülüşünüzü uzman ellere emanet edin.">
+    <meta property="og:url" content="https://www.sincandis.com">
+    <link rel="canonical" href="https://www.sincandis.com">
+    <meta name="theme-color" content="#C5B464">
 
-    <!-- Fonts: Poppins (Heading) & Lato (Body - Inter is forbidden) -->
+    <!-- Prewitt Fonts: Playfair Display & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Dentist",
+      "name":"Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği",
+      "address":{"@type":"PostalAddress","streetAddress":"No:7/3 Apt, İstasyon, Polatlı 1. Cd., 06935 Sincan/Ankara, Türkiye","addressCountry":"TR"},
+      "telephone":"+90 507 303 94 34",
+      "url":"https://www.sincandis.com",
+      "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"194"},
+      "openingHours":"Mo-Sa 12:00-20:00",
+      "paymentAccepted":"Nakit, Kredi Karti, SGK, Taksit",
+      "geo":{"@type":"GeoCoordinates","latitude":39.9658141,"longitude":32.5859333},
+      "priceRange":"$$",
+      "medicalSpecialty":"Dentistry"
+    }
+    </script>
 
     <style>
-        /* ==========================================
-           VARIABLES & RESET
-           ========================================== */
+        /* ==========================================================================
+           CSS VARIABLES (PREWITT EXACT MATCH)
+           ========================================================================== */
         :root {
-            --color-primary: #1B3A5C;
-            --color-accent: #F5A623;
-            --color-bg: #F8F9FC;
-            --color-text: #2D3748;
-            --color-text-light: #718096;
+            --color-bg: #FFFFFF;
+            --color-btn: #C5B464;
+            --color-btn-text: #FFFFFF;
+            --color-dark: #22221F;
+            --color-olive: #6F6C5E;
+            --color-footer: #000000;
             --color-white: #FFFFFF;
             
-            --font-heading: 'Poppins', sans-serif;
-            --font-body: 'Lato', sans-serif; /* Inter Yasakli */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+
+            --shadow-multi: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04);
+            --shadow-hover: 0 2px 4px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.06), 0 16px 32px rgba(0,0,0,0.08), 0 32px 64px rgba(0,0,0,0.06);
             
-            --shadow-premium: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04);
-            --shadow-glow: 0 0 20px rgba(245, 166, 35, 0.4);
-            
-            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            --wa-link: 'https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum';
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* ==========================================================================
+           RESET & BASE
+           ========================================================================== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: auto !important; font-size: 16px; }
         body {
             font-family: var(--font-body);
+            color: var(--color-dark);
             background-color: var(--color-bg);
-            color: var(--color-text);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
-
-        /* Fluid Typography */
-        h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
-        h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 600; line-height: 1.2; }
-        h3 { font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; }
-        p { font-size: clamp(0.95rem, 1.2vw, 1.1rem); }
-
-        a { text-decoration: none; color: inherit; var(--transition-smooth); }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; }
-
-        .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: 0 auto;
+        button { cursor: pointer; border: none; background: none; font-family: inherit; }
+        
+        /* Typography - Fluid */
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 400; line-height: 1.2; color: var(--color-dark); }
+        h1 { font-size: clamp(2.5rem, 6vw, 5.5rem); font-style: italic; }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-style: italic; }
+        h3 { font-size: clamp(1.5rem, 2.5vw, 2.25rem); }
+        p { font-size: clamp(0.95rem, 1.1vw, 1.1rem); color: rgba(34, 34, 31, 0.8); }
+        
+        .tracked-label {
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-btn);
+            margin-bottom: 1rem;
+            display: block;
         }
 
-        .section {
-            padding: 100px 0;
-        }
+        /* Layout Utilities */
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem); }
+        .section-padding { padding: clamp(5rem, 10vw, 8rem) 0; }
+        .text-center { text-align: center; }
 
-        /* Accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--color-accent);
+        /* ==========================================================================
+           COMPONENTS
+           ========================================================================== */
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        .btn-gold {
+            background-color: var(--color-btn);
             color: var(--color-white);
-            padding: 8px;
-            z-index: 10000;
-            transition: top 0.3s;
+            border: 1px solid var(--color-btn);
+            box-shadow: var(--shadow-multi);
         }
-        .skip-link:focus { top: 0; }
-        :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--color-btn);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--color-white);
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+        .btn-ghost:hover {
+            background-color: var(--color-white);
+            color: var(--color-dark);
+        }
+        .btn-ghost-dark {
+            background-color: transparent;
+            color: var(--color-dark);
+            border: 1px solid rgba(34, 34, 31, 0.2);
+        }
+        .btn-ghost-dark:hover {
+            border-color: var(--color-dark);
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
 
-        @media (prefers-reduced-motion: reduce) {
-            * { animation: none !important; transition: none !important; }
+        /* Image Placeholder */
+        .img-placeholder {
+            background: linear-gradient(135deg, rgba(111,108,94,0.1), rgba(197,180,100,0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .img-placeholder span { font-size: 3rem; opacity: 0.3; }
+        .img-placeholder::after {
+            content: attr(data-foto-prompt);
+            position: absolute;
+            bottom: 10px; left: 10px; right: 10px;
+            font-size: 10px; color: rgba(0,0,0,0.4);
+            text-align: center; pointer-events: none;
         }
 
         /* GSAP Fallback */
         .gs-reveal { opacity: 1; transform: none; }
         .gsap-ready .gs-reveal { opacity: 0; transform: translateY(40px); }
 
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-family: var(--font-heading);
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            border: none;
-            text-align: center;
+        /* Floating Actions */
+        .floating-wa, .floating-phone {
+            position: fixed; bottom: 24px; z-index: 9999;
+            width: 56px; height: 56px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: var(--shadow-multi); transition: var(--transition);
+            animation: floatPulse 2s infinite; font-size: 24px;
         }
-        .btn-primary {
-            background: var(--color-primary);
-            color: var(--color-white);
-            box-shadow: var(--shadow-premium);
-        }
-        .btn-primary:hover {
-            transform: scale(1.03) translateY(-2px);
-            box-shadow: 0 10px 30px rgba(27, 58, 92, 0.3);
-        }
-        .btn-accent {
-            background: var(--color-accent);
-            color: var(--color-white);
-            box-shadow: var(--shadow-premium);
-        }
-        .btn-accent:hover {
-            transform: scale(1.03) translateY(-2px);
-            box-shadow: var(--shadow-glow);
+        .floating-wa { right: 24px; background: #25D366; color: #fff; }
+        .floating-phone { left: 24px; background: var(--color-btn); color: #fff; }
+        .floating-wa:hover, .floating-phone:hover { transform: scale(1.12); }
+        @keyframes floatPulse {
+            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 8px rgba(197,180,100,0.2); }
         }
 
-        /* ==========================================
-           1. STICKY NAVBAR
-           ========================================== */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: var(--transition-smooth);
+        /* Mobile Sticky Bottom Nav */
+        .mobile-bottom-nav {
+            display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--color-white); box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 9998; height: 60px;
         }
+        .mobile-bottom-nav a {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 600; color: var(--color-dark);
+            border-right: 1px solid rgba(0,0,0,0.05);
+        }
+        .mobile-bottom-nav a:last-child { border: none; }
+        .mobile-bottom-nav a.cta { background: var(--color-btn); color: #fff; }
+
+        @media (max-width: 768px) {
+            .mobile-bottom-nav { display: flex; }
+            .floating-wa { bottom: 84px; right: 16px; width: 48px; height: 48px; }
+            .floating-phone { display: none; }
+        }
+
+        /* ==========================================================================
+           1. TOP BAR
+           ========================================================================== */
+        .top-bar {
+            background-color: var(--color-olive);
+            color: var(--color-white);
+            padding: 8px 0;
+            font-size: 12px;
+            font-family: var(--font-body);
+            position: relative;
+            z-index: 1001;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 8px; opacity: 0.9; }
+        .top-bar-right a {
+            color: var(--color-btn);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .top-bar-right a:hover { color: var(--color-white); }
+
+        /* ==========================================================================
+           2. NAVBAR
+           ========================================================================== */
+        .header {
+            background-color: var(--color-white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .header.scrolled { box-shadow: var(--shadow-multi); }
+        
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 90px;
+            padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
         }
-        .nav-logo {
+
+        .logo-area { display: flex; flex-direction: column; max-width: 300px;}
+        .logo-text {
             font-family: var(--font-heading);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            display: flex;
-            flex-direction: column;
+            font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+            font-style: italic;
+            color: var(--color-dark);
             line-height: 1.2;
         }
-        .nav-logo span:last-child {
-            font-size: 0.8rem;
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-        .nav-links {
-            display: flex;
-            gap: 32px;
-        }
-        .nav-links a {
-            font-weight: 500;
-            position: relative;
-            padding: 8px 0;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-accent);
-            transition: var(--transition-smooth);
-        }
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        .nav-actions {
+
+        .nav-right { display: flex; flex-direction: column; align-items: flex-end; gap: 15px; }
+        
+        .nav-utils {
             display: flex;
             align-items: center;
             gap: 20px;
-        }
-        .lang-switch {
-            display: flex;
-            gap: 8px;
-        }
-        .lang-switch button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-family: var(--font-heading);
+            font-size: 12px;
             font-weight: 600;
-            color: var(--color-text-light);
-            transition: var(--transition-smooth);
+            letter-spacing: 0.05em;
         }
-        .lang-switch button:hover, .lang-switch button.active {
-            color: var(--color-primary);
+        .nav-phone { color: var(--color-btn); }
+        .lang-switch { display: flex; gap: 5px; }
+        .lang-switch button {
+            font-size: 11px; color: rgba(34,34,31,0.5); font-weight: 600;
+            transition: var(--transition);
         }
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--color-primary);
+        .lang-switch button:hover, .lang-switch button.active { color: var(--color-dark); }
+
+        .main-nav { display: flex; gap: 2rem; align-items: center; }
+        .nav-link {
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            padding: 10px 0;
+        }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: 5px; left: 0; width: 0; height: 1px;
+            background-color: var(--color-btn); transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-menu {
+            position: absolute; top: 100%; left: 0;
+            background: var(--color-white);
+            min-width: 200px;
+            box-shadow: var(--shadow-multi);
+            opacity: 0; visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            padding: 1rem 0;
+            border-top: 2px solid var(--color-btn);
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item {
+            display: block; padding: 0.5rem 1.5rem;
+            font-size: 12px; color: var(--color-dark);
+            text-transform: none; font-weight: 500; letter-spacing: 0;
+        }
+        .dropdown-item:hover { background: rgba(197,180,100,0.1); color: var(--color-btn); }
+
+        .hamburger { display: none; font-size: 24px; background: none; border: none; color: var(--color-dark); }
+
+        @media (max-width: 1024px) {
+            .nav-right { display: none; }
+            .hamburger { display: block; }
+            /* Mobile menu implementation below in JS/CSS */
         }
 
-        /* ==========================================
-           2. HERO SECTION
-           ========================================== */
+        /* ==========================================================================
+           3. HERO
+           ========================================================================== */
         .hero {
-            padding-top: 160px;
-            padding-bottom: 80px;
+            position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .hero-content h1 {
-            color: var(--color-primary);
-            margin-bottom: 24px;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--color-text-light);
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .google-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #fff;
-            padding: 8px 16px;
-            border-radius: 50px;
-            box-shadow: var(--shadow-premium);
-            font-weight: 600;
-            color: var(--color-primary);
-        }
-        .hero-ctas {
-            display: flex;
-            gap: 20px;
-        }
-
-        /* ==========================================
-           3. GUVEN SERIDI (MARQUEE)
-           ========================================== */
-        .marquee-wrapper {
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 16px 0;
             overflow: hidden;
-            position: relative;
-            display: flex;
         }
-        .marquee-content {
-            display: flex;
-            white-space: nowrap;
-            animation: marquee 20s linear infinite;
+        .hero-bg { position: absolute; inset: 0; z-index: 1; }
+        .hero-overlay {
+            position: absolute; inset: 0; z-index: 2;
+            background: rgba(34, 34, 31, 0.55);
         }
-        .marquee-item {
-            margin: 0 40px;
-            font-family: var(--font-heading);
-            font-weight: 500;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* ==========================================
-           4. SAYACLAR
-           ========================================== */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-        }
-        .stat-card {
-            background: var(--color-white);
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-premium);
-            text-align: center;
-            transition: var(--transition-smooth);
-        }
-        .stat-card:hover {
-            transform: translateY(-8px);
-        }
-        .stat-number {
-            font-size: 3rem;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            color: var(--color-accent);
-            margin-bottom: 10px;
-            display: block;
-        }
-        .stat-text {
-            color: var(--color-text-light);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        /* ==========================================
-           5 & 6. HIZMET GRIDI & FILTRELEME
-           ========================================== */
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .section-header h2 {
-            color: var(--color-primary);
-            margin-bottom: 16px;
-        }
-        
-        .filter-tool {
-            background: var(--color-white);
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: var(--shadow-premium);
-            display: flex;
-            gap: 16px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-        .filter-tool input, .filter-tool select {
-            flex: 1;
-            min-width: 200px;
-            padding: 16px;
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: var(--transition-smooth);
-        }
-        .filter-tool input:focus, .filter-tool select:focus {
-            outline: none;
-            border-color: var(--color-accent);
-            box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.2);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-        .service-card {
-            background: var(--color-white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-premium);
-            transition: var(--transition-smooth);
-            display: flex;
-            flex-direction: column;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        .service-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .service-content h3 {
-            color: var(--color-primary);
-            margin-bottom: 12px;
-            font-size: 1.4rem;
-        }
-        .service-content p {
-            color: var(--color-text-light);
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        .service-price {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--color-primary);
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .service-price span {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-            font-weight: 400;
-        }
-
-        /* ==========================================
-           7. SADAKAT PROGRAMI & PAKETLER
-           ========================================== */
-        .loyalty-section {
-            background: linear-gradient(135deg, var(--color-primary) 0%, #0d2238 100%);
-            color: var(--color-white);
-            border-radius: 30px;
-            padding: 80px 60px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-premium);
-        }
-        .loyalty-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
-        .loyalty-content h2 { color: var(--color-white); margin-bottom: 20px; }
-        .loyalty-card {
-            position: absolute;
-            right: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 350px;
-            height: 220px;
-            background: linear-gradient(135deg, #FFD700 0%, #F5A623 100%);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            color: var(--color-primary);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            z-index: 2;
-            animation: floatCard 6s ease-in-out infinite;
-        }
-        @keyframes floatCard {
-            0%, 100% { transform: translateY(-50%); }
-            50% { transform: translateY(-55%); }
-        }
-
-        /* ==========================================
-           8. INSTAGRAM FEED
-           ========================================== */
-        .insta-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .insta-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            aspect-ratio: 1;
-        }
-        .insta-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(27, 58, 92, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition-smooth);
-            color: var(--color-white);
-            font-size: 1.5rem;
-            gap: 10px;
-        }
-        .insta-item:hover .insta-overlay {
-            opacity: 1;
-        }
-
-        /* ==========================================
-           9. GERCEK YORUMLAR CAROUSEL
-           ========================================== */
-        .reviews-wrapper {
-            background: var(--color-white);
-            padding: 80px 0;
-            border-radius: 30px;
-            box-shadow: var(--shadow-premium);
-        }
-        .carousel-container {
-            overflow: hidden;
-            position: relative;
-            padding: 20px;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .review-card {
-            min-width: 100%;
-            padding: 0 20px;
-            text-align: center;
-        }
-        .review-avatar {
-            width: 80px;
-            height: 80px;
-            background: var(--color-accent);
-            color: var(--color-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            margin: 0 auto 20px;
-        }
-        .stars { color: #FFD700; font-size: 1.2rem; margin-bottom: 16px; }
-        .review-text { font-size: 1.2rem; font-style: italic; margin-bottom: 20px; color: var(--color-text); }
-        .review-author { font-weight: 700; color: var(--color-primary); font-family: var(--font-heading); }
-        .carousel-dots { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
-        .dot { width: 12px; height: 12px; border-radius: 50%; background: #E2E8F0; cursor: pointer; transition: var(--transition-smooth); }
-        .dot.active { background: var(--color-accent); transform: scale(1.2); }
-
-        /* ==========================================
-           10. CTA BANDI
-           ========================================== */
-        .cta-band {
-            background: var(--color-accent);
-            padding: 80px 0;
-            text-align: center;
-            color: var(--color-white);
-        }
-        .cta-band h2 { color: var(--color-white); margin-bottom: 30px; }
-        .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-
-        /* ==========================================
-           11. ILETISIM & HARITA
-           ========================================== */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-        .contact-info {
-            background: var(--color-white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-premium);
-        }
-        .info-item {
-            margin-bottom: 30px;
-        }
-        .info-item h4 {
-            color: var(--color-primary);
-            margin-bottom: 10px;
-            font-family: var(--font-heading);
-        }
-        .info-item p, .info-item li {
-            color: var(--color-text-light);
-        }
-
-        /* ==========================================
-           12. FOOTER
-           ========================================== */
-        footer {
-            background: var(--color-primary);
-            color: rgba(255,255,255,0.7);
-            padding: 80px 0 40px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-        .footer-logo {
-            color: var(--color-white);
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: block;
-        }
-        .footer-links h4 {
-            color: var(--color-white);
-            margin-bottom: 20px;
-            font-family: var(--font-heading);
-        }
-        .footer-links ul li { margin-bottom: 10px; }
-        .footer-links a:hover { color: var(--color-accent); }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        /* ==========================================
-           FLOATING BUTTONS & MOBILE NAV
-           ========================================== */
-        .floating-wa, .floating-phone {
-            position: fixed;
-            bottom: 24px;
-            z-index: 9999;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            animation: floatPulse 2s infinite;
-            text-decoration: none;
-            font-size: 24px;
-        }
-        .floating-wa { right: 24px; background: #25D366; color: #fff; }
-        .floating-phone { left: 24px; background: var(--color-primary); color: #fff; }
-        .floating-wa:hover, .floating-phone:hover { transform: scale(1.12); }
-        
-        @keyframes floatPulse {
-            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 8px rgba(37,211,102,0.2); }
-        }
-
-        .mobile-bottom-nav {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
+        .hero-content {
+            position: relative; z-index: 3;
             width: 100%;
-            background: var(--color-white);
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            z-index: 9998;
-            padding: 10px;
+            padding: 0 clamp(1.5rem, 8vw, 10rem);
+            display: flex; flex-direction: column; justify-content: center;
+            margin-top: 4rem; /* offset for nav */
         }
-        .mobile-nav-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr 1fr;
-            gap: 10px;
+        .hero-label {
+            color: var(--color-btn);
+            font-family: var(--font-body);
+            font-size: 12px; font-weight: 600;
+            letter-spacing: 0.3em; text-transform: uppercase;
+            text-decoration: underline; margin-bottom: 1.5rem;
         }
-        .mobile-nav-btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 56px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-align: center;
+        .hero-title {
+            color: var(--color-white);
+            max-width: 900px; margin-bottom: 1.5rem;
         }
-
-        /* ==========================================
-           RESPONSIVE
-           ========================================== */
-        @media (max-width: 1024px) {
-            .hero-grid, .contact-grid { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-            .loyalty-card { position: relative; right: 0; transform: none; margin-top: 40px; width: 100%; animation: none; }
+        .hero-desc { color: rgba(255,255,255,0.85); max-width: 560px; margin-bottom: 2.5rem; }
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+        .hero-rating {
+            margin-top: 3rem; color: rgba(255,255,255,0.7);
+            font-size: 13px; display: flex; align-items: center; gap: 8px;
         }
 
-        @media (max-width: 768px) {
-            .nav-links, .nav-actions .btn { display: none; }
-            .hamburger { display: block; }
-            .services-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .floating-wa, .floating-phone { display: none; } /* Replaced by bottom nav */
-            .mobile-bottom-nav { display: block; }
-            body { padding-bottom: 80px; }
-            h1 { font-size: 2.5rem; }
+        /* ==========================================================================
+           4. ABOUT ("Art of Trust")
+           ========================================================================== */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: center; }
+        .about-text h2 { margin-bottom: 2rem; }
+        .about-text p { margin-bottom: 1.5rem; }
+        @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+
+        /* ==========================================================================
+           5. COUNTERS
+           ========================================================================== */
+        .counters-section { border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05); padding: 4rem 0; }
+        .counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+        .counter-item .number {
+            font-family: var(--font-heading); font-size: clamp(2.5rem, 4vw, 4rem);
+            color: var(--color-dark); line-height: 1; margin-bottom: 0.5rem;
         }
+        .counter-item .label { font-size: 13px; color: var(--color-olive); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+        @media (max-width: 768px) { .counters-grid { grid-template-columns: 1fr 1fr; } }
+
+        /* ==========================================================================
+           6. SERVICES (Olive Carousel)
+           ========================================================================== */
+        .services-section { background-color: var(--color-olive); color: var(--color-white); overflow: hidden; }
+        .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+        .services-header h2 { color: var(--color-white); margin-bottom: 0; }
+        
+        .carousel-controls { display: flex; gap: 10px; }
+        .carousel-btn {
+            width: 48px; height: 48px; border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .carousel-btn:hover { background: var(--color-btn); border-color: var(--color-btn); }
+
+        .services-track {
+            display: flex; gap: 2rem; overflow-x: auto; scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            padding-bottom: 2rem;
+            margin-right: calc(-50vw + 50%); /* Full bleed right */
+            padding-right: clamp(1.5rem, 5vw, 4rem);
+        }
+        .services-track::-webkit-scrollbar { display: none; }
+        
+        .service-card {
+            flex: 0 0 350px; scroll-snap-align: start;
+            position: relative; height: 450px; border-radius: 4px; overflow: hidden;
+            group;
+        }
+        .service-card .img-placeholder { border-radius: 0; }
+        .service-overlay {
+            position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,34,31,0.9) 0%, rgba(34,34,31,0.2) 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;
+            transition: var(--transition);
+        }
+        .service-card:hover .service-overlay { background: linear-gradient(to top, rgba(34,34,31,0.95) 0%, rgba(34,34,31,0.4) 100%); }
+        
+        .service-num { position: absolute; top: 1.5rem; left: 1.5rem; font-family: var(--font-heading); font-size: 2rem; color: rgba(255,255,255,0.5); }
+        .service-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff; }
+        .service-desc { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .service-link { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: var(--color-btn); text-transform: uppercase; }
+
+        @media (max-width: 768px) { .service-card { flex: 0 0 85vw; height: 400px; } .services-header { flex-direction: column; align-items: flex-start; gap: 1rem; } }
+
+        /* ==========================================================================
+           7. DOCTORS
+           ========================================================================== */
+        .doctors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; margin-top: 4rem; }
+        .doctor-card { display: flex; flex-direction: column; }
+        .doc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+        .doc-tag { background: var(--color-olive); color: #fff; font-size: 10px; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .doc-img-wrap { aspect-ratio: 1/1; margin-bottom: 1.5rem; overflow: hidden; border-radius: 4px; }
+        .doc-img-wrap .img-placeholder { transition: var(--transition); }
+        .doctor-card:hover .img-placeholder { transform: scale(1.03); }
+        .doc-name { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.25rem; }
+        .doc-title { font-size: 13px; color: var(--color-olive); margin-bottom: 1rem; font-weight: 500; }
+        .doc-bio { margin-bottom: 1.5rem; }
+        @media (max-width: 768px) { .doctors-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+        /* ==========================================================================
+           8. FINANCING
+           ========================================================================== */
+        .financing-section { background-color: var(--color-olive); color: var(--color-white); text-align: center; }
+        .financing-content { max-width: 800px; margin: 0 auto; }
+        .financing-content h2 { color: var(--color-white); margin-bottom: 1rem; }
+        .financing-content p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+        .social-icons { display: flex; justify-content: center; gap: 15px; margin-top: 2rem; }
+        .social-icons a { width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .social-icons a:hover { background: var(--color-btn); border-color: var(--color-btn); }
+
+        /* ==========================================================================
+           9. TECHNOLOGY
+           ========================================================================== */
+        .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .tech-tabs { display: flex; flex-direction: column; gap: 1rem; }
+        .tech-tab-btn {
+            text-align: left; padding: 1.5rem; font-size: 1.25rem; font-weight: 500; color: var(--color-dark);
+            border-bottom: 1px solid rgba(0,0,0,0.1); transition: var(--transition);
+            display: flex; align-items: center; gap: 15px;
+        }
+        .tech-tab-btn:hover, .tech-tab-btn.active { color: var(--color-btn); border-color: var(--color-btn); padding-left: 2rem; }
+        .tech-content-area { position: relative; aspect-ratio: 4/3; }
+        .tech-pane { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: var(--transition); display: flex; flex-direction: column; }
+        .tech-pane.active { opacity: 1; visibility: visible; position: relative; }
+        .tech-pane .img-placeholder { flex-grow: 1; margin-bottom: 1.5rem; }
+        @media (max-width: 900px) { .tech-grid { grid-template-columns: 1fr; } .tech-tab-btn { padding: 1rem; font-size: 1.1rem; } }
+
+        /* ==========================================================================
+           10. LOCATIONS
+           ========================================================================== */
+        .locations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .location-card {
+            background: #F9F9F8; padding: 4rem 3rem; text-align: center;
+            border-radius: 4px; transition: var(--transition);
+        }
+        .location-card:hover { box-shadow: var(--shadow-multi); transform: translateY(-5px); background: var(--color-white); }
+        .loc-title { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1rem; }
+        .loc-address { margin-bottom: 2rem; font-size: 1rem; }
+        @media (max-width: 768px) { .locations-grid { grid-template-columns: 1fr; } .location-card { padding: 3rem 1.5rem; } }
+
+        /* ==========================================================================
+           11. BLOG
+           ========================================================================== */
+        .blog-header { margin-bottom: 3rem; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .blog-card { display: flex; flex-direction: column; group; }
+        .blog-img { aspect-ratio: 16/10; overflow: hidden; margin-bottom: 1.5rem; border-radius: 4px; }
+        .blog-img .img-placeholder { transition: var(--transition); }
+        .blog-card:hover .img-placeholder { transform: scale(1.05); }
+        .blog-cat { font-size: 10px; font-weight: 600; color: var(--color-btn); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+        .blog-title { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; line-height: 1.3; }
+        .blog-link { margin-top: auto; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-dark); }
+        .blog-card:hover .blog-link { color: var(--color-btn); }
+        @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+        /* ==========================================================================
+           12. TESTIMONIALS
+           ========================================================================== */
+        .testi-section { background-color: #F9F9F8; }
+        .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .testi-card {
+            background: var(--color-white); padding: 2.5rem; border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: var(--transition);
+        }
+        .testi-card:hover { box-shadow: var(--shadow-multi); transform: translateY(-5px); }
+        .stars { color: var(--color-btn); font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px; }
+        .testi-text { font-style: italic; margin-bottom: 1.5rem; font-size: 1rem; }
+        .testi-name { font-weight: 600; color: var(--color-dark); font-size: 1.1rem; }
+        @media (max-width: 900px) { .testi-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .testi-grid { grid-template-columns: 1fr; } }
+
+        /* ==========================================================================
+           13. MAPS
+           ========================================================================== */
+        .map-container { width: 100%; height: 450px; line-height: 0; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        /* ==========================================================================
+           14. FOOTER
+           ========================================================================== */
+        .footer { background-color: var(--color-footer); color: var(--color-white); padding: 6rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+        
+        .footer-logo h2 { color: var(--color-white); font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .footer-branding { font-size: 11px; color: var(--color-btn); letter-spacing: 0.1em; text-transform: uppercase; }
+        
+        .footer-hours-table { width: 100%; border-collapse: collapse; }
+        .footer-hours-table td { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; color: rgba(255,255,255,0.7); }
+        .footer-hours-table tr:last-child td { border-bottom: none; }
+        .footer-hours-table td:last-child { text-align: right; color: var(--color-white); }
+        
+        .footer-links h4 { color: var(--color-white); margin-bottom: 1.5rem; font-family: var(--font-body); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; }
+        .footer-links ul { display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--color-btn); }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+            font-size: 12px; color: rgba(255,255,255,0.5);
+        }
+        .footer-legal a { margin-right: 15px; transition: var(--transition); }
+        .footer-legal a:hover { color: var(--color-white); }
+
+        @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed; inset: 0; background: var(--color-bg); z-index: 1002;
+            display: flex; flex-direction: column; padding: 2rem;
+            transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu-overlay.active { transform: translateX(0); }
+        .mobile-menu-close { align-self: flex-end; font-size: 30px; margin-bottom: 2rem; }
+        .mobile-nav-links { display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.5rem; font-family: var(--font-heading); }
+        .mobile-nav-links a { border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 10px; }
+
     </style>
 </head>
-<body>
+<body id="main">
 
-    <a href="#main" class="skip-link">İçeriğe Geç</a>
+    <!-- Accessibility Skip Link -->
+    <a href="#hero" class="skip-link" style="position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:10000;">İçeriğe Geç</a>
 
-    <!-- 1. STICKY NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="nav-logo" data-tr="Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli" data-en="Dr. Ayse Zeycan Kaleli & Dr. Faruk Sariyerli" data-ar="د. عائشة زيكان كاليلي ود. فاروق سارييرلي">
-                <span>KALELİ & SARIYERLİ</span>
-                <span>DİŞ KLİNİĞİ</span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="#hizmetler" data-tr="Tedaviler" data-en="Treatments" data-ar="العلاجات">Tedaviler</a></li>
-                <li><a href="#sadakat" data-tr="Paketler" data-en="Packages" data-ar="الحزم">Paketler</a></li>
-                <li><a href="#yorumlar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a></li>
-                <li><a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</a></li>
-            </ul>
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="floating-wa" aria-label="WhatsApp ile İletişime Geç">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+    <a href="tel:+905073039434" class="floating-phone" aria-label="Bizi Arayın">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
 
-            <div class="nav-actions">
-                <a href="tel:+905073039434" style="font-weight:700; color:var(--color-primary);">+90 507 303 94 34</a>
-                <a href="https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="btn btn-accent" target="_blank" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
-                <div class="lang-switch">
-                    <button onclick="switchLang('tr')" class="active">TR</button>
-                    <button onclick="switchLang('en')">EN</button>
-                    <button onclick="switchLang('ar')">AR</button>
-                </div>
-                <button class="hamburger" aria-label="Menu">☰</button>
-            </div>
-        </div>
-    </nav>
+    <!-- Mobile Sticky Bottom Nav -->
+    <div class="mobile-bottom-nav">
+        <a href="tel:+905073039434" data-tr="📞 Ara">📞 Ara</a>
+        <a href="#hizmetler" class="cta" data-tr="🎯 Hizmetler">🎯 Hizmetler</a>
+        <a href="https://wa.me/905073039434?text=Merhaba" target="_blank" data-tr="💬 WhatsApp">💬 WhatsApp</a>
+    </div>
 
-    <main id="main">
-        <!-- 2. HERO -->
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content gs-reveal">
-                    <div class="google-badge mb-4">
-                        ⭐ 4.7 Google Puanı
-                    </div>
-                    <h1 data-tr="Diş Hekimliğinde Güvenilir Adresiniz" data-en="Your Trusted Address in Dentistry" data-ar="عنوانك الموثوق في طب الأسنان">Diş Hekimliğinde Güvenilir Adresiniz</h1>
-                    <p class="hero-subtitle" data-tr="Ankara'da 194+ Mutlu Hasta. Uzman kadromuzla sağlıklı ve estetik gülüşler tasarlıyoruz." data-en="194+ Happy Patients in Ankara. We design healthy and aesthetic smiles." data-ar="أكثر من 194 مريض سعيد في أنقرة. نصمم ابتسامات صحية وجمالية.">
-                        Ankara'da 194+ Mutlu Hasta. Uzman kadromuzla sağlıklı ve estetik gülüşler tasarlıyoruz.
-                    </p>
-                    <div class="hero-ctas">
-                        <a href="#hizmetler" class="btn btn-primary" data-tr="Hemen İncele" data-en="Explore Now" data-ar="استكشف الآن">Hemen İncele</a>
-                        <a href="https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-accent" style="background:#25D366;" data-tr="WhatsApp'tan Sor" data-en="Ask on WhatsApp" data-ar="اسأل على واتساب">WhatsApp'tan Sor</a>
-                    </div>
-                </div>
-                <div class="hero-image gs-reveal">
-                    <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;border-radius:24px;min-height:500px;box-shadow:var(--shadow-premium);" data-foto-prompt="Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği iç mekan, modern dental üniteler, profesyonel, davetkar, aydınlık, premium klinik atmosferi, editorial fotoğraf">
-                        <span style="font-size:4rem;opacity:0.4">📷</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. GUVEN SERIDI -->
-        <div class="marquee-wrapper">
-            <div class="marquee-content">
-                <div class="marquee-item">⭐ 4.7/5 Google Puanı</div>
-                <div class="marquee-item">✓ 194+ Mutlu Hasta</div>
-                <div class="marquee-item">✓ Ağrısız Tedavi Yöntemleri</div>
-                <div class="marquee-item">✓ %100 Hijyen Standartları</div>
-                <div class="marquee-item">✓ Alanında Uzman Hekimler</div>
-                <div class="marquee-item">✓ Şeffaf Fiyatlandırma</div>
-                <!-- Duplicate for infinite effect -->
-                <div class="marquee-item">⭐ 4.7/5 Google Puanı</div>
-                <div class="marquee-item">✓ 194+ Mutlu Hasta</div>
-                <div class="marquee-item">✓ Ağrısız Tedavi Yöntemleri</div>
-                <div class="marquee-item">✓ %100 Hijyen Standartları</div>
-                <div class="marquee-item">✓ Alanında Uzman Hekimler</div>
-                <div class="marquee-item">✓ Şeffaf Fiyatlandırma</div>
-            </div>
-        </div>
-
-        <!-- 4. SAYACLAR -->
+    <!-- 1. TOP BAR -->
+    <div class="top-bar" id="top-bar">
         <div class="container">
-            <div class="stats-grid gs-reveal">
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="194" data-suffix="+">0</span>
-                    <span class="stat-text" data-tr="Mutlu Hasta" data-en="Happy Patients" data-ar="مرضى سعداء">Mutlu Hasta</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="4.7" data-decimal="true">0</span>
-                    <span class="stat-text" data-tr="Google Puanı" data-en="Google Rating" data-ar="تقييم جوجل">Google Puanı</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="1500" data-suffix="+">0</span>
-                    <span class="stat-text" data-tr="Başarılı Tedavi" data-en="Successful Treatments" data-ar="علاجات ناجحة">Başarılı Tedavi</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="15" data-suffix="+">0</span>
-                    <span class="stat-text" data-tr="Yıl Tecrübe" data-en="Years Experience" data-ar="سنوات خبرة">Yıl Tecrübe</span>
-                </div>
+            <div class="top-bar-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span data-tr="No:7/3 Apt, İstasyon, Polatlı 1. Cd., 06935 Sincan/Ankara, Türkiye">No:7/3 Apt, İstasyon, Polatlı 1. Cd., 06935 Sincan/Ankara, Türkiye</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" data-tr="RANDEVU AL">RANDEVU AL</a>
             </div>
         </div>
+    </div>
 
-        <!-- 5 & 6. HIZMETLER & FILTRE -->
-        <section id="hizmetler" class="section bg-light">
-            <div class="container">
-                <div class="section-header gs-reveal">
-                    <h2 data-tr="Uzmanlık Alanlarımız" data-en="Our Expertise" data-ar="خبراتنا">Uzmanlık Alanlarımız</h2>
-                    <p data-tr="Size en uygun tedaviyi bulmak için arama yapın." data-en="Search to find the best treatment for you." data-ar="ابحث للعثور على أفضل علاج لك.">Size en uygun tedaviyi bulmak için arama yapın.</p>
-                </div>
+    <!-- 2. NAVBAR -->
+    <header class="header" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#hero" class="logo-area">
+                <span class="logo-text">Dt. Ayşe Zeycan Kaleli &</span>
+                <span class="logo-text">Dt. Faruk Sarıyerli</span>
+            </a>
 
-                <div class="filter-tool gs-reveal">
-                    <input type="text" id="searchInput" placeholder="Tedavi Ara (Örn: İmplant)...">
-                    <select id="categoryFilter">
-                        <option value="all">Tüm Kategoriler</option>
-                        <option value="cerrahi">Cerrahi & İmplant</option>
-                        <option value="estetik">Estetik Diş Hekimliği</option>
-                        <option value="genel">Genel Tedaviler</option>
-                    </select>
-                </div>
-
-                <div class="services-grid gs-reveal" id="servicesGrid">
-                    <!-- Card 1 -->
-                    <div class="service-card" data-category="cerrahi">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;min-height:250px;" data-foto-prompt="Dt. Ayşe Zeycan Kaleli Diş Kliniği implant tedavisi, steril ortam, yüksek teknoloji cihazlar, premium aydınlatma, editorial fotoğraf">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <div class="service-content">
-                            <h3>İmplant Tedavisi</h3>
-                            <p>Eksik dişleriniz için titanyum altyapılı, ömür boyu garantili doğal görünümlü kalıcı çözümler.</p>
-                            <div class="service-price">
-                                <span>KDV Dahil</span>
-                                Detaylı Bilgi Alın
-                            </div>
-                            <a href="https://wa.me/905073039434?text=İmplant%20tedavisi%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" style="width:100%">Bilgi Al</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="service-card" data-category="estetik">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;min-height:250px;" data-foto-prompt="Zirkonyum kaplama öncesi sonrası estetik gülüş, Dt. Faruk SARIYERLİ Diş kliniği ortamında, doğal ışık, mutlu hasta, editorial fotoğraf">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <div class="service-content">
-                            <h3>Zirkonyum Kaplama</h3>
-                            <p>Işık geçirgenliği yüksek, diş etiyle %100 uyumlu estetik zirkonyum kaplamalar ile mükemmel gülüşler.</p>
-                            <div class="service-price">
-                                <span>KDV Dahil</span>
-                                Detaylı Bilgi Alın
-                            </div>
-                            <a href="https://wa.me/905073039434?text=Zirkonyum%20kaplama%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" style="width:100%">Bilgi Al</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="service-card" data-category="genel">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;min-height:250px;" data-foto-prompt="Diş hekimi kanal tedavisi uygularken, modern mikroskop cihazı, ağrısız işlem, odaklanmış doktor, premium klinik, editorial">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <div class="service-content">
-                            <h3>Kanal Tedavisi</h3>
-                            <p>İleri derece çürümüş veya enfekte olmuş dişleri kurtarmak için uygulanan ağrısız endodontik tedavi.</p>
-                            <div class="service-price">
-                                <span>KDV Dahil</span>
-                                Detaylı Bilgi Alın
-                            </div>
-                            <a href="https://wa.me/905073039434?text=Kanal%20tedavisi%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" style="width:100%">Bilgi Al</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="service-card" data-category="estetik">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;min-height:250px;" data-foto-prompt="Hollywood smile gülüş tasarımı yaptıran mutlu kadın hasta, bembeyaz dişler, Dt. Ayşe Zeycan Kaleli kliniği, lüks atmosfer">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <div class="service-content">
-                            <h3>Gülüş Tasarımı</h3>
-                            <p>Yüz hatlarınıza ve karakterinize en uygun, dijital destekli kişiselleştirilmiş gülüş estetiği (Hollywood Smile).</p>
-                            <div class="service-price">
-                                <span>KDV Dahil</span>
-                                Detaylı Bilgi Alın
-                            </div>
-                            <a href="https://wa.me/905073039434?text=Gülüş%20tasarımı%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" style="width:100%">Bilgi Al</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="service-card" data-category="estetik">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;min-height:250px;" data-foto-prompt="Klinik tipi lazer diş beyazlatma işlemi, koruyucu gözlük takan hasta, mavi lazer ışığı, hijyenik ve modern diş kliniği">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <div class="service-content">
-                            <h3>Lazer Diş Beyazlatma</h3>
-                            <p>Tek seansta 3-4 tona kadar açılma sağlayan, diş minesine zarar vermeyen güvenli beyazlatma işlemi.</p>
-                            <div class="service-price">
-                                <span>KDV Dahil</span>
-                                Detaylı Bilgi Alın
-                            </div>
-                            <a href="https://wa.me/905073039434?text=Diş%20beyazlatma%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" style="width:100%">Bilgi Al</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="service-card" data-category="cerrahi">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);display:flex;align-items:center;justify-content:center;min-height:250px;" data-foto-prompt="Gömülü 20'lik diş çekimi için panoramik röntgen inceleyen doktor, güven veren ifade, modern klinik, Sincan Ankara">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <div class="service-content">
-                            <h3>20'lik Diş Çekimi</h3>
-                            <p>Gömülü veya sorunlu yirmilik yaş dişlerinin çene cerrahisi standartlarında güvenli ve konforlu çekimi.</p>
-                            <div class="service-price">
-                                <span>KDV Dahil</span>
-                                Detaylı Bilgi Alın
-                            </div>
-                            <a href="https://wa.me/905073039434?text=20'lik%20diş%20çekimi%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-primary" style="width:100%">Bilgi Al</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. SADAKAT PROGRAMI -->
-        <section id="sadakat" class="section">
-            <div class="container">
-                <div class="loyalty-section gs-reveal">
-                    <div class="loyalty-content">
-                        <h2 data-tr="Gülüş Kulübü'ne Katılın" data-en="Join the Smile Club" data-ar="انضم إلى نادي الابتسامة">Gülüş Kulübü'ne Katılın</h2>
-                        <p style="margin-bottom: 30px; font-size: 1.1rem; color: rgba(255,255,255,0.8);">Düzenli ağız ve diş bakımı sağlığınızın temelidir. Yıllık bakım paketimizle hem sağlığınızı koruyun hem de özel avantajlardan yararlanın.</p>
-                        <ul style="margin-bottom: 30px;">
-                            <li style="margin-bottom: 10px;">✓ Yılda 2 Kez Ücretsiz Detaylı Muayene & Röntgen</li>
-                            <li style="margin-bottom: 10px;">✓ Yılda 1 Kez Ücretsiz Diş Taşı Temizliği</li>
-                            <li style="margin-bottom: 10px;">✓ Tüm Tedavilerde %15 İndirim Avantajı</li>
-                        </ul>
-                        <a href="https://wa.me/905073039434?text=Gülüş%20Kulübü%20paketleri%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-accent">Programa Katıl</a>
-                    </div>
-                    <div class="loyalty-card">
-                        <div>
-                            <div style="font-size: 1.2rem; font-weight: 700; font-family: var(--font-heading);">GÜLÜŞ KULÜBÜ</div>
-                            <div style="font-size: 0.8rem; opacity: 0.8;">Premium Üyelik</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-                            <div style="font-size: 1.5rem;">✦ ✦ ✦ ✦</div>
-                            <div style="font-weight: 700;">Kaleli & Sarıyerli</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. INSTAGRAM FEED -->
-        <section class="section bg-light">
-            <div class="container">
-                <div class="section-header gs-reveal">
-                    <h2>Bizi Takip Edin</h2>
-                    <p>@kalelisariyerlident</p>
-                </div>
-                <div class="insta-grid gs-reveal">
-                    <div class="insta-item">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);height:100%;display:flex;align-items:center;justify-content:center;" data-foto-prompt="Dt. Ayşe Zeycan Kaleli kliniğinde tedavi sonrası gülümseyen mutlu bir hasta ve doktor, sıcak samimi ortam">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <a href="#" class="insta-overlay"><span>❤️ 124</span> <span>💬 12</span></a>
-                    </div>
-                    <div class="insta-item">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);height:100%;display:flex;align-items:center;justify-content:center;" data-foto-prompt="Modern dental implant vidası makro çekim, yüksek teknoloji, temiz arka plan, profesyonel diş hekimliği">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <a href="#" class="insta-overlay"><span>❤️ 89</span> <span>💬 5</span></a>
-                    </div>
-                    <div class="insta-item">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);height:100%;display:flex;align-items:center;justify-content:center;" data-foto-prompt="Dt. Faruk SARIYERLİ hastasını muayene ederken, profesyonel klinik ışıkları, güven veren duruş, Ankara Sincan">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <a href="#" class="insta-overlay"><span>❤️ 205</span> <span>💬 18</span></a>
-                    </div>
-                    <div class="insta-item">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);height:100%;display:flex;align-items:center;justify-content:center;" data-foto-prompt="Estetik gülüş tasarımı öncesi ve sonrası kolaj tarzı kaliteli çekim, mükemmel beyaz dişler">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <a href="#" class="insta-overlay"><span>❤️ 342</span> <span>💬 45</span></a>
-                    </div>
-                    <div class="insta-item">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);height:100%;display:flex;align-items:center;justify-content:center;" data-foto-prompt="Diş kliniği bekleme salonu, konforlu koltuklar, şık dekorasyon, rahatlatıcı atmosfer, premium his">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <a href="#" class="insta-overlay"><span>❤️ 156</span> <span>💬 8</span></a>
-                    </div>
-                    <div class="insta-item">
-                        <div class="img-placeholder" style="background:linear-gradient(135deg,#1B3A5C22,#F5A62322);height:100%;display:flex;align-items:center;justify-content:center;" data-foto-prompt="Çocuk hasta diş hekimi koltuğunda cesurca gülümsüyor, doktor elinde oyuncak diş fırçası tutuyor, sevimli an">
-                            <span style="font-size:3rem;opacity:0.4">📷</span>
-                        </div>
-                        <a href="#" class="insta-overlay"><span>❤️ 412</span> <span>💬 32</span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. GERCEK YORUMLAR CAROUSEL -->
-        <section id="yorumlar" class="section">
-            <div class="container">
-                <div class="reviews-wrapper gs-reveal">
-                    <div class="section-header">
-                        <h2>⭐ 4.7/5 — 194 Gerçek Hasta Yorumu</h2>
-                        <p>Hastalarımızın deneyimleri bizim en büyük referansımızdır.</p>
-                    </div>
-                    
-                    <div class="carousel-container">
-                        <div class="carousel-track" id="reviewTrack">
-                            <!-- Yorum 1 -->
-                            <div class="review-card">
-                                <div class="review-avatar">E</div>
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Öneri üzerine geldim çok memnun kaldım .Merhamet li bir isletme ilgilenen doktor ve yardimcisida çok kibar ve işin ehli herkese çok teşekkür ederim."</p>
-                                <div class="review-author">— emre Bilgin</div>
-                            </div>
-                            <!-- Yorum 2 -->
-                            <div class="review-card">
-                                <div class="review-avatar">Z</div>
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Gayet ilgili insanlar, işlerini iyi yapıyorlar..20lik diş çektirdim ve dolgu yaptıracağım fiyat performans kliniği diyebiliriz⭐️⭐️⭐️⭐️⭐️"</p>
-                                <div class="review-author">— Zeki Can Özer</div>
-                            </div>
-                            <!-- Yorum 3 -->
-                            <div class="review-card">
-                                <div class="review-avatar">E</div>
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Doktorları da calısanları da çok ilgili , işlerini çok titiz ve düzenli yapıyolar ayrıca Taner beyin ilgisine de çok teşekkür ediyorum çok memnun kaldım gitmek isteyenler hiç düşünmeden gidebilirler"</p>
-                                <div class="review-author">— esila kürkaya</div>
-                            </div>
-                            <!-- Yorum 4 -->
-                            <div class="review-card">
-                                <div class="review-avatar">A</div>
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Kliniğe ilk muayene için gittigimde muayene sonrası bilgilendirmeyi açıklayıcı ve ilgiyi gayet samimi buldum. Verilen güven ile çalışmaya ve implant yaptırmaya karar verdim. Gayet hijyenik ve güvenli bir klinik. Tavsiye ederim ve çok teşekkür ediyorum ☺️🙏"</p>
-                                <div class="review-author">— Azize sungur</div>
-                            </div>
-                            <!-- Yorum 5 -->
-                            <div class="review-card">
-                                <div class="review-avatar">O</div>
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Mahallemizin discisi"</p>
-                                <div class="review-author">— Oguzhan Ozarpacı</div>
-                            </div>
-                            <!-- Yorum 6 -->
-                            <div class="review-card">
-                                <div class="review-avatar">S</div>
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Ben Ayşe Zeycan Kaleli kadar tatlımı tatlı ve naif olan , tüm sorularına tatlı dille cevap verip yorumlayan doktor görmedim.Yolunuz hep açık olsun hocam sizi çok sevdim 🥰"</p>
-                                <div class="review-author">— Semra Dal</div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-dots" id="reviewDots"></div>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 40px;">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Dt.%20Ay%C5%9Fe%20Zeycan%20Kaleli%20Di%C5%9F%20Klini%C4%9Fi%20ve%20Dt.%20Faruk%20SARIYERL%C4%B0%20Di%C5%9F%20klini%C4%9Fi&query_place_id=ChIJeYHgXn460xQRJeh0NUP-XiU" target="_blank" class="btn btn-primary">Google'da Tüm Yorumları Gör</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. CTA BANDI -->
-        <section class="cta-band gs-reveal">
-            <div class="container">
-                <h2 data-tr="Sağlıklı Gülüşlere Bugün Başlayın" data-en="Start Your Healthy Smiles Today" data-ar="ابدأ ابتساماتك الصحية اليوم">Sağlıklı Gülüşlere Bugün Başlayın</h2>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/905073039434?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="btn" style="background:#25D366; color:#fff; box-shadow:var(--shadow-premium);">💬 WhatsApp'tan Yazın</a>
-                    <a href="tel:+905073039434" class="btn" style="background:var(--color-primary); color:#fff; box-shadow:var(--shadow-premium);">📞 +90 507 303 94 34</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 11. ILETISIM -->
-        <section id="iletisim" class="section bg-light">
-            <div class="container contact-grid">
-                <div class="contact-info gs-reveal">
-                    <h2>İletişim & Ulaşım</h2>
-                    <p style="margin-bottom: 40px; color: var(--color-text-light);">Sorularınız veya randevu talepleriniz için bize ulaşın.</p>
-                    
-                    <div class="info-item">
-                        <h4>📍 Adres</h4>
-                        <p>No:7/3 Apt, İstasyon, Polatlı 1. Cd.<br>06935 Sincan/Ankara, Türkiye</p>
-                        <a href="https://www.google.com/maps/dir//39.9658141,32.5859333" target="_blank" style="color: var(--color-accent); font-weight: 600; display: inline-block; margin-top: 10px;">Yol Tarifi Al →</a>
-                    </div>
-
-                    <div class="info-item">
-                        <h4>📞 İletişim</h4>
-                        <p>Telefon: +90 507 303 94 34</p>
-                        <p>WhatsApp: +90 507 303 94 34</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h4>🕒 Çalışma Saatleri</h4>
-                        <ul>
-                            <li>Pazartesi - Cumartesi: 12:00 - 20:00</li>
-                            <li>Pazar: Kapalı</li>
-                        </ul>
+            <!-- Right Area (Nav + Utils) -->
+            <div class="nav-right">
+                <!-- Top Utils -->
+                <div class="nav-utils">
+                    <a href="tel:+905073039434" class="nav-phone">+90 507 303 94 34</a>
+                    <div class="lang-switch">
+                        <button onclick="switchLang('tr')" class="active">TR</button> |
+                        <button onclick="switchLang('en')">EN</button> |
+                        <button onclick="switchLang('ar')">AR</button>
                     </div>
                 </div>
                 
-                <div class="contact-map gs-reveal">
-                    <iframe src="https://maps.google.com/maps?q=39.9658141,32.5859333&z=15&output=embed" width="100%" height="100%" style="border:0;border-radius:20px;min-height:400px;box-shadow:var(--shadow-premium);" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
-    </main>
+                <!-- Main Links -->
+                <nav class="main-nav">
+                    <a href="#hero" class="nav-link" data-tr="ANA SAYFA">ANA SAYFA</a>
+                    <a href="#hakkimizda" class="nav-link" data-tr="HAKKIMIZDA">HAKKIMIZDA</a>
+                    
+                    <div class="dropdown">
+                        <span class="nav-link" style="cursor:pointer" data-tr="KOZMETİK ▾">KOZMETİK ▾</span>
+                        <div class="dropdown-menu">
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Diş Beyazlatma">Diş Beyazlatma</a>
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Zirkonyum Kaplamalar">Zirkonyum Kaplamalar</a>
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Estetik Dolgu">Estetik Dolgu</a>
+                        </div>
+                    </div>
 
-    <!-- 12. FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="#" class="footer-logo">KALELİ & SARIYERLİ DİŞ KLİNİĞİ</a>
-                    <p>Ankara Sincan'da 194+ mutlu hastasıyla hizmet veren, modern teknolojilerle donatılmış, güvenilir ve uzman diş kliniğiniz.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Hızlı Linkler</h4>
-                    <ul>
-                        <li><a href="#hizmetler">Tedavilerimiz</a></li>
-                        <li><a href="#sadakat">Gülüş Kulübü</a></li>
-                        <li><a href="#yorumlar">Hasta Yorumları</a></li>
-                        <li><a href="#iletisim">İletişim & Randevu</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Yasal</h4>
-                    <ul>
-                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
-                        <li><a href="#">Çerez Politikası</a></li>
-                        <li><a href="#">Hasta Hakları</a></li>
-                    </ul>
+                    <div class="dropdown">
+                        <span class="nav-link" style="cursor:pointer" data-tr="RESTORATİF ▾">RESTORATİF ▾</span>
+                        <div class="dropdown-menu">
+                            <a href="#hizmetler" class="dropdown-item" data-tr="İmplant">İmplant</a>
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Köprü & Protez">Köprü & Protez</a>
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Kanal Tedavisi">Kanal Tedavisi</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <span class="nav-link" style="cursor:pointer" data-tr="HİZMETLERİMİZ ▾">HİZMETLERİMİZ ▾</span>
+                        <div class="dropdown-menu">
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Genel Diş Hekimliği">Genel Diş Hekimliği</a>
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Ortodonti">Ortodonti</a>
+                            <a href="#hizmetler" class="dropdown-item" data-tr="Acil Diş">Acil Diş</a>
+                        </div>
+                    </div>
+
+                    <a href="#teknoloji" class="nav-link" data-tr="TEKNOLOJİ">TEKNOLOJİ</a>
+                </nav>
+            </div>
+
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+        <div class="mobile-nav-links">
+            <a href="#hero" onclick="toggleMenu()" data-tr="ANA SAYFA">ANA SAYFA</a>
+            <a href="#hakkimizda" onclick="toggleMenu()" data-tr="HAKKIMIZDA">HAKKIMIZDA</a>
+            <a href="#hizmetler" onclick="toggleMenu()" data-tr="HİZMETLER">HİZMETLER</a>
+            <a href="#doktorlar" onclick="toggleMenu()" data-tr="HEKİMLERİMİZ">HEKİMLERİMİZ</a>
+            <a href="#teknoloji" onclick="toggleMenu()" data-tr="TEKNOLOJİ">TEKNOLOJİ</a>
+            <a href="#iletisim" onclick="toggleMenu()" data-tr="İLETİŞİM">İLETİŞİM</a>
+        </div>
+        <div class="lang-switch" style="margin-top: 2rem; font-size: 1.2rem;">
+            <button onclick="switchLang('tr'); toggleMenu()" class="active">TR</button> |
+            <button onclick="switchLang('en'); toggleMenu()">EN</button> |
+            <button onclick="switchLang('ar'); toggleMenu()">AR</button>
+        </div>
+    </div>
+
+    <!-- 3. HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="img-placeholder" style="border-radius:0;" data-foto-prompt="Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği dis klinigi mutlu hasta ailesi, anne baba ve bebek birlikte gulumsüyor, sicak samimi sahne, dogal studio isigi, yuksek cozunurluklu editorial fotograf">
+                <span>🦷</span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content gs-reveal">
+            <p class="hero-label" data-tr="Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli">Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli</p>
+            <h1 class="hero-title" data-tr="Ankara Sincan'da Kusursuz Gülüşlere Hoş Geldiniz">Ankara Sincan'da Kusursuz Gülüşlere<br>Hoş Geldiniz</h1>
+            <p class="hero-desc" data-tr="Türkiye'de Sıcak, Kapsamlı ve Güvenilir Ağız ve Diş Sağlığı Hizmeti. Gülümsemeniz bizim işimiz.">Türkiye'de Sıcak, Kapsamlı ve Güvenilir Ağız ve Diş Sağlığı Hizmeti. Gülümsemeniz bizim işimiz.</p>
+            
+            <div class="hero-btns">
+                <a href="#hakkimizda" class="btn btn-gold" data-tr="DAHA FAZLA BİLGİ">DAHA FAZLA BİLGİ</a>
+                <a href="#hizmetler" class="btn btn-ghost" data-tr="DİŞ HİZMETLERİ">DİŞ HİZMETLERİ</a>
+                <a href="#teknoloji" class="btn btn-ghost" data-tr="TEKNOLOJİ">TEKNOLOJİ</a>
+            </div>
+
+            <div class="hero-rating">
+                <span style="color:var(--color-btn)">★★★★★</span>
+                <span data-tr="4.7/5 · 194 Google Yorumu">4.7/5 · 194 Google Yorumu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ABOUT -->
+    <section class="section-padding" id="hakkimizda">
+        <div class="container about-grid">
+            <div class="about-text gs-reveal">
+                <span class="tracked-label" data-tr="Hakkımızda">Hakkımızda</span>
+                <h2 data-tr="Güvenin Sanatını Yaratıyoruz.">Güvenin Sanatını<br>Yaratıyoruz.</h2>
+                <p data-tr="Güçlendirici, tutarlı ve şefkatli bir bakım sunuyoruz — her hastamızın sağlık yolculuğunun güvenli sahibi olmasını sağlıyoruz.">Güçlendirici, tutarlı ve şefkatli bir bakım sunuyoruz — her hastamızın sağlık yolculuğunun güvenli sahibi olmasını sağlıyoruz.</p>
+                <p data-tr="Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli olarak aşırı sorumluluk, proaktif iletişim ve kusursuz ekip anlayışıyla çalışıyoruz. Çünkü gülümsemeniz bizim işimiz. Modern kliniğimizde, ailenizin her bireyi için en uygun tedavi planını şeffaflıkla oluşturuyoruz.">Dt. Ayşe Zeycan Kaleli ve Dt. Faruk Sarıyerli olarak aşırı sorumluluk, proaktif iletişim ve kusursuz ekip anlayışıyla çalışıyoruz. Çünkü gülümsemeniz bizim işimiz. Modern kliniğimizde, ailenizin her bireyi için en uygun tedavi planını şeffaflıkla oluşturuyoruz.</p>
+                <a href="#doktorlar" class="btn btn-gold" style="margin-top: 1rem;" data-tr="HEKİMLERİMİZİ TANIYIN">HEKİMLERİMİZİ TANIYIN</a>
+            </div>
+            <div class="about-img gs-reveal">
+                <div class="img-placeholder" style="aspect-ratio: 4/5;" data-foto-prompt="Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği dis klinigi ic mekan veya ekip fotografi, profesyonel hekim ve personel, beyaz onluklar, sicak samimi poz, dogal isik, editorial">
+                    <span>👨‍⚕️</span>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div>© 2026 Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği. Tüm Hakları Saklıdır.</div>
-                <div>Powered by <a href="https://galzura.com" target="_blank" style="color: var(--color-accent); font-weight: 600;">Galzura Digital</a></div>
+        </div>
+    </section>
+
+    <!-- 5. COUNTERS -->
+    <section class="counters-section">
+        <div class="container counters-grid gs-reveal">
+            <div class="counter-item">
+                <div class="number"><span class="counter" data-target="15" data-suffix="+">0</span></div>
+                <div class="label" data-tr="Yıllık Deneyim">Yıllık Deneyim</div>
+            </div>
+            <div class="counter-item">
+                <div class="number"><span class="counter" data-target="5000" data-suffix="+">0</span></div>
+                <div class="label" data-tr="Mutlu Hasta">Mutlu Hasta</div>
+            </div>
+            <div class="counter-item">
+                <div class="number"><span class="counter" data-target="12" data-suffix="">0</span></div>
+                <div class="label" data-tr="Uzmanlık Alanı">Uzmanlık Alanı</div>
+            </div>
+            <div class="counter-item">
+                <div class="number"><span class="counter" data-target="4.7" data-decimal="true">0</span></div>
+                <div class="label" data-tr="Google Puanı">Google Puanı (194 Yorum)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SERVICES (Carousel) -->
+    <section class="section-padding services-section" id="hizmetler">
+        <div class="container">
+            <div class="services-header gs-reveal">
+                <div>
+                    <span class="tracked-label" style="color:var(--color-white); opacity:0.8;" data-tr="Tedavilerimiz">Tedavilerimiz</span>
+                    <h2 data-tr="Öne Çıkan Hizmetler">Öne Çıkan Hizmetler</h2>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="scrollServices(-1)" aria-label="Önceki">←</button>
+                    <button class="carousel-btn" onclick="scrollServices(1)" aria-label="Sonraki">→</button>
+                </div>
+            </div>
+
+            <div class="services-track gs-reveal" id="servicesTrack">
+                <!-- Card 1 -->
+                <a href="https://wa.me/905073039434?text=Şeffaf%20Plak%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="service-card">
+                    <div class="img-placeholder" data-foto-prompt="seffaf plak ortodonti tedavisi, modern dis klinigi, temiz goruntu"><span>🦷</span></div>
+                    <div class="service-overlay">
+                        <span class="service-num">01</span>
+                        <h3 class="service-title" data-tr="Şeffaf Plak Ortodonti">Şeffaf Plak Ortodonti</h3>
+                        <p class="service-desc" data-tr="Telsiz ortodonti ile estetik kaygı yaşamadan dişlerinizi düzeltin.">Telsiz ortodonti ile estetik kaygı yaşamadan dişlerinizi düzeltin.</p>
+                        <span class="service-link" data-tr="DAHA FAZLA →">DAHA FAZLA →</span>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="https://wa.me/905073039434?text=İmplant%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="service-card">
+                    <div class="img-placeholder" data-foto-prompt="dis implanti maketi veya operasyon ani, steril ortam"><span>🦷</span></div>
+                    <div class="service-overlay">
+                        <span class="service-num">02</span>
+                        <h3 class="service-title" data-tr="Diş İmplantı">Diş İmplantı</h3>
+                        <p class="service-desc" data-tr="Eksik dişlerinizi ömür boyu kalıcı ve doğal görünümlü implantlarla tamamlayın.">Eksik dişlerinizi ömür boyu kalıcı ve doğal görünümlü implantlarla tamamlayın.</p>
+                        <span class="service-link" data-tr="DAHA FAZLA →">DAHA FAZLA →</span>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="https://wa.me/905073039434?text=Zirkonyum%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="service-card">
+                    <div class="img-placeholder" data-foto-prompt="zirkonyum dis kaplama estetik gulumseme oncesi sonrasi"><span>🦷</span></div>
+                    <div class="service-overlay">
+                        <span class="service-num">03</span>
+                        <h3 class="service-title" data-tr="Zirkonyum Kaplamalar">Zirkonyum Kaplamalar</h3>
+                        <p class="service-desc" data-tr="Mükemmel ışık geçirgenliği ile doğal diş görünümünde estetik kaplamalar.">Mükemmel ışık geçirgenliği ile doğal diş görünümünde estetik kaplamalar.</p>
+                        <span class="service-link" data-tr="DAHA FAZLA →">DAHA FAZLA →</span>
+                    </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="https://wa.me/905073039434?text=Ağız%20Cerrahisi%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="service-card">
+                    <div class="img-placeholder" data-foto-prompt="agiz ve cene cerrahisi, 20lik dis cekimi"><span>🦷</span></div>
+                    <div class="service-overlay">
+                        <span class="service-num">04</span>
+                        <h3 class="service-title" data-tr="Ağız Cerrahisi">Ağız Cerrahisi</h3>
+                        <p class="service-desc" data-tr="Gömülü 20'lik yaş diş çekimi ve ileri cerrahi operasyonlar.">Gömülü 20'lik yaş diş çekimi ve ileri cerrahi operasyonlar.</p>
+                        <span class="service-link" data-tr="DAHA FAZLA →">DAHA FAZLA →</span>
+                    </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="https://wa.me/905073039434?text=Diş%20Beyazlatma%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="service-card">
+                    <div class="img-placeholder" data-foto-prompt="lazerle dis beyazlatma islemi, isiltili gulumseme"><span>🦷</span></div>
+                    <div class="service-overlay">
+                        <span class="service-num">05</span>
+                        <h3 class="service-title" data-tr="Diş Beyazlatma">Diş Beyazlatma</h3>
+                        <p class="service-desc" data-tr="Tek seansta güvenilir lazer teknolojisi ile bembeyaz bir gülüş.">Tek seansta güvenilir lazer teknolojisi ile bembeyaz bir gülüş.</p>
+                        <span class="service-link" data-tr="DAHA FAZLA →">DAHA FAZLA →</span>
+                    </div>
+                </a>
+                <!-- Card 6 -->
+                <a href="https://wa.me/905073039434?text=Kanal%20Tedavisi%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="service-card">
+                    <div class="img-placeholder" data-foto-prompt="endodonti kanal tedavisi mikroskop altinda"><span>🦷</span></div>
+                    <div class="service-overlay">
+                        <span class="service-num">06</span>
+                        <h3 class="service-title" data-tr="Kanal Tedavisi">Kanal Tedavisi</h3>
+                        <p class="service-desc" data-tr="Ağrılı dişlerinizi çekimden kurtaran modern endodontik tedaviler.">Ağrılı dişlerinizi çekimden kurtaran modern endodontik tedaviler.</p>
+                        <span class="service-link" data-tr="DAHA FAZLA →">DAHA FAZLA →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. DOCTORS -->
+    <section class="section-padding" id="doktorlar">
+        <div class="container">
+            <div class="text-center gs-reveal">
+                <span class="tracked-label" data-tr="Ekibimiz">Ekibimiz</span>
+                <h2 data-tr="Uzman Diş Hekimleri">Uzman Diş Hekimleri</h2>
+            </div>
+
+            <div class="doctors-grid gs-reveal">
+                <!-- Doctor 1 -->
+                <div class="doctor-card">
+                    <div class="doc-tags">
+                        <span class="doc-tag" data-tr="Estetik Diş Hekimliği">Estetik Diş Hekimliği</span>
+                        <span class="doc-tag" data-tr="15+ Yıl Deneyim">15+ Yıl Deneyim</span>
+                    </div>
+                    <div class="doc-img-wrap">
+                        <div class="img-placeholder" data-foto-prompt="Dt. Ayşe Zeycan Kaleli, kadin dis hekimi, beyaz onluk, profesyonel portre, sicak gulumseme, studio isigi, koyu arka plan"><span>👩‍⚕️</span></div>
+                    </div>
+                    <h3 class="doc-name" data-tr="Dt. Ayşe Zeycan Kaleli">Dt. Ayşe Zeycan Kaleli</h3>
+                    <p class="doc-title" data-tr="Kurucu Diş Hekimi">Kurucu Diş Hekimi</p>
+                    <p class="doc-bio" data-tr="Hastalarıyla kurduğu sıcak iletişim ve detaycı yaklaşımıyla bilinen Dt. Kaleli, estetik gülüş tasarımı ve restoratif tedavilerde uzmanlaşmıştır.">Hastalarıyla kurduğu sıcak iletişim ve detaycı yaklaşımıyla bilinen Dt. Kaleli, estetik gülüş tasarımı ve restoratif tedavilerde uzmanlaşmıştır.</p>
+                    <a href="https://wa.me/905073039434?text=Dt.%20Ayşe%20Hanım'dan%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-gold" style="align-self: flex-start;" data-tr="RANDEVU AL">RANDEVU AL</a>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="doctor-card">
+                    <div class="doc-tags">
+                        <span class="doc-tag" data-tr="Cerrahi & İmplant">Cerrahi & İmplant</span>
+                        <span class="doc-tag" data-tr="Gülüş Tasarımı">Gülüş Tasarımı</span>
+                    </div>
+                    <div class="doc-img-wrap">
+                        <div class="img-placeholder" data-foto-prompt="Dt. Faruk SARIYERLİ, erkek dis hekimi, beyaz onluk, profesyonel portre, guven veren durus, studio isigi, koyu arka plan"><span>👨‍⚕️</span></div>
+                    </div>
+                    <h3 class="doc-name" data-tr="Dt. Faruk Sarıyerli">Dt. Faruk Sarıyerli</h3>
+                    <p class="doc-title" data-tr="Kurucu Diş Hekimi">Kurucu Diş Hekimi</p>
+                    <p class="doc-bio" data-tr="Özellikle cerrahi işlemler, implantoloji ve protetik diş tedavilerinde geniş tecrübeye sahip olan Dt. Sarıyerli, hastalarına güvenli ve ağrısız bir tedavi süreci sunar.">Özellikle cerrahi işlemler, implantoloji ve protetik diş tedavilerinde geniş tecrübeye sahip olan Dt. Sarıyerli, hastalarına güvenli ve ağrısız bir tedavi süreci sunar.</p>
+                    <a href="https://wa.me/905073039434?text=Dt.%20Faruk%20Bey'den%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-gold" style="align-self: flex-start;" data-tr="RANDEVU AL">RANDEVU AL</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINANCING -->
+    <section class="section-padding financing-section" id="iletisim">
+        <div class="container financing-content gs-reveal">
+            <h2 data-tr="Şeffaf ve Uygun Fiyatlı Bakım Sunuyoruz.">Şeffaf ve Uygun Fiyatlı<br>Bakım Sunuyoruz.</h2>
+            <p data-tr="Taksit seçenekleri, SGK anlaşmaları ve tedavi planlaması için bizimle iletişime geçin. Sürpriz maliyetler olmadan, sağlığınıza yatırım yapın. (Tüm fiyatlarımıza KDV dahildir)">Taksit seçenekleri, SGK anlaşmaları ve tedavi planlaması için bizimle iletişime geçin. Sürpriz maliyetler olmadan, sağlığınıza yatırım yapın. (Tüm fiyatlarımıza KDV dahildir)</p>
+            <a href="https://wa.me/905073039434?text=Fiyatlar%20ve%20ödeme%20seçenekleri%20hakkında%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-gold" data-tr="BİZİMLE İLETİŞİME GEÇİN">BİZİMLE İLETİŞİME GEÇİN</a>
+            
+            <div class="social-icons">
+                <a href="https://wa.me/905073039434" target="_blank" aria-label="WhatsApp">W</a>
+                <a href="#" target="_blank" aria-label="Instagram">I</a>
+                <a href="#" target="_blank" aria-label="Facebook">F</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. TECHNOLOGY -->
+    <section class="section-padding" id="teknoloji">
+        <div class="container">
+            <div class="text-center gs-reveal" style="margin-bottom: 3rem;">
+                <span class="tracked-label" data-tr="Klinik Donanımı">Klinik Donanımı</span>
+                <h2 data-tr="Modern Teknoloji">Modern Teknoloji</h2>
+            </div>
+            
+            <div class="tech-grid gs-reveal">
+                <div class="tech-tabs">
+                    <button class="tech-tab-btn active" onclick="openTech(0)">
+                        <span>🔬</span> <span data-tr="Dijital Röntgen">Dijital Röntgen</span>
+                    </button>
+                    <button class="tech-tab-btn" onclick="openTech(1)">
+                        <span>🖥️</span> <span data-tr="Panoramik Çekim">Panoramik Çekim</span>
+                    </button>
+                    <button class="tech-tab-btn" onclick="openTech(2)">
+                        <span>🦷</span> <span data-tr="İntraoral Tarayıcı">İntraoral Tarayıcı</span>
+                    </button>
+                    <button class="tech-tab-btn" onclick="openTech(3)">
+                        <span>✨</span> <span data-tr="Lazer Teknolojisi">Lazer Teknolojisi</span>
+                    </button>
+                </div>
+                
+                <div class="tech-content-area">
+                    <!-- Tech 0 -->
+                    <div class="tech-pane active" id="tech-0">
+                        <div class="img-placeholder" data-foto-prompt="modern dis klinigi dijital rontgen cihazi, steril ortam"><span>🔬</span></div>
+                        <h3 data-tr="Dijital Röntgen">Dijital Röntgen</h3>
+                        <p data-tr="Geleneksel röntgenlere göre %90 daha az radyasyon ile anında, yüksek çözünürlüklü görüntüler elde ediyoruz.">Geleneksel röntgenlere göre %90 daha az radyasyon ile anında, yüksek çözünürlüklü görüntüler elde ediyoruz.</p>
+                    </div>
+                    <!-- Tech 1 -->
+                    <div class="tech-pane" id="tech-1">
+                        <div class="img-placeholder" data-foto-prompt="panoramik dis rontgen cihazi, hasta cekim asamasinda"><span>🖥️</span></div>
+                        <h3 data-tr="Panoramik Çekim">Panoramik Çekim</h3>
+                        <p data-tr="Tüm çene yapısını tek bir karede görerek, kist, tümör ve gömülü diş tespitlerini kusursuz yapıyoruz.">Tüm çene yapısını tek bir karede görerek, kist, tümör ve gömülü diş tespitlerini kusursuz yapıyoruz.</p>
+                    </div>
+                    <!-- Tech 2 -->
+                    <div class="tech-pane" id="tech-2">
+                        <div class="img-placeholder" data-foto-prompt="intraoral 3d tarayici ile dis olcusu alma islemi"><span>🦷</span></div>
+                        <h3 data-tr="İntraoral Tarayıcı">İntraoral Tarayıcı</h3>
+                        <p data-tr="Geleneksel hamur ölçülere son. Saniyeler içinde ağız içinizin 3 boyutlu dijital kopyasını oluşturuyoruz.">Geleneksel hamur ölçülere son. Saniyeler içinde ağız içinizin 3 boyutlu dijital kopyasını oluşturuyoruz.</p>
+                    </div>
+                    <!-- Tech 3 -->
+                    <div class="tech-pane" id="tech-3">
+                        <div class="img-placeholder" data-foto-prompt="dis hekimliginde lazer cihazi kullanimi"><span>✨</span></div>
+                        <h3 data-tr="Lazer Teknolojisi">Lazer Teknolojisi</h3>
+                        <p data-tr="Diş eti şekillendirme ve beyazlatma işlemlerinde ağrısız, kanamasız ve hızlı iyileşme sunan lazer çözümleri.">Diş eti şekillendirme ve beyazlatma işlemlerinde ağrısız, kanamasız ve hızlı iyileşme sunan lazer çözümleri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. LOCATIONS -->
+    <section class="section-padding" style="background-color: var(--color-white);">
+        <div class="container locations-grid gs-reveal">
+            <div class="location-card">
+                <span class="tracked-label" data-tr="Ana Klinik">Ana Klinik</span>
+                <h3 class="loc-title" data-tr="Sincan Merkez">Sincan Merkez</h3>
+                <p class="loc-address" data-tr="No:7/3 Apt, İstasyon, Polatlı 1. Cd., 06935 Sincan/Ankara, Türkiye">No:7/3 Apt, İstasyon, Polatlı 1. Cd.<br>06935 Sincan/Ankara</p>
+                <a href="https://wa.me/905073039434" target="_blank" class="btn btn-ghost-dark" data-tr="BİZİMLE İLETİŞİME GEÇİN">BİZİMLE İLETİŞİME GEÇİN</a>
+            </div>
+            <div class="location-card">
+                <span class="tracked-label" data-tr="Çalışma Saatleri">Çalışma Saatleri</span>
+                <h3 class="loc-title" data-tr="Haftanın 6 Günü">Haftanın 6 Günü</h3>
+                <p class="loc-address" data-tr="Pazartesi - Cumartesi: 12:00 - 20:00<br>Pazar: Kapalı">Pazartesi - Cumartesi: 12:00 - 20:00<br>Pazar: Kapalı</p>
+                <a href="tel:+905073039434" class="btn btn-gold" data-tr="HEMEN ARA">HEMEN ARA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. BLOG -->
+    <section class="section-padding" id="blog">
+        <div class="container">
+            <div class="blog-header gs-reveal">
+                <span class="tracked-label" data-tr="Hasta Eğitimi">Hasta Eğitimi</span>
+                <h2 data-tr="Blog & Haberler">Blog & Haberler</h2>
+            </div>
+            
+            <div class="blog-grid gs-reveal">
+                <a href="#" class="blog-card">
+                    <div class="blog-img">
+                        <div class="img-placeholder" data-foto-prompt="dil kaziyici kullanimi, agiz hijyeni, temiz banyo ortami"><span>🪥</span></div>
+                    </div>
+                    <span class="blog-cat" data-tr="AĞIZ HİJYENİ">AĞIZ HİJYENİ</span>
+                    <h3 class="blog-title" data-tr="Dil Kazıyıcı Kullanmalı mıyım? Diş Sağlığı Rehberi">Dil Kazıyıcı Kullanmalı mıyım? Diş Sağlığı Rehberi</h3>
+                    <p data-tr="Ağız kokusunun bir numaralı sebebi olan dil bakterileri ile nasıl başa çıkılır?">Ağız kokusunun bir numaralı sebebi olan dil bakterileri ile nasıl başa çıkılır?</p>
+                    <span class="blog-link" data-tr="DEVAMINI OKU →">DEVAMINI OKU →</span>
+                </a>
+                
+                <a href="#" class="blog-card">
+                    <div class="blog-img">
+                        <div class="img-placeholder" data-foto-prompt="kanal tedavisi oncesi sonrasi rontgen, endodonti anlatici gorsel"><span>🦷</span></div>
+                    </div>
+                    <span class="blog-cat" data-tr="TEDAVİLER">TEDAVİLER</span>
+                    <h3 class="blog-title" data-tr="Kanal Tedavisi Hakkındaki Mitler — Gerçekler Neler?">Kanal Tedavisi Hakkındaki Mitler — Gerçekler Neler?</h3>
+                    <p data-tr="Kanal tedavisi gerçekten ağrılı mıdır? Toplumdaki yanlış bilinenleri açıklıyoruz.">Kanal tedavisi gerçekten ağrılı mıdır? Toplumdaki yanlış bilinenleri açıklıyoruz.</p>
+                    <span class="blog-link" data-tr="DEVAMINI OKU →">DEVAMINI OKU →</span>
+                </a>
+                
+                <a href="#" class="blog-card">
+                    <div class="blog-img">
+                        <div class="img-placeholder" data-foto-prompt="saglikli gulumseyen genc kadin, dogal isik, estetik gulumseme"><span>✨</span></div>
+                    </div>
+                    <span class="blog-cat" data-tr="ESTETİK">ESTETİK</span>
+                    <h3 class="blog-title" data-tr="Sağlıklı Olmak Yeni Güzel Olmaktır">Sağlıklı Olmak Yeni Güzel Olmaktır</h3>
+                    <p data-tr="Estetik bir gülüşün temeli sağlıklı diş etleri ve diş yapısından geçer.">Estetik bir gülüşün temeli sağlıklı diş etleri ve diş yapısından geçer.</p>
+                    <span class="blog-link" data-tr="DEVAMINI OKU →">DEVAMINI OKU →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. TESTIMONIALS (Real Reviews) -->
+    <section class="section-padding testi-section" id="yorumlar">
+        <div class="container text-center gs-reveal">
+            <span class="tracked-label" data-tr="Başarı Hikayeleri">Başarı Hikayeleri</span>
+            <h2 data-tr="Hastalarımızın Yorumları">Hastalarımızın Yorumları</h2>
+            
+            <div class="testi-grid">
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Öneri üzerine geldim çok memnun kaldım. Merhametli bir işletme ilgilenen doktor ve yardımcısı da çok kibar ve işin ehli herkese çok teşekkür ederim."</p>
+                    <p class="testi-name">— Emre Bilgin</p>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Gayet ilgili insanlar, işlerini iyi yapıyorlar. 20'lik diş çektirdim ve dolgu yaptıracağım fiyat performans kliniği diyebiliriz."</p>
+                    <p class="testi-name">— Zeki Can Özer</p>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Doktorları da çalışanları da çok ilgili, işlerini çok titiz ve düzenli yapıyorlar. Çok memnun kaldım gitmek isteyenler hiç düşünmeden gidebilirler."</p>
+                    <p class="testi-name">— Esila Kürkaya</p>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Kliniğe ilk muayene için gittiğimde bilgilendirmeyi açıklayıcı ve ilgiyi gayet samimi buldum. Verilen güven ile implant yaptırmaya karar verdim. Gayet hijyenik."</p>
+                    <p class="testi-name">— Azize Sungur</p>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Mahallemizin dişçisi. Güvenle tercih edebilirsiniz."</p>
+                    <p class="testi-name">— Oğuzhan Özarpacı</p>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Ben Ayşe Zeycan Kaleli kadar tatlı mı tatlı ve naif olan, tüm sorularına tatlı dille cevap verip yorumlayan doktor görmedim. Sizi çok sevdim."</p>
+                    <p class="testi-name">— Semra Dal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. MAPS -->
+    <section id="harita">
+        <div class="map-container gs-reveal">
+            <iframe src="https://maps.google.com/maps?q=39.9658141,32.5859333&z=15&output=embed" title="Klinik Lokasyonu" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- 14. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid gs-reveal">
+                <!-- Col 1 -->
+                <div class="footer-logo">
+                    <h2>Dt. Ayşe Zeycan Kaleli &<br>Dt. Faruk Sarıyerli</h2>
+                    <p style="color:rgba(255,255,255,0.6); margin-bottom: 2rem;" data-tr="Ankara Sincan'da güvenilir gülüş mimarlarınız.">Ankara Sincan'da güvenilir gülüş mimarlarınız.</p>
+                    <span class="footer-branding">POWERED BY <a href="https://galzura.com" target="_blank" style="color:var(--color-white)">GALZURA DIGITAL</a></span>
+                </div>
+                
+                <!-- Col 2 -->
+                <div>
+                    <h4 style="color:var(--color-white); margin-bottom:1.5rem; font-size:13px; letter-spacing:0.1em; text-transform:uppercase;" data-tr="ÇALIŞMA SAATLERİ">ÇALIŞMA SAATLERİ</h4>
+                    <table class="footer-hours-table">
+                        <tr><td data-tr="Pazartesi">Pazartesi</td><td>12:00 - 20:00</td></tr>
+                        <tr><td data-tr="Salı">Salı</td><td>12:00 - 20:00</td></tr>
+                        <tr><td data-tr="Çarşamba">Çarşamba</td><td>12:00 - 20:00</td></tr>
+                        <tr><td data-tr="Perşembe">Perşembe</td><td>12:00 - 20:00</td></tr>
+                        <tr><td data-tr="Cuma">Cuma</td><td>12:00 - 20:00</td></tr>
+                        <tr><td data-tr="Cumartesi">Cumartesi</td><td>12:00 - 20:00</td></tr>
+                        <tr><td data-tr="Pazar">Pazar</td><td data-tr="Kapalı">Kapalı</td></tr>
+                    </table>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="footer-links">
+                    <h4 data-tr="HIZLI LİNKLER">HIZLI LİNKLER</h4>
+                    <ul>
+                        <li><a href="#hero" data-tr="Ana Sayfa">Ana Sayfa</a></li>
+                        <li><a href="#hakkimizda" data-tr="Hakkımızda">Hakkımızda</a></li>
+                        <li><a href="#hizmetler" data-tr="Hizmetlerimiz">Hizmetlerimiz</a></li>
+                        <li><a href="#doktorlar" data-tr="Hekimlerimiz">Hekimlerimiz</a></li>
+                        <li><a href="https://wa.me/905073039434" target="_blank" data-tr="İletişim">İletişim</a></li>
+                    </ul>
+                    
+                    <div class="social-icons" style="justify-content: flex-start; margin-top: 2rem;">
+                        <a href="https://wa.me/905073039434" target="_blank" aria-label="WhatsApp">W</a>
+                        <a href="#" target="_blank" aria-label="Instagram">I</a>
+                        <a href="#" target="_blank" aria-label="Facebook">F</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom gs-reveal">
+                <div class="footer-legal">
+                    <a href="#" data-tr="Gizlilik Politikası">Gizlilik Politikası</a>
+                    <a href="#" data-tr="Çerez Politikası">Çerez Politikası</a>
+                    <a href="#" data-tr="KVKK Aydınlatma Metni">KVKK Aydınlatma Metni</a>
+                </div>
+                <div data-tr="© 2026 Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği. Tüm hakları saklıdır.">
+                    &copy; 2026 Dt. Ayşe Zeycan Kaleli & Dt. Faruk Sarıyerli Diş Kliniği. Tüm hakları saklıdır.
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- FLOATING BUTTONS (Desktop) -->
-    <a href="tel:+905073039434" class="floating-phone" aria-label="Ara">📞</a>
-    <a href="https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="floating-wa" aria-label="WhatsApp">💬</a>
-
-    <!-- MOBILE BOTTOM NAV -->
-    <div class="mobile-bottom-nav">
-        <div class="mobile-nav-grid">
-            <a href="tel:+905073039434" class="mobile-nav-btn" style="background:#f1f5f9; color:var(--color-primary);">
-                <span style="font-size:1.2rem;margin-bottom:2px;">📞</span> Ara
-            </a>
-            <a href="https://wa.me/905073039434?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="mobile-nav-btn" style="background:var(--color-primary); color:#fff;">
-                <span style="font-size:1.2rem;margin-bottom:2px;">📅</span> Randevu Al
-            </a>
-            <a href="https://wa.me/905073039434?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="mobile-nav-btn" style="background:#25D366; color:#fff;">
-                <span style="font-size:1.2rem;margin-bottom:2px;">💬</span> WhatsApp
-            </a>
-        </div>
-    </div>
 
     <!-- CDNs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -1156,77 +1112,75 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. DIL GECIS SISTEMI
-            window.switchLang = function(lang) {
-                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-                document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-                    el.textContent = el.dataset[lang];
-                });
-                localStorage.setItem('lang', lang);
-                
-                // Update active button
-                document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
-                const activeBtn = document.querySelector(`.lang-switch button[onclick="switchLang('${lang}')"]`);
-                if(activeBtn) activeBtn.classList.add('active');
-            };
-            const savedLang = localStorage.getItem('lang');
-            if(savedLang) switchLang(savedLang);
-
-            // 2. LENIS SMOOTH SCROLL
-            if(typeof Lenis !== 'undefined'){
+            // 1. LENIS SMOOTH SCROLL (Strict Implementation)
+            if(typeof Lenis !== 'undefined') {
                 const lenis = new Lenis({
-                    duration: 1.2,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                    duration: 1.0,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    smoothWheel: true,
+                    wheelMultiplier: 1.0,
+                    touchMultiplier: 1.5,
                 });
-                function raf(time) {
-                    lenis.raf(time);
+                
+                if (typeof gsap !== 'undefined') {
+                    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+                    gsap.ticker.lagSmoothing(0);
+                } else {
+                    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
                     requestAnimationFrame(raf);
                 }
-                requestAnimationFrame(raf);
                 
-                // Wait for GSAP to load
-                window.onload = () => {
-                    if(typeof ScrollTrigger !== 'undefined'){
-                        lenis.on('scroll', ScrollTrigger.update);
-                        gsap.ticker.add((t) => { lenis.raf(t * 1000); });
-                        gsap.ticker.lagSmoothing(0, 0);
-                    }
-                };
+                if (typeof ScrollTrigger !== 'undefined') {
+                    lenis.on('scroll', ScrollTrigger.update);
+                }
+
+                document.querySelectorAll('a[href^="#"]').forEach(a => {
+                    a.addEventListener('click', e => {
+                        const id = a.getAttribute('href');
+                        if(id === '#') return;
+                        const target = document.querySelector(id);
+                        if (target) { 
+                            e.preventDefault(); 
+                            lenis.scrollTo(target, {offset: -80, duration: 1.2}); 
+                        }
+                    });
+                });
             }
 
-            // 3. GSAP FALLBACK & ANIMATIONS
-            window.addEventListener('load', () => {
-                if(typeof gsap !== 'undefined'){
-                    document.documentElement.classList.add('gsap-ready');
-                    gsap.registerPlugin(ScrollTrigger);
+            // 2. GSAP REVEAL ANIMATIONS
+            if(typeof gsap !== 'undefined') {
+                document.documentElement.classList.add('gsap-ready');
+                gsap.registerPlugin(ScrollTrigger);
+                
+                setTimeout(() => { // small delay to ensure layout is ready
                     document.querySelectorAll('.gs-reveal').forEach(el => {
                         gsap.fromTo(el, 
                             { opacity: 0, y: 40 },
                             { 
-                                opacity: 1, 
-                                y: 0, 
-                                duration: 0.8, 
-                                ease: 'power2.out',
-                                scrollTrigger: {
-                                    trigger: el,
-                                    start: 'top 85%'
-                                }
+                                opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+                                scrollTrigger: { trigger: el, start: 'top 85%' }
                             }
                         );
                     });
-                }
+                }, 100);
+            }
+
+            // 3. NAVBAR SCROLL EFFECT
+            const header = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if(window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
             });
 
-            // 4. SAYAC ANIMASYONU
-            function animateCounter(el) {
+            // 4. COUNTER ANIMATION
+            function animateCounter(el){
                 const target = parseFloat(el.dataset.target);
                 const suffix = el.dataset.suffix || '';
                 const decimal = el.dataset.decimal === 'true';
                 const duration = 2000;
-                let start = null;
+                const start = performance.now();
                 
-                function update(now) {
-                    if (!start) start = now;
+                function update(now){
                     const elapsed = Math.min((now - start) / duration, 1);
                     const ease = 1 - Math.pow(2, -10 * elapsed);
                     const val = target * ease;
@@ -1235,9 +1189,10 @@
                 
                 const obs = new IntersectionObserver(entries => {
                     if(entries[0].isIntersecting){
-                        requestAnimationFrame(function tick(now) {
+                        requestAnimationFrame(function tick(now){
                             update(now);
                             if(performance.now() - start < duration) requestAnimationFrame(tick);
+                            else el.textContent = (decimal ? target.toFixed(1) : target) + suffix; // ensure final value
                         });
                         obs.disconnect();
                     }
@@ -1246,106 +1201,43 @@
             }
             document.querySelectorAll('.counter').forEach(animateCounter);
 
-            // 5. HIZMET FILTRELEME
-            const searchInput = document.getElementById('searchInput');
-            const categoryFilter = document.getElementById('categoryFilter');
-            const cards = document.querySelectorAll('.service-card');
-
-            function filterServices() {
-                const searchTerm = searchInput.value.toLowerCase();
-                const category = categoryFilter.value;
-
-                cards.forEach(card => {
-                    const title = card.querySelector('h3').textContent.toLowerCase();
-                    const cardCategory = card.dataset.category;
-                    const matchesSearch = title.includes(searchTerm);
-                    const matchesCategory = category === 'all' || category === cardCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
+            // 5. LANGUAGE SWITCHER
+            window.switchLang = function(lang) {
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                    if(el.dataset[lang]) el.textContent = el.dataset[lang];
                 });
-            }
+                
+                // Update active button states
+                document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll(`.lang-switch button[onclick*="${lang}"]`).forEach(btn => btn.classList.add('active'));
+                
+                localStorage.setItem('lang', lang);
+            };
+            const savedLang = localStorage.getItem('lang');
+            if(savedLang) window.switchLang(savedLang);
 
-            if(searchInput && categoryFilter) {
-                searchInput.addEventListener('input', filterServices);
-                categoryFilter.addEventListener('change', filterServices);
-            }
+            // 6. SERVICES CAROUSEL
+            const track = document.getElementById('servicesTrack');
+            window.scrollServices = function(dir) {
+                const cardWidth = track.querySelector('.service-card').offsetWidth + 32; // width + gap
+                track.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+            };
 
-            // 6. YORUMLAR CAROUSEL
-            const track = document.getElementById('reviewTrack');
-            const dotsContainer = document.getElementById('reviewDots');
-            const slides = document.querySelectorAll('.review-card');
-            let currentSlide = 0;
+            // 7. TECHNOLOGY TABS
+            window.openTech = function(index) {
+                document.querySelectorAll('.tech-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tech-pane').forEach(p => p.classList.remove('active'));
+                
+                document.querySelectorAll('.tech-tab-btn')[index].classList.add('active');
+                document.getElementById('tech-' + index).classList.add('active');
+            };
 
-            if(track && slides.length > 0) {
-                // Create dots
-                slides.forEach((_, i) => {
-                    const dot = document.createElement('div');
-                    dot.classList.add('dot');
-                    if(i === 0) dot.classList.add('active');
-                    dot.addEventListener('click', () => goToSlide(i));
-                    dotsContainer.appendChild(dot);
-                });
-
-                const dots = document.querySelectorAll('.dot');
-
-                function goToSlide(n) {
-                    currentSlide = n;
-                    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-                    dots.forEach(d => d.classList.remove('active'));
-                    dots[currentSlide].classList.add('active');
-                }
-
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    goToSlide(currentSlide);
-                }
-
-                setInterval(nextSlide, 5000);
-            }
-
-            // 7. MOBIL MENU & SCROLL OFFSET
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            
-            hamburger.addEventListener('click', () => {
-                const isHidden = window.getComputedStyle(navLinks).display === 'none';
-                navLinks.style.display = isHidden ? 'flex' : 'none';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '90px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = '#fff';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-            });
-
-            // Smooth scroll for anchors
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    if(targetId === '#') return;
-                    const targetEl = document.querySelector(targetId);
-                    if(targetEl) {
-                        e.preventDefault();
-                        if(window.innerWidth <= 768) navLinks.style.display = 'none'; // close mobile menu
-                        const offset = 100; // Navbar height
-                        const bodyRect = document.body.getBoundingClientRect().top;
-                        const elementRect = targetEl.getBoundingClientRect().top;
-                        const elementPosition = elementRect - bodyRect;
-                        const offsetPosition = elementPosition - offset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                        });
-                    }
-                });
-            });
+            // 8. MOBILE MENU TOGGLE
+            const mobileMenu = document.getElementById('mobileMenu');
+            window.toggleMenu = function() {
+                mobileMenu.classList.toggle('active');
+            };
         });
     </script>
 </body>
