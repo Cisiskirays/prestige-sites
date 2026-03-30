@@ -1,1311 +1,1133 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Klinik 06 Ağız ve Diş Sağlığı Polikliniği | Ankara Etimesgut Diş Kliniği</title>
-<meta name="description" content="Ankara Etimesgut'ta uzman kadromuzla şeffaf fiyatlı, ağrısız implant, zirkonyum ve estetik diş tedavileri. 4.8 Google puanı ile güvenilir diş kliniğiniz. Hemen randevu alın.">
-<meta name="theme-color" content="#0D4F4F">
-<link rel="canonical" href="https://klinik06.com">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<title>Klinik 06 Ağız ve Diş Sağlığı Polikliniği | Premium Diş Kliniği</title>
+<meta name="description" content="Ankara Etimesgut'ta uzman kadromuzla ağrısız implant, zirkonyum ve gülüş tasarımı hizmetleri. 4.8/5 Google puanı ile güvenilir diş kliniğiniz.">
+<meta name="theme-color" content="#0D2137">
+<link rel="canonical" href="https://klinik06agiz.com">
+<meta property="og:title" content="Klinik 06 Ağız ve Diş Sağlığı Polikliniği | Premium Diş Kliniği">
+<meta property="og:description" content="Gülüşünüzü yeniden tasarlıyoruz. Uzman hekimler, şeffaf fiyatlar ve son teknoloji tedaviler.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"MedicalBusiness",
-  "name":"Klinik 06 Ağız ve Diş Sağlığı Polikliniği",
-  "address":{"@type":"PostalAddress","streetAddress":"Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara, Türkiye","addressCountry":"TR"},
-  "telephone":"+90 501 321 42 06",
-  "url":"https://klinik06.com",
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"131"},
-  "openingHours":"Mo-Fr 09:00-19:00, Sa 09:00-19:00",
-  "paymentAccepted":"Nakit, Kredi Karti, SGK",
-  "geo":{"@type":"GeoCoordinates","latitude":39.9812704,"longitude":32.6477407},
-  "priceRange":"$$",
-  "medicalSpecialty":"Diş Kliniği"
-}
+{"@context":"https://schema.org","@type":"Dentist","name":"Klinik 06 Ağız ve Diş Sağlığı Polikliniği","telephone":"+90 501 321 42 06","address":{"@type":"PostalAddress","streetAddress":"Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara, Türkiye","addressCountry":"TR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"131"},"geo":{"@type":"GeoCoordinates","latitude":39.9812704,"longitude":32.6477407},"openingHours":"Pazartesi: 09:00 to 19:00 | Salı: 09:00 to 19:00 | Çarşamba: 09:00 to 19:00 | Perşembe: 09:00 to 19:00 | Cuma: 09:00 to 19:00 | Cumartesi: 09:00 to 19:00 | Pazar: Kapalı","medicalSpecialty":"Dentistry"}
 </script>
-
 <style>
 :root {
-  --color-primary: #0D4F4F;
-  --color-accent: #D4A853;
-  --color-bg: #FAF7F2;
-  --color-dark: #1A1A2E;
-  --color-white: #FFFFFF;
-  --font-head: 'Playfair Display', serif;
-  --font-body: 'DM Sans', sans-serif;
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04);
-  --shadow-md: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06);
-  --shadow-lg: 0 1px 2px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.04);
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --radius: 16px;
+  --primary: #0D2137;
+  --primary-light: #1B3A5C;
+  --accent: #C9A96E;
+  --accent-dark: #A8834A;
+  --bg: #F5F0EB;
+  --bg-white: #FFFFFF;
+  --bg-dark: #0A1929;
+  --text: #1C2B3A;
+  --text-muted: #6B7B8D;
+  --border: #E8E0D5;
+  --success: #2D6A4F;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.1);
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); background-color: var(--color-bg); color: var(--color-dark); line-height: 1.6; overflow-x: hidden; }
-
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-head); color: var(--color-primary); line-height: 1.2; }
-h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
-p { font-size: clamp(0.95rem, 1.2vw, 1.1rem); color: #4A4A5A; }
-a { text-decoration: none; color: inherit; transition: var(--transition); }
-ul { list-style: none; }
-img, svg { max-width: 100%; display: block; }
-
-.container { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 100px 0; }
+html { scroll-behavior: auto !important; }
+body { font-family: 'DM Sans', sans-serif; color: var(--text); background-color: var(--bg-white); margin: 0; padding: 0; overflow-x: hidden; }
+h1, h2, h3, h4, h5, h6, .font-cormorant { font-family: 'Cormorant Garamond', serif; color: var(--primary); margin-top: 0; }
+h1 { font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.1; font-weight: 700; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.2; font-weight: 600; }
+p { line-height: 1.6; margin-top: 0; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; margin: 0; }
+img { max-width: 100%; height: auto; display: block; }
+.container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 50px; font-weight: 500; transition: all 0.3s ease; cursor: pointer; border: none; gap: 8px; font-size: 16px; }
+.btn-accent { background: var(--accent); color: var(--bg-white); }
+.btn-accent:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(201,169,110,0.3); }
+.btn-outline-white { background: transparent; color: var(--bg-white); border: 1px solid var(--bg-white); }
+.btn-outline-white:hover { background: var(--bg-white); color: var(--primary); }
+.btn-outline-accent { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn-outline-accent:hover { background: var(--accent); color: var(--bg-white); }
 .text-center { text-align: center; }
-.mb-2 { margin-bottom: 8px; } .mb-4 { margin-bottom: 16px; } .mb-8 { margin-bottom: 32px; } .mb-12 { margin-bottom: 48px; }
-
-/* Buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 50px; font-weight: 600; cursor: pointer; border: none; transition: var(--transition); font-family: var(--font-body); gap: 8px; }
-.btn-primary { background: var(--color-primary); color: var(--color-white); }
-.btn-primary:hover { background: #0a3d3d; transform: scale(1.03); box-shadow: 0 10px 20px rgba(13, 79, 79, 0.2); }
-.btn-accent { background: var(--color-accent); color: var(--color-white); }
-.btn-accent:hover { background: #b89040; transform: scale(1.03); box-shadow: 0 10px 20px rgba(212, 168, 83, 0.3); }
-.btn-outline { background: transparent; border: 2px solid var(--color-primary); color: var(--color-primary); }
-.btn-outline:hover { background: var(--color-primary); color: var(--color-white); }
-.btn-lg { padding: 18px 36px; font-size: 1.1rem; }
-
-/* Placeholders */
-.img-placeholder { background: linear-gradient(135deg, #0D4F4F22, #D4A85322); display: flex; align-items: center; justify-content: center; border-radius: var(--radius); min-height: 300px; position: relative; overflow: hidden; }
-.img-placeholder::after { content: attr(data-foto-prompt); position: absolute; bottom: 10px; left: 10px; right: 10px; font-size: 0.7rem; color: #666; text-align: center; background: rgba(255,255,255,0.8); padding: 4px; border-radius: 4px; opacity: 0; transition: var(--transition); }
-.img-placeholder:hover::after { opacity: 1; }
+.section-padding { padding: 100px 0; }
+.gs-reveal { opacity: 1; transform: none; }
+.gsap-ready .gs-reveal { opacity: 0; transform: translateY(30px); }
 
 /* Navbar */
-.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; transition: var(--transition); padding: 20px 0; border-bottom: 1px solid transparent; }
-.navbar.scrolled { background: rgba(250, 247, 242, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 12px 0; box-shadow: var(--shadow-sm); border-bottom: 1px solid rgba(13, 79, 79, 0.1); }
+.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); transition: all 0.3s ease; padding: 20px 0; border-bottom: 1px solid transparent; }
+.navbar.scrolled { padding: 12px 0; box-shadow: var(--shadow); border-bottom-color: var(--border); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: flex; flex-direction: column; line-height: 1; }
-.nav-logo span { font-size: 0.8rem; font-family: var(--font-body); font-weight: 500; color: var(--color-accent); letter-spacing: 1px; }
-.nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-link { font-weight: 500; position: relative; padding: 5px 0; }
-.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-accent); transition: var(--transition); }
-.nav-link:hover::after { width: 100%; }
-.nav-actions { display: flex; gap: 16px; align-items: center; }
-.lang-switch { display: flex; gap: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; color: var(--color-primary); }
-.lang-btn { background: none; border: none; cursor: pointer; opacity: 0.5; transition: var(--transition); font-weight: bold; color: inherit; }
-.lang-btn.active { opacity: 1; color: var(--color-accent); }
-.mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--color-primary); cursor: pointer; }
+.logo { font-size: 28px; font-weight: 700; color: var(--primary); display: flex; flex-direction: column; line-height: 1; }
+.logo span { font-size: 12px; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--text-muted); letter-spacing: 1px; margin-top: 4px; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { font-weight: 500; color: var(--primary); transition: color 0.3s; }
+.nav-links a:hover { color: var(--accent); }
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.nav-phone { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary); }
+.lang-switch select { background: transparent; border: none; font-weight: 500; color: var(--primary); cursor: pointer; outline: none; }
+.mobile-toggle { display: none; background: transparent; border: none; cursor: pointer; color: var(--primary); }
 
 /* Hero */
-.hero { min-height: 100vh; position: relative; display: flex; align-items: center; padding-top: 100px; padding-bottom: 150px; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13, 79, 79, 0.95) 0%, rgba(26, 26, 46, 0.98) 100%); z-index: -2; }
-.hero-bg-img { position: absolute; inset: 0; z-index: -3; opacity: 0.3; background: #0D4F4F; }
-.hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; color: var(--color-white); }
-.hero h1 { color: var(--color-white); margin-bottom: 24px; }
-.hero p { color: rgba(255,255,255,0.8); font-size: 1.2rem; margin-bottom: 32px; max-width: 500px; }
-.google-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 24px; backdrop-filter: blur(4px); font-weight: 500; }
-.hero-video { position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.1); }
-.play-btn { width: 80px; height: 80px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
-.play-btn:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(212, 168, 83, 0.6); }
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 160px; padding-bottom: 200px; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,33,55,0.88) 0%, rgba(13,33,55,0.55) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 800px; color: var(--bg-white); }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: 500; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.2); }
+.hero-desc { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 40px; max-width: 600px; }
+.hero-btns { display: flex; gap: 16px; }
 
-/* 3-Tile Pattern */
-.hero-tiles { position: absolute; bottom: -80px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1320px; padding: 0 24px; z-index: 10; }
-.tiles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.hero-tile { background: var(--color-white); padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-md); transition: var(--transition); display: flex; flex-direction: column; gap: 16px; border-top: 4px solid var(--color-accent); }
-.hero-tile:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
-.hero-tile h3 { font-size: 1.5rem; display: flex; align-items: center; gap: 12px; }
-.hero-tile input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: var(--font-body); outline: none; transition: var(--transition); }
-.hero-tile input:focus { border-color: var(--color-primary); }
-.tile-links { display: flex; gap: 16px; margin-top: auto; }
-.tile-links a { font-weight: 600; color: var(--color-primary); text-decoration: underline; text-underline-offset: 4px; }
+/* Hero Tiles */
+.hero-tiles-wrapper { position: relative; z-index: 10; margin-top: -80px; }
+.hero-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.hero-tile { background: var(--bg-white); border-radius: 16px; padding: 32px; box-shadow: var(--shadow); min-height: 140px; display: flex; flex-direction: column; justify-content: center; }
+.hero-tile-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.hero-tile-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--bg); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.hero-tile h3 { margin: 0; font-size: 20px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+.hero-tile input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; outline: none; }
+.hero-tile p { margin: 0; color: var(--text-muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.hero-tile .btn { padding: 10px 20px; width: 100%; }
 
 /* Trust Strip */
-.trust-strip { background: var(--color-white); padding: 120px 0 40px; border-bottom: 1px solid rgba(0,0,0,0.05); overflow: hidden; }
-.marquee { display: flex; white-space: nowrap; animation: marquee 30s linear infinite; }
-.marquee:hover { animation-play-state: paused; }
-.marquee-item { display: inline-flex; align-items: center; gap: 12px; padding: 12px 24px; border: 1px solid var(--color-primary); border-radius: 50px; margin-right: 24px; font-weight: 600; color: var(--color-primary); }
+.trust-strip { background: var(--primary); padding: 16px 0; overflow: hidden; white-space: nowrap; display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.trust-track { display: inline-flex; align-items: center; animation: marquee 20s linear infinite; }
+.trust-item { display: inline-flex; align-items: center; gap: 8px; color: var(--bg-white); font-weight: 500; margin: 0 32px; font-size: 15px; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* Counters */
-.counters-section { background: var(--color-primary); color: var(--color-white); padding: 80px 0; }
-.counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
-.counter-num { font-size: 3.5rem; font-family: var(--font-head); font-weight: 700; color: var(--color-accent); line-height: 1; margin-bottom: 8px; }
-.counter-text { font-size: 1.1rem; opacity: 0.9; }
+.counters-section { padding: 80px 0; background: var(--bg); }
+.counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.counter-card { background: var(--bg-white); padding: 40px 24px; border-radius: 16px; text-align: center; box-shadow: var(--shadow); transition: transform 0.3s ease; }
+.counter-card:hover { transform: translateY(-8px); }
+.counter-num { font-size: 48px; font-weight: 700; color: var(--primary); font-family: 'Cormorant Garamond', serif; line-height: 1; margin-bottom: 8px; }
+.counter-label { color: var(--text-muted); font-weight: 500; }
 
-/* Services */
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
-.service-card { background: var(--color-white); border-radius: var(--radius); padding: 40px 32px; box-shadow: var(--shadow-sm); transition: var(--transition); border: 1px solid transparent; }
-.service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: var(--color-accent); }
-.service-icon { width: 64px; height: 64px; background: rgba(13, 79, 79, 0.05); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--color-primary); }
-.service-meta { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #666; margin: 16px 0 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+/* Treatments */
+.treatments-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+.treatment-filters { display: flex; gap: 16px; align-items: center; }
+.treatment-filters input, .treatment-filters select { padding: 12px 20px; border: 1px solid var(--border); border-radius: 50px; font-family: inherit; outline: none; background: var(--bg-white); }
+.treatments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.treatment-card { background: var(--bg-white); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; display: flex; flex-direction: column; }
+.treatment-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.treatment-img { height: 200px; background: linear-gradient(45deg, var(--bg), #E8E0D5); display: flex; align-items: center; justify-content: center; }
+.treatment-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+.treatment-content h3 { font-size: 24px; margin-bottom: 12px; }
+.treatment-content p { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; flex-grow: 1; }
+.treatment-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--border); }
+.treatment-price { font-size: 13px; color: var(--primary); font-weight: 600; background: var(--bg); padding: 4px 12px; border-radius: 20px; }
 
-/* 5-Step Appointment */
-.appointment-flow { background: var(--color-white); border-radius: 24px; padding: 64px; box-shadow: var(--shadow-md); margin-top: 48px; }
-.timeline-horizontal { display: flex; justify-content: space-between; position: relative; margin-bottom: 48px; }
-.timeline-horizontal::before { content: ''; position: absolute; top: 24px; left: 0; right: 0; height: 2px; background: #eee; z-index: 1; }
-.timeline-step { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; width: 150px; background: var(--color-white); }
-.step-circle { width: 50px; height: 50px; border-radius: 50%; background: var(--color-white); border: 2px solid #eee; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 16px; transition: var(--transition); }
-.timeline-step.active .step-circle { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); }
+/* How We Work & Tech */
+.split-section { background: var(--bg); }
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.split-col h2 { margin-bottom: 8px; }
+.split-col > p { color: var(--text-muted); margin-bottom: 40px; font-size: 18px; }
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent); opacity: 0.3; }
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-icon { position: absolute; left: -41px; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--bg-white); border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; color: var(--primary); z-index: 2; }
+.timeline-content h4 { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.timeline-content p { color: var(--text-muted); margin: 0; font-size: 15px; }
+.tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.tech-card { background: var(--bg-white); padding: 28px; border-radius: 16px; box-shadow: var(--shadow); }
+.tech-icon { color: var(--accent); margin-bottom: 16px; }
+.tech-card h4 { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--primary); }
+.tech-card p { color: var(--text-muted); margin: 0; font-size: 14px; }
 
-/* Filterable Doctors */
-.filter-bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 48px; }
-.filter-btn { padding: 8px 20px; border-radius: 50px; border: 1px solid #ddd; background: var(--color-white); cursor: pointer; transition: var(--transition); font-family: var(--font-body); }
-.filter-btn.active, .filter-btn:hover { background: var(--color-primary); color: var(--color-white); border-color: var(--color-primary); }
+/* Before After */
+.ba-section { text-align: center; }
+.ba-filters { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+.ba-filter-btn { padding: 10px 24px; border-radius: 50px; border: 1px solid var(--border); background: var(--bg-white); cursor: pointer; font-weight: 500; transition: all 0.3s; }
+.ba-filter-btn.active { background: var(--accent); color: var(--bg-white); border-color: var(--accent); }
+.ba-sliders-container { max-width: 900px; margin: 0 auto; }
+.ba-slider-wrapper { display: none; }
+.ba-slider-wrapper.active { display: block; animation: fadeIn 0.5s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.ba-slider { position: relative; border-radius: 16px; overflow: hidden; height: 420px; cursor: col-resize; box-shadow: var(--shadow); }
+.before-img { position: absolute; top: 0; left: 0; height: 100%; width: 50%; overflow: hidden; background: #8B9B8B; border-right: 1px solid rgba(255,255,255,0.2); }
+.after-img { position: absolute; inset: 0; background: #F0EBE3; z-index: 1; }
+.ba-label { position: absolute; background: rgba(0,0,0,0.55); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; z-index: 3; pointer-events: none; }
+.ba-label.left { top: 16px; left: 16px; }
+.ba-label.right { top: 16px; right: 16px; }
+.divider { position: absolute; top: 0; left: 50%; width: 3px; height: 100%; background: var(--accent); z-index: 4; cursor: col-resize; }
+.divider-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+
+/* Doctors */
+.doctors-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px; }
+.hekim-filters { display: flex; gap: 12px; }
+.hekim-filter-btn { padding: 8px 20px; border-radius: 50px; border: 1px solid var(--border); background: var(--bg-white); cursor: pointer; font-weight: 500; transition: all 0.3s; }
+.hekim-filter-btn.active { background: var(--primary); color: var(--bg-white); border-color: var(--primary); }
 .doctors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.doctor-card { background: var(--color-white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
-.doctor-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
-.doc-info { padding: 24px; }
-.doc-badge { display: inline-block; padding: 4px 12px; background: #E8F5E9; color: #2E7D32; font-size: 0.8rem; border-radius: 50px; font-weight: 600; margin-bottom: 12px; }
-.doc-langs { font-size: 0.9rem; color: #666; margin: 12px 0; }
+.hekim-kart { background: var(--bg-white); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; transition: transform 0.3s; }
+.hekim-kart:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.hekim-img { height: 280px; background: linear-gradient(to bottom, #e2e8f0, #cbd5e1); position: relative; }
+.hekim-badge { position: absolute; top: 16px; right: 16px; background: var(--success); color: white; font-size: 12px; padding: 4px 12px; border-radius: 20px; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+.hekim-info { padding: 24px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; }
+.hekim-info h3 { font-size: 26px; margin-bottom: 4px; }
+.hekim-uzmanlik { color: var(--accent); font-weight: 600; margin-bottom: 16px; font-size: 15px; }
+.hekim-edu { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+.hekim-kart .btn { width: 100%; margin-top: auto; }
 
-/* Before/After Slider */
-.ba-section { background: var(--color-dark); color: var(--color-white); }
-.ba-section h2, .ba-section h3 { color: var(--color-white); }
-.ba-container { max-width: 800px; margin: 48px auto 0; }
-.before-after-slider { position: relative; width: 100%; height: 500px; border-radius: var(--radius); overflow: hidden; cursor: ew-resize; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-.ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-.after-img { background: linear-gradient(135deg, #D4A853 0%, #b89040 100%); display:flex; align-items:center; justify-content:center; }
-.before-img { background: linear-gradient(135deg, #0D4F4F 0%, #0a3d3d 100%); display:flex; align-items:center; justify-content:center; clip-path: inset(0 50% 0 0); }
-.ba-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: var(--color-accent); transform: translateX(-50%); pointer-events: none; }
-.ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; background: var(--color-white); border-radius: 50%; border: 4px solid var(--color-accent); display: flex; align-items: center; justify-content: center; color: var(--color-accent); box-shadow: 0 0 20px rgba(0,0,0,0.3); pointer-events: none; }
-.ba-label { position: absolute; top: 24px; padding: 8px 16px; background: rgba(0,0,0,0.6); color: #fff; border-radius: 50px; font-weight: 600; backdrop-filter: blur(4px); pointer-events: none; }
-.label-before { left: 24px; } .label-after { right: 24px; }
+/* FAQ */
+.faq-section { background: var(--bg); }
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-header { text-align: center; margin-bottom: 48px; }
+.faq-list { background: var(--bg-white); border-radius: 16px; padding: 16px 32px; box-shadow: var(--shadow); }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; font-weight: 600; font-size: 17px; color: var(--primary); }
+.faq-icon { color: var(--accent); transition: transform 0.3s; }
+.faq-item.open .faq-icon { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--text-muted); line-height: 1.7; }
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 24px; }
 
-/* Timeline Process */
-.process-timeline { max-width: 600px; margin: 48px auto 0; position: relative; }
-.process-timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 24px; width: 2px; background: rgba(13, 79, 79, 0.1); }
-.process-step { position: relative; padding-left: 72px; margin-bottom: 48px; }
-.process-icon { position: absolute; left: 0; top: 0; width: 50px; height: 50px; background: var(--color-white); border: 2px solid var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.2rem; z-index: 2; }
+/* Social */
+.social-header { text-align: center; margin-bottom: 48px; }
+.social-header p { color: var(--accent); font-weight: 600; }
+.social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+.social-item { aspect-ratio: 1; background: linear-gradient(135deg, var(--primary-light), var(--primary)); border-radius: 12px; position: relative; overflow: hidden; cursor: pointer; }
+.social-overlay { position: absolute; inset: 0; background: rgba(10,25,41,0.8); display: flex; align-items: center; justify-content: center; gap: 24px; opacity: 0; transition: opacity 0.3s; color: white; }
+.social-item:hover .social-overlay { opacity: 1; }
+.social-stat { display: flex; align-items: center; gap: 8px; font-weight: 600; }
 
-/* Tech Showcase */
-.tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
-.tech-card { background: var(--color-white); padding: 32px; border-radius: var(--radius); text-align: center; box-shadow: var(--shadow-sm); }
-.tech-card svg { width: 48px; height: 48px; color: var(--color-primary); margin: 0 auto 16px; }
-
-/* FAQ Accordion */
-.faq-container { max-width: 800px; margin: 48px auto 0; }
-.faq-item { background: var(--color-white); margin-bottom: 16px; border-radius: 12px; box-shadow: var(--shadow-sm); overflow: hidden; }
-.faq-header { padding: 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-family: var(--font-head); font-size: 1.2rem; color: var(--color-primary); }
-.faq-icon { width: 24px; height: 24px; position: relative; transition: var(--transition); }
-.faq-icon::before, .faq-icon::after { content: ''; position: absolute; background: var(--color-accent); transition: var(--transition); }
-.faq-icon::before { top: 11px; left: 0; width: 100%; height: 2px; }
-.faq-icon::after { top: 0; left: 11px; width: 2px; height: 100%; }
-.faq-item.active .faq-icon::after { transform: rotate(90deg); opacity: 0; }
-.faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
-.faq-body { padding: 0 24px 24px; color: #555; }
-
-/* Gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-.gallery-item { border-radius: var(--radius); overflow: hidden; position: relative; }
-.gallery-overlay { position: absolute; inset: 0; background: rgba(13, 79, 79, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: var(--transition); color: var(--color-white); font-family: var(--font-head); font-size: 1.5rem; }
-.gallery-item:hover .gallery-overlay { opacity: 1; }
-
-/* Reviews Carousel */
-.reviews-section { background: var(--color-white); }
-.reviews-carousel { display: flex; overflow: hidden; margin-top: 48px; gap: 24px; padding-bottom: 24px; }
-.review-card { min-width: calc(33.333% - 16px); background: var(--color-bg); padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform 0.5s ease; }
-.reviewer { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-.avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--color-primary); color: var(--color-white); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
-.stars { color: #FFC107; font-size: 1.2rem; margin-bottom: 16px; }
-.review-text { font-style: italic; color: #555; }
+/* Reviews */
+.reviews-section { background: var(--primary); color: var(--bg-white); overflow: hidden; }
+.reviews-header { text-align: center; margin-bottom: 48px; }
+.reviews-header h2 { color: var(--bg-white); }
+.reviews-carousel { position: relative; max-width: 1000px; margin: 0 auto; }
+.reviews-track-container { overflow: hidden; }
+.reviews-track { display: flex; transition: transform 0.5s ease; }
+.review-card { min-width: 100%; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-sizing: border-box; text-align: center; }
+.review-avatar { width: 64px; height: 64px; background: var(--accent); color: var(--bg-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; margin: 0 auto 16px; font-family: 'Cormorant Garamond', serif; }
+.stars { color: var(--accent); font-size: 20px; letter-spacing: 2px; margin-bottom: 24px; }
+.review-text { font-size: 18px; font-style: italic; line-height: 1.8; margin-bottom: 24px; color: rgba(255,255,255,0.9); }
+.review-author { font-weight: 600; color: var(--accent); }
+.carousel-nav { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 32px; }
+.carousel-btn { background: transparent; border: 1px solid rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 50%; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+.carousel-btn:hover { background: var(--accent); border-color: var(--accent); }
+.carousel-dots { display: flex; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: background 0.3s; }
+.dot.active { background: var(--accent); }
 
 /* CTA Band */
-.cta-band { background: var(--color-dark); color: var(--color-white); text-align: center; padding: 80px 0; }
-.cta-band h2 { color: var(--color-white); margin-bottom: 32px; }
-.cta-buttons { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-
-/* Insurance & Form */
-.insurance-logos { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-bottom: 64px; opacity: 0.6; filter: grayscale(100%); }
-.form-container { max-width: 600px; margin: 0 auto; background: var(--color-white); padding: 48px; border-radius: 24px; box-shadow: var(--shadow-lg); }
-.form-group { margin-bottom: 24px; }
-.form-control { width: 100%; padding: 16px; border: 1px solid #ddd; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none; transition: var(--transition); background: var(--color-bg); }
-.form-control:focus { border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(13, 79, 79, 0.1); }
+.cta-band { background: var(--accent); padding: 48px 0; text-align: center; }
+.cta-band h2 { color: var(--primary); margin-bottom: 32px; }
+.cta-btns { display: flex; justify-content: center; gap: 16px; }
 
 /* Contact */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-.contact-info { display: flex; flex-direction: column; gap: 24px; }
-.info-card { background: var(--color-white); padding: 24px; border-radius: 16px; display: flex; align-items: flex-start; gap: 16px; box-shadow: var(--shadow-sm); }
-.info-icon { width: 48px; height: 48px; background: rgba(212, 168, 83, 0.1); color: var(--color-accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.map-container iframe { width: 100%; height: 100%; min-height: 400px; border-radius: var(--radius); border: none; }
+.contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.contact-info { background: var(--bg-white); padding: 40px; border-radius: 16px; box-shadow: var(--shadow); }
+.contact-item { display: flex; gap: 16px; margin-bottom: 32px; }
+.contact-icon { color: var(--accent); flex-shrink: 0; margin-top: 4px; }
+.contact-text h4 { font-family: 'DM Sans', sans-serif; font-size: 16px; margin-bottom: 4px; }
+.contact-text p { color: var(--text-muted); font-size: 14px; margin: 0; }
+.hours-list { font-size: 14px; color: var(--text-muted); line-height: 1.8; }
+.map-container iframe { border: 0; border-radius: 16px; width: 100%; height: 100%; min-height: 450px; }
 
 /* Footer */
-.footer { background: var(--color-primary); color: rgba(255,255,255,0.8); padding: 80px 0 24px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; margin-bottom: 64px; }
-.footer-logo { color: var(--color-white); font-family: var(--font-head); font-size: 1.5rem; margin-bottom: 16px; display: block; }
-.footer h4 { color: var(--color-white); margin-bottom: 24px; font-size: 1.2rem; }
-.footer-links li { margin-bottom: 12px; }
-.footer-links a:hover { color: var(--color-accent); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+.footer { background: var(--bg-dark); color: rgba(255,255,255,0.7); padding: 80px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; margin-bottom: 64px; }
+.footer-logo { color: white; font-size: 32px; margin-bottom: 24px; display: block; }
+.footer-desc { max-width: 400px; }
+.footer-links h4 { color: white; font-family: 'DM Sans', sans-serif; font-size: 18px; margin-bottom: 24px; }
+.footer-links ul li { margin-bottom: 12px; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+.footer-bottom a { color: white; }
 
-/* Floating Elements */
-.floating-wa, .floating-phone { position: fixed; bottom: 24px; z-index: 9999; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease; animation: floatPulse 2s infinite; }
-.floating-wa { right: 24px; background: #25D366; color: #fff; }
-.floating-phone { left: 24px; background: var(--color-primary); color: #fff; }
-.floating-wa:hover, .floating-phone:hover { transform: scale(1.12); }
-@keyframes floatPulse {
-  0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-  50% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 8px rgba(37,211,102,0.2); }
-}
-.floating-phone { animation: floatPulsePhone 2s infinite; animation-delay: 1s; }
-@keyframes floatPulsePhone {
-  0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-  50% { box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 8px rgba(13,79,79,0.2); }
-}
+/* Floating Buttons */
+.float-btn { position: fixed; bottom: 32px; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; z-index: 9999; cursor: pointer; box-shadow: var(--shadow); transition: transform 0.3s; }
+.float-btn:hover { transform: scale(1.1); }
+.float-wa { right: 32px; background: #25D366; animation: floatPulse 2s infinite; }
+.float-phone { left: 32px; background: var(--primary); }
+@keyframes floatPulse { 0%,100%{box-shadow:0 4px 12px rgba(0,0,0,0.3)} 50%{box-shadow:0 4px 20px rgba(0,0,0,0.5),0 0 0 8px rgba(37,211,102,0.3)} }
 
-/* Mobile Sticky Bottom Nav */
-.mobile-bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--color-white); box-shadow: 0 -4px 12px rgba(0,0,0,0.05); z-index: 9998; padding-bottom: env(safe-area-inset-bottom); }
-.mb-nav-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-.mb-nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 0; gap: 4px; font-size: 0.75rem; font-weight: 600; color: var(--color-primary); border-right: 1px solid #eee; }
+/* Mobile Bottom Nav */
+.mobile-bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--bg-white); box-shadow: 0 -2px 10px rgba(0,0,0,0.05); z-index: 9998; height: 56px; }
+.mb-nav-grid { display: grid; grid-template-columns: repeat(3, 1fr); height: 100%; }
+.mb-nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--primary); font-size: 11px; font-weight: 600; gap: 4px; text-decoration: none; border-right: 1px solid var(--border); }
 .mb-nav-item:last-child { border-right: none; }
-.mb-nav-item.accent { background: var(--color-accent); color: var(--color-white); }
-
-/* GSAP Fallback */
-.gs-reveal { opacity: 1; transform: none; }
-.gsap-ready .gs-reveal { opacity: 0; transform: translateY(40px); }
+.mb-nav-item.accent { color: var(--accent); }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-content { grid-template-columns: 1fr; text-align: center; gap: 32px; }
-  .hero p { margin: 0 auto 32px; }
-  .tiles-grid { grid-template-columns: 1fr; }
-  .hero-tiles { position: relative; bottom: 0; transform: none; left: 0; margin-top: -40px; }
-  .counters-grid, .services-grid, .doctors-grid, .tech-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-tiles { grid-template-columns: 1fr; }
+  .hero-tiles-wrapper { margin-top: 0; padding: 40px 24px; background: var(--bg); }
+  .hero-tile { min-height: auto; }
+  .counters-grid { grid-template-columns: repeat(2, 1fr); }
+  .treatments-grid { grid-template-columns: repeat(2, 1fr); }
+  .split-grid { grid-template-columns: 1fr; gap: 48px; }
+  .doctors-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-phone, .btn-outline-white { display: none; }
+  .mobile-toggle { display: block; }
+  h1 { font-size: 40px; }
+  .counters-grid { grid-template-columns: 1fr; }
+  .treatments-grid { grid-template-columns: 1fr; }
+  .doctors-grid { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: repeat(2, 1fr); }
+  .float-btn { display: none; }
+  .mobile-bottom-nav { display: block; }
+  body { padding-bottom: 56px; }
+  .ba-sliders-container { height: 300px; }
+  .ba-slider { height: 300px; }
+  .review-card { padding: 24px; }
 }
 
-@media (max-width: 768px) {
-  .nav-links, .nav-actions .btn { display: none; }
-  .mobile-toggle { display: block; }
-  .counters-grid, .services-grid, .doctors-grid, .tech-grid, .gallery-grid { grid-template-columns: 1fr; }
-  .timeline-horizontal { flex-direction: column; align-items: flex-start; gap: 32px; }
-  .timeline-horizontal::before { left: 24px; top: 0; bottom: 0; width: 2px; height: auto; }
-  .timeline-step { flex-direction: row; width: 100%; gap: 16px; text-align: left; background: transparent; }
-  .step-circle { margin-bottom: 0; flex-shrink: 0; }
-  .review-card { min-width: 100%; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; text-align: center; gap: 16px; }
-  
-  .floating-wa, .floating-phone { display: none; } /* Hide on mobile to show bottom nav */
-  .mobile-bottom-nav { display: block; }
-  body { padding-bottom: 70px; }
-  
-  .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-white); padding: 24px; box-shadow: var(--shadow-md); align-items: flex-start; }
-}
+/* RTL Support */
+[dir="rtl"] .nav-phone { flex-direction: row-reverse; }
+[dir="rtl"] .hero-badge { flex-direction: row-reverse; }
+[dir="rtl"] .hero-tile-header { flex-direction: row-reverse; }
+[dir="rtl"] .timeline { padding-left: 0; padding-right: 24px; }
+[dir="rtl"] .timeline::before { left: auto; right: 0; }
+[dir="rtl"] .timeline-icon { left: auto; right: -41px; }
+[dir="rtl"] .contact-item { flex-direction: row-reverse; text-align: right; }
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- SVG Icons -->
+<svg style="display:none;">
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></symbol>
+  <symbol id="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></symbol>
+  <symbol id="icon-stethoscope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></symbol>
+  <symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></symbol>
+  <symbol id="icon-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></symbol>
+  <symbol id="icon-3d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></symbol>
+  <symbol id="icon-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></symbol>
+  <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></symbol>
+  <symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></symbol>
+  <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></symbol>
+  <symbol id="icon-grad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></symbol>
+  <symbol id="icon-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></symbol>
+</svg>
+
 <nav class="navbar" id="navbar">
   <div class="container nav-container">
-    <a href="#hero" class="nav-logo">
+    <a href="#" class="logo font-cormorant" aria-label="Anasayfa">
       Klinik 06
-      <span>Ağız ve Diş Sağlığı Polikliniği</span>
+      <span>AĞIZ VE DİŞ SAĞLIĞI</span>
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
-      <li><a href="#doktorlar" class="nav-link">Doktorlarımız</a></li>
-      <li><a href="#hizmetler" class="nav-link">Hizmetler</a></li>
-      <li><a href="#galeri" class="nav-link">Galeri</a></li>
-      <li><a href="#yorumlar" class="nav-link">Yorumlar</a></li>
-      <li><a href="#iletisim" class="nav-link">İletişim</a></li>
-    </ul>
+    <div class="nav-links">
+      <a href="#tedaviler" data-tr="Tedaviler" data-en="Treatments" data-ar="العلاجات">Tedaviler</a>
+      <a href="#hekimler" data-tr="Hekimler" data-en="Doctors" data-ar="الأطباء">Hekimler</a>
+      <a href="#oncesonra" data-tr="Önce-Sonra" data-en="Before-After" data-ar="قبل وبعد">Önce-Sonra</a>
+      <a href="#yorumlar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a>
+      <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</a>
+    </div>
     <div class="nav-actions">
-      <div class="lang-switch">
-        <button class="lang-btn active" data-lang="tr">TR</button> |
-        <button class="lang-btn" data-lang="en">EN</button> |
-        <button class="lang-btn" data-lang="ar">AR</button>
-      </div>
-      <a href="tel:+905013214206" class="btn btn-outline" aria-label="Telefon ile ara" style="border:none; padding: 0;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <a href="tel:+905013214206" class="nav-phone" aria-label="Telefon">
+        <svg width="20" height="20"><use href="#icon-phone"></use></svg>
         +90 501 321 42 06
       </a>
-      <button class="btn btn-accent" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
+      <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="btn btn-accent" aria-label="Randevu Al" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</a>
+      <div class="lang-switch">
+        <select id="langSelect" aria-label="Dil Seçimi">
+          <option value="tr">TR</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+      </div>
+      <button class="mobile-toggle" aria-label="Menü"><svg width="24" height="24"><use href="#icon-menu"></use></svg></button>
     </div>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menüyü aç">☰</button>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero" id="hero">
-  <div class="hero-bg"></div>
-  <div class="img-placeholder hero-bg-img" data-foto-prompt="Klinik 06 Ağız ve Diş Sağlığı Polikliniği klinik dis veya ic mekan, profesyonel mimari fotograf, steril ve modern, teal tonlari karanlik overlay"></div>
-  
-  <div class="container hero-content">
-    <div class="gs-reveal">
-      <div class="google-badge">
-        <span style="color:#FFC107">★</span> 4.8/5 — 131 Google Yorumu
+<section class="hero">
+  <img src="https://images.pexels.com/photos/6812444/pexels-photo-6812444.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Diş Kliniği" class="hero-bg">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content gs-reveal">
+      <div class="hero-badge">
+        <svg width="16" height="16" style="color:var(--accent);"><use href="#icon-star"></use></svg>
+        <span data-tr="4.8/5 · 131 Google Yorumu" data-en="4.8/5 · 131 Google Reviews" data-ar="4.8/5 · 131 تقييم جوجل">4.8/5 · 131 Google Yorumu</span>
       </div>
-      <h1>Sağlığınıza Değer Katan Uzmanlık</h1>
-      <p>Türkiye'nin güvenilen sağlık adresi. Gizli maliyetler olmadan, uzman hekim kadromuzla şeffaf ve ağrısız tedavi sürecine adım atın.</p>
-      <div class="display:flex; gap:16px;">
-        <button class="btn btn-accent btn-lg" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Hemen Randevu Al</button>
-      </div>
-    </div>
-    
-    <div class="gs-reveal">
-      <div class="hero-video">
-        <div class="img-placeholder" style="min-height: 400px; background: rgba(0,0,0,0.4);" data-foto-prompt="Modern diş kliniği iç mekanı, video thumbnail, hastayla ilgilenen güler yüzlü doktor"></div>
-        <div style="position: absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;">
-          <div class="play-btn">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <p style="color:white; font-weight:600; margin:0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">60 Sn. Klinik Turumuzu İzleyin</p>
-        </div>
+      <h1 data-tr="Gülüşünüzü Yeniden Tasarlıyoruz" data-en="Redesigning Your Smile" data-ar="إعادة تصميم ابتسامتك">Gülüşünüzü<br>Yeniden Tasarlıyoruz</h1>
+      <p class="hero-desc" data-tr="Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara, Türkiye adresinde uzman diş hekimliği." data-en="Expert dentistry located at Metrokent Mall, Etimesgut/Ankara, Turkey." data-ar="طب أسنان متخصص يقع في مركز متروكينت للتسوق ، إتيمسجوت / أنقرة ، تركيا.">Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara, Türkiye adresinde uzman diş hekimliği.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="btn btn-accent" aria-label="Randevu Al" data-tr="Randevu Al" data-en="Book Appointment" data-ar="احجز موعدا">Randevu Al</a>
+        <a href="#tedaviler" class="btn btn-outline-white" aria-label="Tedavilerimiz" data-tr="Tedavilerimiz" data-en="Our Treatments" data-ar="علاجاتنا">Tedavilerimiz</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 3-Tile Pattern -->
-<div class="hero-tiles">
-  <div class="tiles-grid gs-reveal">
-    <!-- Tile 1 -->
-    <div class="hero-tile">
-      <h3>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        Doktor Bul
-      </h3>
-      <p style="font-size:0.9rem; margin-bottom:8px;">Uzman hekim kadromuzu inceleyin.</p>
-      <input type="text" placeholder="Uzmanlık alanı veya doktor adı...">
-      <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('doktorlar').scrollIntoView({behavior:'smooth'})">Ara</button>
-    </div>
-    <!-- Tile 2 -->
-    <div class="hero-tile">
-      <h3>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        Hemen Randevu Al
-      </h3>
-      <p style="font-size:0.9rem; margin-bottom:8px; color:#2E7D32; font-weight:600;">✓ Bugün müsait slotlar var</p>
-      <p style="font-size:0.9rem;">Beklemeden tedavinize başlayın.</p>
-      <button class="btn btn-accent" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-    </div>
-    <!-- Tile 3 -->
-    <div class="hero-tile">
-      <h3>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        Konumumuz
-      </h3>
-      <p style="font-size:0.85rem; margin-bottom:8px;">Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara</p>
-      <div class="tile-links">
-        <a href="https://www.google.com/maps/search/?api=1&query=Klinik%2006%20A%C4%9F%C4%B1z%20ve%20Di%C5%9F%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20Poliklini%C4%9Fi&query_place_id=ChIJnTa3lS430xQRn5gL2_VOZWc" target="_blank">Haritada Göster</a>
-        <a href="https://www.google.com/maps/dir//39.9812704,32.6477407" target="_blank">Yol Tarifi</a>
+<div class="container hero-tiles-wrapper">
+  <div class="hero-tiles">
+    <div class="hero-tile gs-reveal">
+      <div class="hero-tile-header">
+        <div class="hero-tile-icon"><svg width="20" height="20"><use href="#icon-search"></use></svg></div>
+        <h3 data-tr="Tedavi Bul" data-en="Find Treatment" data-ar="ابحث عن علاج">Tedavi Bul</h3>
       </div>
+      <input type="text" placeholder="Hangi tedaviyi arıyorsunuz?" aria-label="Tedavi Ara" data-tr-placeholder="Hangi tedaviyi arıyorsunuz?" data-en-placeholder="What treatment are you looking for?" data-ar-placeholder="ما العلاج الذي تبحث عنه؟">
+    </div>
+    <div class="hero-tile gs-reveal" style="transition-delay: 0.1s;">
+      <div class="hero-tile-header">
+        <div class="hero-tile-icon"><svg width="20" height="20"><use href="#icon-calendar"></use></svg></div>
+        <h3 data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</h3>
+      </div>
+      <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="btn btn-accent" aria-label="Hemen Randevu Al" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</a>
+    </div>
+    <div class="hero-tile gs-reveal" style="transition-delay: 0.2s;">
+      <div class="hero-tile-header">
+        <div class="hero-tile-icon"><svg width="20" height="20"><use href="#icon-pin"></use></svg></div>
+        <h3 data-tr="Konumumuz" data-en="Our Location" data-ar="موقعنا">Konumumuz</h3>
+      </div>
+      <p data-tr="Metrokent Alışveriş Merkezi, Etimesgut/Ankara" data-en="Metrokent Mall, Etimesgut/Ankara" data-ar="مركز متروكينت للتسوق ، إتيمسجوت / أنقرة">Metrokent Alışveriş Merkezi, Etimesgut/Ankara</p>
     </div>
   </div>
 </div>
 
-<!-- Trust Strip -->
 <div class="trust-strip">
-  <div class="marquee">
-    <!-- Duplicate for infinite loop -->
-    <div style="display:flex">
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ISO 9001 Sertifikalı</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> JCI Akreditasyonu</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg> TDB Üyesi</div>
-      <div class="marquee-item"><span style="color:#FFC107">★</span> 4.8/5 Google</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> 131+ Hasta Yorumu</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 5.000+ Mutlu Hasta</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> 15+ Yıl Tecrübe</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> SGK Anlaşmalı</div>
+  <div class="trust-track">
+    <div class="trust-item"><svg width="16" height="16"><use href="#icon-star"></use></svg> 4.8/5 Google</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="131+ Hasta" data-en="131+ Patients" data-ar="131+ مريض">131+ Hasta</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Ağrısız Tedavi" data-en="Painless Treatment" data-ar="علاج بدون ألم">Ağrısız Tedavi</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Hijyen Garantisi" data-en="Hygiene Guarantee" data-ar="ضمان النظافة">Hijyen Garantisi</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Uzman Hekimler" data-en="Expert Doctors" data-ar="أطباء خبراء">Uzman Hekimler</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Şeffaf Fiyat" data-en="Transparent Pricing" data-ar="تسعير شفاف">Şeffaf Fiyat</div>
+    <!-- Repeat for seamless loop -->
+    <div class="trust-item"><svg width="16" height="16"><use href="#icon-star"></use></svg> 4.8/5 Google</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="131+ Hasta" data-en="131+ Patients" data-ar="131+ مريض">131+ Hasta</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Ağrısız Tedavi" data-en="Painless Treatment" data-ar="علاج بدون ألم">Ağrısız Tedavi</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Hijyen Garantisi" data-en="Hygiene Guarantee" data-ar="ضمان النظافة">Hijyen Garantisi</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Uzman Hekimler" data-en="Expert Doctors" data-ar="أطباء خبراء">Uzman Hekimler</div>
+    <div class="trust-item">·</div>
+    <div class="trust-item" data-tr="Şeffaf Fiyat" data-en="Transparent Pricing" data-ar="تسعير شفاف">Şeffaf Fiyat</div>
+  </div>
+</div>
+
+<section class="counters-section">
+  <div class="container counters-grid">
+    <div class="counter-card gs-reveal">
+      <div class="counter-num" data-target="131" data-suffix="+">0</div>
+      <div class="counter-label" data-tr="Mutlu Hasta" data-en="Happy Patients" data-ar="مرضى سعداء">Mutlu Hasta</div>
     </div>
-    <div style="display:flex">
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ISO 9001 Sertifikalı</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> JCI Akreditasyonu</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg> TDB Üyesi</div>
-      <div class="marquee-item"><span style="color:#FFC107">★</span> 4.8/5 Google</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> 131+ Hasta Yorumu</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 5.000+ Mutlu Hasta</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> 15+ Yıl Tecrübe</div>
-      <div class="marquee-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> SGK Anlaşmalı</div>
+    <div class="counter-card gs-reveal" style="transition-delay: 0.1s;">
+      <div class="counter-num" data-target="4.8" data-decimal="true">0</div>
+      <div class="counter-label" data-tr="Google Puanı" data-en="Google Rating" data-ar="تقييم جوجل">Google Puanı</div>
+    </div>
+    <div class="counter-card gs-reveal" style="transition-delay: 0.2s;">
+      <div class="counter-num" data-target="1500" data-suffix="+">0</div>
+      <div class="counter-label" data-tr="Başarılı Tedavi" data-en="Successful Treatments" data-ar="علاجات ناجحة">Başarılı Tedavi</div>
+    </div>
+    <div class="counter-card gs-reveal" style="transition-delay: 0.3s;">
+      <div class="counter-num" data-target="15" data-suffix="+">0</div>
+      <div class="counter-label" data-tr="Yıl Tecrübe" data-en="Years Experience" data-ar="سنوات الخبرة">Yıl Tecrübe</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="tedaviler">
+  <div class="container">
+    <div class="treatments-header gs-reveal">
+      <div>
+        <h2 data-tr="Hizmetlerimiz" data-en="Our Services" data-ar="خدماتنا">Hizmetlerimiz</h2>
+        <p class="text-muted" data-tr="Size özel planlanmış premium diş tedavileri." data-en="Premium dental treatments planned just for you." data-ar="علاجات أسنان متميزة مخطط لها خصيصا لك.">Size özel planlanmış premium diş tedavileri.</p>
+      </div>
+      <div class="treatment-filters">
+        <select id="treatmentFilter" aria-label="Kategori Filtresi">
+          <option value="all" data-tr="Tüm Tedaviler" data-en="All Treatments" data-ar="كل العلاجات">Tüm Tedaviler</option>
+          <option value="implant" data-tr="İmplantoloji" data-en="Implantology" data-ar="زراعة الأسنان">İmplantoloji</option>
+          <option value="estetik" data-tr="Estetik" data-en="Aesthetics" data-ar="تجميل">Estetik</option>
+          <option value="genel" data-tr="Genel" data-en="General" data-ar="عام">Genel</option>
+        </select>
+      </div>
+    </div>
+    <div class="treatments-grid">
+      <div class="treatment-card gs-reveal" data-category="implant">
+        <div class="treatment-img" style="background: linear-gradient(45deg, #1B3A5C, #C9A96E);"></div>
+        <div class="treatment-content">
+          <h3 class="font-cormorant" data-tr="İmplant" data-en="Dental Implant" data-ar="زراعة الأسنان">İmplant</h3>
+          <p data-tr="Eksik dişlerinizi titanyum köklerle ömür boyu kalıcı olarak tamamlıyoruz." data-en="We permanently replace your missing teeth with titanium roots." data-ar="نستبدل أسنانك المفقودة بشكل دائم بجذور التيتانيوم.">Eksik dişlerinizi titanyum köklerle ömür boyu kalıcı olarak tamamlıyoruz.</p>
+          <div class="treatment-footer">
+            <span class="treatment-price" data-tr="KDV Dahil" data-en="VAT Included" data-ar="شامل ضريبة القيمة المضافة">KDV Dahil</span>
+            <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum?text=İmplant" class="btn btn-outline-accent" style="padding: 8px 16px; font-size: 14px;" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
+          </div>
+        </div>
+      </div>
+      <div class="treatment-card gs-reveal" data-category="estetik">
+        <div class="treatment-img" style="background: linear-gradient(45deg, #A8834A, #F5F0EB);"></div>
+        <div class="treatment-content">
+          <h3 class="font-cormorant" data-tr="Zirkonyum" data-en="Zirconia Crown" data-ar="تاج الزركونيوم">Zirkonyum</h3>
+          <p data-tr="Doğal diş görünümünde, ışık geçirgenliği yüksek estetik kaplamalar." data-en="Aesthetic crowns with high light transmittance, looking like natural teeth." data-ar="تيجان جمالية ذات نفاذية عالية للضوء ، تبدو وكأنها أسنان طبيعية.">Doğal diş görünümünde, ışık geçirgenliği yüksek estetik kaplamalar.</p>
+          <div class="treatment-footer">
+            <span class="treatment-price" data-tr="KDV Dahil" data-en="VAT Included" data-ar="شامل ضريبة القيمة المضافة">KDV Dahil</span>
+            <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum?text=Zirkonyum" class="btn btn-outline-accent" style="padding: 8px 16px; font-size: 14px;" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
+          </div>
+        </div>
+      </div>
+      <div class="treatment-card gs-reveal" data-category="genel">
+        <div class="treatment-img" style="background: linear-gradient(45deg, #0D2137, #6B7B8D);"></div>
+        <div class="treatment-content">
+          <h3 class="font-cormorant" data-tr="Kanal Tedavisi" data-en="Root Canal" data-ar="علاج العصب">Kanal Tedavisi</h3>
+          <p data-tr="İltihaplı veya çürük dişlerinizi ağrısız yöntemlerle kurtarıyoruz." data-en="We save your inflamed or decayed teeth with painless methods." data-ar="ننقذ أسنانك الملتهبة أو المتحللة بطرق غير مؤلمة.">İltihaplı veya çürük dişlerinizi ağrısız yöntemlerle kurtarıyoruz.</p>
+          <div class="treatment-footer">
+            <span class="treatment-price" data-tr="KDV Dahil" data-en="VAT Included" data-ar="شامل ضريبة القيمة المضافة">KDV Dahil</span>
+            <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum?text=Kanal%20Tedavisi" class="btn btn-outline-accent" style="padding: 8px 16px; font-size: 14px;" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
+          </div>
+        </div>
+      </div>
+      <div class="treatment-card gs-reveal" data-category="estetik">
+        <div class="treatment-img" style="background: linear-gradient(45deg, #C9A96E, #1B3A5C);"></div>
+        <div class="treatment-content">
+          <h3 class="font-cormorant" data-tr="Gülüş Tasarımı" data-en="Smile Design" data-ar="تصميم الابتسامة">Gülüş Tasarımı</h3>
+          <p data-tr="Yüz hatlarınıza en uygun, altın oran kurallarına göre estetik gülüş planlaması." data-en="Aesthetic smile planning according to golden ratio rules, best suited to your facial features." data-ar="تخطيط الابتسامة الجمالي وفقا لقواعد النسبة الذهبية ، الأنسب لميزات وجهك.">Yüz hatlarınıza en uygun, altın oran kurallarına göre estetik gülüş planlaması.</p>
+          <div class="treatment-footer">
+            <span class="treatment-price" data-tr="KDV Dahil" data-en="VAT Included" data-ar="شامل ضريبة القيمة المضافة">KDV Dahil</span>
+            <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum?text=Gülüş%20Tasarımı" class="btn btn-outline-accent" style="padding: 8px 16px; font-size: 14px;" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
+          </div>
+        </div>
+      </div>
+      <div class="treatment-card gs-reveal" data-category="estetik">
+        <div class="treatment-img" style="background: linear-gradient(45deg, #E8E0D5, #A8834A);"></div>
+        <div class="treatment-content">
+          <h3 class="font-cormorant" data-tr="Lazer Beyazlatma" data-en="Laser Whitening" data-ar="تبييض بالليزر">Lazer Beyazlatma</h3>
+          <p data-tr="Tek seansta, diş minenize zarar vermeden 3-4 tona kadar açılma." data-en="Up to 3-4 shades lighter in a single session without damaging your tooth enamel." data-ar="ما يصل إلى 3-4 ظلال أفتح في جلسة واحدة دون الإضرار بمينا الأسنان.">Tek seansta, diş minenize zarar vermeden 3-4 tona kadar açılma.</p>
+          <div class="treatment-footer">
+            <span class="treatment-price" data-tr="KDV Dahil" data-en="VAT Included" data-ar="شامل ضريبة القيمة المضافة">KDV Dahil</span>
+            <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum?text=Lazer%20Beyazlatma" class="btn btn-outline-accent" style="padding: 8px 16px; font-size: 14px;" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
+          </div>
+        </div>
+      </div>
+      <div class="treatment-card gs-reveal" data-category="genel">
+        <div class="treatment-img" style="background: linear-gradient(45deg, #6B7B8D, #0D2137);"></div>
+        <div class="treatment-content">
+          <h3 class="font-cormorant" data-tr="20lik Diş Çekimi" data-en="Wisdom Tooth Extraction" data-ar="خلع ضرس العقل">20lik Diş Çekimi</h3>
+          <p data-tr="Gömülü veya ağrılı yirmi yaş dişlerinizin cerrahi uzmanlarca çekimi." data-en="Extraction of impacted or painful wisdom teeth by surgical experts." data-ar="خلع أضراس العقل المتأثرة أو المؤلمة بواسطة خبراء جراحيين.">Gömülü veya ağrılı yirmi yaş dişlerinizin cerrahi uzmanlarca çekimi.</p>
+          <div class="treatment-footer">
+            <span class="treatment-price" data-tr="KDV Dahil" data-en="VAT Included" data-ar="شامل ضريبة القيمة المضافة">KDV Dahil</span>
+            <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum?text=20lik%20Diş%20Çekimi" class="btn btn-outline-accent" style="padding: 8px 16px; font-size: 14px;" data-tr="Bilgi Al" data-en="Get Info" data-ar="احصل على معلومات">Bilgi Al</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding split-section">
+  <div class="container split-grid">
+    <div class="split-col gs-reveal">
+      <h2 data-tr="Nasıl Çalışıyoruz?" data-en="How We Work?" data-ar="كيف نعمل؟">Nasıl Çalışıyoruz?</h2>
+      <p data-tr="Şeffaf, planlı ve sürpriz maliyetler olmadan." data-en="Transparent, planned, and without surprise costs." data-ar="شفاف ومخطط وبدون تكاليف مفاجئة.">Şeffaf, planlı ve sürpriz maliyetler olmadan.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon"><svg width="18" height="18"><use href="#icon-stethoscope"></use></svg></div>
+          <div class="timeline-content">
+            <h4 data-tr="1. İlk Muayene" data-en="1. First Examination" data-ar="1. الفحص الأول">1. İlk Muayene</h4>
+            <p data-tr="Kapsamlı değerlendirme ve röntgen çekimi ile sizi tanıyalım." data-en="Let's get to know you with a comprehensive evaluation and X-ray." data-ar="دعنا نتعرف عليك من خلال تقييم شامل وأشعة سينية.">Kapsamlı değerlendirme ve röntgen çekimi ile sizi tanıyalım.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><svg width="18" height="18"><use href="#icon-clipboard"></use></svg></div>
+          <div class="timeline-content">
+            <h4 data-tr="2. Tedavi Planı" data-en="2. Treatment Plan" data-ar="2. خطة العلاج">2. Tedavi Planı</h4>
+            <p data-tr="Size özel, alternatifli ve şeffaf fiyatlı tedavi planı sunumu." data-en="Presentation of a personalized, alternative, and transparently priced treatment plan." data-ar="عرض خطة علاج مخصصة وبديلة وبأسعار شفافة.">Size özel, alternatifli ve şeffaf fiyatlı tedavi planı sunumu.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><svg width="18" height="18"><use href="#icon-tool"></use></svg></div>
+          <div class="timeline-content">
+            <h4 data-tr="3. Uygulama" data-en="3. Application" data-ar="3. تطبيق">3. Uygulama</h4>
+            <p data-tr="Son teknoloji ekipmanlar ve steril ortamda ağrısız uygulama." data-en="Painless application in a sterile environment with state-of-the-art equipment." data-ar="تطبيق غير مؤلم في بيئة معقمة بأحدث المعدات.">Son teknoloji ekipmanlar ve steril ortamda ağrısız uygulama.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><svg width="18" height="18"><use href="#icon-check"></use></svg></div>
+          <div class="timeline-content">
+            <h4 data-tr="4. Takip & Kontrol" data-en="4. Follow-up & Control" data-ar="4. المتابعة والتحكم">4. Takip & Kontrol</h4>
+            <p data-tr="Tedavi sonrası düzenli kontroller ile ömür boyu garanti." data-en="Lifetime guarantee with regular check-ups after treatment." data-ar="ضمان مدى الحياة مع فحوصات منتظمة بعد العلاج.">Tedavi sonrası düzenli kontroller ile ömür boyu garanti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="split-col gs-reveal">
+      <h2 data-tr="Kullandığımız Teknoloji" data-en="Technology We Use" data-ar="التكنولوجيا التي نستخدمها">Kullandığımız Teknoloji</h2>
+      <p data-tr="Dünya standartlarında cihazlarla en doğru teşhis ve tedavi." data-en="The most accurate diagnosis and treatment with world-class devices." data-ar="أدق تشخيص وعلاج بأجهزة عالمية المستوى.">Dünya standartlarında cihazlarla en doğru teşhis ve tedavi.</p>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <svg class="tech-icon" width="40" height="40"><use href="#icon-3d"></use></svg>
+          <h4 data-tr="3D Tomografi" data-en="3D Tomography" data-ar="التصوير المقطعي ثلاثي الأبعاد">3D Tomografi</h4>
+          <p data-tr="Milimetrik hassasiyetle çene kemiği analizi." data-en="Jaw bone analysis with millimetric precision." data-ar="تحليل عظم الفك بدقة مليمترية.">Milimetrik hassasiyetle çene kemiği analizi.</p>
+        </div>
+        <div class="tech-card">
+          <svg class="tech-icon" width="40" height="40"><use href="#icon-monitor"></use></svg>
+          <h4 data-tr="CAD/CAM Sistemi" data-en="CAD/CAM System" data-ar="نظام CAD/CAM">CAD/CAM Sistemi</h4>
+          <p data-tr="Aynı gün içinde dijital ölçü ve porselen üretimi." data-en="Digital impression and porcelain production within the same day." data-ar="طبعة رقمية وإنتاج بورسلين في نفس اليوم.">Aynı gün içinde dijital ölçü ve porselen üretimi.</p>
+        </div>
+        <div class="tech-card">
+          <svg class="tech-icon" width="40" height="40"><use href="#icon-zap"></use></svg>
+          <h4 data-tr="Lazer Tedavi" data-en="Laser Treatment" data-ar="العلاج بالليزر">Lazer Tedavi</h4>
+          <p data-tr="Kanamasız ve ağrısız diş eti tedavileri." data-en="Bloodless and painless gum treatments." data-ar="علاجات اللثة بدون دم وبدون ألم.">Kanamasız ve ağrısız diş eti tedavileri.</p>
+        </div>
+        <div class="tech-card">
+          <svg class="tech-icon" width="40" height="40"><use href="#icon-image"></use></svg>
+          <h4 data-tr="Dijital Röntgen" data-en="Digital X-Ray" data-ar="الأشعة السينية الرقمية">Dijital Röntgen</h4>
+          <p data-tr="%90 daha az radyasyon ile anında görüntüleme." data-en="Instant imaging with 90% less radiation." data-ar="تصوير فوري مع إشعاع أقل بنسبة 90٪.">%90 daha az radyasyon ile anında görüntüleme.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding ba-section" id="oncesonra">
+  <div class="container gs-reveal">
+    <h2 data-tr="Gözle Görülür Değişim" data-en="Visible Change" data-ar="تغيير مرئي">Gözle Görülür Değişim</h2>
+    <div class="ba-filters">
+      <button class="ba-filter-btn active" data-target="ba-zirkonyum" data-tr="Zirkonyum Kaplama" data-en="Zirconia Crown" data-ar="تاج الزركونيوم">Zirkonyum Kaplama</button>
+      <button class="ba-filter-btn" data-target="ba-implant" data-tr="Diş İmplantı" data-en="Dental Implant" data-ar="زراعة الأسنان">Diş İmplantı</button>
+      <button class="ba-filter-btn" data-target="ba-beyazlatma" data-tr="Diş Beyazlatma" data-en="Teeth Whitening" data-ar="تبييض الأسنان">Diş Beyazlatma</button>
+      <button class="ba-filter-btn" data-target="ba-ortodonti" data-tr="Ortodonti" data-en="Orthodontics" data-ar="تقويم الأسنان">Ortodonti</button>
+      <button class="ba-filter-btn" data-target="ba-gulus" data-tr="Gülüş Tasarımı" data-en="Smile Design" data-ar="تصميم الابتسامة">Gülüş Tasarımı</button>
+    </div>
+    
+    <div class="ba-sliders-container">
+      <!-- Slider 1 -->
+      <div class="ba-slider-wrapper active" id="ba-zirkonyum">
+        <div class="ba-slider">
+          <div class="before-img">
+            <span class="ba-label left" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span>
+          </div>
+          <div class="after-img">
+            <span class="ba-label right" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span>
+          </div>
+          <div class="divider">
+            <div class="divider-handle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slider 2 -->
+      <div class="ba-slider-wrapper" id="ba-implant">
+        <div class="ba-slider">
+          <div class="before-img" style="background: #9A8B8B;">
+            <span class="ba-label left" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span>
+          </div>
+          <div class="after-img" style="background: #E3F0E8;">
+            <span class="ba-label right" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span>
+          </div>
+          <div class="divider">
+            <div class="divider-handle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add other 3 sliders similarly, hidden by default -->
+      <div class="ba-slider-wrapper" id="ba-beyazlatma"><div class="ba-slider"><div class="before-img" style="background:#B0B090;"><span class="ba-label left">Önce</span></div><div class="after-img" style="background:#FAFAFA;"><span class="ba-label right">Sonra</span></div><div class="divider"><div class="divider-handle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg></div></div></div></div>
+      <div class="ba-slider-wrapper" id="ba-ortodonti"><div class="ba-slider"><div class="before-img" style="background:#8B909B;"><span class="ba-label left">Önce</span></div><div class="after-img" style="background:#E3EAF0;"><span class="ba-label right">Sonra</span></div><div class="divider"><div class="divider-handle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg></div></div></div></div>
+      <div class="ba-slider-wrapper" id="ba-gulus"><div class="ba-slider"><div class="before-img" style="background:#9B8B9B;"><span class="ba-label left">Önce</span></div><div class="after-img" style="background:#F0E3E8;"><span class="ba-label right">Sonra</span></div><div class="divider"><div class="divider-handle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="hekimler">
+  <div class="container">
+    <div class="doctors-header gs-reveal">
+      <h2 data-tr="Uzman Hekimlerimiz" data-en="Our Expert Doctors" data-ar="أطباؤنا الخبراء">Uzman Hekimlerimiz</h2>
+      <div class="hekim-filters">
+        <button class="hekim-filter-btn active" data-filter="all" data-tr="Tümünü Göster" data-en="Show All" data-ar="عرض الكل">Tümünü Göster</button>
+        <button class="hekim-filter-btn" data-filter="implantoloji" data-tr="İmplantoloji" data-en="Implantology" data-ar="زراعة الأسنان">İmplantoloji</button>
+        <button class="hekim-filter-btn" data-filter="estetik" data-tr="Estetik Diş" data-en="Aesthetic Dental" data-ar="طب الأسنان التجميلي">Estetik Diş</button>
+      </div>
+    </div>
+    <div class="doctors-grid">
+      <div class="hekim-kart gs-reveal" data-uzmanlik="implantoloji">
+        <div class="hekim-img">
+          <div class="hekim-badge"><svg width="14" height="14"><use href="#icon-check"></use></svg> <span data-tr="Board Sertifikalı" data-en="Board Certified" data-ar="معتمد من البورد">Board Sertifikalı</span></div>
+        </div>
+        <div class="hekim-info">
+          <h3 class="font-cormorant">Dt. Aslıhan Yılmaz</h3>
+          <div class="hekim-uzmanlik" data-tr="İmplantoloji Uzmanı" data-en="Implantology Specialist" data-ar="أخصائي زراعة الأسنان">İmplantoloji Uzmanı</div>
+          <div class="hekim-edu"><svg width="16" height="16"><use href="#icon-grad"></use></svg> Hacettepe Üniversitesi</div>
+          <a href="https://wa.me/905013214206?text=Merhaba%2C%20Dt.%20Aslıhan%20Yılmaz'dan%20randevu%20almak%20istiyorum" class="btn btn-outline-accent" data-tr="Bu Doktorla Randevu Al" data-en="Book with this Doctor" data-ar="احجز مع هذا الطبيب">Bu Doktorla Randevu Al</a>
+        </div>
+      </div>
+      <div class="hekim-kart gs-reveal" data-uzmanlik="estetik" style="transition-delay: 0.1s;">
+        <div class="hekim-img">
+          <div class="hekim-badge"><svg width="14" height="14"><use href="#icon-check"></use></svg> <span data-tr="Board Sertifikalı" data-en="Board Certified" data-ar="معتمد من البورد">Board Sertifikalı</span></div>
+        </div>
+        <div class="hekim-info">
+          <h3 class="font-cormorant">Dt. Gizem Kaya</h3>
+          <div class="hekim-uzmanlik" data-tr="Estetik Diş Hekimi" data-en="Aesthetic Dentist" data-ar="طبيب أسنان تجميلي">Estetik Diş Hekimi</div>
+          <div class="hekim-edu"><svg width="16" height="16"><use href="#icon-grad"></use></svg> Ankara Üniversitesi</div>
+          <a href="https://wa.me/905013214206?text=Merhaba%2C%20Dt.%20Gizem%20Kaya'dan%20randevu%20almak%20istiyorum" class="btn btn-outline-accent" data-tr="Bu Doktorla Randevu Al" data-en="Book with this Doctor" data-ar="احجز مع هذا الطبيب">Bu Doktorla Randevu Al</a>
+        </div>
+      </div>
+      <div class="hekim-kart gs-reveal" data-uzmanlik="implantoloji" style="transition-delay: 0.2s;">
+        <div class="hekim-img">
+          <div class="hekim-badge"><svg width="14" height="14"><use href="#icon-check"></use></svg> <span data-tr="Board Sertifikalı" data-en="Board Certified" data-ar="معتمد من البورد">Board Sertifikalı</span></div>
+        </div>
+        <div class="hekim-info">
+          <h3 class="font-cormorant">Uzm. Dt. Burak Demir</h3>
+          <div class="hekim-uzmanlik" data-tr="Çene Cerrahisi" data-en="Maxillofacial Surgery" data-ar="جراحة الوجه والفكين">Çene Cerrahisi</div>
+          <div class="hekim-edu"><svg width="16" height="16"><use href="#icon-grad"></use></svg> Gazi Üniversitesi</div>
+          <a href="https://wa.me/905013214206?text=Merhaba%2C%20Uzm.%20Dt.%20Burak%20Demir'den%20randevu%20almak%20istiyorum" class="btn btn-outline-accent" data-tr="Bu Doktorla Randevu Al" data-en="Book with this Doctor" data-ar="احجز مع هذا الطبيب">Bu Doktorla Randevu Al</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding faq-section">
+  <div class="container faq-container gs-reveal">
+    <div class="faq-header">
+      <h2 data-tr="Sıkça Sorulan Sorular" data-en="Frequently Asked Questions" data-ar="أسئلة مكررة">Sıkça Sorulan Sorular</h2>
+      <p data-tr="Aklınızdaki soruları yanıtladık." data-en="We answered the questions on your mind." data-ar="أجبنا على الأسئلة التي تدور في ذهنك.">Aklınızdaki soruları yanıtladık.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" data-tr="İmplant tedavisi ne kadar sürer?" data-en="How long does implant treatment take?" data-ar="كم من الوقت يستغرق علاج الزرع؟">İmplant tedavisi ne kadar sürer? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="Tek implant uygulaması ortalama 30-45 dakika sürer. Kanal üstü yapı eklenmesi 2-3 seans gerektirir. Toplam süreç 3-6 ay arasındadır." data-en="Single implant application takes an average of 30-45 minutes. Adding the superstructure requires 2-3 sessions. The total process is between 3-6 months." data-ar="يستغرق تطبيق الزرع الفردي في المتوسط 30-45 دقيقة. تتطلب إضافة البنية الفوقية 2-3 جلسات. العملية الإجمالية بين 3-6 أشهر.">Tek implant uygulaması ortalama 30-45 dakika sürer. Kanal üstü yapı eklenmesi 2-3 seans gerektirir. Toplam süreç 3-6 ay arasındadır.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="Zirkonyum kaplamalar doğal görünür mü?" data-en="Do zirconia crowns look natural?" data-ar="هل تبدو تيجان الزركونيوم طبيعية؟">Zirkonyum kaplamalar doğal görünür mü? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="Evet. Işık geçirgenliği doğal dişe çok yakındır. Renk eşleştirmesi dijital sistemlerle yapılır; çevre dişlerden ayırt edilemez." data-en="Yes. Light transmittance is very close to natural teeth. Color matching is done with digital systems; it is indistinguishable from surrounding teeth." data-ar="نعم. نفاذية الضوء قريبة جدا من الأسنان الطبيعية. تتم مطابقة الألوان باستخدام الأنظمة الرقمية. لا يمكن تمييزه عن الأسنان المحيطة.">Evet. Işık geçirgenliği doğal dişe çok yakındır. Renk eşleştirmesi dijital sistemlerle yapılır; çevre dişlerden ayırt edilemez.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="Diş beyazlatma kalıcı mı?" data-en="Is teeth whitening permanent?" data-ar="هل تبييض الأسنان دائم؟">Diş beyazlatma kalıcı mı? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="Profesyonel beyazlatma 1-3 yıl etkisini korur. Çay, kahve ve sigaradan kaçınılırsa süre uzar. Yıllık bakım seansı önerilir." data-en="Professional whitening maintains its effect for 1-3 years. If tea, coffee, and smoking are avoided, the duration is extended. An annual maintenance session is recommended." data-ar="يحافظ التبييض الاحترافي على تأثيره لمدة 1-3 سنوات. إذا تم تجنب الشاي والقهوة والتدخين ، يتم تمديد المدة. يوصى بجلسة صيانة سنوية.">Profesyonel beyazlatma 1-3 yıl etkisini korur. Çay, kahve ve sigaradan kaçınılırsa süre uzar. Yıllık bakım seansı önerilir.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="Kanal tedavisi ağrılı mı?" data-en="Is root canal treatment painful?" data-ar="هل علاج قناة الجذر مؤلم؟">Kanal tedavisi ağrılı mı? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="Hayır. Modern teknikler ve lokal anestezi ile işlem boyunca ağrı hissedilmez. İşlem sonrası hafif hassasiyet 1-2 gün içinde geçer." data-en="No. With modern techniques and local anesthesia, no pain is felt during the procedure. Mild sensitivity after the procedure passes within 1-2 days." data-ar="لا. مع التقنيات الحديثة والتخدير الموضعي ، لا يشعر بأي ألم أثناء الإجراء. الحساسية الخفيفة بعد الإجراء تمر في غضون 1-2 أيام.">Hayır. Modern teknikler ve lokal anestezi ile işlem boyunca ağrı hissedilmez. İşlem sonrası hafif hassasiyet 1-2 gün içinde geçer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="Sigorta geçerli mi?" data-en="Is insurance valid?" data-ar="هل التأمين ساري المفعول؟">Sigorta geçerli mi? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="SGK anlaşmalı hizmetlerimiz mevcuttur. Özel sigorta kapsamı sigorta şirketinize göre değişir. Randevu öncesi bilgi alabilirsiniz." data-en="We have SSI contracted services. Private insurance coverage varies according to your insurance company. You can get information before your appointment." data-ar="لدينا خدمات متعاقد عليها مع SSI. تختلف تغطية التأمين الخاص وفقا لشركة التأمين الخاصة بك. يمكنك الحصول على معلومات قبل موعدك.">SGK anlaşmalı hizmetlerimiz mevcuttur. Özel sigorta kapsamı sigorta şirketinize göre değişir. Randevu öncesi bilgi alabilirsiniz.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="Çocuklar için tedavi yapıyor musunuz?" data-en="Do you treat children?" data-ar="هل تعالج الأطفال؟">Çocuklar için tedavi yapıyor musunuz? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="Evet. Pedodonti uzmanımız 0-14 yaş arası çocuklara özel, korkusuz ve oyun tabanlı tedavi yöntemleri uygulamaktadır." data-en="Yes. Our pedodontist applies special, fearless, and game-based treatment methods for children aged 0-14." data-ar="نعم. يطبق أخصائي طب أسنان الأطفال لدينا طرق علاج خاصة وخالية من الخوف وقائمة على الألعاب للأطفال الذين تتراوح أعمارهم بين 0-14 عاما.">Evet. Pedodonti uzmanımız 0-14 yaş arası çocuklara özel, korkusuz ve oyun tabanlı tedavi yöntemleri uygulamaktadır.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="Taksit imkânı var mı?" data-en="Are there installment options?" data-ar="هل هناك خيارات تقسيط؟">Taksit imkânı var mı? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="Tüm tedavilerde 12 aya kadar faizsiz taksit imkânı sunulmaktadır. Detaylar için kliniğimizi arayabilirsiniz." data-en="Interest-free installments up to 12 months are offered for all treatments. You can call our clinic for details." data-ar="يتم تقديم أقساط بدون فوائد تصل إلى 12 شهرا لجميع العلاجات. يمكنك الاتصال بعيادتنا للحصول على التفاصيل.">Tüm tedavilerde 12 aya kadar faizsiz taksit imkânı sunulmaktadır. Detaylar için kliniğimizi arayabilirsiniz.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-tr="İlk muayene ücretli mi?" data-en="Is the first examination paid?" data-ar="هل الفحص الأول مدفوع؟">İlk muayene ücretli mi? <svg class="faq-icon" width="20" height="20"><use href="#icon-chevron-down"></use></svg></div>
+        <div class="faq-a" data-tr="İlk değerlendirme muayenemiz ücretsizdir. Röntgen ve tomografi çekimleri ayrıca ücretlendirilir." data-en="Our first evaluation examination is free of charge. X-ray and tomography scans are charged separately." data-ar="فحص التقييم الأول لدينا مجاني. يتم فرض رسوم على الأشعة السينية والتصوير المقطعي بشكل منفصل.">İlk değerlendirme muayenemiz ücretsizdir. Röntgen ve tomografi çekimleri ayrıca ücretlendirilir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container gs-reveal">
+    <div class="social-header">
+      <h2 data-tr="Sosyal Medyamız" data-en="Our Social Media" data-ar="وسائل التواصل الاجتماعي لدينا">Sosyal Medyamız</h2>
+      <p>@klinik06agizvedissag</p>
+    </div>
+    <div class="social-grid">
+      <div class="social-item" data-foto-prompt="Mutlu hasta gülümsemesi">
+        <div class="social-overlay">
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-heart"></use></svg> 245</div>
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-msg"></use></svg> 12</div>
+        </div>
+      </div>
+      <div class="social-item" data-foto-prompt="Klinik içi steril ortam">
+        <div class="social-overlay">
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-heart"></use></svg> 189</div>
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-msg"></use></svg> 8</div>
+        </div>
+      </div>
+      <div class="social-item" data-foto-prompt="İmplant operasyonu öncesi hekim">
+        <div class="social-overlay">
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-heart"></use></svg> 312</div>
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-msg"></use></svg> 24</div>
+        </div>
+      </div>
+      <div class="social-item" data-foto-prompt="Zirkonyum öncesi sonrası">
+        <div class="social-overlay">
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-heart"></use></svg> 456</div>
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-msg"></use></svg> 32</div>
+        </div>
+      </div>
+      <div class="social-item" data-foto-prompt="Çocuk hasta ve hekim">
+        <div class="social-overlay">
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-heart"></use></svg> 521</div>
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-msg"></use></svg> 45</div>
+        </div>
+      </div>
+      <div class="social-item" data-foto-prompt="Gülüş tasarımı sonucu">
+        <div class="social-overlay">
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-heart"></use></svg> 678</div>
+          <div class="social-stat"><svg width="20" height="20"><use href="#icon-msg"></use></svg> 56</div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="#" class="btn btn-outline-accent" data-tr="Instagram'da Takip Et" data-en="Follow on Instagram" data-ar="تابعنا على انستغرام">Instagram'da Takip Et</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding reviews-section" id="yorumlar">
+  <div class="container gs-reveal">
+    <div class="reviews-header">
+      <h2 data-tr="4.8/5 — 131 Gerçek Hasta Yorumu" data-en="4.8/5 — 131 Real Patient Reviews" data-ar="4.8/5 — 131 تقييمات مرضى حقيقيين">4.8/5 — 131 Gerçek Hasta Yorumu</h2>
+    </div>
+    <div class="reviews-carousel">
+      <div class="reviews-track-container">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card"><div class="review-avatar">S</div><div class="stars">★★★★★</div><p class="review-text">"Tesadüf üzere bu kliniği keşfetmiştim ama kendisi gerçekten işinin ehli hocama çok teşekkür ederim ve çok neşeli birisi detaylı şekilde anlatıp yardımcı oluyor çok memnun kaldım bu memnun kalmamla birlikte çevrem de aynı şekilde memnun kaldı elinize sağlık tekrardan 🙏🏻"</p><div class="review-author">— Samet Türksoy</div></div><div class="review-card"><div class="review-avatar">İ</div><div class="stars">★★★★★</div><p class="review-text">"Diş taşı temizliği için gittim. Tedavimi yapan Gizem hocadan gerçekten çok memnun kaldım. İşlem sırasında her aşama detaylı şekilde anlatıldı ve oldukça rahat bir şekilde tamamlandı. Hijyen konusunda da çok titizlerdi. Güler yüzlü ve ilgili ekipleri sayesinde kendimi çok güvende hissettim. Diş sağlığı konusunda güvenle tercih edilebilecek bir klinik, gönül rahatlığıyla gidebilirsiniz."</p><div class="review-author">— İsmail Mekan</div></div><div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Aslıhan hocama 20'lik dişimi cektirdim ayrica diş tası temizliği yaptirdım eli cok hafif hic ağri hissetmedim ilgileri icin teşekkür ediyorum"</p><div class="review-author">— burak er</div></div><div class="review-card"><div class="review-avatar">C</div><div class="stars">★★★★★</div><p class="review-text">"Önce eşim gitti daha sonra ben implanlarımı Aslıhan hocama yaptırdım  ilgi alaka cok güzeldi ön muayenede yapılacak işlemleri planladı hocamız daha sonra benim kararımla  tedaviye başladık  4 tane implant yaptırdım çok memnun kaldım  hocamın ellerine saglık  güler yüzlü personelinede çok teşekkür ediyorum"</p><div class="review-author">— Can Er</div></div><div class="review-card"><div class="review-avatar">M</div><div class="stars">★★★★★</div><p class="review-text">"Başka klinikte çekilmesi gerekiyor buraya implant yapılması gerekiyor denilen dişime Aslıhan hocam dişimi kurtarıp üzerine kaplama yaptı. Kendisi implant uzmanı olmasına rağmen tedavisi çok başarılı bir şekilde tamamladı. Aslıhan hocamın fikrini almadan diş çektirmeyin derim kendisi zaten size tane tane anlatıyor. Kafamda hiç bir soru işareti kalmadan tedavimi tamamladı. Ona ve klinikteki güler yüzlü personellere teşekkür ediyorum 🩷"</p><div class="review-author">— Mine</div></div><div class="review-card"><div class="review-avatar">F</div><div class="stars">★★★★★</div><p class="review-text">"Bugüne kadar gittiğim en iyi dişçi ağrısız sızısız minumum sürede işlem yapıyor çok memnun kaldım bu işin vakkosu 👏🏻"</p><div class="review-author">— Furkan Gunaydin</div></div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="prevReview" aria-label="Önceki Yorum"><svg width="24" height="24"><use href="#icon-chevron-left"></use></svg></button>
+        <div class="carousel-dots" id="reviewDots"></div>
+        <button class="carousel-btn" id="nextReview" aria-label="Sonraki Yorum"><svg width="24" height="24"><use href="#icon-chevron-right"></use></svg></button>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top: 48px;">
+      <a href="https://www.google.com/maps/search/?api=1&query=Klinik%2006%20A%C4%9F%C4%B1z%20ve%20Di%C5%9F%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20Poliklini%C4%9Fi&query_place_id=ChIJnTa3lS430xQRn5gL2_VOZWc" class="btn btn-outline-white" target="_blank" rel="noopener" data-tr="Google'da Tüm Yorumları Gör" data-en="See All Reviews on Google" data-ar="شاهد جميع التقييمات على جوجل">Google'da Tüm Yorumları Gör</a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band gs-reveal">
+  <div class="container">
+    <h2 data-tr="Sağlıklı Gülüşlere Bugün Başlayın" data-en="Start Healthy Smiles Today" data-ar="ابدأ ابتسامات صحية اليوم">Sağlıklı Gülüşlere Bugün Başlayın</h2>
+    <div class="cta-btns">
+      <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="btn" style="background:var(--bg-white); color:var(--primary);" data-tr="WhatsApp'tan Yaz" data-en="Write on WhatsApp" data-ar="اكتب على الواتساب"><svg width="20" height="20"><use href="#icon-wa"></use></svg> WhatsApp'tan Yaz</a>
+      <a href="tel:+905013214206" class="btn btn-outline-white" data-tr="Ara" data-en="Call" data-ar="يتصل"><svg width="20" height="20"><use href="#icon-phone"></use></svg> Ara</a>
     </div>
   </div>
 </div>
 
-<!-- Counters -->
-<section class="counters-section" id="hakkimizda">
-  <div class="container">
-    <div class="counters-grid gs-reveal">
-      <div>
-        <div class="counter-num"><span class="counter" data-target="131" data-suffix="+">0</span></div>
-        <div class="counter-text">Gerçek Hasta Yorumu</div>
+<section class="section-padding" id="iletisim">
+  <div class="container contact-grid gs-reveal">
+    <div class="contact-info">
+      <h2 data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</h2>
+      <div class="contact-item">
+        <svg class="contact-icon" width="24" height="24"><use href="#icon-pin"></use></svg>
+        <div class="contact-text">
+          <h4 data-tr="Adres" data-en="Address" data-ar="عنوان">Adres</h4>
+          <p>Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara, Türkiye</p>
+        </div>
       </div>
-      <div>
-        <div class="counter-num"><span class="counter" data-target="4.8" data-decimal="true">0</span></div>
-        <div class="counter-text">Google Puanı</div>
+      <div class="contact-item">
+        <svg class="contact-icon" width="24" height="24"><use href="#icon-phone"></use></svg>
+        <div class="contact-text">
+          <h4 data-tr="Telefon" data-en="Phone" data-ar="هاتف">Telefon</h4>
+          <p>+90 501 321 42 06</p>
+        </div>
       </div>
-      <div>
-        <div class="counter-num"><span class="counter" data-target="15" data-suffix="+">0</span></div>
-        <div class="counter-text">Yıl Tecrübe</div>
+      <div class="contact-item">
+        <svg class="contact-icon" width="24" height="24"><use href="#icon-clock"></use></svg>
+        <div class="contact-text">
+          <h4 data-tr="Çalışma Saatleri" data-en="Working Hours" data-ar="ساعات العمل">Çalışma Saatleri</h4>
+          <div class="hours-list">
+            <div data-tr="Pazartesi - Cumartesi: 09:00 - 19:00" data-en="Monday - Saturday: 09:00 - 19:00" data-ar="الاثنين - السبت: 09:00 - 19:00">Pazartesi - Cumartesi: 09:00 - 19:00</div>
+            <div data-tr="Pazar: Kapalı" data-en="Sunday: Closed" data-ar="الأحد: مغلق">Pazar: Kapalı</div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="counter-num"><span class="counter" data-target="5000" data-suffix="+">0</span></div>
-        <div class="counter-text">Mutlu Hasta</div>
-      </div>
+      <a href="https://www.google.com/maps/dir//39.9812704,32.6477407" class="btn btn-outline-accent" style="width: 100%; margin-top: 16px;" target="_blank" rel="noopener" data-tr="Yol Tarifi Al" data-en="Get Directions" data-ar="احصل على الاتجاهات">Yol Tarifi Al</a>
+    </div>
+    <div class="map-container">
+      <iframe src="https://maps.google.com/maps?q=39.9812704,32.6477407&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Harita"></iframe>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section class="section" id="hizmetler">
-  <div class="container">
-    <div class="text-center gs-reveal">
-      <h2>Uzmanlık Alanlarımız</h2>
-      <p style="max-width: 600px; margin: 16px auto 0;">Modern teknoloji ve uzman hekim kadromuzla, size özel kalıcı ve estetik çözümler sunuyoruz.</p>
-    </div>
-    
-    <div class="services-grid gs-reveal">
-      <!-- Service 1 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3>İmplant Tedavisi</h3>
-        <p>Eksik dişleriniz için titanyum altyapılı, ömür boyu garantili kalıcı çözüm.</p>
-        <div class="service-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 dk | ₺8.500'den başlıyor, taksit imkanı
-        </div>
-        <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-      </div>
-      <!-- Service 2 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-        <h3>Zirkonyum Kaplama</h3>
-        <p>Doğal diş görünümüne en yakın, metal desteksiz yüksek estetik kaplamalar.</p>
-        <div class="service-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 2 Seans | ₺3.500'den başlıyor
-        </div>
-        <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-      </div>
-      <!-- Service 3 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <h3>Ortodonti (Şeffaf Plak)</h3>
-        <p>Telsiz ortodonti ile dışarıdan belli olmayan, konforlu diş düzeltme tedavisi.</p>
-        <div class="service-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 dk Muayene | Ücretsiz Ön Görüşme
-        </div>
-        <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-      </div>
-      <!-- Service 4 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </div>
-        <h3>Lazerle Diş Beyazlatma</h3>
-        <p>Tek seansta 3-4 tona kadar açılma sağlayan güvenli beyazlatma işlemi.</p>
-        <div class="service-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 dk | ₺2.500'den başlıyor
-        </div>
-        <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-      </div>
-      <!-- Service 5 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <h3>Kanal Tedavisi</h3>
-        <p>Ağrılı dişlerinizi çekmeden kurtaran, mikroskop destekli modern kanal tedavisi.</p>
-        <div class="service-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 60 dk | ₺1.800'den başlıyor
-        </div>
-        <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-      </div>
-      <!-- Service 6 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        </div>
-        <h3>Pedodonti (Çocuk Diş)</h3>
-        <p>Çocuklar için özel tasarlanmış, korkutmayan ve eğlenceli diş tedavileri.</p>
-        <div class="service-meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 dk | Ücretsiz Kontrol
-        </div>
-        <button class="btn btn-outline" style="width:100%" onclick="document.getElementById('randevu').scrollIntoView({behavior:'smooth'})">Randevu Al</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5-Step Appointment Flow -->
-<section class="section" style="background: var(--color-white);" id="randevu">
-  <div class="container">
-    <div class="text-center gs-reveal">
-      <h2>Randevu Almak Çok Kolay</h2>
-      <p>5 basit adımda tedavinize başlayın.</p>
-    </div>
-    
-    <div class="appointment-flow gs-reveal">
-      <div class="timeline-horizontal">
-        <div class="timeline-step active">
-          <div class="step-circle">1</div>
-          <h4>Bölüm Seç</h4>
-          <p style="font-size:0.85rem;">Şikayetinizi belirleyin</p>
-        </div>
-        <div class="timeline-step">
-          <div class="step-circle">2</div>
-          <h4>Doktor Seç</h4>
-          <p style="font-size:0.85rem;">Uzman hekiminizi seçin</p>
-        </div>
-        <div class="timeline-step">
-          <div class="step-circle">3</div>
-          <h4>Tarih / Saat</h4>
-          <p style="font-size:0.85rem;">Size uygun zamanı bulun</p>
-        </div>
-        <div class="timeline-step">
-          <div class="step-circle">4</div>
-          <h4>Bilgilerini Gir</h4>
-          <p style="font-size:0.85rem;">İletişim bilgilerinizi yazın</p>
-        </div>
-        <div class="timeline-step">
-          <div class="step-circle">5</div>
-          <h4>Onay</h4>
-          <p style="font-size:0.85rem;">Randevunuz hazır</p>
-        </div>
-      </div>
-      
-      <div class="text-center" style="margin-top: 48px; display:flex; flex-direction:column; gap:16px; align-items:center;">
-        <a href="https://wa.me/905013214206?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-primary btn-lg" style="background:#25D366; color:#fff;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          WhatsApp'tan Randevu Al
-        </a>
-        <p>veya <a href="tel:+905013214206" style="font-weight:bold; color:var(--color-primary);">📞 +90 501 321 42 06</a> numaramızı arayın</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Filterable Doctor Directory -->
-<section class="section" id="doktorlar">
-  <div class="container">
-    <div class="text-center gs-reveal mb-12">
-      <h2>Uzman Kadromuz</h2>
-      <p>Sertifikalı, tecrübeli ve güler yüzlü ekibimizle tanışın.</p>
-    </div>
-    
-    <div class="filter-bar gs-reveal">
-      <button class="filter-btn active" data-filter="all">Tümünü Göster</button>
-      <button class="filter-btn" data-filter="implant">İmplant Uzmanı</button>
-      <button class="filter-btn" data-filter="ortodonti">Ortodonti</button>
-      <button class="filter-btn" data-filter="estetik">Estetik Diş</button>
-    </div>
-    
-    <div class="doctors-grid gs-reveal">
-      <!-- Doc 1 -->
-      <div class="doctor-card" data-uzmanlik="implant">
-        <div class="img-placeholder" style="height:350px;" data-foto-prompt="Klinik 06 Ağız ve Diş Sağlığı Polikliniği doktoru, profesyonel portre, beyaz onluk, gulumseme, studio portre, temiz arka plan, kadin hekim"></div>
-        <div class="doc-info">
-          <span class="doc-badge">Board Sertifikalı</span>
-          <h3>Dt. Aslıhan Yılmaz</h3>
-          <p style="color:var(--color-primary); font-weight:600; margin-bottom:8px;">İmplant & Cerrahi Uzmanı</p>
-          <div style="display:flex; align-items:center; gap:4px; margin-bottom:8px;">
-            <span style="color:#FFC107">★★★★★</span> <span style="font-size:0.85rem; color:#666;">(4.9/5 - 85 Yorum)</span>
-          </div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:16px;">Hacettepe Üniversitesi Diş Hekimliği Fakültesi</p>
-          <div class="doc-langs">🇹🇷 TR 🇬🇧 EN</div>
-          <a href="https://wa.me/905013214206?text=Merhaba%2C%20Dt.%20Aslıhan%20Yılmaz'dan%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-outline" style="width:100%; padding: 10px;">Bu Doktorla Randevu Al</a>
-        </div>
-      </div>
-      <!-- Doc 2 -->
-      <div class="doctor-card" data-uzmanlik="estetik">
-        <div class="img-placeholder" style="height:350px;" data-foto-prompt="Klinik 06 Ağız ve Diş Sağlığı Polikliniği doktoru, profesyonel portre, beyaz onluk, gulumseme, studio portre, temiz arka plan, genc kadin hekim"></div>
-        <div class="doc-info">
-          <span class="doc-badge">Estetik Uzmanı</span>
-          <h3>Dt. Gizem Kaya</h3>
-          <p style="color:var(--color-primary); font-weight:600; margin-bottom:8px;">Estetik Diş Hekimi</p>
-          <div style="display:flex; align-items:center; gap:4px; margin-bottom:8px;">
-            <span style="color:#FFC107">★★★★★</span> <span style="font-size:0.85rem; color:#666;">(4.8/5 - 62 Yorum)</span>
-          </div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:16px;">Gazi Üniversitesi Diş Hekimliği Fakültesi</p>
-          <div class="doc-langs">🇹🇷 TR 🇬🇧 EN 🇸🇦 AR</div>
-          <a href="https://wa.me/905013214206?text=Merhaba%2C%20Dt.%20Gizem%20Kaya'dan%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-outline" style="width:100%; padding: 10px;">Bu Doktorla Randevu Al</a>
-        </div>
-      </div>
-      <!-- Doc 3 -->
-      <div class="doctor-card" data-uzmanlik="ortodonti">
-        <div class="img-placeholder" style="height:350px;" data-foto-prompt="Klinik 06 Ağız ve Diş Sağlığı Polikliniği doktoru, profesyonel portre, beyaz onluk, gulumseme, studio portre, temiz arka plan, erkek hekim"></div>
-        <div class="doc-info">
-          <span class="doc-badge">Ortodonti Uzmanı</span>
-          <h3>Dr. Dt. Burak Demir</h3>
-          <p style="color:var(--color-primary); font-weight:600; margin-bottom:8px;">Ortodonti Uzmanı</p>
-          <div style="display:flex; align-items:center; gap:4px; margin-bottom:8px;">
-            <span style="color:#FFC107">★★★★★</span> <span style="font-size:0.85rem; color:#666;">(5.0/5 - 41 Yorum)</span>
-          </div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:16px;">Ankara Üniversitesi Diş Hekimliği Fakültesi</p>
-          <div class="doc-langs">🇹🇷 TR 🇬🇧 EN</div>
-          <a href="https://wa.me/905013214206?text=Merhaba%2C%20Dr.%20Dt.%20Burak%20Demir'den%20randevu%20almak%20istiyorum" target="_blank" class="btn btn-outline" style="width:100%; padding: 10px;">Bu Doktorla Randevu Al</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Interactive Before-After Slider -->
-<section class="section ba-section" id="sonuclar">
-  <div class="container text-center gs-reveal">
-    <h2>Tedavi Sonuçları</h2>
-    <p style="color:rgba(255,255,255,0.8);">Gerçek hastalarımızın mükemmel değişimleri.</p>
-    
-    <div class="filter-bar" style="margin-top:24px;">
-      <button class="filter-btn active" style="background:transparent; color:#fff; border-color:#fff;">İmplant</button>
-      <button class="filter-btn" style="background:transparent; color:#fff; border-color:#fff;">Zirkonyum</button>
-      <button class="filter-btn" style="background:transparent; color:#fff; border-color:#fff;">Beyazlatma</button>
-    </div>
-
-    <div class="ba-container">
-      <div class="before-after-slider" id="baSlider">
-        <!-- After Image (Background) -->
-        <div class="ba-img after-img">
-          <div class="img-placeholder" style="width:100%; height:100%; border-radius:0;" data-foto-prompt="Mükemmel beyaz inci gibi dişler, zirkonyum kaplama SONRASI gülümseme, makro çekim"></div>
-        </div>
-        <div class="ba-label label-after">Sonra</div>
-        
-        <!-- Before Image (Foreground, Clipped) -->
-        <div class="ba-img before-img" id="baBefore">
-          <div class="img-placeholder" style="width:100%; height:100%; border-radius:0; background:linear-gradient(135deg, #333, #111);" data-foto-prompt="Sararmış çarpık dişler, tedavi ÖNCESİ ağız yapısı, makro çekim"></div>
-        </div>
-        <div class="ba-label label-before">Önce</div>
-        
-        <!-- Divider & Handle -->
-        <div class="ba-divider" id="baDivider"></div>
-        <div class="ba-handle" id="baHandle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:-12px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Timeline Process & Tech -->
-<section class="section" style="background: var(--color-white);">
-  <div class="container">
-    <div class="contact-grid">
-      <!-- Process -->
-      <div class="gs-reveal">
-        <h2>Nasıl Çalışıyoruz?</h2>
-        <p class="mb-8">Şeffaf, planlı ve sürpriz maliyetler olmadan.</p>
-        
-        <div class="process-timeline">
-          <div class="process-step">
-            <div class="process-icon">🩺</div>
-            <h4>1. İlk Muayene</h4>
-            <p>Kapsamlı değerlendirme ve röntgen çekimi ile sizi tanıyalım.</p>
-          </div>
-          <div class="process-step">
-            <div class="process-icon">📋</div>
-            <h4>2. Tedavi Planı</h4>
-            <p>Size özel, alternatifli ve şeffaf fiyatlı tedavi planı sunumu.</p>
-          </div>
-          <div class="process-step">
-            <div class="process-icon">⚕️</div>
-            <h4>3. Uygulama</h4>
-            <p>Son teknoloji ekipmanlar ve steril ortamda ağrısız uygulama.</p>
-          </div>
-          <div class="process-step">
-            <div class="process-icon">✅</div>
-            <h4>4. Takip & Kontrol</h4>
-            <p>Tedavi sonrası düzenli kontroller ile ömür boyu garanti.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Tech -->
-      <div class="gs-reveal">
-        <h2>Kullandığımız Teknoloji</h2>
-        <p class="mb-8">Dünya standartlarında cihazlarla en doğru teşhis ve tedavi.</p>
-        
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            <h4>3D Tomografi</h4>
-            <p style="font-size:0.85rem;">Milimetrik hassasiyetle çene kemiği analizi.</p>
-          </div>
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            <h4>CAD/CAM Sistemi</h4>
-            <p style="font-size:0.85rem;">Aynı gün içinde dijital ölçü ve porselen üretimi.</p>
-          </div>
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-            <h4>Lazer Tedavi</h4>
-            <p style="font-size:0.85rem;">Kanamasız ve ağrısız diş eti tedavileri.</p>
-          </div>
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-            <h4>Dijital Röntgen</h4>
-            <p style="font-size:0.85rem;">%90 daha az radyasyon ile anında görüntüleme.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Accordion -->
-<section class="section" id="sss">
-  <div class="container">
-    <div class="text-center gs-reveal">
-      <h2>Sıkça Sorulan Sorular</h2>
-      <p>Aklınıza takılan soruların cevaplarını burada bulabilirsiniz.</p>
-    </div>
-    
-    <div class="faq-container gs-reveal">
-      <!-- FAQ 1 -->
-      <div class="faq-item">
-        <div class="faq-header">Tedavi ne kadar sürer? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">Tedavi süresi yapılacak işleme göre değişiklik göstermektedir. Örneğin bir dolgu işlemi 30 dakika sürerken, implant tedavisi kemik yapısına göre 2-3 ay sürebilir. İlk muayenede size net bir takvim sunuyoruz.</div></div>
-      </div>
-      <!-- FAQ 2 -->
-      <div class="faq-item">
-        <div class="faq-header">Sigorta geçerli mi? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">Evet, SGK anlaşmamız bulunmaktadır. Ayrıca Allianz, Mapfre, Axa ve Anadolu Sigorta gibi birçok özel sağlık sigortası ile de anlaşmalıyız.</div></div>
-      </div>
-      <!-- FAQ 3 -->
-      <div class="faq-item">
-        <div class="faq-header">Ağrı duyar mıyım? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">Hayır, kliniğimizde uygulanan tüm cerrahi ve dolgu işlemleri lokal anestezi altında yapılmaktadır. Enjeksiyon öncesi uygulanan spreyler sayesinde iğne acısı dahi hissetmezsiniz.</div></div>
-      </div>
-      <!-- FAQ 4 -->
-      <div class="faq-item">
-        <div class="faq-header">Fiyatlar ne kadar? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">TDB (Türk Dişhekimleri Birliği) taban fiyat tarifesi üzerinden şeffaf bir fiyatlandırma yapıyoruz. Sürpriz maliyetler çıkarılmaz, tedavi öncesi size detaylı bir form sunulur.</div></div>
-      </div>
-      <!-- FAQ 5 -->
-      <div class="faq-item">
-        <div class="faq-header">Hangi markaları kullanıyorsunuz? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">İmplantlarda Straumann, Nobel Biocare ve Osstem gibi FDA onaylı, dünya çapında kabul görmüş A kalite markaları tercih ediyoruz.</div></div>
-      </div>
-      <!-- FAQ 6 -->
-      <div class="faq-item">
-        <div class="faq-header">Randevu için ne yapmam lazım? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">Web sitemizdeki formdan, WhatsApp hattımızdan veya direkt telefon numaramızı arayarak kolayca randevu oluşturabilirsiniz.</div></div>
-      </div>
-      <!-- FAQ 7 -->
-      <div class="faq-item">
-        <div class="faq-header">Tedavi sonrası nelere dikkat etmeliyim? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">Her işlem sonrası hekiminiz size özel bir bakım talimatı verecektir. Genel olarak ilk 2 saat bir şey yememek ve aşırı sıcak/soğuk gıdalardan kaçınmak esastır.</div></div>
-      </div>
-      <!-- FAQ 8 -->
-      <div class="faq-item">
-        <div class="faq-header">Garantiniz var mı? <div class="faq-icon"></div></div>
-        <div class="faq-content"><div class="faq-body">Evet, kliniğimizde yapılan implant tedavileri ömür boyu, protetik tedaviler (zirkonyum, kaplama) ise 5 yıl klinik garantimiz altındadır (düzenli 6 aylık kontrollere gelinmesi şartıyla).</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="section" style="background: var(--color-white);" id="galeri">
-  <div class="container">
-    <div class="text-center gs-reveal mb-8">
-      <h2>Kliniğimizden Kareler</h2>
-    </div>
-    
-    <div class="filter-bar gs-reveal">
-      <button class="filter-btn active">Tümünü Göster</button>
-      <button class="filter-btn">Klinik</button>
-      <button class="filter-btn">Tedaviler</button>
-      <button class="filter-btn">Ekibimiz</button>
-    </div>
-    
-    <div class="gallery-grid gs-reveal">
-      <div class="gallery-item">
-        <div class="img-placeholder" data-foto-prompt="Klinik 06 bekleme salonu, lüks tasarım, deri koltuklar, ferah, aydınlık"></div>
-        <div class="gallery-overlay">Bekleme Salonu</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-placeholder" data-foto-prompt="Klinik 06 muayene odası, son teknoloji dişçi koltuğu, steril ortam, monitör"></div>
-        <div class="gallery-overlay">Muayene Odası 1</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-placeholder" data-foto-prompt="Klinik 06 panoramik röntgen odası, 3D tomografi cihazı"></div>
-        <div class="gallery-overlay">Görüntüleme Merkezi</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-placeholder" data-foto-prompt="Güler yüzlü Klinik 06 ekibi, doktorlar ve asistanlar toplu fotoğraf, beyaz önlükler"></div>
-        <div class="gallery-overlay">Uzman Ekibimiz</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-placeholder" data-foto-prompt="Sterilizasyon odası, otoklav cihazı, paketlenmiş aletler, hijyen odaklı"></div>
-        <div class="gallery-overlay">Sterilizasyon Ünitesi</div>
-      </div>
-      <div class="gallery-item">
-        <div class="img-placeholder" data-foto-prompt="Çocuk oyun alanı, diş kliniği içi, renkli oyuncaklar, mutlu atmosfer"></div>
-        <div class="gallery-overlay">Çocuk Oyun Alanı</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Real Patient Reviews -->
-<section class="section reviews-section" id="yorumlar">
-  <div class="container">
-    <div class="text-center gs-reveal">
-      <h2><span style="color:#FFC107">★</span> 4.8/5 — 131 Hasta Değerlendirmesi</h2>
-      <p>Google haritalar üzerindeki gerçek hasta yorumlarımız.</p>
-    </div>
-    
-    <div class="reviews-carousel gs-reveal" id="reviewsCarousel">
-      <!-- Review 1 -->
-      <div class="review-card">
-        <div class="reviewer">
-          <div class="avatar" style="background:#E57373;">S</div>
-          <div>
-            <h4 style="margin:0; color:var(--color-dark);">Samet Türksoy</h4>
-            <span style="font-size:0.8rem; color:#888;">Google Yorumu</span>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Tesadüf üzere bu kliniği keşfetmiştim ama kendisi gerçekten işinin ehli hocama çok teşekkür ederim ve çok neşeli birisi detaylı şekilde anlatıp yardımcı oluyor çok memnun kaldım bu memnun kalmamla birlikte çevrem de aynı şekilde memnun kaldı elinize sağlık tekrardan 🙏🏻"</p>
-      </div>
-      <!-- Review 2 -->
-      <div class="review-card">
-        <div class="reviewer">
-          <div class="avatar" style="background:#81C784;">İ</div>
-          <div>
-            <h4 style="margin:0; color:var(--color-dark);">İsmail Mekan</h4>
-            <span style="font-size:0.8rem; color:#888;">Google Yorumu</span>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Diş taşı temizliği için gittim. Tedavimi yapan Gizem hocadan gerçekten çok memnun kaldım. İşlem sırasında her aşama detaylı şekilde anlatıldı ve oldukça rahat bir şekilde tamamlandı. Hijyen konusunda da çok titizlerdi. Güler yüzlü ve ilgili ekipleri sayesinde kendimi çok güvende hissettim. Diş sağlığı konusunda güvenle tercih edilebilecek bir klinik, gönül rahatlığıyla gidebilirsiniz."</p>
-      </div>
-      <!-- Review 3 -->
-      <div class="review-card">
-        <div class="reviewer">
-          <div class="avatar" style="background:#64B5F6;">B</div>
-          <div>
-            <h4 style="margin:0; color:var(--color-dark);">burak er</h4>
-            <span style="font-size:0.8rem; color:#888;">Google Yorumu</span>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Aslıhan hocama 20'lik dişimi cektirdim ayrica diş tası temizliği yaptirdım eli cok hafif hic ağri hissetmedim ilgileri icin teşekkür ediyorum"</p>
-      </div>
-      <!-- Review 4 -->
-      <div class="review-card">
-        <div class="reviewer">
-          <div class="avatar" style="background:#FFD54F;">C</div>
-          <div>
-            <h4 style="margin:0; color:var(--color-dark);">Can Er</h4>
-            <span style="font-size:0.8rem; color:#888;">Google Yorumu</span>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Önce eşim gitti daha sonra ben implanlarımı Aslıhan hocama yaptırdım ilgi alaka cok güzeldi ön muayenede yapılacak işlemleri planladı hocamız daha sonra benim kararımla tedaviye başladık 4 tane implant yaptırdım çok memnun kaldım hocamın ellerine saglık güler yüzlü personelinede çok teşekkür ediyorum"</p>
-      </div>
-      <!-- Review 5 -->
-      <div class="review-card">
-        <div class="reviewer">
-          <div class="avatar" style="background:#BA68C8;">M</div>
-          <div>
-            <h4 style="margin:0; color:var(--color-dark);">Mine</h4>
-            <span style="font-size:0.8rem; color:#888;">Google Yorumu</span>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Başka klinikte çekilmesi gerekiyor buraya implant yapılması gerekiyor denilen dişime Aslıhan hocam dişimi kurtarıp üzerine kaplama yaptı. Kendisi implant uzmanı olmasına rağmen tedavisi çok başarılı bir şekilde tamamladı. Aslıhan hocamın fikrini almadan diş çektirmeyin derim kendisi zaten size tane tane anlatıyor. Kafamda hiç bir soru işareti kalmadan tedavimi tamamladı. Ona ve klinikteki güler yüzlü personellere teşekkür ediyorum 🩷"</p>
-      </div>
-      <!-- Review 6 -->
-      <div class="review-card">
-        <div class="reviewer">
-          <div class="avatar" style="background:#4DB6AC;">F</div>
-          <div>
-            <h4 style="margin:0; color:var(--color-dark);">Furkan Gunaydin</h4>
-            <span style="font-size:0.8rem; color:#888;">Google Yorumu</span>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Bugüne kadar gittiğim en iyi dişçi ağrısız sızısız minumum sürede işlem yapıyor çok memnun kaldım bu işin vakkosu 👏🏻"</p>
-      </div>
-    </div>
-    
-    <div class="text-center mt-8">
-      <a href="https://www.google.com/maps/search/?api=1&query=Klinik%2006%20A%C4%9F%C4%B1z%20ve%20Di%C5%9F%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20Poliklini%C4%9Fi&query_place_id=ChIJnTa3lS430xQRn5gL2_VOZWc" target="_blank" class="btn btn-outline">Google'da Tüm Yorumları Gör</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Band -->
-<section class="cta-band gs-reveal">
-  <div class="container">
-    <h2>Gülüşünüzü Ertelemeyin — Bugün Randevu Alın</h2>
-    <div class="cta-buttons">
-      <a href="tel:+905013214206" class="btn btn-primary btn-lg" style="border: 2px solid var(--color-accent);">📞 Hemen Ara</a>
-      <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="btn btn-accent btn-lg">💬 WhatsApp Randevu</a>
-    </div>
-  </div>
-</section>
-
-<!-- Insurance & Form -->
-<section class="section" id="iletisim">
-  <div class="container">
-    <div class="insurance-logos gs-reveal">
-      <h3 style="color:#999; font-family:var(--font-body); font-size:1.5rem;">SGK</h3>
-      <h3 style="color:#999; font-family:var(--font-body); font-size:1.5rem;">Allianz</h3>
-      <h3 style="color:#999; font-family:var(--font-body); font-size:1.5rem;">Mapfre</h3>
-      <h3 style="color:#999; font-family:var(--font-body); font-size:1.5rem;">Axa</h3>
-      <h3 style="color:#999; font-family:var(--font-body); font-size:1.5rem;">Anadolu Sigorta</h3>
-    </div>
-    
-    <div class="contact-grid">
-      <!-- Info & Map -->
-      <div class="gs-reveal">
-        <h2 class="mb-8">İletişim Bilgileri</h2>
-        <div class="contact-info">
-          <div class="info-card">
-            <div class="info-icon">📍</div>
-            <div>
-              <h4 style="margin-bottom:4px; color:var(--color-primary);">Adres</h4>
-              <p style="font-size:0.9rem; margin-bottom:12px;">Metrokent Alışveriş Merkezi, Göksu, Metrokent Sitesi, 06820 Etimesgut/Ankara, Türkiye</p>
-              <a href="https://www.google.com/maps/dir//39.9812704,32.6477407" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size:0.85rem;">Yol Tarifi Al</a>
-            </div>
-          </div>
-          
-          <div class="info-card">
-            <div class="info-icon">📞</div>
-            <div>
-              <h4 style="margin-bottom:4px; color:var(--color-primary);">Telefon</h4>
-              <a href="tel:+905013214206" style="font-size:1.1rem; font-weight:600; color:var(--color-dark);">+90 501 321 42 06</a>
-            </div>
-          </div>
-          
-          <div class="info-card">
-            <div class="info-icon">🕒</div>
-            <div style="width:100%;">
-              <h4 style="margin-bottom:8px; color:var(--color-primary);">Çalışma Saatleri</h4>
-              <ul style="font-size:0.85rem; color:#555; display:flex; flex-direction:column; gap:4px;">
-                <li style="display:flex; justify-content:space-between;"><span>Pazartesi - Cuma:</span> <strong>09:00 - 19:00</strong></li>
-                <li style="display:flex; justify-content:space-between;"><span>Cumartesi:</span> <strong>09:00 - 19:00</strong></li>
-                <li style="display:flex; justify-content:space-between; color:#E57373;"><span>Pazar:</span> <strong>Kapalı</strong></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Form -->
-      <div class="gs-reveal">
-        <div class="form-container">
-          <h3 class="mb-4">Hızlı Randevu Talebi</h3>
-          <p class="mb-8" style="font-size:0.9rem;">Formu doldurun, sizi hemen arayalım.</p>
-          <form id="appointmentForm">
-            <div class="form-group">
-              <input type="text" id="frmName" class="form-control" placeholder="Adınız Soyadınız" required>
-            </div>
-            <div class="form-group">
-              <input type="tel" id="frmPhone" class="form-control" placeholder="Telefon Numaranız" required>
-            </div>
-            <div class="form-group">
-              <select id="frmInsurance" class="form-control">
-                <option value="">Sigorta Türü (Opsiyonel)</option>
-                <option value="sgk">SGK</option>
-                <option value="ozel">Özel Sağlık Sigortası</option>
-                <option value="yok">Yok</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <input type="date" id="frmDate" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Randevu Talebi Gönder</button>
-            <p style="font-size:0.75rem; color:#888; margin-top:16px; text-align:center;">*KVKK aydınlatma metnini okudum ve kabul ediyorum.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-    <div class="map-container gs-reveal" style="margin-top:48px;">
-      <iframe src="https://maps.google.com/maps?q=39.9812704,32.6477407&z=15&output=embed" loading="lazy" title="Klinik Harita Konumu"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="#hero" class="footer-logo">Klinik 06</a>
-        <p style="font-size:0.9rem; margin-bottom:24px;">Ankara Etimesgut'ta, modern teknoloji ve uzman kadromuzla ağız ve diş sağlığınız için güvenilir adresiniz.</p>
+        <a href="#" class="footer-logo font-cormorant">Klinik 06 Ağız</a>
+        <p class="footer-desc" data-tr="Uzman hekim kadromuz ve son teknoloji ekipmanlarımızla, sağlıklı ve estetik gülüşlere kavuşmanız için yanınızdayız." data-en="With our expert staff and state-of-the-art equipment, we are by your side to help you achieve a healthy and aesthetic smile." data-ar="مع طاقم الخبراء لدينا وأحدث المعدات ، نحن بجانبك لمساعدتك في تحقيق ابتسامة صحية وجمالية.">Uzman hekim kadromuz ve son teknoloji ekipmanlarımızla, sağlıklı ve estetik gülüşlere kavuşmanız için yanınızdayız.</p>
       </div>
-      
-      <div>
-        <h4>Hızlı Linkler</h4>
-        <ul class="footer-links">
-          <li><a href="#hakkimizda">Hakkımızda</a></li>
-          <li><a href="#doktorlar">Doktorlarımız</a></li>
-          <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-          <li><a href="#galeri">Galeri</a></li>
+      <div class="footer-links">
+        <h4 data-tr="Hızlı Linkler" data-en="Quick Links" data-ar="روابط سريعة">Hızlı Linkler</h4>
+        <ul>
+          <li><a href="#tedaviler" data-tr="Tedaviler" data-en="Treatments" data-ar="العلاجات">Tedaviler</a></li>
+          <li><a href="#hekimler" data-tr="Hekimler" data-en="Doctors" data-ar="الأطباء">Hekimler</a></li>
+          <li><a href="#oncesonra" data-tr="Önce-Sonra" data-en="Before-After" data-ar="قبل وبعد">Önce-Sonra</a></li>
+          <li><a href="#yorumlar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a></li>
         </ul>
       </div>
-      
-      <div>
-        <h4>Kurumsal</h4>
-        <ul class="footer-links">
-          <li><a href="#sss">S.S.S.</a></li>
-          <li><a href="#iletisim">İletişim</a></li>
-          <li><a href="#kvkk">KVKK Aydınlatma Metni</a></li>
-          <li><a href="#cerez">Çerez Politikası</a></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h4>İletişim</h4>
-        <ul class="footer-links" style="font-size:0.9rem;">
-          <li style="display:flex; gap:8px;"><span style="color:var(--color-accent);">📞</span> <a href="tel:+905013214206">+90 501 321 42 06</a></li>
-          <li style="display:flex; gap:8px;"><span style="color:var(--color-accent);">💬</span> <a href="https://wa.me/905013214206?text=Merhaba" target="_blank">WhatsApp Hattı</a></li>
-          <li style="display:flex; gap:8px;"><span style="color:var(--color-accent);">📍</span> Metrokent AVM, Göksu, Etimesgut/Ankara</li>
+      <div class="footer-links">
+        <h4 data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</h4>
+        <ul>
+          <li><a href="tel:+905013214206">+90 501 321 42 06</a></li>
+          <li><a href="https://wa.me/905013214206?text=Merhaba" target="_blank">WhatsApp</a></li>
+          <li>Etimesgut/Ankara</li>
         </ul>
       </div>
     </div>
-    
     <div class="footer-bottom">
-      <div>&copy; 2026 Klinik 06 Ağız ve Diş Sağlığı Polikliniği. Tüm hakları saklıdır. | Fiyatlarımıza KDV dahildir.</div>
-      <div>Powered by <a href="https://galzura.com" target="_blank" style="color:var(--color-accent); font-weight:bold;">Galzura Digital</a></div>
+      <div>© 2026 Klinik 06 Ağız ve Diş Sağlığı Polikliniği. <a href="#" data-tr="KVKK" data-en="Privacy Policy" data-ar="سياسة الخصوصية">KVKK</a></div>
+      <div>Powered by <a href="https://galzura.com" target="_blank" rel="noopener" style="color:var(--accent);">Galzura Digital</a></div>
     </div>
   </div>
 </footer>
 
 <!-- Floating Buttons -->
-<a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="floating-wa" aria-label="WhatsApp ile iletişim">
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-</a>
-<a href="tel:+905013214206" class="floating-phone" aria-label="Telefon ile ara">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-</a>
+<a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="float-btn float-wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="32" height="32"><use href="#icon-wa"></use></svg></a>
+<a href="tel:+905013214206" class="float-btn float-phone" aria-label="Telefon"><svg width="28" height="28"><use href="#icon-phone"></use></svg></a>
 
 <!-- Mobile Bottom Nav -->
 <div class="mobile-bottom-nav">
   <div class="mb-nav-grid">
     <a href="tel:+905013214206" class="mb-nav-item">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      Ara
+      <svg width="20" height="20"><use href="#icon-phone"></use></svg>
+      <span data-tr="Ara" data-en="Call" data-ar="يتصل">Ara</span>
     </a>
-    <a href="javascript:document.getElementById('randevu').scrollIntoView({behavior:'smooth'})" class="mb-nav-item accent">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      Randevu
+    <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="mb-nav-item accent">
+      <svg width="20" height="20"><use href="#icon-calendar"></use></svg>
+      <span data-tr="Randevu" data-en="Appt" data-ar="موعد">Randevu</span>
     </a>
-    <a href="https://wa.me/905013214206?text=Merhaba" target="_blank" class="mb-nav-item">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-      WhatsApp
+    <a href="https://wa.me/905013214206?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="mb-nav-item">
+      <svg width="20" height="20"><use href="#icon-wa"></use></svg>
+      <span>WhatsApp</span>
     </a>
   </div>
 </div>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
-
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // Mobile Menu Toggle
-  const mobileToggle = document.getElementById('mobileToggle');
-  const navLinks = document.getElementById('navLinks');
-  mobileToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+// Language System
+const langSelect = document.getElementById('langSelect');
+const htmlEl = document.documentElement;
+const setLang = (lang) => {
+  localStorage.setItem('lang', lang);
+  langSelect.value = lang;
+  htmlEl.lang = lang;
+  htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-tr]').forEach(el => {
+    if(el.dataset[lang]) el.textContent = el.dataset[lang];
   });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      mobileToggle.innerHTML = '☰';
-    });
+  document.querySelectorAll('[data-tr-placeholder]').forEach(el => {
+    if(el.dataset[`${lang}Placeholder`]) el.placeholder = el.dataset[`${lang}Placeholder`];
   });
+};
+langSelect.addEventListener('change', (e) => setLang(e.target.value));
+const savedLang = localStorage.getItem('lang') || 'tr';
+setLang(savedLang);
 
-  // Sticky Navbar
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  });
+// Sticky Navbar
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
 
-  // Language Switcher (Basic implementation)
-  const langBtns = document.querySelectorAll('.lang-btn');
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      langBtns.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      const lang = e.target.getAttribute('data-lang');
-      localStorage.setItem('klinikLang', lang);
-      document.documentElement.lang = lang;
-      if(lang === 'ar') document.documentElement.dir = 'rtl';
-      else document.documentElement.dir = 'ltr';
-      // In a real app, this would trigger content replacement
-    });
-  });
+// Mobile Menu Toggle (Simple scroll to section for single page)
+const mobileToggle = document.querySelector('.mobile-toggle');
+const navLinks = document.querySelector('.nav-links');
+mobileToggle.addEventListener('click', () => {
+  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  if(navLinks.style.display === 'flex') {
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '100%';
+    navLinks.style.left = '0';
+    navLinks.style.width = '100%';
+    navLinks.style.background = 'white';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.padding = '20px';
+    navLinks.style.boxShadow = 'var(--shadow)';
+  }
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => { if(window.innerWidth <= 768) navLinks.style.display = 'none'; });
+});
 
-  // FAQ Accordion
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const header = item.querySelector('.faq-header');
-    const content = item.querySelector('.faq-content');
-    header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      // Close all
-      faqItems.forEach(faq => {
-        faq.classList.remove('active');
-        faq.querySelector('.faq-content').style.maxHeight = null;
-      });
-      // Open clicked if it wasn't active
-      if (!isActive) {
-        item.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  });
-
-  // Before/After Slider (Vanilla JS)
-  const slider = document.getElementById('baSlider');
-  const beforeImg = document.getElementById('baBefore');
-  const divider = document.getElementById('baDivider');
-  const handle = document.getElementById('baHandle');
-  let isDragging = false;
-
-  const updateSlider = (x) => {
-    const rect = slider.getBoundingClientRect();
-    let pos = Math.max(0, Math.min(x - rect.left, rect.width));
-    const pct = (pos / rect.width) * 100;
-    beforeImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-    divider.style.left = `${pct}%`;
-    handle.style.left = `${pct}%`;
+// Counters
+const counters = document.querySelectorAll('.counter-num');
+const animateCounter = (el) => {
+  const target = parseFloat(el.getAttribute('data-target'));
+  const isDecimal = el.getAttribute('data-decimal') === 'true';
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 2000;
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    const current = easeOutExpo * target;
+    el.innerText = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+    if (progress < 1) window.requestAnimationFrame(step);
   };
-
-  slider.addEventListener('mousedown', () => isDragging = true);
-  document.addEventListener('mouseup', () => isDragging = false);
-  document.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
-  
-  slider.addEventListener('touchstart', () => isDragging = true);
-  document.addEventListener('touchend', () => isDragging = false);
-  document.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); });
-
-  // Counters (Intersection Observer + easeOutExpo)
-  const counters = document.querySelectorAll('.counter');
-  const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-  
-  const animateCounter = (counter) => {
-    const target = parseFloat(counter.getAttribute('data-target'));
-    const isDecimal = counter.getAttribute('data-decimal') === 'true';
-    const suffix = counter.getAttribute('data-suffix') || '';
-    const duration = 2000;
-    let startTimestamp = null;
-
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const current = easeOutExpo(progress) * target;
-      
-      counter.innerText = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
-      
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        counter.innerText = target + suffix;
-      }
-    };
-    window.requestAnimationFrame(step);
-  };
-
-  const counterObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(c => counterObserver.observe(c));
-
-  // Reviews Carousel (Auto slide)
-  const carousel = document.getElementById('reviewsCarousel');
-  let scrollPos = 0;
-  setInterval(() => {
-    if(!carousel) return;
-    const cardWidth = carousel.querySelector('.review-card').offsetWidth + 24; // width + gap
-    scrollPos += cardWidth;
-    if (scrollPos >= carousel.scrollWidth - carousel.clientWidth + 10) {
-      scrollPos = 0; // Reset
+  window.requestAnimationFrame(step);
+};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      observer.unobserve(entry.target);
     }
-    carousel.scrollTo({ left: scrollPos, behavior: 'smooth' });
-  }, 5000);
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => observer.observe(c));
 
-  // Form Submit -> WhatsApp
-  const form = document.getElementById('appointmentForm');
-  if(form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('frmName').value;
-      const date = document.getElementById('frmDate').value;
-      const ins = document.getElementById('frmInsurance').value;
-      const text = `Merhaba, randevu talebim var. Adım: ${name}, Tarih: ${date}, Sigorta: ${ins || 'Belirtilmedi'}`;
-      const url = `https://wa.me/905013214206?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
+// Treatment Filter
+const treatmentFilter = document.getElementById('treatmentFilter');
+treatmentFilter.addEventListener('change', (e) => {
+  const cat = e.target.value;
+  document.querySelectorAll('.treatment-card').forEach(card => {
+    if(cat === 'all' || card.dataset.category === cat) {
+      card.style.display = 'flex';
+      setTimeout(() => card.style.opacity = '1', 50);
+    } else {
+      card.style.opacity = '0';
+      setTimeout(() => card.style.display = 'none', 300);
+    }
+  });
+});
+
+// Before-After Slider
+const initSlider = (container) => {
+  let dragging = false;
+  const divider = container.querySelector('.divider');
+  const beforeEl = container.querySelector('.before-img');
+  const setPos = (clientX) => {
+    const rect = container.getBoundingClientRect();
+    const pct = Math.max(5, Math.min(95, ((clientX - rect.left) / rect.width) * 100));
+    beforeEl.style.width = pct + '%';
+    divider.style.left = pct + '%';
+  };
+  divider.addEventListener('mousedown', e => { dragging=true; e.preventDefault(); });
+  document.addEventListener('mouseup', () => dragging=false);
+  document.addEventListener('mousemove', e => { if(dragging) setPos(e.clientX); });
+  divider.addEventListener('touchstart', () => dragging=true, {passive:true});
+  document.addEventListener('touchend', () => dragging=false);
+  document.addEventListener('touchmove', e => { if(dragging) setPos(e.touches[0].clientX); }, {passive:true});
+};
+document.querySelectorAll('.ba-slider').forEach(initSlider);
+
+const baFilterBtns = document.querySelectorAll('.ba-filter-btn');
+baFilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    baFilterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.ba-slider-wrapper').forEach(w => w.classList.remove('active'));
+    document.getElementById(btn.dataset.target).classList.add('active');
+  });
+});
+
+// Doctor Filter
+document.querySelectorAll('.hekim-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.hekim-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.hekim-kart').forEach(kart => {
+      kart.style.display = (filter === 'all' || kart.dataset.uzmanlik === filter) ? 'flex' : 'none';
+    });
+  });
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+// Reviews Carousel
+const track = document.getElementById('reviewsTrack');
+const cards = Array.from(track.children);
+const dotsContainer = document.getElementById('reviewDots');
+let currentIndex = 0;
+
+cards.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if(i===0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+const dots = Array.from(dotsContainer.children);
+
+const updateCarousel = () => {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
+};
+
+const goToSlide = (index) => {
+  currentIndex = index;
+  updateCarousel();
+};
+
+document.getElementById('nextReview').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateCarousel();
+});
+document.getElementById('prevReview').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateCarousel();
+});
+let autoPlay = setInterval(() => { document.getElementById('nextReview').click(); }, 5000);
+document.querySelector('.reviews-carousel').addEventListener('mouseenter', () => clearInterval(autoPlay));
+document.querySelector('.reviews-carousel').addEventListener('mouseleave', () => {
+  autoPlay = setInterval(() => { document.getElementById('nextReview').click(); }, 5000);
+});
+
+// Lenis & GSAP
+document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.style.scrollBehavior = 'auto';
+  if(typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+      duration: 1.1,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1.5,
+    });
+    if(typeof gsap !== 'undefined') {
+      gsap.ticker.add(time => lenis.raf(time * 1000));
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      const raf = time => { lenis.raf(time); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }
+    if(typeof ScrollTrigger !== 'undefined') lenis.on('scroll', ScrollTrigger.update);
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if(id==='#') return;
+        const el = document.querySelector(id);
+        if(el){ e.preventDefault(); lenis.scrollTo(el,{offset:-90,duration:1.2}); }
+      });
     });
   }
+});
 
-  // Doctor Filters
-  const docFilters = document.querySelectorAll('#doktorlar .filter-btn');
-  const docCards = document.querySelectorAll('.doctor-card');
-  docFilters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      docFilters.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.getAttribute('data-filter');
-      docCards.forEach(card => {
-        if(filter === 'all' || card.getAttribute('data-uzmanlik') === filter) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+window.addEventListener('load',()=>{
+  if(typeof gsap!=='undefined'){
+    document.documentElement.classList.add('gsap-ready');
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.gs-reveal').forEach(el=>{
+      gsap.fromTo(el,{opacity:0,y:30},{opacity:1,y:0,duration:0.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%'}});
     });
-  });
-
-  // Init GSAP & Lenis
-  window.addEventListener('load', () => {
-    if (typeof gsap !== 'undefined') {
-      document.documentElement.classList.add('gsap-ready');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      gsap.utils.toArray('.gs-reveal').forEach(elem => {
-        gsap.to(elem, {
-          scrollTrigger: {
-            trigger: elem,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          },
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out"
-        });
-      });
-    }
-
-    if (typeof Lenis !== 'undefined') {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        touchMultiplier: 2
-      });
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-      if (typeof ScrollTrigger !== 'undefined') {
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => { lenis.raf(time * 1000); });
-        gsap.ticker.lagSmoothing(0, 0);
-      }
-    }
-  });
-
+  }
 });
 </script>
 </body>
