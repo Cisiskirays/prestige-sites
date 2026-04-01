@@ -160,12 +160,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hekim-kart { background: var(--bg-white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
 .hekim-img { position: relative; width: 100%; height: 300px; }
 .hekim-img img { width: 100%; height: 100%; object-fit: cover; }
-.hekim-badge { position: absolute; top: 16px; right: 16px; background: var(--success); color: #fff; padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+.hekim-badge { position: absolute; top: 16px; left: 16px; background: var(--success); color: #fff; padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
 .hekim-info { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
 .hekim-info h3 { font-size: 1.5rem; margin-bottom: 4px; }
 .hekim-uzmanlik { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin-bottom: 16px; }
 .hekim-edu { display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px; }
 .hekim-kart .pill-btn { width: 100%; margin-top: auto; }
+.doctors-grid.tek-doktor { display: flex; justify-content: center; }
+.tek-doktor .hekim-kart { flex-direction: row; max-width: 860px; width: 100%; min-height: 440px; border-radius: 24px; }
+.tek-doktor .hekim-img { width: 380px; min-width: 380px; height: auto; min-height: 440px; flex-shrink: 0; }
+.tek-doktor .hekim-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.tek-doktor .hekim-info { padding: 52px 56px; justify-content: center; }
+.tek-doktor .hekim-info h3 { font-size: 1.9rem; line-height: 1.25; margin-bottom: 8px; }
+.tek-doktor .hekim-uzmanlik { font-size: 1.05rem; margin-bottom: 24px; }
+.tek-doktor .hekim-edu { margin-bottom: 36px; font-size: 1rem; }
+.tek-doktor .pill-btn { width: fit-content; padding: 14px 40px; }
+@media (max-width: 768px) {
+  .tek-doktor .hekim-kart { flex-direction: column; }
+  .tek-doktor .hekim-img { width: 100%; min-width: unset; height: 320px; min-height: unset; }
+  .tek-doktor .hekim-info { padding: 28px 24px; }
+  .tek-doktor .hekim-info h3 { font-size: 1.4rem; }
+  .tek-doktor .pill-btn { width: 100%; }
+}
 
 /* PARTNERS */
 .partners { background: var(--bg); padding: 80px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
