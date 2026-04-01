@@ -58,7 +58,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pill-btn.outline-white:hover { background: var(--bg-white); color: var(--primary); transform: translateY(-2px); }
 
 /* NAVBAR */
-.navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000; transition: box-shadow 0.3s ease; border-bottom: 1px solid var(--border); }
+.navbar { ; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000; transition: box-shadow 0.3s ease; border-bottom: 1px solid var(--border); }
 .navbar.scrolled { box-shadow: var(--shadow-sm); }
 .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -254,7 +254,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* FLOATING BUTTONS */
 .floating-wa, .floating-phone { position: fixed; bottom: 24px; z-index: 9999; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.25); animation: floatPulse 2s infinite; transition: transform 0.3s; }
-.floating-wa { right: 24px; background: #25D366; color: #fff; }
+.floating-wa { right: 24px; bottom: 90px; background: #25D366; color: #fff; }
 .floating-phone { left: 24px; background: var(--primary); color: #fff; }
 .floating-wa:hover, .floating-phone:hover { transform: scale(1.12); }
 @keyframes floatPulse { 0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.25); } 50% { box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 0 8px rgba(201,169,110,0.15); } }
