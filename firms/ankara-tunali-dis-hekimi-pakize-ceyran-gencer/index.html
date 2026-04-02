@@ -638,6 +638,69 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: opacity 0.2s;
 }
 .detay-whatsapp:hover { opacity: 0.85; }
+  /* ULTRA PREMIUM EFFECTS */
+
+/* 1. Shimmer sweep — tüm pill butonlar ve CTA'lar */
+.pill-btn, .floating-wa, .floating-phone, .detay-whatsapp {
+  position: relative;
+  overflow: hidden;
+}
+.pill-btn::after, .floating-wa::after, .floating-phone::after, .detay-whatsapp::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: none;
+}
+.pill-btn:hover::after, .floating-wa:hover::after, .floating-phone:hover::after, .detay-whatsapp:hover::after {
+  left: 160%;
+  transition: left 0.55s ease;
+}
+
+/* 2. Kart hover — premium lift */
+.hizmet-kart, .tech-card {
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease;
+}
+.hizmet-kart:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.18);
+}
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(201,169,110,0.15);
+}
+
+/* 3. Accent underline — nav linkleri */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* 4. Section header accent line */
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+}
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; left: 50%;
+  transform: translateX(-50%);
+  width: 48px; height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
 </style>
 
 <script>
