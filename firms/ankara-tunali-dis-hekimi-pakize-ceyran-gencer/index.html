@@ -641,11 +641,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   /* ULTRA PREMIUM EFFECTS */
 
 /* 1. Shimmer sweep — tüm pill butonlar ve CTA'lar */
-.pill-btn, .floating-wa, .floating-phone, .detay-whatsapp {
+.pill-btn, .detay-whatsapp {
   position: relative;
   overflow: hidden;
 }
-.pill-btn::after, .floating-wa::after, .floating-phone::after, .detay-whatsapp::after {
+.pill-btn::after, .detay-whatsapp::after {
   content: '';
   position: absolute;
   top: 0; left: -100%;
@@ -655,7 +655,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: skewX(-20deg);
   transition: none;
 }
-.pill-btn:hover::after, .floating-wa:hover::after, .floating-phone:hover::after, .detay-whatsapp:hover::after {
+.pill-btn:hover::after, .detay-whatsapp:hover::after {
   left: 160%;
   transition: left 0.55s ease;
 }
