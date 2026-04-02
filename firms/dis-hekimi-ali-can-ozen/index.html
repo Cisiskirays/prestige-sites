@@ -1596,6 +1596,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--accent);
   border-radius: 2px;
 }
+/* ═══ ULTRA PREMIUM ANIMASYON DÜZELTMESİ ═══ */
+/* Tüm geçişleri yavaşlat — premium his */
+.pill-btn, .floating-wa, .floating-phone, .hizmet-kart, .tech-card, .neden-card, .blog-card, .sss-question, .hero-tile, .stat-card, .review-card, .nav-links a, .footer-col a, .mobile-nav-btn, .mbn-item, .detay-btn, .detay-whatsapp, .filter-tab { transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
+
+/* Floating butonlar — yavaş kayarak açılma */
+.floating-wa, .floating-phone { transition: all 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; overflow: hidden; }
+.float-label { transition: max-width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.45s ease 0.1s !important; }
+
+/* Kart hover — yavaş kalkış */
+.hizmet-kart:hover, .tech-card:hover, .neden-card:hover, .blog-card:hover { transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.55s ease !important; }
+
+/* Nav underline — yavaş çizgi */
+.nav-links a::after { transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
+
+/* Section header accent — yavaş */
+.section-header h2::after { transition: width 0.5s ease !important; }
+
+/* Shimmer yaldız efekti — TÜM butonlar ve CTA'lar */
+.pill-btn, .detay-whatsapp, .detay-btn { position: relative; overflow: hidden; }
+.pill-btn::after, .detay-whatsapp::after, .detay-btn::after { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.35) 55%, transparent 100%); transform: skewX(-20deg); transition: none; pointer-events: none; z-index: 1; }
+.pill-btn:hover::after, .detay-whatsapp:hover::after, .detay-btn:hover::after { left: 150%; transition: left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+/* Floating butonlarda shimmer AYRI — overflow sorununu önlemek için */
+.floating-wa, .floating-phone { position: relative; }
+.floating-wa::before, .floating-phone::before { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 45%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0.3) 55%, transparent 100%); transform: skewX(-20deg); pointer-events: none; z-index: 2; border-radius: inherit; }
+.floating-wa:hover::before, .floating-phone:hover::before { left: 150%; transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 </style>
 
 <script>
