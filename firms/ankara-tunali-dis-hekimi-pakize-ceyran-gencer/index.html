@@ -253,13 +253,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; flex-wrap: wrap; gap: 16px; }
 
 /* FLOATING BUTTONS */
-.floating-wa, .floating-phone { position: fixed; z-index: 9999; height: 48px; border-radius: 999px; display: flex; align-items: center; gap: 8px; padding: 0 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease; overflow: hidden; white-space: nowrap; }
-.floating-wa { right: 24px; bottom: 90px; background: var(--accent); color: #000; }
-.floating-phone { right: 24px; bottom: 156px; background: var(--primary); color: #fff; }
-.float-label { font-size: 0.82rem; font-weight: 600; max-width: 0; opacity: 0; transition: max-width 0.3s ease, opacity 0.3s ease; overflow: hidden; }
-.floating-wa:hover .float-label, .floating-phone:hover .float-label { max-width: 120px; opacity: 1; }
-.floating-wa:hover, .floating-phone:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
-@keyframes floatPulse { 0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.2); } 50% { box-shadow: 0 4px 28px rgba(0,0,0,0.35); } }
+.floating-wa, .floating-phone { position: fixed; right: 24px; z-index: 9999; height: 44px; border-radius: 999px; display: flex; align-items: center; gap: 10px; padding: 0 18px 0 14px; transition: all 0.35s cubic-bezier(0.4,0,0.2,1); overflow: hidden; white-space: nowrap; cursor: pointer; border: 1px solid rgba(255,255,255,0.08); }
+.floating-phone { bottom: 164px; background: var(--dark); color: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.28); }
+.floating-wa { bottom: 108px; background: var(--accent); color: #000; box-shadow: 0 8px 32px rgba(201,169,110,0.35); }
+.float-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; max-width: 0; opacity: 0; transition: max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease; overflow: hidden; text-transform: uppercase; }
+.floating-wa:hover .float-label, .floating-phone:hover .float-label { max-width: 100px; opacity: 1; }
+.floating-wa:hover { box-shadow: 0 12px 40px rgba(201,169,110,0.5); transform: translateY(-2px); }
+.floating-phone:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.4); transform: translateY(-2px); }
+@keyframes floatPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
 
 /* MOBILE BOTTOM NAV */
 .mobile-bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; height: 56px; background: #fff; border-top: 1px solid var(--border); z-index: 9998; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }
