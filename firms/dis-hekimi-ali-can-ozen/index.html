@@ -913,6 +913,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
   </div>
 </div>
+
 <!-- RANDEVU TAKVİMİ -->
 <section class="section-padding" style="padding-top:40px;padding-bottom:60px;">
   <div class="container">
@@ -920,17 +921,70 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <h2 data-tr="Online Randevu" data-en="Online Appointment" data-ar="موعد عبر الإنترنت">Online Randevu</h2>
       <p data-tr="Uygun saati seçin, hemen randevunuzu oluşturun." data-en="Choose an available time and book your appointment." data-ar="اختر وقتًا مناسبًا واحجز موعدك.">Uygun saati seçin, hemen randevunuzu oluşturun.</p>
     </div>
-    <div style="max-width:680px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,0.08);padding:48px 40px;text-align:center;">
-      <div style="width:72px;height:72px;border-radius:50%;background:rgba(201,169,110,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="16" r="1" fill="var(--accent)" stroke="none"/></svg>
+    <div class="dt-widget gs-reveal" onclick="window.open('https://www.doktortakvimi.com/','_blank')" style="max-width:420px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.08);cursor:pointer;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+      <div style="padding:20px 20px 16px;display:flex;align-items:flex-start;gap:14px;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+            <span style="font-weight:700;font-size:1.05rem;color:#1a1a1a;">Diş Hekimi Ali Can Özen</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#00897B"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div style="color:#666;font-size:0.82rem;margin-bottom:4px;">Diş Hekimi</div>
+          <div style="display:flex;align-items:center;gap:3px;">
+            <span style="color:#FFB300;font-size:0.85rem;">★★★★★</span>
+            <span style="color:#999;font-size:0.78rem;">78 görüş</span>
+          </div>
+        </div>
       </div>
-      <h3 style="font-size:1.5rem;margin-bottom:8px;color:var(--primary);" data-tr="Müsait Saatleri Görüntüle" data-en="View Available Hours" data-ar="عرض الساعات المتاحة">Müsait Saatleri Görüntüle</h3>
-      <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:32px;max-width:400px;margin-left:auto;margin-right:auto;" data-tr="DoktorTakvimi üzerinden uygun randevu saatlerini görün ve hemen online randevunuzu oluşturun." data-en="See available appointment times on DoktorTakvimi and book your appointment online." data-ar="اطلع على أوقات المواعيد المتاحة واحجز موعدك عبر الإنترنت.">DoktorTakvimi üzerinden uygun randevu saatlerini görün ve hemen online randevunuzu oluşturun.</p>
-      <a href="https://www.doktortakvimi.com/ali-can-ozen/dis-hekimligi/ankara" target="_blank" rel="noopener" class="pill-btn accent" style="padding:16px 40px;font-size:1rem;" data-tr="Randevu Takvimini Aç" data-en="Open Appointment Calendar" data-ar="افتح تقويم المواعيد">Randevu Takvimini Aç →</a>
-      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span data-tr="Güvenli online randevu · DoktorTakvimi.com" data-en="Secure online booking · DoktorTakvimi.com" data-ar="حجز آمن عبر الإنترنت">Güvenli online randevu · DoktorTakvimi.com</span>
-      </p>
+      <div style="padding:0 20px 16px;display:flex;align-items:flex-start;gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#00897B" style="flex-shrink:0;margin-top:2px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span style="color:#555;font-size:0.8rem;line-height:1.4;">Batıkent Yolu, Çakırlar mahallesi, 1949. Cd., 06370 Yenimahalle/Ankara, Türkiye</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr) 32px;padding:0 16px;border-top:1px solid #f0f0f0;padding-top:16px;">
+        <div style="text-align:center;"><div style="font-weight:600;font-size:0.85rem;color:#1a1a1a;">Bugün</div><div style="font-size:0.72rem;color:#999;">3 Nis</div></div>
+        <div style="text-align:center;"><div style="font-weight:600;font-size:0.85rem;color:#1a1a1a;">Yarın</div><div style="font-size:0.72rem;color:#999;">4 Nis</div></div>
+        <div style="text-align:center;"><div style="font-weight:600;font-size:0.85rem;color:#999;">Pzr,</div><div style="font-size:0.72rem;color:#999;">5 Nis</div></div>
+        <div style="text-align:center;"><div style="font-weight:600;font-size:0.85rem;color:#00897B;">Pzt,</div><div style="font-size:0.72rem;color:#999;">6 Nis</div></div>
+        <div style="display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+      <div style="padding:12px 16px 8px;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr) 32px;gap:8px;margin-bottom:8px;">
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">12:00</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">10:50</div>
+          <div style="color:#ccc;font-size:0.85rem;text-align:center;padding:10px 0;">-</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:700;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">10:00</div>
+          <div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr) 32px;gap:8px;margin-bottom:8px;">
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">13:00</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">11:00</div>
+          <div style="color:#ccc;font-size:0.85rem;text-align:center;padding:10px 0;">-</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:700;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">11:00</div>
+          <div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr) 32px;gap:8px;margin-bottom:8px;">
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">14:00</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">11:20</div>
+          <div style="color:#ccc;font-size:0.85rem;text-align:center;padding:10px 0;">-</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:700;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">12:00</div>
+          <div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr) 32px;gap:8px;margin-bottom:8px;">
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">15:00</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:600;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">11:40</div>
+          <div style="color:#ccc;font-size:0.85rem;text-align:center;padding:10px 0;">-</div>
+          <div style="background:#e8f5e9;color:#00897B;font-weight:700;font-size:0.85rem;text-align:center;padding:10px 0;border-radius:8px;">13:00</div>
+          <div></div>
+        </div>
+      </div>
+      <div style="text-align:center;padding:8px 0 16px;">
+        <span style="color:#00897B;font-size:0.85rem;font-weight:500;">Daha fazla saat göster <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2" style="vertical-align:middle;"><path d="M6 9l6 6 6-6"/></svg></span>
+      </div>
+      <div style="background:#e8f5e9;padding:16px 20px;border-radius:0 0 16px 16px;">
+        <p style="color:#555;font-size:0.82rem;line-height:1.5;margin:0;text-align:center;">Uygun zamanı seçerek randevu oluşturun.<br>E-posta ile onay maili alacaksınız.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1414,7 +1468,7 @@ function toggleDetay(btn) {
   <div class="doctors-grid tek-doktor gs-reveal">
     <div class="hekim-kart">
       <div class="hekim-img">
-        <img src="clinic-photo.jpg" alt="Diş Hekimi Ali Can Özen" style="width:100%;height:100%;object-fit:cover;object-position:center center;">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqR3U9f6-L4sWCgRf8GEcnSXtjTCnYFYqm_S3B9vnUL34ln43uDZV-lOBum44rnEqRTP6GbNR2q-MBYvBpNu-DpLK6P6n_15b0ViKHxE0miQcs_yamDtW5sQnCc-NacaL8N2_Kw=w408-h452-k-no" alt="Diş Hekimi Ali Can Özen" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
         <span class="hekim-badge">Uzman Hekim</span>
       </div>
       <div class="hekim-info">
