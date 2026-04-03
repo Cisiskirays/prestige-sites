@@ -18,7 +18,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dentist","name":"Diş Hekimi Ali Can Özen Diş Hekimi Ali Can Özen","telephone":"+90 312 566 00 86","address":{"@type":"PostalAddress","streetAddress":"Batıkent Yolu, Çakırlar mahallesi, 1949. Cd., 06370 Yenimahalle/Ankara, Türkiye","addressCountry":"TR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"78"},"geo":{"@type":"GeoCoordinates","latitude":39.9894933,"longitude":32.7072654},"openingHours":"Perşembe: 09:00 to 18:30 | Cuma: 09:00 to 18:30 | Cumartesi: 09:00 to 17:00 | Pazar: Kapalı | Pazartesi: 09:00 to 18:30 | Salı: 09:00 to 18:30 | Çarşamba: 09:00 to 18:30","medicalSpecialty":"Dentistry"}
+{"@context":"https://schema.org","@type":"Dentist","name":"Diş Hekimi Ali Can Özen Diş Hekimi Ali Can Özen","telephone":"+90 312 566 00 86","address":{"@type":"PostalAddress","streetAddress":"Batıkent Yolu, Çakırlar mahallesi, 1949. Cd., 06370 Yenimahalle/Ankara, Türkiye","addressCountry":"TR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"78"},"geo":{"@type":"GeoCoordinates","latitude":39.9894933,"longitude":32.7072654},"openingHours":"Cuma: 09:00 to 18:30 | Cumartesi: 09:00 to 17:00 | Pazar: Kapalı | Pazartesi: 09:00 to 18:30 | Salı: 09:00 to 18:30 | Çarşamba: 09:00 to 18:30 | Perşembe: 09:00 to 18:30","medicalSpecialty":"Dentistry"}
 </script>
 <style>
 :root {
@@ -57,10 +57,51 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pill-btn.outline-white { border: 1px solid var(--bg-white); color: var(--bg-white); }
 .pill-btn.outline-white:hover { background: var(--bg-white); color: var(--primary); transform: translateY(-2px); }
 
+/* TOP BAR */
+.top-bar { background: var(--primary); color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.3px; }
+.top-bar .container { display: flex; align-items: center; justify-content: space-between; height: 38px; }
+.top-bar-left { display: flex; align-items: center; gap: 16px; }
+.top-bar-socials { display: flex; align-items: center; gap: 10px; }
+.top-bar-socials a { color: rgba(255,255,255,0.7); transition: color 0.2s ease; display: flex; align-items: center; }
+.top-bar-socials a:hover { color: var(--accent); }
+.top-bar-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.2); }
+.top-bar-address { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.7); }
+.top-bar-address svg { color: var(--accent); flex-shrink: 0; }
+.top-bar-right { display: flex; align-items: center; gap: 18px; }
+.top-bar-phone { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); font-weight: 500; text-decoration: none; transition: color 0.2s ease; }
+.top-bar-phone:hover { color: var(--accent); }
+.top-bar-phone svg { color: var(--accent); flex-shrink: 0; }
+@media (max-width: 768px) { .top-bar { display: none; } }
+
+/* CHAT WIDGET */
+.chat-widget-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 4px 20px rgba(201,169,110,0.4); transition: all 0.3s ease; }
+.chat-widget-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(201,169,110,0.5); }
+.chat-widget-btn .chat-badge { position: absolute; top: -2px; right: -2px; width: 20px; height: 20px; border-radius: 50%; background: #e53935; color: #fff; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0); transition: all 0.3s ease; }
+.chat-widget-btn .chat-badge.show { opacity: 1; transform: scale(1); }
+.chat-widget-popup { position: fixed; bottom: 96px; right: 24px; width: 320px; background: #fff; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; opacity: 0; transform: translateY(16px) scale(0.95); pointer-events: none; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+.chat-widget-popup.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.chat-popup-header { background: var(--primary); color: #fff; padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+.chat-popup-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.chat-popup-info { display: flex; flex-direction: column; }
+.chat-popup-name { font-weight: 600; font-size: 0.92rem; }
+.chat-popup-status { font-size: 0.75rem; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; }
+.chat-popup-status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #4caf50; display: inline-block; }
+.chat-popup-close { margin-left: auto; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.chat-popup-close:hover { color: #fff; }
+.chat-popup-body { padding: 20px; }
+.chat-popup-msg { background: var(--bg-alt, #f5f5f5); border-radius: 12px 12px 12px 2px; padding: 12px 16px; font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+.chat-popup-time { font-size: 0.7rem; color: var(--text-muted); margin-top: 6px; text-align: left; }
+.chat-popup-input { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border); }
+.chat-popup-input input { flex: 1; border: none; outline: none; font-size: 0.85rem; color: var(--text); background: transparent; }
+.chat-popup-input button { background: var(--accent); color: #fff; border: none; border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+.chat-popup-input button:hover { background: var(--primary); }
+@media (max-width: 768px) { .chat-widget-popup { right: 12px; bottom: 88px; width: calc(100% - 24px); } .chat-widget-btn { bottom: 72px; right: 16px; width: 52px; height: 52px; } }
+
 /* NAVBAR */
-.navbar { ; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000; transition: box-shadow 0.3s ease; border-bottom: 1px solid var(--border); }
-.navbar.scrolled { box-shadow: var(--shadow-sm); }
-.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+.navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.92); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); z-index: 1000; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); border-bottom: 1px solid transparent; }
+.navbar.scrolled { background: rgba(255,255,255,0.97); border-bottom-color: var(--border); box-shadow: 0 1px 24px rgba(0,0,0,0.06); }
+.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; transition: height 0.3s ease; }
+.navbar.scrolled .container { height: 62px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo-text { display: flex; flex-direction: column; }
 .nav-logo-title { font-family: 'Cormorant Garamond', serif; color: var(--primary); font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; line-height: 1; }
@@ -68,6 +109,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
 .nav-links a:hover { color: var(--accent); }
+.nav-links a { position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 0; height: 1.5px; background: var(--accent); transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 1px; }
+.nav-links a:hover::after { width: 100%; }
 .nav-right { display: flex; align-items: center; gap: 20px; }
 .nav-phone { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary); }
 .nav-phone svg { color: var(--accent); }
@@ -283,40 +327,924 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 [dir="rtl"] .floating-wa { right: auto; left: 24px; }
 [dir="rtl"] .floating-phone { left: auto; right: 24px; }
 
-/* RESPONSIVE */
+/* ═══════════════════════════════════════════════════════════
+   PRESTIGE GHOST SITE — ULTRA PREMIUM MOBİL OVERHAUL
+   Dubai lüks otel seviyesi — her bölüm mobil-native
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── TABLET (1024px) ── */
 @media (max-width: 1024px) {
-  .hizmet-grid { grid-template-columns: repeat(3, 1fr); }
-  .counter-grid { grid-template-columns: repeat(2, 1fr); }
-  .wt-grid { grid-template-columns: 1fr; gap: 48px; }
-  .doctors-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 20px; }
+  .section-padding { padding: 72px 0; }
+  h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-tech-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hekimler-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .neden-grid { grid-template-columns: repeat(2, 1fr); }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── MOBİL ANA (768px) ── */
 @media (max-width: 768px) {
-  body { padding-bottom: 56px; }
-  .nav-links, .nav-phone, .nav-btn { display: none; }
-  .mobile-toggle { display: block; }
-  .hero-content { padding-top: 40px; padding-bottom: 160px; }
-  .hero-tiles { grid-template-columns: 1fr; }
-  .hero-tiles-wrapper { margin-top: -60px; }
-  .hizmet-grid { grid-template-columns: repeat(2, 1fr); }
-  .doctors-grid { grid-template-columns: 1fr; }
-  .tech-grid { grid-template-columns: 1fr; }
-  .social-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr; }
+
+  /* ─── GENEL TİPOGRAFİ & SPACING ─── */
+  html { font-size: 15px; }
+  body {
+    padding-bottom: 80px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1 { font-size: clamp(2rem, 8vw, 2.8rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); letter-spacing: -0.01em; }
+  h3 { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+  .container { padding: 0 16px; }
+  .section-padding { padding: 56px 0; }
+
+  /* Section header — mobilde daha zarif */
+  .section-header { margin-bottom: 32px; }
+  .section-header p { font-size: 0.9rem; padding: 0 8px; line-height: 1.6; }
+  .section-header h2::after { width: 36px; bottom: -8px; }
+
+  /* Pill butonlar — mobilde touch-friendly */
+  .pill-btn {
+    padding: 13px 24px;
+    font-size: 0.9rem;
+    min-height: 48px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ─── TOP BAR ─── */
+  .top-bar { display: none; }
+
+  /* ─── NAVBAR ─── */
+  .nav-links, .nav-tel, .nav-right .btn-randevu, .lang-switcher { display: none; }
+  .hamburger { display: block; }
+  .navbar {
+    padding: 0;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .nav-inner {
+    padding: 12px 16px;
+    min-height: 56px;
+  }
+  .nav-logo {
+    font-size: 1rem;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nav-logo small {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+  }
+  /* Hamburger premium animasyonu */
+  .hamburger {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: background 0.2s;
+  }
+  .hamburger:active { background: rgba(201, 169, 110, 0.1); }
+
+  /* Mobil menü — fullscreen overlay */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background: var(--primary);
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 24px 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: block;
+    transition: color 0.2s, padding-left 0.3s;
+  }
+  .mobile-menu a:active {
+    color: var(--accent);
+    padding-left: 12px;
+  }
+  .mobile-menu .menu-cta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .mobile-menu .menu-cta .pill-btn {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 85dvh;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero-content {
+    padding: 100px 16px 32px;
+    text-align: center;
+  }
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 6px 14px;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+  .hero p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    padding: 0 4px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .hero-buttons .pill-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    min-height: 52px;
+    border-radius: 14px;
+  }
+  .hero-buttons .pill-btn.accent {
+    box-shadow: 0 4px 24px rgba(201, 169, 110, 0.35);
+  }
+
+  /* ─── HERO TİLES ─── */
+  .hero-tiles {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 10px;
+    margin-top: -48px;
+    position: relative;
+    z-index: 10;
+  }
+  .hero-tile {
+    padding: 18px 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-tile svg { flex-shrink: 0; width: 28px; height: 28px; }
+  .hero-tile span {
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* ─── TRUST MARQUEE ─── */
+  .trust-marquee { padding: 20px 0; overflow: hidden; }
+  .trust-item {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .trust-item svg { width: 14px; height: 14px; }
+
+  /* ─── COUNTERS / STATS ─── */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 4px;
+  }
+  .stat-card {
+    padding: 20px 14px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  .stat-card .stat-number {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-card .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.3;
+  }
+
+  /* ─── TEDAVİLER / HİZMETLER ─── */
+  .filter-tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 16px 12px;
+    margin: 0 -16px;
+  }
+  .filter-tabs::-webkit-scrollbar { display: none; }
+  .filter-tab {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .hizmet-kart {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: none;
+  }
+  .hizmet-kart:hover { transform: none; box-shadow: var(--shadow-sm); }
+  .hizmet-kart img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .hizmet-kart .kart-icerik {
+    padding: 16px;
+  }
+  .hizmet-kart h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .hizmet-kart p { font-size: 0.82rem; line-height: 1.5; color: var(--text-muted); }
+
+  /* Accordion detay — mobilde tam genişlik */
+  .accordion-content {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  .detay-btn {
+    padding: 10px 16px;
+    font-size: 0.82rem;
+    min-height: 44px;
+    border-radius: 12px;
+  }
+  .detay-whatsapp {
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    min-height: 48px;
+    border-radius: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ─── NEDEN BİZİ SEÇMELİSİNİZ ─── */
+  .neden-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .neden-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .neden-card .neden-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .neden-card h3 { font-size: 1rem; margin-bottom: 4px; }
+  .neden-card p { font-size: 0.82rem; line-height: 1.5; }
+
+  /* ─── NASIL ÇALIŞIYORUZ (TİMELİNE) ─── */
+  .how-tech-grid { grid-template-columns: 1fr; gap: 32px; }
+  .timeline {
+    padding-left: 24px;
+  }
+  .timeline-item {
+    padding: 18px 0 18px 24px;
+    position: relative;
+  }
+  .timeline-item::before {
+    left: -24px;
+    width: 10px;
+    height: 10px;
+  }
+  .timeline-step {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .timeline-item h4 { font-size: 1rem; margin-bottom: 4px; }
+  .timeline-item p { font-size: 0.82rem; line-height: 1.5; }
+
+  /* ─── TEKNOLOJİ KARTLARI ─── */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .tech-card {
+    padding: 18px 14px;
+    border-radius: 14px;
+    text-align: center;
+    transition: none;
+  }
+  .tech-card:hover { transform: none; }
+  .tech-card svg, .tech-card .tech-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+  .tech-card h4 { font-size: 0.82rem; line-height: 1.3; }
+  .tech-card p { font-size: 0.72rem; line-height: 1.4; display: none; }
+
+  /* ─── ÖNCE-SONRA SLİDER ─── */
+  .slider-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 -4px;
+  }
+  .slider-wrapper img {
+    height: 280px;
+    object-fit: cover;
+  }
+  .slider-label {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+  }
+  .slider-handle {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ─── HEKİMLER ─── */
+  .hekimler-grid { grid-template-columns: 1fr; }
+  .hekim-card {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  /* Tek hekim yatay layout → mobilde dikey */
+  .hekim-card.hekim-yatay {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hekim-card .hekim-foto {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  .hekim-card .hekim-info {
+    padding: 24px 20px;
+  }
+  .hekim-card .hekim-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+  .hekim-card .hekim-info .hekim-uzmanlik {
+    font-size: 0.82rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .hekim-card .hekim-info p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .hekim-card .hekim-info .hekim-egitim {
+    font-size: 0.78rem;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  /* ─── BLOG ─── */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .blog-card {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .blog-card img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .blog-card .blog-content {
+    padding: 16px;
+  }
+  .blog-card h3 { font-size: 1rem; margin-bottom: 6px; line-height: 1.3; }
+  .blog-card p { font-size: 0.82rem; line-height: 1.5; }
+  .blog-card .blog-meta {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  /* ─── ANLAŞMALI KURUMLAR MARQUEE ─── */
+  .kurumlar-marquee {
+    padding: 16px 0;
+  }
+  .kurum-logo {
+    height: 28px;
+    opacity: 0.5;
+    margin: 0 20px;
+  }
+
+  /* ─── SSS ACCORDION ─── */
+  .sss-item {
+    border-radius: 14px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .sss-question {
+    padding: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .sss-question svg, .sss-question .sss-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .sss-answer {
+    padding: 0 16px 16px;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+
+  /* ─── SOSYAL MEDYA GRİD ─── */
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .insta-grid img {
+    border-radius: 10px;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  /* ─── YORUMLAR CAROUSEL ─── */
+  .reviews-wrapper {
+    padding: 32px 16px;
+    border-radius: 20px;
+  }
+  .reviews-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 4px 0 16px;
+  }
+  .reviews-track::-webkit-scrollbar { display: none; }
+  .review-card {
+    min-width: 280px;
+    max-width: 300px;
+    scroll-snap-align: start;
+    padding: 20px;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+  .review-card .review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .review-card .stars {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+  .review-card .review-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .review-card .review-author {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+  /* Carousel dots göstergesi */
+  .reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+  }
+
+  /* ─── CTA BAND ─── */
+  .cta-band {
+    padding: 48px 20px;
+    border-radius: 20px;
+    margin: 0 16px;
+    text-align: center;
+  }
+  .cta-band h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .cta-band p {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    padding: 0 8px;
+  }
+  .cta-band .pill-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* ─── İLETİŞİM + HARİTA ─── */
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact-info {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  .contact-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-item:last-child { border-bottom: none; }
+  .contact-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--accent);
+    margin-top: 2px;
+  }
+  .contact-item .contact-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .contact-item .contact-value {
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .map-container {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 240px;
+  }
+  .map-container iframe { height: 240px; }
+
+  /* ─── FOOTER ─── */
+  .footer { padding: 48px 0 24px; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  .footer-brand { margin-bottom: 0; }
+  .footer-brand .footer-logo {
+    font-size: 1.3rem;
+    justify-content: center;
+  }
+  .footer-brand p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 8px auto 0;
+  }
+  .footer-col h4 {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .footer-col a, .footer-col p {
+    font-size: 0.82rem;
+    display: block;
+    padding: 5px 0;
+  }
+  .footer-bottom {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  .footer-copy { font-size: 0.7rem; }
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .footer-legal a { font-size: 0.7rem; }
+
+  /* Yasal uyarı */
+  .legal-disclaimer {
+    font-size: 0.68rem;
+    line-height: 1.5;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* ─── FLOATING BUTONLAR ─── */
   .floating-wa, .floating-phone { display: none; }
-  .mobile-bottom-nav { display: flex; }
+
+  /* ─── CHAT WİDGET ─── */
+  .chat-widget-popup {
+    right: 12px;
+    bottom: 88px;
+    width: calc(100% - 24px);
+    max-height: 70dvh;
+  }
+  .chat-widget-btn {
+    bottom: 86px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+  .chat-widget-btn svg { width: 22px; height: 22px; }
+
+  /* ─── MOBİL BOTTOM NAV — ULTRA PREMİUM ─── */
+  .mobile-nav, .mobile-bottom-nav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9998;
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
+    padding: 0;
+  }
+  .mobile-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 0;
+    padding: 6px 12px;
+    align-items: center;
+  }
+  .mobile-nav-btn, .mbn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 0.65rem;
+    gap: 3px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-nav-btn:active, .mbn-item:active {
+    background: rgba(201, 169, 110, 0.08);
+    color: var(--accent);
+  }
+  .mobile-nav-btn svg, .mbn-item svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.8;
+  }
+  /* Ortadaki Randevu butonu — premium vurgu */
+  .mobile-nav-btn.accent, .mbn-item.accent {
+    background: var(--accent);
+    color: var(--bg-white);
+    border-radius: 14px;
+    height: 52px;
+    box-shadow: 0 4px 16px rgba(201, 169, 110, 0.3);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .mobile-nav-btn.accent:active, .mbn-item.accent:active {
+    background: var(--accent-dark);
+    transform: scale(0.97);
+  }
+  .mobile-nav-btn.accent svg, .mbn-item.accent svg { stroke: var(--bg-white); }
+
+  /* ─── GSAP REVEAL — MOBİLDE DAHA YUMUŞAK ─── */
+  .gs-reveal { opacity: 1; transform: none; }
+  .gsap-ready .gs-reveal { opacity: 0; transform: translateY(20px); }
+
+  /* ─── ULTRA PREMİUM EFEKTLER — MOBİLDE HAFIFLETME ─── */
+  /* Hover efektlerini kaldır — mobilde hover yok */
+  .hizmet-kart:hover, .tech-card:hover, .neden-card:hover, .blog-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+  /* Shimmer sweep mobilde kapalı — performans */
+  .pill-btn::after, .floating-wa::after, .floating-phone::after, .detay-whatsapp::after {
+    display: none;
+  }
+
+  /* ─── PERFORMANS OPTİMİZASYONU ─── */
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  img { content-visibility: auto; }
+
+  /* ─── DİL SEÇİCİ — MOBİL MENÜDE ─── */
+  .lang-switcher-mobile {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .lang-btn-mobile {
+    width: 44px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.2s;
+  }
+  .lang-btn-mobile.active {
+    background: var(--accent);
+    color: var(--primary);
+  }
 }
+
+/* ── KÜÇÜK MOBİL (480px) ── */
 @media (max-width: 480px) {
-  .hizmet-grid { grid-template-columns: 1fr; }
-  .counter-grid { grid-template-columns: 1fr; }
-  .social-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 2.5rem; }
-  .hero-tile { padding: 24px; }
+  html { font-size: 14px; }
+  .container { padding: 0 14px; }
+  .section-padding { padding: 44px 0; }
+  h1 { font-size: clamp(1.7rem, 9vw, 2.3rem); }
+  h2 { font-size: clamp(1.4rem, 7vw, 1.9rem); }
+
+  .hero { min-height: 90dvh; }
+  .hero h1 { font-size: clamp(1.7rem, 10vw, 2.5rem); }
+  .hero p { font-size: 0.85rem; }
+
+  .stats-grid { gap: 8px; }
+  .stat-card { padding: 16px 10px; border-radius: 14px; }
+  .stat-card .stat-number { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .stat-card .stat-label { font-size: 0.65rem; }
+
+  .tech-grid { gap: 8px; }
+  .tech-card { padding: 14px 10px; border-radius: 12px; }
+  .tech-card svg, .tech-card .tech-icon { width: 28px; height: 28px; }
+  .tech-card h4 { font-size: 0.75rem; }
+
+  .review-card { min-width: 260px; padding: 16px; }
+
+  .contact-info { padding: 20px 16px; }
+  .map-container { height: 200px; }
+  .map-container iframe { height: 200px; }
+
+  .cta-band { padding: 36px 16px; margin: 0 14px; border-radius: 16px; }
+  .cta-band h2 { font-size: clamp(1.3rem, 7vw, 1.7rem); }
+
+  .mobile-nav-grid { padding: 4px 8px; }
+  .mobile-nav-btn, .mbn-item { height: 52px; font-size: 0.6rem; }
+  .mobile-nav-btn svg, .mbn-item svg { width: 20px; height: 20px; }
+
+  .insta-grid { gap: 4px; }
+  .insta-grid img { border-radius: 8px; }
+
+  .slider-wrapper img { height: 220px; }
 }
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── SAFE AREA (iPhone notch/bottom bar) ── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-nav, .mobile-bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  body {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
+
+
+/* ═══ ULTRA PREMIUM ANIMASYON ═══ */
+.pill-btn, .floating-wa, .floating-phone, .hizmet-kart, .tech-card, .counter-card, .hero-tile, .nav-links a, .footer-links a, .mbn-item, .filter-btn { transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
+.floating-wa, .floating-phone { transition: all 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; overflow: hidden; }
+.float-label { transition: max-width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.45s ease 0.1s !important; }
+.hizmet-kart:hover, .tech-card:hover, .counter-card:hover { transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.55s ease !important; }
+.section-header h2 { position: relative; display: inline-block; }
+.section-header h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 48px; height: 2px; background: var(--accent); border-radius: 2px; transition: width 0.5s ease; }
+/* Shimmer yaldız */
+.pill-btn { position: relative; overflow: hidden; }
+.pill-btn::after { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.35) 55%, transparent 100%); transform: skewX(-20deg); transition: none; pointer-events: none; z-index: 1; }
+.pill-btn:hover::after { left: 150%; transition: left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.floating-wa, .floating-phone { position: relative; }
+.floating-wa::before, .floating-phone::before { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 45%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0.3) 55%, transparent 100%); transform: skewX(-20deg); pointer-events: none; z-index: 2; border-radius: inherit; }
+.floating-wa:hover::before, .floating-phone:hover::before { left: 150%; transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 </style>
 </head>
 <body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <div class="top-bar-socials">
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      </div>
+      <div class="top-bar-divider"></div>
+      <div class="top-bar-address">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Batıkent Yolu, Çakırlar mahallesi, 1949. Cd., 06370 Yenimaha</span>
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <a href="tel:+90 312 566 00 86" class="top-bar-phone">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06a19.79 19.79 0 01-2.96-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +90 312 566 00 86
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -448,7 +1376,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Profesyonel diş beyazlatma ile dişlerinizi birkaç ton açın. Kliniğimizde uygulanan ofis tipi beyazlatma işlemi ortalama 45-60 dakika sürer." data-en="Lighten your teeth several shades with professional whitening. Our in-office procedure takes 45-60 minutes." data-ar="أبيّض أسنانك عدة درجات بتبييض احترافي. تستغرق العملية 45-60 دقيقة.">Profesyonel diş beyazlatma ile dişlerinizi birkaç ton açın. Kliniğimizde uygulanan ofis tipi beyazlatma işlemi ortalama 45-60 dakika sürer.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Diş%20Beyazlatma%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -461,7 +1389,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Şeffaf plaklar ile dişlerinizi tel takmadan düzeltin. Her 2 haftada bir plak değiştirilerek tedavi ilerler; günlük hayatınızı etkilemez." data-en="Straighten your teeth without metal braces. Aligners are changed every 2 weeks without disrupting daily life." data-ar="قوّم أسنانك بدون تقويم معدني. تُغيَّر الواقيات كل أسبوعين.">Şeffaf plaklar ile dişlerinizi tel takmadan düzeltin. Her 2 haftada bir plak değiştirilerek tedavi ilerler; günlük hayatınızı etkilemez.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Telsiz%20Ortodonti%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -474,7 +1402,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Geleneksel tel tedavisi ile çapraşık ve aralıklı dişleri düzeltiriz. Her yaş grubuna uygun tedavi seçenekleri mevcuttur." data-en="We correct crowded or gapped teeth with traditional braces. Treatment options available for all ages." data-ar="نصحح الأسنان المتراكبة بالتقويم التقليدي، متاح لجميع الأعمار.">Geleneksel tel tedavisi ile çapraşık ve aralıklı dişleri düzeltiriz. Her yaş grubuna uygun tedavi seçenekleri mevcuttur.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Ortodonti%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -487,7 +1415,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Çürük dişlerin erken teşhisi ve kompozit dolgu ile tedavisi yapılır. Doğal diş rengiyle uyumlu estetik dolgular kullanılmaktadır." data-en="Early diagnosis and composite filling treatment for decayed teeth. Aesthetic fillings matching natural tooth color." data-ar="تشخيص مبكر وحشوات مركبة لعلاج التسوس بألوان طبيعية.">Çürük dişlerin erken teşhisi ve kompozit dolgu ile tedavisi yapılır. Doğal diş rengiyle uyumlu estetik dolgular kullanılmaktadır.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Diş%20Çürükleri%20tedavisi%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -500,7 +1428,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Zirkonyum kaplamalar; dayanıklılığı ve estetik görünümü ile tercih edilen modern çözümlerdir. Metal içermez, alerjik reaksiyon oluşturmaz." data-en="Zirconia crowns are the modern choice for durability and aesthetics. Metal-free, no allergic reactions." data-ar="تيجان الزركونيوم الحل الحديث بلا معدن، متين وجمالي.">Zirkonyum kaplamalar; dayanıklılığı ve estetik görünümü ile tercih edilen modern çözümlerdir. Metal içermez, alerjik reaksiyon oluşturmaz.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Zirkonyum%20Kaplama%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -513,7 +1441,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Diş eti şekillendirme, gülüş hattı düzeltme ve diş eti çekilmesi tedavileri ile estetiğinizi tamamlıyoruz." data-en="Gum contouring, smile line correction and gum recession treatments for complete aesthetics." data-ar="تشكيل اللثة وتصحيح خط الابتسامة لجماليات متكاملة.">Diş eti şekillendirme, gülüş hattı düzeltme ve diş eti çekilmesi tedavileri ile estetiğinizi tamamlıyoruz.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Pembe%20Estetik%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -526,7 +1454,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Dijital gülüş tasarımı ile tedavi öncesi sonucunuzu görebilirsiniz. Beyazlatma, kaplama ve diş eti estetiği kombine edilerek hayalinizdeki gülüşe ulaşırsınız." data-en="See your result before treatment with digital smile design. Combining whitening, veneers and gum aesthetics." data-ar="شاهد النتيجة قبل العلاج بتصميم الابتسامة الرقمي.">Dijital gülüş tasarımı ile tedavi öncesi sonucunuzu görebilirsiniz. Beyazlatma, kaplama ve diş eti estetiği kombine edilerek hayalinizdeki gülüşe ulaşırsınız.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Gülüş%20Tasarımı%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -539,7 +1467,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Eksik dişlerin yerine vida şeklinde titanyum implantlar yerleştirilerek doğal görünümlü ve işlevsel dişler elde edilir. Ömür boyu kullanım mümkündür." data-en="Titanium implants replace missing teeth with natural-looking, functional results. Lifetime use is possible." data-ar="زرع تيتانيوم لاستبدال الأسنان المفقودة بمظهر طبيعي مدى الحياة.">Eksik dişlerin yerine vida şeklinde titanyum implantlar yerleştirilerek doğal görünümlü ve işlevsel dişler elde edilir. Ömür boyu kullanım mümkündür.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20İmplant%20Tedavisi%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -552,7 +1480,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="İleri çürük veya enfekte dişlerde kanal tedavisi ile diş kurtarılır. Modern teknikler sayesinde işlem ağrısız ve kısa sürede tamamlanır." data-en="Root canal treatment saves severely decayed or infected teeth. Modern techniques make it painless and quick." data-ar="علاج قناة الجذر ينقذ الأسنان المصابة بدون ألم بالتقنيات الحديثة.">İleri çürük veya enfekte dişlerde kanal tedavisi ile diş kurtarılır. Modern teknikler sayesinde işlem ağrısız ve kısa sürede tamamlanır.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Kanal%20Tedavisi%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -565,7 +1493,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Düzenli diş taşı temizliği, diş eti kontrolü ve profesyonel ağız bakımı ile dişlerinizi uzun yıllar sağlıklı tutun. 6 ayda bir kontrol önerilir." data-en="Keep your teeth healthy for years with regular scaling, gum check-ups and professional oral care. Check-up every 6 months recommended." data-ar="حافظ على صحة أسنانك بتنظيف دوري وفحص اللثة كل 6 أشهر.">Düzenli diş taşı temizliği, diş eti kontrolü ve profesyonel ağız bakımı ile dişlerinizi uzun yıllar sağlıklı tutun. 6 ayda bir kontrol önerilir.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Ağız%20Bakımı%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -578,7 +1506,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Gömülü veya eğri çıkan 20 yaş dişleri cerrahi müdahale ile güvenle çekilir. İşlem lokal anestezi altında gerçekleştirilir, aynı gün taburcu edilirsiniz." data-en="Impacted or misaligned wisdom teeth are safely extracted under local anesthesia. Same-day discharge." data-ar="خلع أسنان العقل المطمورة تحت التخدير الموضعي مع مغادرة في نفس اليوم.">Gömülü veya eğri çıkan 20 yaş dişleri cerrahi müdahale ile güvenle çekilir. İşlem lokal anestezi altında gerçekleştirilir, aynı gün taburcu edilirsiniz.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%2020%20Yaş%20Dişi%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -591,7 +1519,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hizmet-detay">
         <p data-tr="Çocuklara özel diş hekimliği yaklaşımımız ile minik hastaların dişlerini güvende tutuyoruz. Oyun odamız ve çocuk dostu ortamımızla korku bir sorun olmaktan çıkıyor." data-en="Our child-friendly dentistry keeps little patients comfortable. Play room and friendly environment eliminates dental fear." data-ar="طب الأسنان المخصص للأطفال بغرفة لعب وبيئة ودية تقضي على الخوف.">Çocuklara özel diş hekimliği yaklaşımımız ile minik hastaların dişlerini güvende tutuyoruz. Oyun odamız ve çocuk dostu ortamımızla korku bir sorun olmaktan çıkıyor.</p>
-        <a href="https://wa.me/903125660086?text=Merhaba%2C%20Pedodonti%20hakkında%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
+        <a href="https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="detay-whatsapp" data-tr="WhatsApp'tan Bilgi Al →" data-en="Ask on WhatsApp →" data-ar="اسأل عبر واتساب →">WhatsApp'tan Bilgi Al →</a>
       </div>
     </div>
 
@@ -1427,5 +2355,31 @@ window.addEventListener('load', () => {
 <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget-btn" onclick="document.querySelector('.chat-widget-popup').classList.toggle('open')">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <div class="chat-badge" id="chatBadge">1</div>
+</div>
+<div class="chat-widget-popup">
+  <div class="chat-popup-header">
+    <div class="chat-popup-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+    <div class="chat-popup-info">
+      <div class="chat-popup-name" data-tr="Diş Hekimi Ali Can Özen Asistan" data-en="Diş Hekimi Ali Can Özen Assistant" data-ar="مساعد Diş Hekimi Ali Can Özen">Diş Hekimi Ali Can Özen Asistan</div>
+      <div class="chat-popup-status" data-tr="Çevrimiçi" data-en="Online" data-ar="متصل">Çevrimiçi</div>
+    </div>
+    <div class="chat-popup-close" onclick="this.closest('.chat-widget-popup').classList.remove('open')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+  </div>
+  <div class="chat-popup-body">
+    <div class="chat-popup-msg" data-tr="Merhaba! Size nasıl yardımcı olabiliriz? Randevu veya tedavi bilgisi için yazabilirsiniz." data-en="Hello! How can we help you? Write us for appointment or treatment info." data-ar="مرحبا! كيف يمكننا مساعدتك؟">Merhaba! Size nasıl yardımcı olabiliriz? Randevu veya tedavi bilgisi için yazabilirsiniz.</div>
+    <div class="chat-popup-time">şimdi</div>
+  </div>
+  <div class="chat-popup-input">
+    <input type="text" placeholder="Mesajınızı yazın..." onfocus="window.open('https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum','_blank')">
+    <button onclick="window.open('https://wa.me/903125660086?text=Merhaba%2C%20bilgi%20almak%20istiyorum','_blank')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+  </div>
+</div>
+<script>setTimeout(()=>{document.getElementById('chatBadge').classList.add('show')},5000);</script>
+
 </body>
 </html>
