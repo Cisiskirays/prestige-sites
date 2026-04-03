@@ -1218,10 +1218,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -3px; left: 0;
-  width: 0; height: 1px;
+  bottom: -4px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 1.5px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 1px;
 }
 .nav-links a:hover::after { width: 100%; }
 
