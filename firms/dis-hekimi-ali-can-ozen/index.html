@@ -328,8 +328,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 [dir="rtl"] .floating-phone { left: auto; right: 24px; }
 
 /* ═══════════════════════════════════════════════════════════
-   PRESTIGE GHOST SITE — ULTRA PREMIUM MOBİL OVERHAUL
-   Dubai lüks otel seviyesi — her bölüm mobil-native
+   PRESTIGE GHOST SITE — ULTRA PREMIUM MOBİL OVERHAUL v2
+   DÜZELTME: Class isimleri HTML ile eşleştirildi
    ═══════════════════════════════════════════════════════════ */
 
 /* ── TABLET (1024px) ── */
@@ -338,15 +338,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .section-padding { padding: 72px 0; }
   h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
   h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
-
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .how-tech-grid { grid-template-columns: 1fr; gap: 48px; }
-  .hekimler-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hizmet-grid { grid-template-columns: repeat(3, 1fr); }
+  .counter-grid { grid-template-columns: repeat(2, 1fr); }
+  .wt-grid { grid-template-columns: 1fr; gap: 48px; }
+  .doctors-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
-  .blog-grid { grid-template-columns: repeat(2, 1fr); }
-  .neden-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
   .tech-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -366,12 +363,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .container { padding: 0 16px; }
   .section-padding { padding: 56px 0; }
 
-  /* Section header — mobilde daha zarif */
   .section-header { margin-bottom: 32px; }
   .section-header p { font-size: 0.9rem; padding: 0 8px; line-height: 1.6; }
-  .section-header h2::after { width: 36px; bottom: -8px; }
 
-  /* Pill butonlar — mobilde touch-friendly */
   .pill-btn {
     padding: 13px 24px;
     font-size: 0.9rem;
@@ -384,30 +378,33 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .top-bar { display: none; }
 
   /* ─── NAVBAR ─── */
-  .nav-links, .nav-tel, .nav-right .btn-randevu, .lang-switcher { display: none; }
-  .hamburger { display: block; }
+  .nav-links, .nav-phone, .nav-btn, .lang-switch, .nav-divider { display: none; }
+  .mobile-toggle { display: block; }
   .navbar {
     padding: 0;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
-  .nav-inner {
-    padding: 12px 16px;
-    min-height: 56px;
+  .navbar .container {
+    height: 56px;
+    padding: 0 16px;
   }
   .nav-logo {
-    font-size: 1rem;
-    max-width: 200px;
+    max-width: 220px;
+    overflow: hidden;
+  }
+  .nav-logo-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
   }
-  .nav-logo small {
+  .nav-logo-sub {
     font-size: 0.55rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 2px;
   }
-  /* Hamburger premium animasyonu */
-  .hamburger {
+  .mobile-toggle {
     width: 44px;
     height: 44px;
     display: flex;
@@ -416,52 +413,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     border-radius: 12px;
     transition: background 0.2s;
   }
-  .hamburger:active { background: rgba(201, 169, 110, 0.1); }
-
-  /* Mobil menü — fullscreen overlay */
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100dvh;
-    background: var(--primary);
-    z-index: 10001;
-    display: flex;
-    flex-direction: column;
-    padding: 80px 24px 40px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .mobile-menu.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .mobile-menu a {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.85);
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: block;
-    transition: color 0.2s, padding-left 0.3s;
-  }
-  .mobile-menu a:active {
-    color: var(--accent);
-    padding-left: 12px;
-  }
-  .mobile-menu .menu-cta {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .mobile-menu .menu-cta .pill-btn {
-    text-align: center;
-    font-size: 0.95rem;
-  }
+  .mobile-toggle:active { background: rgba(201, 169, 110, 0.1); }
 
   /* ─── HERO ─── */
   .hero {
@@ -469,14 +421,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     display: flex;
     align-items: flex-end;
   }
+  .hero-bg {
+    width: 100% !important;
+    min-width: 100vw;
+    object-fit: cover;
+    object-position: center;
+  }
   .hero-content {
-    padding: 100px 16px 32px;
+    padding: 100px 16px 180px;
     text-align: center;
+    max-width: 100%;
   }
   .hero-badge {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 6px 14px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     margin-bottom: 16px;
   }
   .hero h1 {
@@ -489,199 +448,121 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     line-height: 1.6;
     margin-bottom: 24px;
     padding: 0 4px;
-    color: rgba(255, 255, 255, 0.85);
+    max-width: 100%;
   }
-  .hero-buttons {
+  .hero-btns {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
   }
-  .hero-buttons .pill-btn {
+  .hero-btns .pill-btn {
     width: 100%;
     padding: 14px 20px;
     font-size: 0.95rem;
     min-height: 52px;
     border-radius: 14px;
   }
-  .hero-buttons .pill-btn.accent {
-    box-shadow: 0 4px 24px rgba(201, 169, 110, 0.35);
-  }
 
   /* ─── HERO TİLES ─── */
+  .hero-tiles-wrapper {
+    margin-top: -80px;
+    padding: 0 16px;
+  }
   .hero-tiles {
     grid-template-columns: 1fr;
-    padding: 0 16px;
-    gap: 10px;
-    margin-top: -48px;
-    position: relative;
-    z-index: 10;
+    gap: 12px;
   }
   .hero-tile {
-    padding: 18px 20px;
-    border-radius: 16px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    min-height: 72px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .hero-tile svg { flex-shrink: 0; width: 28px; height: 28px; }
-  .hero-tile span {
-    font-size: 0.88rem;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-
-  /* ─── TRUST MARQUEE ─── */
-  .trust-marquee { padding: 20px 0; overflow: hidden; }
-  .trust-item {
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    gap: 6px;
-    white-space: nowrap;
-  }
-  .trust-item svg { width: 14px; height: 14px; }
-
-  /* ─── COUNTERS / STATS ─── */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 0 4px;
-  }
-  .stat-card {
-    padding: 20px 14px;
+    padding: 24px 20px;
     border-radius: 16px;
     text-align: center;
+    align-items: center;
   }
-  .stat-card .stat-number {
+  .hero-tile-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+  .hero-tile h3 { font-size: 1.2rem; margin-bottom: 6px; }
+  .hero-tile p { font-size: 0.85rem; margin-bottom: 16px; }
+  .hero-tile .pill-btn { font-size: 0.9rem; }
+
+  /* ─── TRUST MARQUEE ─── */
+  .trust-marquee { padding: 14px 0; }
+  .marquee-item {
+    font-size: 0.8rem;
+    margin-right: 32px;
+    gap: 8px;
+  }
+  .marquee-item svg { width: 16px; height: 16px; }
+
+  /* ─── COUNTERS ─── */
+  .counters { padding: 48px 0 24px; }
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .counter-card {
+    padding: 20px 14px;
+    border-radius: 14px;
+  }
+  .counter-card:hover { transform: none; }
+  .counter-num {
     font-size: clamp(1.8rem, 7vw, 2.4rem);
-    font-weight: 700;
-    line-height: 1;
     margin-bottom: 4px;
   }
-  .stat-card .stat-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    line-height: 1.3;
+  .counter-text {
+    font-size: 0.75rem;
   }
 
   /* ─── TEDAVİLER / HİZMETLER ─── */
   .filter-tabs {
-    display: flex;
-    gap: 6px;
+    justify-content: flex-start;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 0 16px 12px;
-    margin: 0 -16px;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    gap: 8px;
   }
   .filter-tabs::-webkit-scrollbar { display: none; }
-  .filter-tab {
+  .filter-btn {
     flex-shrink: 0;
-    padding: 8px 16px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    padding: 8px 18px;
+    font-size: 0.82rem;
     white-space: nowrap;
     min-height: 40px;
-    display: flex;
-    align-items: center;
   }
-  .services-grid {
-    grid-template-columns: 1fr;
+  .hizmet-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
   .hizmet-kart {
-    border-radius: 16px;
-    overflow: hidden;
-    transition: none;
+    height: 220px;
+    border-radius: 14px;
   }
-  .hizmet-kart:hover { transform: none; box-shadow: var(--shadow-sm); }
-  .hizmet-kart img {
-    height: 180px;
-    object-fit: cover;
-    width: 100%;
-  }
-  .hizmet-kart .kart-icerik {
+  .hizmet-kart:hover img { transform: none; }
+  .hizmet-content {
     padding: 16px;
   }
-  .hizmet-kart h3 { font-size: 1.05rem; margin-bottom: 6px; }
-  .hizmet-kart p { font-size: 0.82rem; line-height: 1.5; color: var(--text-muted); }
-
-  /* Accordion detay — mobilde tam genişlik */
-  .accordion-content {
-    padding: 14px 16px;
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  .detay-btn {
-    padding: 10px 16px;
-    font-size: 0.82rem;
-    min-height: 44px;
-    border-radius: 12px;
-  }
-  .detay-whatsapp {
-    padding: 12px 16px;
-    font-size: 0.85rem;
-    min-height: 48px;
-    border-radius: 12px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* ─── NEDEN BİZİ SEÇMELİSİNİZ ─── */
-  .neden-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .neden-card {
-    padding: 24px 20px;
-    border-radius: 16px;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .neden-card .neden-icon {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .neden-card h3 { font-size: 1rem; margin-bottom: 4px; }
-  .neden-card p { font-size: 0.82rem; line-height: 1.5; }
-
-  /* ─── NASIL ÇALIŞIYORUZ (TİMELİNE) ─── */
-  .how-tech-grid { grid-template-columns: 1fr; gap: 32px; }
-  .timeline {
-    padding-left: 24px;
-  }
-  .timeline-item {
-    padding: 18px 0 18px 24px;
-    position: relative;
-  }
-  .timeline-item::before {
-    left: -24px;
-    width: 10px;
-    height: 10px;
-  }
-  .timeline-step {
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
+  .hizmet-content h3 {
+    font-size: 1rem;
     margin-bottom: 4px;
+    line-height: 1.2;
   }
-  .timeline-item h4 { font-size: 1rem; margin-bottom: 4px; }
-  .timeline-item p { font-size: 0.82rem; line-height: 1.5; }
+  .hizmet-content a {
+    font-size: 0.75rem;
+  }
 
-  /* ─── TEKNOLOJİ KARTLARI ─── */
+  /* ─── NASIL ÇALIŞIYORUZ (TİMELİNE + TECH) ─── */
+  .wt-grid { grid-template-columns: 1fr; gap: 32px; }
+  .timeline { padding-left: 28px; }
+  .timeline-item { margin-bottom: 28px; }
+  .timeline-icon { left: -40px; width: 20px; height: 20px; }
+  .timeline-content h4 { font-size: 1.1rem; margin-bottom: 4px; }
+  .timeline-content p { font-size: 0.85rem; }
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -689,279 +570,109 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .tech-card {
     padding: 18px 14px;
     border-radius: 14px;
-    text-align: center;
-    transition: none;
   }
   .tech-card:hover { transform: none; }
-  .tech-card svg, .tech-card .tech-icon {
+  .tech-icon {
     width: 36px;
     height: 36px;
-    margin-bottom: 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
-  .tech-card h4 { font-size: 0.82rem; line-height: 1.3; }
-  .tech-card p { font-size: 0.72rem; line-height: 1.4; display: none; }
+  .tech-card h4 { font-size: 0.9rem; margin-bottom: 4px; }
+  .tech-card p { font-size: 0.78rem; }
 
-  /* ─── ÖNCE-SONRA SLİDER ─── */
-  .slider-wrapper {
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 0 -4px;
-  }
-  .slider-wrapper img {
-    height: 280px;
-    object-fit: cover;
-  }
-  .slider-label {
-    font-size: 0.65rem;
-    padding: 4px 10px;
-    letter-spacing: 0.1em;
-    border-radius: 6px;
-  }
-  .slider-handle {
-    width: 36px;
-    height: 36px;
-  }
+  /* ─── ÖNCE-SONRA ─── */
+  .ba-container { padding: 0 8px; }
 
   /* ─── HEKİMLER ─── */
-  .hekimler-grid { grid-template-columns: 1fr; }
-  .hekim-card {
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  /* Tek hekim yatay layout → mobilde dikey */
-  .hekim-card.hekim-yatay {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hekim-card .hekim-foto {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-  }
-  .hekim-card .hekim-info {
-    padding: 24px 20px;
-  }
-  .hekim-card .hekim-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 4px;
-  }
-  .hekim-card .hekim-info .hekim-uzmanlik {
-    font-size: 0.82rem;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-  .hekim-card .hekim-info p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-  }
-  .hekim-card .hekim-info .hekim-egitim {
+  .doctors-grid { grid-template-columns: 1fr; }
+  .doctors-header { margin-bottom: 32px; }
+  .tek-doktor .hekim-kart { flex-direction: column; }
+  .tek-doktor .hekim-img { width: 100%; min-width: unset; height: 280px; min-height: unset; }
+  .tek-doktor .hekim-info { padding: 24px 20px; text-align: center; }
+  .tek-doktor .hekim-info h3 { font-size: 1.4rem; }
+  .tek-doktor .hekim-uzmanlik { font-size: 0.95rem; }
+  .tek-doktor .hekim-edu { font-size: 0.88rem; justify-content: center; }
+  .tek-doktor .pill-btn { width: 100%; }
+
+  /* ─── PARTNERS MARQUEE ─── */
+  .partners { padding: 40px 0; }
+  .kurum-badge {
+    padding: 8px 18px;
     font-size: 0.78rem;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
-  }
-
-  /* ─── BLOG ─── */
-  .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .blog-card {
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .blog-card img {
-    height: 180px;
-    object-fit: cover;
-    width: 100%;
-  }
-  .blog-card .blog-content {
-    padding: 16px;
-  }
-  .blog-card h3 { font-size: 1rem; margin-bottom: 6px; line-height: 1.3; }
-  .blog-card p { font-size: 0.82rem; line-height: 1.5; }
-  .blog-card .blog-meta {
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-  }
-
-  /* ─── ANLAŞMALI KURUMLAR MARQUEE ─── */
-  .kurumlar-marquee {
-    padding: 16px 0;
-  }
-  .kurum-logo {
-    height: 28px;
-    opacity: 0.5;
-    margin: 0 20px;
   }
 
   /* ─── SSS ACCORDION ─── */
-  .sss-item {
-    border-radius: 14px;
-    margin-bottom: 8px;
-    overflow: hidden;
-  }
-  .sss-question {
-    padding: 16px;
-    font-size: 0.9rem;
-    font-weight: 600;
+  .faq-container { padding: 0 4px; }
+  .faq-item { border-radius: 14px; margin-bottom: 10px; }
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 0.95rem;
     min-height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    cursor: pointer;
   }
-  .sss-question svg, .sss-question .sss-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    transition: transform 0.3s;
-  }
-  .sss-answer {
-    padding: 0 16px 16px;
-    font-size: 0.82rem;
-    line-height: 1.65;
-    color: var(--text-muted);
-  }
-
-  /* ─── SOSYAL MEDYA GRİD ─── */
-  .insta-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-  }
-  .insta-grid img {
-    border-radius: 10px;
-    aspect-ratio: 1;
-    object-fit: cover;
-  }
-
-  /* ─── YORUMLAR CAROUSEL ─── */
-  .reviews-wrapper {
-    padding: 32px 16px;
-    border-radius: 20px;
-  }
-  .reviews-track {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    padding: 4px 0 16px;
-  }
-  .reviews-track::-webkit-scrollbar { display: none; }
-  .review-card {
-    min-width: 280px;
-    max-width: 300px;
-    scroll-snap-align: start;
-    padding: 20px;
-    border-radius: 16px;
-    flex-shrink: 0;
-  }
-  .review-card .review-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  .review-card .stars {
-    font-size: 0.85rem;
-    color: var(--accent);
-    margin-bottom: 8px;
-    letter-spacing: 2px;
-  }
-  .review-card .review-text {
+  .faq-answer-inner {
+    padding: 0 18px 18px;
     font-size: 0.85rem;
     line-height: 1.6;
-    font-style: italic;
-    color: var(--text);
-    margin-bottom: 10px;
   }
-  .review-card .review-author {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    letter-spacing: 0.04em;
+
+  /* ─── SOSYAL MEDYA ─── */
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
-  /* Carousel dots göstergesi */
-  .reviews-dots {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 16px;
+
+  /* ─── YORUMLAR ─── */
+  .reviews-section { padding: 60px 0; }
+  .reviews-slider { margin-bottom: 24px; }
+  .review-card { padding: 0 12px; }
+  .review-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
   }
+  .stars { font-size: 1rem; margin-bottom: 14px; }
+  .review-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .review-author { font-size: 0.88rem; }
+  .review-btn { width: 36px; height: 36px; }
 
   /* ─── CTA BAND ─── */
   .cta-band {
     padding: 48px 20px;
-    border-radius: 20px;
-    margin: 0 16px;
     text-align: center;
   }
   .cta-band h2 {
     font-size: clamp(1.5rem, 6vw, 2rem);
-    margin-bottom: 12px;
-    line-height: 1.2;
+    margin-bottom: 20px;
   }
-  .cta-band p {
-    font-size: 0.88rem;
-    margin-bottom: 24px;
-    line-height: 1.5;
-    padding: 0 8px;
-  }
-  .cta-band .pill-btn {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+  .cta-band .btns {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 
   /* ─── İLETİŞİM + HARİTA ─── */
-  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
-  .contact-info {
-    padding: 24px 20px;
+  .contact-section { padding: 60px 0; }
+  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+  .contact-card {
+    padding: 28px 20px;
     border-radius: 16px;
   }
-  .contact-item {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .contact-item:last-child { border-bottom: none; }
-  .contact-item svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    color: var(--accent);
-    margin-top: 2px;
-  }
-  .contact-item .contact-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 2px;
-  }
-  .contact-item .contact-value {
-    font-size: 0.88rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
+  .contact-card h2 { margin-bottom: 24px; font-size: 1.4rem; }
+  .contact-info-list { gap: 18px; margin-bottom: 24px; }
+  .contact-item { gap: 12px; }
+  .contact-icon { width: 36px; height: 36px; border-radius: 8px; }
+  .contact-text h4 { font-size: 0.78rem; }
+  .contact-text p { font-size: 0.9rem; }
   .map-container {
+    min-height: 280px;
     border-radius: 16px;
-    overflow: hidden;
-    height: 240px;
   }
-  .map-container iframe { height: 240px; }
 
   /* ─── FOOTER ─── */
   .footer { padding: 48px 0 24px; }
@@ -970,52 +681,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     gap: 32px;
     text-align: center;
   }
-  .footer-brand { margin-bottom: 0; }
-  .footer-brand .footer-logo {
-    font-size: 1.3rem;
-    justify-content: center;
-  }
-  .footer-brand p {
-    font-size: 0.82rem;
-    line-height: 1.6;
-    max-width: 280px;
-    margin: 8px auto 0;
-  }
-  .footer-col h4 {
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-  .footer-col a, .footer-col p {
-    font-size: 0.82rem;
-    display: block;
-    padding: 5px 0;
-  }
+  .footer-logo { font-size: 1.4rem; }
+  .footer h4 { margin-bottom: 16px; }
+  .footer-links { align-items: center; }
   .footer-bottom {
-    margin-top: 32px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
     flex-direction: column;
     text-align: center;
     gap: 8px;
-  }
-  .footer-copy { font-size: 0.7rem; }
-  .footer-legal {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-  .footer-legal a { font-size: 0.7rem; }
-
-  /* Yasal uyarı */
-  .legal-disclaimer {
-    font-size: 0.68rem;
-    line-height: 1.5;
-    padding: 16px;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: center;
   }
 
   /* ─── FLOATING BUTONLAR ─── */
@@ -1026,122 +698,50 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     right: 12px;
     bottom: 88px;
     width: calc(100% - 24px);
-    max-height: 70dvh;
   }
   .chat-widget-btn {
-    bottom: 86px;
+    bottom: 80px;
     right: 16px;
     width: 48px;
     height: 48px;
   }
-  .chat-widget-btn svg { width: 22px; height: 22px; }
 
-  /* ─── MOBİL BOTTOM NAV — ULTRA PREMİUM ─── */
-  .mobile-nav, .mobile-bottom-nav {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9998;
-    background: var(--bg-white);
-    border-top: 1px solid var(--border);
-    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
-    padding: 0;
-  }
-  .mobile-nav-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
-    gap: 0;
-    padding: 6px 12px;
-    align-items: center;
-  }
-  .mobile-nav-btn, .mbn-item {
+  /* ─── MOBİL BOTTOM NAV ─── */
+  .mobile-bottom-nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 56px;
-    border-radius: 14px;
-    font-weight: 600;
+    height: auto;
+    padding: 6px 8px;
+  }
+  .mbn-item {
+    padding: 8px 4px;
     font-size: 0.65rem;
+    letter-spacing: 0.05em;
     gap: 3px;
-    transition: all 0.2s;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
   }
-  .mobile-nav-btn:active, .mbn-item:active {
-    background: rgba(201, 169, 110, 0.08);
-    color: var(--accent);
-  }
-  .mobile-nav-btn svg, .mbn-item svg {
-    width: 22px;
-    height: 22px;
-    stroke-width: 1.8;
-  }
-  /* Ortadaki Randevu butonu — premium vurgu */
-  .mobile-nav-btn.accent, .mbn-item.accent {
+  .mbn-item svg { width: 20px; height: 20px; }
+  .mbn-item.accent {
     background: var(--accent);
-    color: var(--bg-white);
-    border-radius: 14px;
-    height: 52px;
-    box-shadow: 0 4px 16px rgba(201, 169, 110, 0.3);
-    font-size: 0.72rem;
-    font-weight: 700;
+    color: #fff;
+    border-radius: 12px;
+    border-right: none;
   }
-  .mobile-nav-btn.accent:active, .mbn-item.accent:active {
-    background: var(--accent-dark);
-    transform: scale(0.97);
-  }
-  .mobile-nav-btn.accent svg, .mbn-item.accent svg { stroke: var(--bg-white); }
 
-  /* ─── GSAP REVEAL — MOBİLDE DAHA YUMUŞAK ─── */
+  /* ─── GSAP — MOBİLDE YUMUŞAK ─── */
   .gs-reveal { opacity: 1; transform: none; }
   .gsap-ready .gs-reveal { opacity: 0; transform: translateY(20px); }
 
-  /* ─── ULTRA PREMİUM EFEKTLER — MOBİLDE HAFIFLETME ─── */
-  /* Hover efektlerini kaldır — mobilde hover yok */
-  .hizmet-kart:hover, .tech-card:hover, .neden-card:hover, .blog-card:hover {
-    transform: none;
-    box-shadow: var(--shadow-sm);
-  }
-  /* Shimmer sweep mobilde kapalı — performans */
-  .pill-btn::after, .floating-wa::after, .floating-phone::after, .detay-whatsapp::after {
-    display: none;
-  }
+  /* ─── HOVER KALDIR — MOBİLDE HOVER YOK ─── */
+  .hizmet-kart:hover img { transform: none; }
+  .hizmet-kart:hover .hizmet-overlay { background: linear-gradient(to top, rgba(13,33,55,0.85) 0%, rgba(13,33,55,0.2) 60%, transparent 100%); }
+  .counter-card:hover { transform: none; }
+  .tech-card:hover { transform: none; }
 
-  /* ─── PERFORMANS OPTİMİZASYONU ─── */
-  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  /* ─── SHIMMER MOBİLDE KAPALI ─── */
+  .pill-btn::after { display: none; }
+
+  /* ─── PERFORMANS ─── */
+  * { -webkit-font-smoothing: antialiased; }
   img { content-visibility: auto; }
-
-  /* ─── DİL SEÇİCİ — MOBİL MENÜDE ─── */
-  .lang-switcher-mobile {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .lang-btn-mobile {
-    width: 44px;
-    height: 36px;
-    border-radius: 8px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(255, 255, 255, 0.5);
-    transition: all 0.2s;
-  }
-  .lang-btn-mobile.active {
-    background: var(--accent);
-    color: var(--primary);
-  }
 }
 
 /* ── KÜÇÜK MOBİL (480px) ── */
@@ -1149,40 +749,31 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   html { font-size: 14px; }
   .container { padding: 0 14px; }
   .section-padding { padding: 44px 0; }
-  h1 { font-size: clamp(1.7rem, 9vw, 2.3rem); }
-  h2 { font-size: clamp(1.4rem, 7vw, 1.9rem); }
 
   .hero { min-height: 90dvh; }
   .hero h1 { font-size: clamp(1.7rem, 10vw, 2.5rem); }
-  .hero p { font-size: 0.85rem; }
+  .hero-content { padding: 80px 14px 160px; }
 
-  .stats-grid { gap: 8px; }
-  .stat-card { padding: 16px 10px; border-radius: 14px; }
-  .stat-card .stat-number { font-size: clamp(1.5rem, 6vw, 2rem); }
-  .stat-card .stat-label { font-size: 0.65rem; }
+  .hizmet-grid { grid-template-columns: 1fr; }
+  .hizmet-kart { height: 200px; }
+
+  .counter-grid { gap: 8px; }
+  .counter-card { padding: 16px 10px; }
+  .counter-num { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .counter-text { font-size: 0.68rem; }
 
   .tech-grid { gap: 8px; }
-  .tech-card { padding: 14px 10px; border-radius: 12px; }
-  .tech-card svg, .tech-card .tech-icon { width: 28px; height: 28px; }
-  .tech-card h4 { font-size: 0.75rem; }
+  .tech-card { padding: 14px 10px; }
 
-  .review-card { min-width: 260px; padding: 16px; }
+  .social-grid { grid-template-columns: 1fr; }
 
-  .contact-info { padding: 20px 16px; }
-  .map-container { height: 200px; }
-  .map-container iframe { height: 200px; }
+  .review-text { font-size: 0.92rem; }
 
-  .cta-band { padding: 36px 16px; margin: 0 14px; border-radius: 16px; }
-  .cta-band h2 { font-size: clamp(1.3rem, 7vw, 1.7rem); }
+  .cta-band { padding: 36px 16px; }
 
-  .mobile-nav-grid { padding: 4px 8px; }
-  .mobile-nav-btn, .mbn-item { height: 52px; font-size: 0.6rem; }
-  .mobile-nav-btn svg, .mbn-item svg { width: 20px; height: 20px; }
+  .map-container { min-height: 220px; }
 
-  .insta-grid { gap: 4px; }
-  .insta-grid img { border-radius: 8px; }
-
-  .slider-wrapper img { height: 220px; }
+  .mbn-item { font-size: 0.6rem; }
 }
 
 /* ── REDUCED MOTION ── */
@@ -1196,14 +787,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ── SAFE AREA (iPhone notch/bottom bar) ── */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
-  .mobile-nav, .mobile-bottom-nav {
+  .mobile-bottom-nav {
     padding-bottom: env(safe-area-inset-bottom);
   }
   body {
     padding-bottom: calc(80px + env(safe-area-inset-bottom));
   }
 }
-
 
 /* ═══ ULTRA PREMIUM ANIMASYON ═══ */
 .pill-btn, .floating-wa, .floating-phone, .hizmet-kart, .tech-card, .counter-card, .hero-tile, .nav-links a, .footer-links a, .mbn-item, .filter-btn { transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
