@@ -18,7 +18,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dentist","name":"Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği","telephone":"+90 507 303 94 34","address":{"@type":"PostalAddress","streetAddress":"No:7/3 Apt, İstasyon, Polatlı 1. Cd., 06935 Sincan/Ankara, Türkiye","addressCountry":"TR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"194"},"geo":{"@type":"GeoCoordinates","latitude":39.9658141,"longitude":32.5859333},"openingHours":"Pazar: Kapalı | Pazartesi: 12:00 to 20:00 | Salı: 12:00 to 20:00 | Çarşamba: 12:00 to 20:00 | Perşembe: 12:00 to 20:00 | Cuma: 12:00 to 20:00 | Cumartesi: 12:00 to 20:00","medicalSpecialty":"Dentistry"}
+{"@context":"https://schema.org","@type":"Dentist","name":"Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği Dt. Ayşe Zeycan Kaleli Diş Kliniği ve Dt. Faruk SARIYERLİ Diş kliniği","telephone":"+90 507 303 94 34","address":{"@type":"PostalAddress","streetAddress":"No:7/3 Apt, İstasyon, Polatlı 1. Cd., 06935 Sincan/Ankara, Türkiye","addressCountry":"TR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"194"},"geo":{"@type":"GeoCoordinates","latitude":39.9658141,"longitude":32.5859333},"openingHours":"Pazartesi: 12:00 to 20:00 | Salı: 12:00 to 20:00 | Çarşamba: 12:00 to 20:00 | Perşembe: 12:00 to 20:00 | Cuma: 12:00 to 20:00 | Cumartesi: 12:00 to 20:00 | Pazar: Kapalı","medicalSpecialty":"Dentistry"}
 </script>
 <style>
 :root {
@@ -808,6 +808,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .ba-opt { padding: 5px 12px; font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.03em; user-select: none; }
 .ba-opt.active { background: var(--accent); color: #000; }
 .ba-opt:hover:not(.active) { color: #fff; }
+  /* LIGHTBOX */
+.ba-lightbox { display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; }
+.ba-lightbox.active { display: flex; }
+.ba-lightbox-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); animation: lbFadeIn 0.3s ease; }
+.ba-lightbox-content { position: relative; width: 90%; max-width: 750px; z-index: 2; animation: lbScaleIn 0.35s cubic-bezier(0.25,0.46,0.45,0.94); }
+.ba-lightbox-close { position: absolute; top: -44px; right: 0; background: none; border: none; color: #fff; font-size: 32px; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; opacity: 0.7; transition: opacity 0.2s; z-index: 3; }
+.ba-lightbox-close:hover { opacity: 1; }
+.ba-lightbox-title { color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; text-align: center; margin-bottom: 16px; }
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbScaleIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+
 /* HIZMET DETAY */
 .hizmet-detay { display: none; padding: 16px; background: rgba(0,0,0,0.85); border-top: 1px solid var(--accent); position: relative; z-index: 10; }
 .hizmet-detay p { color: #e0e0e0; font-size: 0.88rem; line-height: 1.6; margin-bottom: 12px; }
@@ -1569,6 +1580,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
   </div>
 </footer>
+<!-- LIGHTBOX -->
+<div class="ba-lightbox" id="baLightbox">
+  <div class="ba-lightbox-overlay"></div>
+  <div class="ba-lightbox-content">
+    <button class="ba-lightbox-close">&times;</button>
+    <h3 class="ba-lightbox-title"></h3>
+    <div class="ba-lightbox-slider" style="position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/2;cursor:col-resize;user-select:none;touch-action:none;">
+      <img class="ba-lb-after" src="" alt="Sonra" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <span style="position:absolute;top:16px;right:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;">Sonra</span>
+      <div class="ba-lb-before" style="position:absolute;top:0;left:0;width:50%;height:100%;overflow:hidden;z-index:2;">
+        <img class="ba-lb-before-img" src="" alt="Önce" style="position:absolute;top:0;left:0;width:200%;max-width:none;height:100%;object-fit:cover;">
+        <span style="position:absolute;top:16px;left:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;">Önce</span>
+      </div>
+      <div class="ba-lb-handle" style="position:absolute;top:0;left:50%;width:4px;height:100%;background:var(--accent);z-index:5;transform:translateX(-50%);">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 16px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.4);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M7 16l-4-4 4-4"/><path d="M17 8l4 4-4 4"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- FLOATING BUTTONS -->
 <a href="tel:+90 507 303 94 34" class="floating-phone" aria-label="Telefon" style="position:fixed;bottom:180px;right:24px;width:52px;height:52px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.25);z-index:900;transition:transform 0.3s ease;">
@@ -1893,6 +1925,68 @@ document.querySelectorAll('.ba-toggle').forEach(toggle => {
     });
   });
 });
+
+// Lightbox Before-After Slider
+const lightbox = document.getElementById('baLightbox');
+if (lightbox) {
+  const lbOverlay = lightbox.querySelector('.ba-lightbox-overlay');
+  const lbClose = lightbox.querySelector('.ba-lightbox-close');
+  const lbTitle = lightbox.querySelector('.ba-lightbox-title');
+  const lbBefore = lightbox.querySelector('.ba-lb-before');
+  const lbHandle = lightbox.querySelector('.ba-lb-handle');
+  const lbBeforeImg = lightbox.querySelector('.ba-lb-before-img');
+  const lbAfterImg = lightbox.querySelector('.ba-lb-after');
+  const lbSlider = lightbox.querySelector('.ba-lightbox-slider');
+  let lbDragging = false;
+
+  function lbMoveTo(x) {
+    const rect = lbSlider.getBoundingClientRect();
+    let pos = (x - rect.left) / rect.width * 100;
+    pos = Math.max(5, Math.min(95, pos));
+    lbBefore.style.width = pos + '%';
+    lbHandle.style.left = pos + '%';
+    lbBeforeImg.style.width = (100 / pos * 100) + '%';
+  }
+
+  lbSlider.addEventListener('mousedown', e => { lbDragging = true; lbMoveTo(e.clientX); });
+  window.addEventListener('mousemove', e => { if (lbDragging) { e.preventDefault(); lbMoveTo(e.clientX); }});
+  window.addEventListener('mouseup', () => { lbDragging = false; });
+  lbSlider.addEventListener('touchstart', e => { lbDragging = true; lbMoveTo(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchmove', e => { if (lbDragging) lbMoveTo(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchend', () => { lbDragging = false; });
+
+  function openLightbox(kart) {
+    const beforeUrl = kart.dataset.before;
+    const afterUrl = kart.dataset.after;
+    const title = kart.querySelector('h3').textContent;
+    lbBeforeImg.src = beforeUrl;
+    lbAfterImg.src = afterUrl;
+    lbTitle.textContent = title;
+    lbBefore.style.width = '50%';
+    lbHandle.style.left = '50%';
+    lbBeforeImg.style.width = '200%';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbOverlay.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  document.querySelectorAll('.hizmet-kart[data-ba="1"]').forEach(kart => {
+    kart.style.cursor = 'pointer';
+    kart.addEventListener('click', e => {
+      if (e.target.closest('.detay-btn') || e.target.closest('.detay-whatsapp') || e.target.closest('.ba-toggle')) return;
+      if (window.innerWidth > 768) openLightbox(kart);
+    });
+  });
+}
+
 // Toggle Detay Accordion
 function toggleDetay(btn) {
   const kart = btn.closest('.hizmet-kart');
