@@ -104,7 +104,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .navbar.scrolled .container { height: 62px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo-text { display: flex; flex-direction: column; }
-.nav-logo-title { font-family: 'Cormorant Garamond', serif; color: var(--primary); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; line-height: 1.15; max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav-logo-title { font-family: 'Cormorant Garamond', serif; color: var(--primary); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; line-height: 1.15; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .nav-logo-sub { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; margin-top: 4px; }
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
@@ -816,10 +816,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   /* LIGHTBOX */
 .ba-lightbox { display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; }
 .ba-lightbox.active { display: flex; }
-.ba-lightbox-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); opacity: 0; }
+.ba-lightbox-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); }
 .ba-lightbox.active .ba-lightbox-overlay { animation: lbFadeIn 0.4s ease forwards; }
 .ba-lightbox.closing .ba-lightbox-overlay { animation: lbFadeOut 0.3s ease forwards; }
-.ba-lightbox-content { position: relative; width: 90%; max-width: 750px; z-index: 2; opacity: 0; transform: scale(0.7) translateY(40px); }
+.ba-lightbox-content { position: relative; width: 90%; max-width: 750px; z-index: 2; }
 .ba-lightbox.active .ba-lightbox-content { animation: lbScaleIn 0.5s cubic-bezier(0.16,1,0.3,1) forwards; }
 .ba-lightbox.closing .ba-lightbox-content { animation: lbScaleOut 0.3s ease forwards; }
 .ba-lightbox-close { position: absolute; top: -44px; right: 0; background: none; border: none; color: #fff; font-size: 32px; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; opacity: 0.7; transition: opacity 0.2s; z-index: 3; }
@@ -876,7 +876,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <path d="M14 15C14.5 13.5 16 12.5 18 12.5C20 12.5 21.5 13.5 22 15" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
       <div class="nav-logo-text">
-        <span class="nav-logo-title">DT. AYŞE ZEYCAN KALELI DIŞ KLINIĞI FARUK SARIYERLİ DIŞ KLINIĞI</span>
+        <span class="nav-logo-title">DT. AYŞE ZEYCAN KALELI FARUK SARIYERLİ</span>
         <span class="nav-logo-sub" data-tr="DİŞ KLİNİĞİ" data-en="DENTAL CLINIC" data-ar="عيادة أسنان" data-ru="СТОМАТОЛОГИЯ">DİŞ KLİNİĞİ</span>
       </div>
     </a>
