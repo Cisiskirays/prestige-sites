@@ -817,7 +817,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .ba-lightbox-close:hover { opacity: 1; }
 .ba-lightbox-title { color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; text-align: center; margin-bottom: 16px; }
 @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes lbScaleIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+@keyframes lbFadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes lbScaleIn { from { opacity: 0; transform: scale(0.7) translateY(30px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes lbScaleOut { from { opacity: 1; transform: scale(1) translateY(0); } to { opacity: 0; transform: scale(0.7) translateY(30px); } }
+.ba-lightbox.active .ba-lightbox-overlay { animation: lbFadeIn 0.4s ease forwards; }
+.ba-lightbox.active .ba-lightbox-content { animation: lbScaleIn 0.5s cubic-bezier(0.16,1,0.3,1) forwards; }
+.ba-lightbox.closing .ba-lightbox-overlay { animation: lbFadeOut 0.3s ease forwards; }
+.ba-lightbox.closing .ba-lightbox-content { animation: lbScaleOut 0.3s ease forwards; }
 
 /* HIZMET DETAY */
 .hizmet-detay { display: none; padding: 16px; background: rgba(0,0,0,0.85); border-top: 1px solid var(--accent); position: relative; z-index: 10; }
@@ -1970,12 +1976,17 @@ if (lightbox) {
   }
 
   function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
+    lightbox.classList.add('closing');
+    setTimeout(() => {
+      lightbox.classList.remove('active');
+      lightbox.classList.remove('closing');
+      document.body.style.overflow = '';
+    }, 350);
   }
 
   lbClose.addEventListener('click', closeLightbox);
   lbOverlay.addEventListener('click', closeLightbox);
+  
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
   document.querySelectorAll('.hizmet-kart[data-ba="1"]').forEach(kart => {
