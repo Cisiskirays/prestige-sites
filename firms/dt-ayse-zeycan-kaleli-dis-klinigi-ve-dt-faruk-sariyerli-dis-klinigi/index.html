@@ -803,6 +803,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pill-btn:hover::after { left: 150%; transition: left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .floating-wa::before, .floating-phone::before { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 45%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0.3) 55%, transparent 100%); transform: skewX(-20deg); pointer-events: none; z-index: 2; border-radius: inherit; }
 .floating-wa:hover::before, .floating-phone:hover::before { left: 150%; transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+/* BEFORE-AFTER TOGGLE */
+.ba-toggle { position: absolute; top: 12px; left: 12px; z-index: 12; display: flex; background: rgba(13,33,55,0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); }
+.ba-opt { padding: 5px 12px; font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.03em; user-select: none; }
+.ba-opt.active { background: var(--accent); color: #000; }
+.ba-opt:hover:not(.active) { color: #fff; }
+/* HIZMET DETAY */
+.hizmet-detay { display: none; padding: 16px; background: rgba(0,0,0,0.85); border-top: 1px solid var(--accent); position: relative; z-index: 10; }
+.hizmet-detay p { color: #e0e0e0; font-size: 0.88rem; line-height: 1.6; margin-bottom: 12px; }
+.hizmet-detay.acik { display: block; }
+.detay-btn { background: transparent; border: 1px solid rgba(255,255,255,0.5); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; margin-top: 6px; transition: all 0.2s; }
+.detay-btn:hover { border-color: var(--accent); color: var(--accent); }
+.detay-whatsapp { display: inline-block; background: var(--accent); color: #000; padding: 8px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; position: relative; overflow: hidden; }
+.detay-whatsapp:hover { opacity: 0.85; }
+.detay-whatsapp::after { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%); transform: skewX(-20deg); transition: none; }
+.detay-whatsapp:hover::after { left: 160%; transition: left 0.55s ease; }
 </style>
 </head>
 <body>
@@ -1026,8 +1041,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
   <div class="hizmet-grid gs-reveal">
 
-    <div class="hizmet-kart" data-category="estetik">
-      <img src="https://images.pexels.com/photos/6627574/pexels-photo-6627574.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Diş Beyazlatma" loading="lazy">
+    <div class="hizmet-kart" data-category="estetik" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/ba-before-beyazlatma.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/ba-after-beyazlatma.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/ba-after-beyazlatma.jpg" alt="Diş Beyazlatma" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Diş Beyazlatma" data-en="Teeth Whitening" data-ar="تبييض الأسنان">Diş Beyazlatma</h3>
@@ -1039,8 +1055,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="estetik">
-      <img src="https://images.pexels.com/photos/11887613/pexels-photo-11887613.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Telsiz Ortodonti" loading="lazy">
+    <div class="hizmet-kart" data-category="estetik" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/telsiz_ortodonti-before.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/telsiz_ortodonti-after.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/telsiz_ortodonti-after.jpg" alt="Telsiz Ortodonti" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Telsiz Ortodonti" data-en="Clear Aligners" data-ar="تقويم شفاف">Telsiz Ortodonti</h3>
@@ -1052,8 +1069,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="estetik">
-      <img src="https://images.pexels.com/photos/5524021/pexels-photo-5524021.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ortodonti" loading="lazy">
+    <div class="hizmet-kart" data-category="estetik" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/ORTODONT%C4%B0___BEFORE.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/ORTODONT%C4%B0___AFTER.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/ORTODONT%C4%B0___AFTER.jpg" alt="Ortodonti" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Ortodonti" data-en="Orthodontics" data-ar="تقويم الأسنان">Ortodonti</h3>
@@ -1065,8 +1083,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="genel">
-      <img src="https://images.pexels.com/photos/6529110/pexels-photo-6529110.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Diş Çürükleri" loading="lazy">
+    <div class="hizmet-kart" data-category="genel" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/D%C4%B0%C5%9E_%C3%87%C3%9CR%C3%9CKLER%C4%B0___BEFORE.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/D%C4%B0%C5%9E_%C3%87%C3%9CR%C3%9CKLER%C4%B0___AFTER.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/D%C4%B0%C5%9E_%C3%87%C3%9CR%C3%9CKLER%C4%B0___AFTER.jpg" alt="Diş Çürükleri" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Diş Çürükleri" data-en="Tooth Decay Treatment" data-ar="علاج تسوس الأسنان">Diş Çürükleri</h3>
@@ -1078,8 +1097,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="estetik">
-      <img src="https://images.pexels.com/photos/7422519/pexels-photo-7422519.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Zirkonyum ve Porselen Kaplama" loading="lazy">
+    <div class="hizmet-kart" data-category="estetik" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/Z%C4%B0RKONYUM_VE_PORSELEN_KAPLAMA___BEFORE.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/Z%C4%B0RKONYUM_VE_PORSELEN_KAPLAMA___AFTER.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/Z%C4%B0RKONYUM_VE_PORSELEN_KAPLAMA___AFTER.jpg" alt="Zirkonyum ve Porselen Kaplama" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Zirkonyum ve Porselen Kaplama" data-en="Zirconia & Porcelain Crowns" data-ar="زركونيوم وبورسلان">Zirkonyum ve Porselen Kaplama</h3>
@@ -1091,8 +1111,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="estetik">
-      <img src="https://images.pexels.com/photos/6627346/pexels-photo-6627346.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pembe Estetik" loading="lazy">
+    <div class="hizmet-kart" data-category="estetik" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/PEMBE_ESTET%C4%B0K___BEFORE.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/PEMBE_ESTET%C4%B0K___AFTER.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/PEMBE_ESTET%C4%B0K___AFTER.jpg" alt="Pembe Estetik" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Pembe Estetik" data-en="Gum Aesthetics" data-ar="جماليات اللثة">Pembe Estetik</h3>
@@ -1104,8 +1125,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="estetik">
-      <img src="https://images.pexels.com/photos/3779706/pexels-photo-3779706.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gülüş Tasarımı" loading="lazy">
+    <div class="hizmet-kart" data-category="estetik" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/G%C3%9CL%C3%9C%C5%9E_TASARIMI___BEFORE.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/G%C3%9CL%C3%9C%C5%9E_TASARIMI___AFTER.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/G%C3%9CL%C3%9C%C5%9E_TASARIMI___AFTER.jpg" alt="Gülüş Tasarımı" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Gülüş Tasarımı" data-en="Smile Design" data-ar="تصميم الابتسامة">Gülüş Tasarımı</h3>
@@ -1117,8 +1139,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
     </div>
 
-    <div class="hizmet-kart" data-category="cerrahi">
-      <img src="https://images.pexels.com/photos/4687905/pexels-photo-4687905.jpeg?auto=compress&cs=tinysrgb&w=800" alt="İmplant Tedavileri" loading="lazy">
+    <div class="hizmet-kart" data-category="cerrahi" data-ba="1" data-before="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/%C4%B0MPLANT_TEDAV%C4%B0LER%C4%B0___BEFORE.jpg" data-after="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/%C4%B0MPLANT_TEDAV%C4%B0LER%C4%B0___AFTER.jpg">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/%C4%B0MPLANT_TEDAV%C4%B0LER%C4%B0___AFTER.jpg" alt="İmplant Tedavileri" loading="lazy">
+      <div class="ba-toggle"><span class="ba-opt" data-state="before" data-tr="Önce" data-en="Before" data-ar="قبل">Önce</span><span class="ba-opt active" data-state="after" data-tr="Sonra" data-en="After" data-ar="بعد">Sonra</span></div>
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="İmplant Tedavileri" data-en="Implant Treatments" data-ar="علاجات الزرع">İmplant Tedavileri</h3>
@@ -1131,7 +1154,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
 
     <div class="hizmet-kart" data-category="genel">
-      <img src="https://images.pexels.com/photos/3845735/pexels-photo-3845735.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kanal Tedavisi" loading="lazy">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/kanal_tedavisi.jpg" alt="Kanal Tedavisi" loading="lazy">
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Kanal Tedavisi" data-en="Root Canal Treatment" data-ar="علاج قناة الجذر">Kanal Tedavisi</h3>
@@ -1144,7 +1167,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
 
     <div class="hizmet-kart" data-category="genel">
-      <img src="https://images.pexels.com/photos/3779709/pexels-photo-3779709.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ağız Bakımı" loading="lazy">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/agiz_bakimi.jpg" alt="Ağız Bakımı" loading="lazy">
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Ağız Bakımı" data-en="Oral Care" data-ar="العناية بالفم">Ağız Bakımı</h3>
@@ -1157,7 +1180,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
 
     <div class="hizmet-kart" data-category="cerrahi">
-      <img src="https://images.pexels.com/photos/6502308/pexels-photo-6502308.jpeg?auto=compress&cs=tinysrgb&w=800" alt="20 Yaş Dişleri" loading="lazy">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/20_lik_disler.jpg" alt="20 Yaş Dişleri" loading="lazy">
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="20 Yaş Dişleri" data-en="Wisdom Teeth" data-ar="أسنان العقل">20 Yaş Dişleri</h3>
@@ -1170,7 +1193,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
 
     <div class="hizmet-kart" data-category="genel">
-      <img src="https://images.pexels.com/photos/7800560/pexels-photo-7800560.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pedodonti" loading="lazy">
+      <img src="https://raw.githubusercontent.com/Cisiskirays/prestige-sites/main/assets/ba/pedodonti.jpg" alt="Pedodonti" loading="lazy">
       <div class="hizmet-overlay"></div>
       <div class="hizmet-content">
         <h3 data-tr="Pedodonti" data-en="Pediatric Dentistry" data-ar="طب أسنان الأطفال">Pedodonti</h3>
@@ -1185,126 +1208,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
 </section>
 
-<style>
-.hizmet-detay {
-  display: none;
-  padding: 16px;
-  background: rgba(0,0,0,0.85);
-  border-top: 1px solid var(--accent);
-  position: relative;
-  z-index: 10;
-}
-.hizmet-detay p {
-  color: #e0e0e0;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-.hizmet-detay.acik { display: block; }
-.detay-btn {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.5);
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: all 0.2s;
-}
-.detay-btn:hover { border-color: var(--accent); color: var(--accent); }
-.detay-whatsapp {
-  display: inline-block;
-  background: var(--accent);
-  color: #000;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.detay-whatsapp:hover { opacity: 0.85; }
-  /* ULTRA PREMIUM EFFECTS */
-
-/* 1. Shimmer sweep — tüm pill butonlar ve CTA'lar */
-.pill-btn, .detay-whatsapp {
-  position: relative;
-  overflow: hidden;
-}
-.pill-btn::after, .detay-whatsapp::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%);
-  transform: skewX(-20deg);
-  transition: none;
-}
-.pill-btn:hover::after, .detay-whatsapp:hover::after {
-  left: 160%;
-  transition: left 0.55s ease;
-}
-
-/* 2. Kart hover — premium lift */
-.hizmet-kart, .tech-card {
-  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease;
-}
-.hizmet-kart:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.18);
-}
-.tech-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(201,169,110,0.15);
-}
-
-/* 3. Accent underline — nav linkleri */
-.nav-links a {
-  position: relative;
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; left: 50%;
-  transform: translateX(-50%);
-  width: 0; height: 1.5px;
-  background: var(--accent);
-  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 1px;
-}
-.nav-links a:hover::after { width: 100%; }
-
-/* 4. Section header accent line */
-.section-header h2 {
-  position: relative;
-  display: inline-block;
-}
-.section-header h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px; left: 50%;
-  transform: translateX(-50%);
-  width: 48px; height: 2px;
-  background: var(--accent);
-  border-radius: 2px;
-}
-</style>
-
-<script>
-function toggleDetay(btn) {
-  const kart = btn.closest('.hizmet-kart');
-  const detay = kart.querySelector('.hizmet-detay');
-  const acik = detay.classList.toggle('acik');
-  const lang = document.documentElement.lang || 'tr';
-  if (acik) {
-    btn.textContent = lang === 'en' ? 'Close ↑' : lang === 'ar' ? 'إغلاق ↑' : 'Kapat ↑';
-  } else {
-    btn.textContent = lang === 'en' ? 'See Details ↓' : lang === 'ar' ? 'عرض التفاصيل ↓' : 'Detayları Gör ↓';
-  }
-}
-</script>
 
   <!-- NEDEN BİZ -->
 <section class="section-padding" style="background:var(--surface);">
@@ -1971,6 +1874,38 @@ document.querySelectorAll('.ba-widget').forEach(widget => {
   window.addEventListener('touchmove', e => { if (isDragging) { moveTo(e.touches[0].clientX); }}, {passive:true});
   window.addEventListener('touchend', () => { isDragging = false; });
 });
+
+// Before-After Toggle on Treatment Cards
+document.querySelectorAll('.ba-toggle').forEach(toggle => {
+  toggle.querySelectorAll('.ba-opt').forEach(opt => {
+    opt.addEventListener('click', function() {
+      const kart = this.closest('.hizmet-kart');
+      const img = kart.querySelector('img');
+      const state = this.dataset.state;
+      const url = state === 'before' ? kart.dataset.before : kart.dataset.after;
+      toggle.querySelectorAll('.ba-opt').forEach(o => o.classList.remove('active'));
+      this.classList.add('active');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = url;
+        img.style.opacity = '1';
+      }, 250);
+    });
+  });
+});
+// Toggle Detay Accordion
+function toggleDetay(btn) {
+  const kart = btn.closest('.hizmet-kart');
+  const detay = kart.querySelector('.hizmet-detay');
+  const acik = detay.classList.toggle('acik');
+  const lang = document.documentElement.lang || 'tr';
+  if (acik) {
+    btn.textContent = lang === 'en' ? 'Close ↑' : lang === 'ar' ? 'إغلاق ↑' : 'Kapat ↑';
+  } else {
+    btn.textContent = lang === 'en' ? 'See Details ↓' : lang === 'ar' ? 'عرض التفاصيل ↓' : 'Detayları Gör ↓';
+  }
+}
+
 // Lenis Scroll & GSAP Initialization
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('clinic_lang') || 'tr';
