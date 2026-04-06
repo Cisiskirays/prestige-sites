@@ -203,7 +203,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .doctors-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 24px; }
 .doctors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .hekim-kart { background: var(--bg-white); border-radius: 0; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.07); display: flex; flex-direction: column; }
-.hekim-img { position: relative; width: 100%; height: 300px; overflow: hidden; border-radius: 0 !important; border: none !important; }
+.hekim-img { position: relative; width: 100%; height: 300px; overflow: hidden; border-radius: 0 !important; border: none !important; background: transparent !important; outline: none !important; box-shadow: none !important; padding: 0 !important; }
 .hekim-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hekim-badge { position: absolute; top: 18px; left: 18px; background: linear-gradient(135deg, var(--primary), #1a3040); color: #fff; padding: 8px 20px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px; z-index: 2; box-shadow: 0 4px 16px rgba(0,0,0,0.25); white-space: nowrap; }
 .hekim-info { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
@@ -214,7 +214,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hekim-kart .pill-btn { width: 100%; margin-top: auto; }
 .doctors-grid.tek-doktor { display: flex; justify-content: center; }
 .tek-doktor .hekim-kart { flex-direction: row; max-width: 920px; width: 100%; min-height: 480px; border-radius: 0; overflow: hidden; }
-.tek-doktor .hekim-img { width: 360px; min-width: 360px; height: auto; min-height: 480px; flex-shrink: 0; overflow: hidden; border-radius: 0 !important; border: none !important; }
+.tek-doktor .hekim-img { width: 360px; min-width: 360px; height: auto; min-height: 480px; flex-shrink: 0; overflow: hidden; border-radius: 0 !important; border: none !important; background: transparent !important; outline: none !important; box-shadow: none !important; padding: 0 !important; }
 .tek-doktor .hekim-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .tek-doktor .hekim-info { padding: 48px 52px; justify-content: center; }
 .tek-doktor .hekim-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; line-height: 1.25; margin-bottom: 6px; color: var(--primary); }
