@@ -57,264 +57,68 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pill-btn.outline-white { border: 1px solid var(--bg-white); color: var(--bg-white); }
 .pill-btn.outline-white:hover { background: var(--bg-white); color: var(--primary); transform: translateY(-2px); }
 
-/* TOP BAR — Kaldırıldı. Lüks sitelerde top-bar yoktur. */
+/* TOP BAR */
+.top-bar { background: var(--primary); color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.3px; }
+.top-bar .container { display: flex; align-items: center; justify-content: space-between; height: 38px; }
+.top-bar-left { display: flex; align-items: center; gap: 16px; }
+.top-bar-socials { display: flex; align-items: center; gap: 10px; }
+.top-bar-socials a { color: rgba(255,255,255,0.7); transition: color 0.2s ease; display: flex; align-items: center; }
+.top-bar-socials a:hover { color: var(--accent); }
+.top-bar-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.2); }
+.top-bar-address { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.7); }
+.top-bar-address svg { color: var(--accent); flex-shrink: 0; }
+.top-bar-right { display: flex; align-items: center; gap: 18px; }
+.top-bar-phone { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); font-weight: 500; text-decoration: none; transition: color 0.2s ease; }
+.top-bar-phone:hover { color: var(--accent); }
+.top-bar-phone svg { color: var(--accent); flex-shrink: 0; }
+@media (max-width: 768px) { .top-bar { display: none; } }
 
-/* NAVBAR — Ultra Premium */
-.lux-header {
-  position: fixed;
-  top: 0; left: 0; width: 100%;
-  z-index: 1000;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
-}
-.lux-header.scrolled {
-  background: rgba(255,255,255,0.98);
-  border-bottom-color: rgba(0,0,0,0.06);
-  box-shadow: 0 1px 30px rgba(0,0,0,0.04);
-}
+/* CHAT WIDGET */
+.chat-widget-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 4px 20px rgba(201,169,110,0.4); transition: all 0.3s ease; }
+.chat-widget-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(201,169,110,0.5); }
+.chat-widget-btn .chat-badge { position: absolute; top: -2px; right: -2px; width: 20px; height: 20px; border-radius: 50%; background: #e53935; color: #fff; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0); transition: all 0.3s ease; }
+.chat-widget-btn .chat-badge.show { opacity: 1; transform: scale(1); }
+.chat-widget-popup { position: fixed; bottom: 96px; right: 24px; width: 320px; background: #fff; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; opacity: 0; transform: translateY(16px) scale(0.95); pointer-events: none; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
+.chat-widget-popup.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.chat-popup-header { background: var(--primary); color: #fff; padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+.chat-popup-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.chat-popup-info { display: flex; flex-direction: column; }
+.chat-popup-name { font-weight: 600; font-size: 0.92rem; }
+.chat-popup-status { font-size: 0.75rem; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; }
+.chat-popup-status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #4caf50; display: inline-block; }
+.chat-popup-close { margin-left: auto; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.chat-popup-close:hover { color: #fff; }
+.chat-popup-body { padding: 20px; }
+.chat-popup-msg { background: var(--bg-alt, #f5f5f5); border-radius: 12px 12px 12px 2px; padding: 12px 16px; font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+.chat-popup-time { font-size: 0.7rem; color: var(--text-muted); margin-top: 6px; text-align: left; }
+.chat-popup-input { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border); }
+.chat-popup-input input { flex: 1; border: none; outline: none; font-size: 0.85rem; color: var(--text); background: transparent; }
+.chat-popup-input button { background: var(--accent); color: #fff; border: none; border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+.chat-popup-input button:hover { background: var(--primary); }
+@media (max-width: 768px) { .chat-widget-popup { right: 12px; bottom: 88px; width: calc(100% - 24px); } .chat-widget-btn { bottom: 72px; right: 16px; width: 52px; height: 52px; } }
 
-.lux-header-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 48px;
-  height: 82px;
-  transition: height 0.4s cubic-bezier(0.16,1,0.3,1);
-}
-.lux-header.scrolled .lux-header-inner { height: 64px; }
-
-/* ── LOGO ── */
-.lux-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.lux-brand-icon {
-  color: var(--accent, #B89B5E);
-  transition: transform 0.4s ease;
-}
-.lux-brand:hover .lux-brand-icon { transform: scale(1.06); }
-
-.lux-brand-text { display: flex; flex-direction: column; }
-.lux-brand-name {
-  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #1a1a2e;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-  max-width: 260px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.lux-brand-sub {
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 0.58rem;
-  font-weight: 600;
-  color: var(--accent, #B89B5E);
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  margin-top: 3px;
-}
-
-/* ── NAV LINKS ── */
-.lux-nav {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
-.lux-nav a {
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #4a4a5a;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  position: relative;
-  padding-bottom: 3px;
-  transition: color 0.3s ease;
-}
-.lux-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 1px;
-  background: var(--accent, #B89B5E);
-  transition: width 0.45s cubic-bezier(0.25,0.8,0.25,1);
-}
-.lux-nav a:hover { color: #1a1a2e; }
-.lux-nav a:hover::after { width: 100%; }
-
-/* ── RIGHT ACTIONS ── */
-.lux-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-shrink: 0;
-}
-
-.lux-phone {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #1a1a2e;
-  letter-spacing: 0.3px;
-  transition: color 0.3s ease;
-  white-space: nowrap;
-}
-.lux-phone svg { color: var(--accent, #B89B5E); flex-shrink: 0; }
-.lux-phone:hover { color: var(--accent, #B89B5E); }
-
-/* CTA — Ghost/Outline Lüks Buton */
-.lux-cta {
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--accent, #B89B5E);
-  border: 1.5px solid var(--accent, #B89B5E);
-  background: transparent;
-  padding: 12px 30px;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.45s cubic-bezier(0.25,0.8,0.25,1);
-  white-space: nowrap;
-}
-.lux-cta::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%; width: 100%; height: 100%;
-  background: var(--accent, #B89B5E);
-  transition: left 0.45s cubic-bezier(0.25,0.8,0.25,1);
-  z-index: -1;
-}
-.lux-cta:hover {
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(184,155,94,0.25);
-}
-.lux-cta:hover::before { left: 0; }
-
-/* LANG SWITCH — Minimal */
-.lux-lang {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-left: 20px;
-  border-left: 1px solid rgba(0,0,0,0.08);
-}
-.lux-lang button {
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #aaa;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 2px;
-  transition: color 0.3s ease;
-  letter-spacing: 0.5px;
-}
-.lux-lang button.active,
-.lux-lang button:hover { color: #1a1a2e; }
-.lux-lang-sep { width: 1px; height: 10px; background: rgba(0,0,0,0.1); }
-
-/* MOBILE TOGGLE */
-.lux-mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-.lux-mobile-toggle span {
-  display: block;
-  width: 22px; height: 1.5px;
-  background: #1a1a2e;
-  transition: all 0.35s cubic-bezier(0.25,0.8,0.25,1);
-  transform-origin: center;
-}
-.lux-header.menu-open .lux-mobile-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.lux-header.menu-open .lux-mobile-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.lux-header.menu-open .lux-mobile-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-/* MOBILE MENU */
-.lux-mobile-menu {
-  display: none;
-  flex-direction: column;
-  padding: 24px 32px 32px;
-  background: rgba(255,255,255,0.99);
-  border-top: 1px solid rgba(0,0,0,0.04);
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
-}
-.lux-header.menu-open .lux-mobile-menu {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
-}
-.lux-mobile-menu a {
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #4a4a5a;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  transition: color 0.3s ease;
-}
-.lux-mobile-menu a:hover { color: var(--accent, #B89B5E); }
-.lux-mobile-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  margin-top: 24px;
-}
-.lux-mobile-phone {
-  font-family: 'Montserrat', var(--ff), sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1a1a2e;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-}
-.lux-cta-mobile { width: 100%; text-align: center; padding: 14px 30px; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 1200px) {
-  .lux-header-inner { padding: 0 32px; }
-  .lux-nav { gap: 24px; }
-  .lux-nav a { font-size: 0.72rem; letter-spacing: 1px; }
-  .lux-phone span { display: none; }
-}
-
-@media (max-width: 960px) {
-  .lux-nav, .lux-phone, .lux-lang { display: none; }
-  .lux-mobile-toggle { display: flex; }
-  .lux-header-inner { height: 68px; padding: 0 20px; }
-  .lux-header.scrolled .lux-header-inner { height: 60px; }
-  .lux-cta { display: none; }
-}
+/* NAVBAR */
+.navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.92); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); z-index: 1000; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); border-bottom: 1px solid transparent; }
+.navbar.scrolled { background: rgba(255,255,255,0.97); border-bottom-color: var(--border); box-shadow: 0 1px 24px rgba(0,0,0,0.06); }
+.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; transition: height 0.3s ease; }
+.navbar.scrolled .container { height: 62px; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-text { display: flex; flex-direction: column; }
+.nav-logo-title { font-family: 'Cormorant Garamond', serif; color: var(--primary); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; line-height: 1.15; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav-logo-sub { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; margin-top: 4px; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--accent); }
+.nav-links a { position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 0; height: 1.5px; background: var(--accent); transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 1px; }
+.nav-links a:hover::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-phone { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary); }
+.nav-phone svg { color: var(--accent); }
+.lang-switch { display: flex; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+.lang-switch button { color: inherit; font-weight: inherit; padding: 4px; }
+.lang-switch button.active { color: var(--primary); }
+.mobile-toggle { display: none; color: var(--primary); }
 
 /* HERO */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; overflow: hidden; }
@@ -1079,76 +883,64 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </head>
 <body>
 
-<!-- NAVBAR — Ultra Premium -->
-<header class="lux-header" id="luxHeader">
-  <div class="lux-header-inner">
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <div class="top-bar-socials">
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      </div>
+      <div class="top-bar-divider"></div>
+      <div class="top-bar-address">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Kavaklıdere, Tunalı Hilmi Cd. No: 81/3, 06680 Çankaya/Ankara</span>
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <a href="tel:+90 507 019 01 93" class="top-bar-phone">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06a19.79 19.79 0 01-2.96-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +90 507 019 01 93
+      </a>
+    </div>
+  </div>
+</div>
 
-    <!-- LOGO -->
-    <a href="#" class="lux-brand" aria-label="${firmaAdi}">
-      <svg class="lux-brand-icon" width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 9C11 9 8.5 11 8.5 15C8.5 18.5 10 21 11.5 23C13 25 13 29 14 31C14.5 32.5 15.5 33 16.5 32C17.5 31 17.5 28 18 26C18.5 28 18.5 31 19.5 32C20.5 33 21.5 32.5 22 31C23 29 23 25 24.5 23C26 21 27.5 18.5 27.5 15C27.5 11 25 9 22.5 8C20.5 7 18 8 18 8C18 8 15.5 7 13.5 8C11.5 9 11 9 11 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M14 15C14.5 13.5 16 12.5 18 12.5C20 12.5 21.5 13.5 22 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo" aria-label="Ankara Tunalı Diş Hekimi Pakize Ceyran Gençer Ana Sayfa">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 9C11 9 8.5 11 8.5 15C8.5 18.5 10 21 11.5 23C13 25 13 29 14 31C14.5 32.5 15.5 33 16.5 32C17.5 31 17.5 28 18 26C18.5 28 18.5 31 19.5 32C20.5 33 21.5 32.5 22 31C23 29 23 25 24.5 23C26 21 27.5 18.5 27.5 15C27.5 11 25 9 22.5 8C20.5 7 18 8 18 8C18 8 15.5 7 13.5 8C11.5 9 11 9 11 9Z" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M14 15C14.5 13.5 16 12.5 18 12.5C20 12.5 21.5 13.5 22 15" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <div class="lux-brand-text">
-        <span class="lux-brand-name">${navTitle}</span>
-        <span class="lux-brand-sub" data-tr="DİŞ KLİNİĞİ" data-en="DENTAL CLINIC" data-ar="عيادة أسنان">DİŞ KLİNİĞİ</span>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">DT. PAKİZE CEYRAN GENÇER</span>
+        <span class="nav-logo-sub" data-tr="DİŞ KLİNİĞİ" data-en="DENTAL CLINIC" data-ar="عيادة أسنان" data-ru="СТОМАТОЛОГИЯ">DİŞ KLİNİĞİ</span>
       </div>
     </a>
-
-    <!-- NAV LINKS -->
-    <nav class="lux-nav" role="navigation">
-      <a href="#tedaviler" data-tr="Tedaviler" data-en="Treatments" data-ar="العلاجات">Tedaviler</a>
-      <a href="#hekimler" data-tr="Hekimler" data-en="Doctors" data-ar="الأطباء">Hekimler</a>
-      <a href="#once-sonra" data-tr="Önce-Sonra" data-en="Before-After" data-ar="قبل وبعد">Önce-Sonra</a>
-      <a href="#yorumlar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات">Yorumlar</a>
-      <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</a>
-    </nav>
-
-    <!-- RIGHT ACTIONS -->
-    <div class="lux-actions">
-      <a href="tel:${telefon}" class="lux-phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06 19.79 19.79 0 01.07 1.18 2 2 0 012.26 1H5.2a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <span>${telefon}</span>
+    <div class="nav-links">
+      <a href="#tedaviler" data-tr="Tedaviler" data-en="Treatments" data-ar="العلاجات" data-ru="Лечение">Tedaviler</a>
+      <a href="#hekimler" data-tr="Hekimler" data-en="Doctors" data-ar="الأطباء" data-ru="Врачи">Hekimler</a>
+      <a href="#once-sonra" data-tr="Önce-Sonra" data-en="Before-After" data-ar="قبل وبعد" data-ru="До-После">Önce-Sonra</a>
+      <a href="#yorumlar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات" data-ru="Отзывы">Yorumlar</a>
+      <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال" data-ru="Контакт">İletişim</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+90 507 019 01 93" class="nav-phone" style="white-space:nowrap;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06a19.79 19.79 0 01-2.96-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +90 507 019 01 93
       </a>
-
-      <a href="${waLink}" class="lux-cta" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</a>
-
-      <div class="lux-lang">
-        <button onclick="setLang('tr')" class="active">TR</button>
-        <span class="lux-lang-sep"></span>
-        <button onclick="setLang('en')">EN</button>
-        <span class="lux-lang-sep"></span>
-        <button onclick="setLang('ar')">AR</button>
+      <a href="https://wa.me/905070190193?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="pill-btn accent nav-btn" style="white-space:nowrap;" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن" data-ru="Записаться">Randevu Al</a>
+      <div class="lang-switch">
+        <button onclick="setLang('tr')" class="active">TR</button>|<button onclick="setLang('en')">EN</button>|<button onclick="setLang('ar')">AR</button>|<button onclick="setLang('ru')">RU</button>
       </div>
-
-      <button class="lux-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.lux-header').classList.toggle('menu-open')">
-        <span></span><span></span><span></span>
+      <button class="mobile-toggle" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
-
   </div>
-
-  <!-- MOBILE MENU -->
-  <div class="lux-mobile-menu">
-    <a href="#tedaviler" data-tr="Tedaviler" data-en="Treatments" data-ar="العلاجات" onclick="document.querySelector('.lux-header').classList.remove('menu-open')">Tedaviler</a>
-    <a href="#hekimler" data-tr="Hekimler" data-en="Doctors" data-ar="الأطباء" onclick="document.querySelector('.lux-header').classList.remove('menu-open')">Hekimler</a>
-    <a href="#once-sonra" data-tr="Önce-Sonra" data-en="Before-After" data-ar="قبل وبعد" onclick="document.querySelector('.lux-header').classList.remove('menu-open')">Önce-Sonra</a>
-    <a href="#yorumlar" data-tr="Yorumlar" data-en="Reviews" data-ar="المراجعات" onclick="document.querySelector('.lux-header').classList.remove('menu-open')">Yorumlar</a>
-    <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال" onclick="document.querySelector('.lux-header').classList.remove('menu-open')">İletişim</a>
-    <div class="lux-mobile-bottom">
-      <a href="tel:${telefon}" class="lux-mobile-phone">${telefon}</a>
-      <a href="${waLink}" class="lux-cta lux-cta-mobile" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</a>
-      <div class="lux-lang" style="justify-content:center;">
-        <button onclick="setLang('tr')" class="active">TR</button>
-        <span class="lux-lang-sep"></span>
-        <button onclick="setLang('en')">EN</button>
-        <span class="lux-lang-sep"></span>
-        <button onclick="setLang('ar')">AR</button>
-      </div>
-    </div>
-  </div>
-</header>
-
+</nav>
 
 <!-- HERO -->
 <section class="hero">
