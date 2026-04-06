@@ -97,28 +97,292 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .chat-popup-input button:hover { background: var(--primary); }
 @media (max-width: 768px) { .chat-widget-popup { right: 12px; bottom: 88px; width: calc(100% - 24px); } .chat-widget-btn { bottom: 72px; right: 16px; width: 52px; height: 52px; } }
 
-/* NAVBAR */
-.navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.92); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); z-index: 1000; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); border-bottom: 1px solid transparent; }
-.navbar.scrolled { background: rgba(255,255,255,0.97); border-bottom-color: var(--border); box-shadow: 0 1px 24px rgba(0,0,0,0.06); }
-.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; transition: height 0.3s ease; }
-.navbar.scrolled .container { height: 62px; }
-.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.nav-logo-text { display: flex; flex-direction: column; }
-.nav-logo-title { font-family: 'Cormorant Garamond', serif; color: var(--primary); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; line-height: 1.15; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.nav-logo-sub { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; margin-top: 4px; }
-.nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
-.nav-links a:hover { color: var(--accent); }
-.nav-links a { position: relative; }
-.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 0; height: 1.5px; background: var(--accent); transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 1px; }
-.nav-links a:hover::after { width: 100%; }
-.nav-right { display: flex; align-items: center; gap: 20px; }
-.nav-phone { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary); }
-.nav-phone svg { color: var(--accent); }
-.lang-switch { display: flex; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
-.lang-switch button { color: inherit; font-weight: inherit; padding: 4px; }
-.lang-switch button.active { color: var(--primary); }
-.mobile-toggle { display: none; color: var(--primary); }
+═══════════════════════════════════════════════════════════════
+BÖLÜM 1: CSS — Mevcut /* NAVBAR */ bloğunun TAMAMINI sil,
+yerine aşağıdaki CSS'i yapıştır.
+═══════════════════════════════════════════════════════════════
+ 
+/* NAVBAR — Ultra Premium */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.0);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+.navbar.scrolled::before {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: rgba(201,169,110,0.12);
+  box-shadow: 0 1px 40px rgba(13,33,55,0.06);
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.navbar.scrolled .container { height: 68px; }
+ 
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  position: relative;
+}
+.nav-logo-icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-logo:hover .nav-logo-icon { transform: scale(1.06) rotate(-2deg); }
+.nav-logo-icon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,110,0.2);
+  transition: all 0.5s ease;
+}
+.nav-logo:hover .nav-logo-icon::after {
+  border-color: rgba(201,169,110,0.5);
+  inset: -6px;
+}
+.nav-logo-text { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  transition: color 0.3s ease;
+}
+.navbar:not(.scrolled) .nav-logo-title { color: var(--bg-white, #fff); }
+.nav-logo-sub {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 20px;
+}
+.nav-logo-sub::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+ 
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.4s ease;
+}
+.navbar:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.8); }
+.navbar:not(.scrolled) .nav-links a:hover { color: var(--accent); }
+.navbar.scrolled .nav-links a { color: var(--text-muted); }
+.navbar.scrolled .nav-links a:hover { color: var(--primary); }
+ 
+/* Magnetic underline */
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  border-radius: 1px;
+}
+.nav-links a:hover::before { width: 100%; left: 0%; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+}
+.nav-links a:hover::after { opacity: 1; }
+ 
+/* Nav Right */
+.nav-right { display: flex; align-items: center; gap: 24px; }
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+.navbar:not(.scrolled) .nav-phone { color: rgba(255,255,255,0.85); }
+.navbar:not(.scrolled) .nav-phone svg { color: var(--accent); }
+.navbar.scrolled .nav-phone { color: var(--primary); }
+.navbar.scrolled .nav-phone svg { color: var(--accent); }
+.nav-phone:hover { color: var(--accent) !important; }
+.nav-phone-ring {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201,169,110,0.3);
+  transition: all 0.4s ease;
+}
+.nav-phone:hover .nav-phone-ring {
+  background: rgba(201,169,110,0.1);
+  border-color: var(--accent);
+  transform: scale(1.08);
+}
+ 
+/* CTA Button — Luxury Outline → Fill */
+.nav-cta {
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  padding: 12px 32px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+.navbar:not(.scrolled) .nav-cta {
+  color: var(--accent);
+  border: 1px solid rgba(201,169,110,0.5);
+  background: transparent;
+}
+.navbar.scrolled .nav-cta {
+  color: var(--bg-white, #fff);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+}
+.nav-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.6s ease;
+}
+.nav-cta:hover::before { left: 100%; }
+.navbar:not(.scrolled) .nav-cta:hover {
+  background: var(--accent);
+  color: var(--bg-white, #fff);
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(201,169,110,0.25);
+  transform: translateY(-2px);
+}
+.navbar.scrolled .nav-cta:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  box-shadow: 0 8px 30px rgba(201,169,110,0.3);
+  transform: translateY(-2px);
+}
+ 
+/* Lang Switch */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-left: 20px;
+  position: relative;
+}
+.lang-switch::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: rgba(201,169,110,0.25);
+}
+.lang-switch button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 6px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.navbar:not(.scrolled) .lang-switch button { color: rgba(255,255,255,0.45); }
+.navbar:not(.scrolled) .lang-switch button.active { color: var(--bg-white, #fff); }
+.navbar.scrolled .lang-switch button { color: var(--text-muted); }
+.navbar.scrolled .lang-switch button.active { color: var(--primary); }
+.lang-switch button:hover { color: var(--accent) !important; }
+.lang-switch span { color: rgba(201,169,110,0.25); font-size: 0.65rem; }
+ 
+/* Mobile Toggle */
+.mobile-toggle { display: none; }
+.navbar:not(.scrolled) .mobile-toggle { color: var(--bg-white, #fff); }
+.navbar.scrolled .mobile-toggle { color: var(--primary); }
+ 
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .nav-phone { display: none; }
+  .mobile-toggle { display: flex; align-items: center; justify-content: center; }
+}
+@media (max-width: 768px) {
+  .navbar .container { height: 72px; padding: 0 16px; }
+  .navbar.scrolled .container { height: 62px; }
+  .nav-cta { padding: 10px 20px; font-size: 0.72rem; letter-spacing: 1.5px; }
+  .lang-switch { display: none; }
+}
 
 /* HERO */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; overflow: hidden; }
@@ -906,10 +1170,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <nav class="navbar">
   <div class="container">
     <a href="#" class="nav-logo" aria-label="Diş Hekimi Abdullah Özcan Özel Muayenehanesi Ana Sayfa">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 9C11 9 8.5 11 8.5 15C8.5 18.5 10 21 11.5 23C13 25 13 29 14 31C14.5 32.5 15.5 33 16.5 32C17.5 31 17.5 28 18 26C18.5 28 18.5 31 19.5 32C20.5 33 21.5 32.5 22 31C23 29 23 25 24.5 23C26 21 27.5 18.5 27.5 15C27.5 11 25 9 22.5 8C20.5 7 18 8 18 8C18 8 15.5 7 13.5 8C11.5 9 11 9 11 9Z" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/>
-        <path d="M14 15C14.5 13.5 16 12.5 18 12.5C20 12.5 21.5 13.5 22 15" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
+      <div class="nav-logo-icon">
+        <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 9C11 9 8.5 11 8.5 15C8.5 18.5 10 21 11.5 23C13 25 13 29 14 31C14.5 32.5 15.5 33 16.5 32C17.5 31 17.5 28 18 26C18.5 28 18.5 31 19.5 32C20.5 33 21.5 32.5 22 31C23 29 23 25 24.5 23C26 21 27.5 18.5 27.5 15C27.5 11 25 9 22.5 8C20.5 7 18 8 18 8C18 8 15.5 7 13.5 8C11.5 9 11 9 11 9Z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+          <path d="M14 15C14.5 13.5 16 12.5 18 12.5C20 12.5 21.5 13.5 22 15" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
       <div class="nav-logo-text">
         <span class="nav-logo-title">ABDULLAH ÖZCAN ÖZEL MUAYENEHANESI</span>
         <span class="nav-logo-sub" data-tr="DİŞ KLİNİĞİ" data-en="DENTAL CLINIC" data-ar="عيادة أسنان">DİŞ KLİNİĞİ</span>
@@ -923,16 +1189,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-ar="اتصال">İletişim</a>
     </div>
     <div class="nav-right">
-      <a href="tel:+90 544 144 74 22" class="nav-phone" style="white-space:nowrap;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06a19.79 19.79 0 01-2.96-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <a href="tel:+90 544 144 74 22" class="nav-phone">
+        <span class="nav-phone-ring">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06a19.79 19.79 0 01-2.96-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </span>
         +90 544 144 74 22
       </a>
-      <a href="https://wa.me/905441447422?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="pill-btn accent nav-btn" style="white-space:nowrap;" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</a>
+      <a href="https://wa.me/905441447422?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="nav-cta" data-tr="Randevu Al" data-en="Book Now" data-ar="احجز الآن">Randevu Al</a>
       <div class="lang-switch">
-        <button onclick="setLang('tr')" class="active">TR</button>|<button onclick="setLang('en')">EN</button>|<button onclick="setLang('ar')">AR</button>
+        <button onclick="setLang('tr')" class="active">TR</button><span>·</span><button onclick="setLang('en')">EN</button><span>·</span><button onclick="setLang('ar')">AR</button>
       </div>
       <button class="mobile-toggle" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="16" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
     </div>
   </div>
