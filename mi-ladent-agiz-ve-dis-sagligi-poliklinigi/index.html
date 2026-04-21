@@ -1042,7 +1042,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .demo-note svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--accent); margin-top: 2px; }
 .demo-note p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
 .cal-time.booked { background: rgba(220,53,69,0.06); border-color: rgba(220,53,69,0.2); color: #aaa; text-decoration: line-through; pointer-events: none; position: relative; }
-.cal-time.booked::after { content: 'Dolu'; position: absolute; top: -6px; right: -6px; font-size: 0.58rem; background: #dc3545; color: #fff; padding: 1px 5px; border-radius: 6px; font-weight: 700; }
+.cal-time.booked::after { content: var(--booked-label, 'Dolu'); position: absolute; top: -6px; right: -6px; font-size: 0.58rem; background: #dc3545; color: #fff; padding: 1px 5px; border-radius: 6px; font-weight: 700; }
 /* BEFORE-AFTER TOGGLE */
 .ba-toggle { position: absolute; top: 12px; left: 12px; z-index: 12; display: flex; background: rgba(13,33,55,0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); }
 .ba-opt { padding: 5px 12px; font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.03em; user-select: none; }
@@ -1119,7 +1119,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         </svg>
       </div>
       <div class="nav-logo-text">
-        <span class="nav-logo-title">MİLADENT AĞIZ VE DIŞ SAĞLIĞI</span>
+        <span class="nav-logo-title">MİLADENT</span>
         <span class="nav-logo-sub" data-tr="DİŞ KLİNİĞİ" data-en="DENTAL CLINIC" data-de="ZAHNARZTPRAXIS">DİŞ KLİNİĞİ</span>
       </div>
     </a>
@@ -1131,11 +1131,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-de="Kontakt">İletişim</a>
     </div>
     <div class="nav-right">
-    <div class="lang-switch" style="display:flex;gap:4px;margin-right:20px;">
-  <button onclick="setLang('tr')" style="background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;font-size:0.7rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:4px;">TR</button>
-  <button onclick="setLang('en')" style="background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;font-size:0.7rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:4px;">EN</button>
-  <button onclick="setLang('de')" style="background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;font-size:0.7rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:4px;">DE</button>
-</div>
       <a href="https://wa.me/905413251000?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="nav-cta" data-tr="Randevu Al" data-en="Book Now" data-de="Termin buchen">Randevu Al</a>
       <button class="mobile-toggle" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -1162,7 +1157,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="demo-note" style="margin-top:24px;background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);">
         <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-        <p style="color:rgba(255,255,255,0.8);">Bu arka plan görseli dilediğiniz görsel ile değiştirilebilir. Kliniğinize ait profesyonel bir fotoğraf bu alana yerleştirilerek sitenize özgün bir dokunuş katılacaktır.</p>
+        <p style="color:rgba(255,255,255,0.8);" data-tr="Bu arka plan görseli dilediğiniz görsel ile değiştirilebilir. Kliniğinize ait profesyonel bir fotoğraf bu alana yerleştirilerek sitenize özgün bir dokunuş katılacaktır." data-en="This background image can be replaced with any image you prefer. A professional photograph of your clinic will give your website a unique touch." data-de="Dieses Hintergrundbild kann durch ein beliebiges Bild ersetzt werden. Ein professionelles Foto Ihrer Ordination verleiht Ihrer Website eine individuelle Note.">Bu arka plan görseli dilediğiniz görsel ile değiştirilebilir. Kliniğinize ait profesyonel bir fotoğraf bu alana yerleştirilerek sitenize özgün bir dokunuş katılacaktır.</p>
       </div>
     </div>
   </div>
@@ -1203,12 +1198,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <p data-tr="30 dakika · Yüz yüze görüşme" data-en="30 min · In-person visit" data-de="30 Minuten · Persönlicher Termin">30 dakika · Yüz yüze görüşme</p>
       </div>
       <div class="cal-days">
-        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name">Pzt</div><div class="day-num">7</div></div>
-        <div class="cal-day active" onclick="showDemoPopup('randevu')"><div class="day-name">Sal</div><div class="day-num">8</div></div>
-        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name">Çar</div><div class="day-num">9</div></div>
-        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name">Per</div><div class="day-num">10</div></div>
-        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name">Cum</div><div class="day-num">11</div></div>
-        <div class="cal-day disabled"><div class="day-name">Cmt</div><div class="day-num">12</div></div>
+        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name" data-tr="Pzt" data-en="Mon" data-de="Mo">Pzt</div><div class="day-num">7</div></div>
+        <div class="cal-day active" onclick="showDemoPopup('randevu')"><div class="day-name" data-tr="Sal" data-en="Tue" data-de="Di">Sal</div><div class="day-num">8</div></div>
+        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name" data-tr="Çar" data-en="Wed" data-de="Mi">Çar</div><div class="day-num">9</div></div>
+        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name" data-tr="Per" data-en="Thu" data-de="Do">Per</div><div class="day-num">10</div></div>
+        <div class="cal-day" onclick="showDemoPopup('randevu')"><div class="day-name" data-tr="Cum" data-en="Fri" data-de="Fr">Cum</div><div class="day-num">11</div></div>
+        <div class="cal-day disabled"><div class="day-name" data-tr="Cmt" data-en="Sat" data-de="Sa">Cmt</div><div class="day-num">12</div></div>
       </div>
       <div class="cal-times">
         <div class="cal-time booked">09:00</div>
@@ -1227,7 +1222,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
     <div class="demo-note gs-reveal" style="max-width:480px;margin:0 auto;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <p>Bu takvim, siteniz canlıya alındığında Cal.com akıllı randevu sistemiyle entegre çalışacaktır. Hastalarınız müsait saatlerinizi görerek online randevu oluşturabilecek, dolu ve boş saatler otomatik güncellenecektir. Ayrıca randevu öncesi otomatik SMS/e-posta hatırlatmaları gönderilecektir.</p>
+      <p data-tr="Bu takvim, siteniz canlıya alındığında Cal.com akıllı randevu sistemiyle entegre çalışacaktır. Hastalarınız müsait saatlerinizi görerek online randevu oluşturabilecek, dolu ve boş saatler otomatik güncellenecektir. Ayrıca randevu öncesi otomatik SMS/e-posta hatırlatmaları gönderilecektir." data-en="When your website goes live, this calendar will be integrated with the Cal.com smart scheduling system. Your patients will be able to see available times and book appointments online; occupied and free slots will update automatically. Automated SMS/email reminders will also be sent before each appointment." data-de="Sobald Ihre Website online ist, wird dieser Kalender mit dem intelligenten Cal.com-Buchungssystem verbunden. Ihre Patientinnen und Patienten sehen freie Termine und buchen online – belegte und freie Slots aktualisieren sich automatisch. Zusätzlich werden automatisch SMS- und E-Mail-Erinnerungen vor jedem Termin versendet.">Bu takvim, siteniz canlıya alındığında Cal.com akıllı randevu sistemiyle entegre çalışacaktır. Hastalarınız müsait saatlerinizi görerek online randevu oluşturabilecek, dolu ve boş saatler otomatik güncellenecektir. Ayrıca randevu öncesi otomatik SMS/e-posta hatırlatmaları gönderilecektir.</p>
     </div>
   </div>
 </section>
@@ -1589,6 +1584,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         </div>
       </div>
     </div>
+    <p style="text-align:center;margin-top:20px;font-size:0.78rem;color:var(--text-muted);line-height:1.6;max-width:700px;margin-left:auto;margin-right:auto;padding:0 20px;" data-tr="Bilgilendirme: Gösterilen tedavi sonuçları gerçek hastalara aittir ve hasta izni ile yayınlanmıştır. Her hastanın ağız yapısı, genel sağlık durumu ve tedaviye yanıtı farklı olabileceğinden sonuçlar bireysel olarak değişiklik gösterebilir. Burada yer alan görseller tedavi garantisi değil, bilgilendirme amaçlıdır." data-en="Disclaimer: The treatment results shown belong to real patients and are published with their consent. Each patient&#39;s oral anatomy, general health and response to treatment differ, so individual results may vary. The images shown are for information only and do not constitute a guarantee of outcome." data-de="Hinweis gemäß ÖÄK-Werberichtlinien: Die dargestellten Behandlungsergebnisse stammen von realen Patientinnen und Patienten und werden mit deren ausdrücklicher Zustimmung gezeigt. Da die Mundverhältnisse, der allgemeine Gesundheitszustand und das Ansprechen auf die Behandlung individuell unterschiedlich sind, können die Ergebnisse im Einzelfall abweichen. Die gezeigten Bilder dienen ausschließlich der Information und stellen kein Heilversprechen dar.">Bilgilendirme: Gösterilen tedavi sonuçları gerçek hastalara aittir ve hasta izni ile yayınlanmıştır. Her hastanın ağız yapısı, genel sağlık durumu ve tedaviye yanıtı farklı olabileceğinden sonuçlar bireysel olarak değişiklik gösterebilir. Burada yer alan görseller tedavi garantisi değil, bilgilendirme amaçlıdır.</p>
   </div>
 </section>
 
@@ -1599,7 +1595,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
   <div class="demo-note gs-reveal" style="margin-bottom:24px;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    <p>Bu bölüme istediğiniz profesyonel fotoğrafınızı, uzmanlık alanlarınızı, eğitim bilgilerinizi ve hakkınızda paylaşmak istediğiniz tüm detayları ekleyebiliriz.</p>
+    <p data-tr="Bu bölüme istediğiniz profesyonel fotoğrafınızı, uzmanlık alanlarınızı, eğitim bilgilerinizi ve hakkınızda paylaşmak istediğiniz tüm detayları ekleyebiliriz." data-en="In this section we can add your professional photograph, areas of expertise, educational background and any further details you wish to share." data-de="In diesem Bereich können wir Ihr professionelles Foto, Ihre Fachgebiete, Ihre Ausbildung sowie alle weiteren Informationen einfügen, die Sie teilen möchten.">Bu bölüme istediğiniz profesyonel fotoğrafınızı, uzmanlık alanlarınızı, eğitim bilgilerinizi ve hakkınızda paylaşmak istediğiniz tüm detayları ekleyebiliriz.</p>
   </div>
   <div class="doctors-grid tek-doktor gs-reveal">
     <div class="hekim-kart">
@@ -1682,7 +1678,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
   <div class="demo-note gs-reveal" style="margin:0 auto 24px;max-width:700px;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    <p>Anlaşmalı olduğunuz kurumlar varsa logoları buraya eklenecektir. Herhangi bir anlaşmalı kurumunuz bulunmuyorsa bu bölüm sitenizden kaldırılacaktır.</p>
+    <p data-tr="Anlaşmalı olduğunuz kurumlar varsa logoları buraya eklenecektir. Herhangi bir anlaşmalı kurumunuz bulunmuyorsa bu bölüm sitenizden kaldırılacaktır." data-en="If you work with partner institutions or insurers, their logos will be placed here. If you have no partners, this section will be removed from your site." data-de="Sofern Sie mit Partnern oder Krankenkassen zusammenarbeiten, werden deren Logos hier angezeigt. Falls keine vorhanden sind, wird dieser Bereich von Ihrer Website entfernt.">Anlaşmalı olduğunuz kurumlar varsa logoları buraya eklenecektir. Herhangi bir anlaşmalı kurumunuz bulunmuyorsa bu bölüm sitenizden kaldırılacaktır.</p>
   </div>
   <div class="kurumlar-track" id="kurumlar-content">
     <!-- Populated by JS -->
@@ -1697,7 +1693,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
   <div class="demo-note" style="margin-bottom:20px;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    <p>Bu bölüm sizden alacağımız bilgiler doğrultusunda kliniğinize özel olarak uyarlanacaktır. Hastalarınızın en sık sorduğu sorular, tedavi süreçleri, fiyatlandırma ve sigorta bilgileri gibi konular burada yer alacaktır.</p>
+    <p data-tr="Bu bölüm sizden alacağımız bilgiler doğrultusunda kliniğinize özel olarak uyarlanacaktır. Hastalarınızın en sık sorduğu sorular, tedavi süreçleri, fiyatlandırma ve sigorta bilgileri gibi konular burada yer alacaktır." data-en="This section will be tailored to your clinic based on the information you provide. Frequently asked questions, treatment processes, pricing and insurance details will appear here." data-de="Dieser Bereich wird auf Grundlage der Informationen, die Sie uns geben, individuell für Ihre Ordination gestaltet. Häufige Fragen, Behandlungsabläufe, Preisangaben und Informationen zu Versicherungen erscheinen hier.">Bu bölüm sizden alacağımız bilgiler doğrultusunda kliniğinize özel olarak uyarlanacaktır. Hastalarınızın en sık sorduğu sorular, tedavi süreçleri, fiyatlandırma ve sigorta bilgileri gibi konular burada yer alacaktır.</p>
   </div>
   <div class="faq-container" id="faq-container">
     <!-- Populated by JS -->
@@ -1708,11 +1704,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section class="section-padding container gs-reveal">
   <div class="section-header" style="margin-bottom:32px;">
     <h2 data-tr="Sosyal Medyamız" data-en="Our Social Media" data-de="Folgen Sie uns">Sosyal Medyamız</h2>
-    <p>@dişhekimialicanözen</p>
+    <p data-tr="@instagram_adresiniz" data-en="@your_instagram_handle" data-de="@ihr_instagram_handle">@instagram_adresiniz</p>
   </div>
   <div class="demo-note" style="margin-bottom:24px;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    <p>Resmi Instagram hesabınız bu bölüme bağlanacak ve son 6 paylaşımınız otomatik olarak burada görüntülenecektir. Bu sayede sitenizi ziyaret eden potansiyel hastalar sosyal medya içeriklerinizi de görebilecek, organik takipçi artışı sağlanacaktır.</p>
+    <p data-tr="Resmi Instagram hesabınız bu bölüme bağlanacak ve son 6 paylaşımınız otomatik olarak burada görüntülenecektir. Bu sayede sitenizi ziyaret eden potansiyel hastalar sosyal medya içeriklerinizi de görebilecek, organik takipçi artışı sağlanacaktır." data-en="Your official Instagram account will be linked here and your latest six posts will be displayed automatically. This allows visitors to view your social media content and helps you grow organically." data-de="Ihr offizieller Instagram-Account wird hier verknüpft und Ihre letzten sechs Beiträge werden automatisch angezeigt. So sehen Besucher Ihre Social-Media-Inhalte, was zu organischem Wachstum beiträgt.">Resmi Instagram hesabınız bu bölüme bağlanacak ve son 6 paylaşımınız otomatik olarak burada görüntülenecektir. Bu sayede sitenizi ziyaret eden potansiyel hastalar sosyal medya içeriklerinizi de görebilecek, organik takipçi artışı sağlanacaktır.</p>
   </div>
   <div class="social-grid">
     <!-- Populated by JS -->
@@ -1855,11 +1851,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- FLOATING BUTTONS -->
 <a href="tel:+90 541 325 10 00" class="floating-phone" aria-label="Telefon">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 7.06a19.79 19.79 0 01-2.96-8.72A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.76a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-  <span class="float-label">Hemen Ara</span>
+  <span class="float-label" data-tr="Hemen Ara" data-en="Call Now" data-de="Jetzt anrufen">Hemen Ara</span>
 </a>
 <a href="https://wa.me/905413251000?text=Merhaba%2C%20bilgi%20almak%20istiyorum" target="_blank" class="floating-wa" aria-label="WhatsApp">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span class="float-label">Mesaj At</span>
+  <span class="float-label" data-tr="Mesaj At" data-en="Message" data-de="Nachricht">Mesaj At</span>
 </a>
 
 <!-- MOBILE BOTTOM NAV -->
@@ -1891,10 +1887,21 @@ function setLang(lang) {
   document.documentElement.dir = translations[lang].dir;
   localStorage.setItem('clinic_lang', lang);
   
+  // Text content translation via data-{lang}
   document.querySelectorAll('[data-' + lang + ']').forEach(el => {
     el.innerHTML = el.getAttribute('data-' + lang);
   });
   
+  // Placeholder translation via data-placeholder-{lang}
+  document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+    el.setAttribute('placeholder', el.getAttribute('data-placeholder-' + lang));
+  });
+  
+  // CSS variable: "Dolu" / "Booked" / "Belegt"
+  const bookedLabels = { tr: 'Dolu', en: 'Booked', de: 'Belegt' };
+  document.documentElement.style.setProperty('--booked-label', "'" + (bookedLabels[lang] || 'Dolu') + "'");
+  
+  // Active button highlight
   document.querySelectorAll('.lang-switch button').forEach(b => {
     b.classList.remove('active');
     if(b.getAttribute('data-lang') === lang) b.classList.add('active');
@@ -2036,7 +2043,10 @@ document.querySelectorAll('.hekim-filter-btn').forEach(btn => {
 });
 
 // Partner Marquee
-const kurumlar = ['SGK', 'Yapı Kredi', 'VakıfBank', 'OYAK', 'Acıbadem Sigorta', 'Allianz', 'AXA', 'Garanti BBVA', 'Türkiye Sigorta', 'Koç Allianz', 'Zurich', 'Halk Sigorta'];
+const _siteLang = 'tr';
+const kurumlarTR = ['SGK', 'Yapı Kredi', 'VakıfBank', 'OYAK', 'Acıbadem Sigorta', 'Allianz', 'AXA', 'Garanti BBVA', 'Türkiye Sigorta', 'Koç Allianz', 'Zurich', 'Halk Sigorta'];
+const kurumlarAT = ['ÖGK', 'BVAEB', 'SVS', 'Wiener Städtische', 'UNIQA', 'Allianz', 'Generali', 'Merkur Versicherung', 'Helvetia', 'ERGO', 'Zurich', 'Donau Versicherung'];
+const kurumlar = (_siteLang === 'de') ? kurumlarAT : kurumlarTR;
 const kurumContainer = document.getElementById('kurumlar-content');
 let kurumHTML = '';
 for(let i=0; i<3; i++) {
@@ -2325,10 +2335,10 @@ window.addEventListener('load', () => {
   </div>
   <div class="chat-popup-body">
     <div class="chat-popup-msg" data-tr="Merhaba! Size nasıl yardımcı olabiliriz? Randevu veya tedavi bilgisi için yazabilirsiniz." data-en="Hello! How can we help you? Write us for appointment or treatment info." data-de="Hallo! Wie können wir Ihnen helfen? Schreiben Sie uns für Terminbuchung oder Behandlungsinformationen.">Merhaba! Size nasıl yardımcı olabiliriz? Randevu veya tedavi bilgisi için yazabilirsiniz.</div>
-    <div class="chat-popup-time">şimdi</div>
+    <div class="chat-popup-time" data-tr="şimdi" data-en="now" data-de="jetzt">şimdi</div>
   </div>
   <div class="chat-popup-input">
-    <input type="text" placeholder="Mesajınızı yazın..." onfocus="this.blur();showDemoPopup('chatbot')" readonly>
+    <input type="text" id="chatInputField" placeholder="Mesajınızı yazın..." data-placeholder-tr="Mesajınızı yazın..." data-placeholder-en="Type your message..." data-placeholder-de="Nachricht schreiben..." onfocus="this.blur();showDemoPopup('chatbot')" readonly>
     <button onclick="showDemoPopup('chatbot')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
   </div>
 </div>
@@ -2338,9 +2348,9 @@ window.addEventListener('load', () => {
 <div class="demo-overlay" id="demoPopup">
   <div class="demo-card">
     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <h3 id="demoTitle">Demo Modu</h3>
-    <p id="demoMsg">Bu alan demo amaçlıdır.</p>
-    <button onclick="closeDemoPopup()">Anladım</button>
+    <h3 id="demoTitle" data-tr="Demo Modu" data-en="Demo Mode" data-de="Demo-Modus">Demo Modu</h3>
+    <p id="demoMsg" data-tr="Bu alan demo amaçlıdır." data-en="This area is for demonstration purposes." data-de="Dieser Bereich dient nur zu Demonstrationszwecken.">Bu alan demo amaçlıdır.</p>
+    <button onclick="closeDemoPopup()" data-tr="Anladım" data-en="Got it" data-de="Verstanden">Anladım</button>
   </div>
 </div>
 <script>
@@ -2348,12 +2358,23 @@ function showDemoPopup(type) {
   const popup = document.getElementById('demoPopup');
   const title = document.getElementById('demoTitle');
   const msg = document.getElementById('demoMsg');
-  if (type === 'randevu') {
-    title.textContent = 'Akıllı Randevu Sistemi';
-    msg.textContent = 'Bu alan demo amaçlıdır. Siteniz canlıya alındığında Cal.com akıllı randevu sistemi burada aktif olarak çalışacaktır.';
-  } else if (type === 'chatbot') {
-    title.textContent = 'Yapay Zeka Asistanı';
-    msg.textContent = 'Bu alan demo amaçlıdır. Satın alma gerçekleştiğinde yapay zeka asistanınız burada devreye alınacaktır.';
+  const lang = document.documentElement.lang || 'tr';
+  const demoTexts = {
+    randevu: {
+      tr: { title: 'Akıllı Randevu Sistemi', msg: 'Bu alan demo amaçlıdır. Siteniz canlıya alındığında Cal.com akıllı randevu sistemi burada aktif olarak çalışacaktır.' },
+      en: { title: 'Smart Booking System', msg: 'This area is for demonstration only. When your website goes live, the Cal.com smart booking system will be active here.' },
+      de: { title: 'Intelligentes Buchungssystem', msg: 'Dieser Bereich dient nur zu Demonstrationszwecken. Sobald Ihre Website live ist, wird hier das Cal.com-Buchungssystem aktiv.' }
+    },
+    chatbot: {
+      tr: { title: 'Yapay Zeka Asistanı', msg: 'Bu alan demo amaçlıdır. Satın alma gerçekleştiğinde yapay zeka asistanınız burada devreye alınacaktır.' },
+      en: { title: 'AI Assistant', msg: 'This area is for demonstration only. Once you subscribe, your AI assistant will be activated here.' },
+      de: { title: 'KI-Assistent', msg: 'Dieser Bereich dient nur zu Demonstrationszwecken. Nach Abschluss wird Ihr KI-Assistent hier aktiviert.' }
+    }
+  };
+  const t = (demoTexts[type] && demoTexts[type][lang]) || (demoTexts[type] && demoTexts[type]['tr']);
+  if (t) {
+    title.textContent = t.title;
+    msg.textContent = t.msg;
   }
   popup.classList.add('active');
   document.querySelector('.chat-widget-popup').classList.remove('open');
