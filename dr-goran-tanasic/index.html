@@ -58,7 +58,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pill-btn.outline-white:hover { background: var(--bg-white); color: var(--primary); transform: translateY(-2px); }
 
 /* TOP BAR */
-.top-bar { background: var(--primary); color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.3px; }
+body { padding-top: 128px; } @media (max-width: 768px) { body { padding-top: 90px; } } .top-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1001; background: var(--primary); color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.3px; }
 .top-bar .container { display: flex; align-items: center; justify-content: space-between; height: 38px; }
 .top-bar-left { display: flex; align-items: center; gap: 16px; }
 .top-bar-socials { display: flex; align-items: center; gap: 10px; }
@@ -72,10 +72,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .top-bar-phone:hover { color: var(--accent); }
 .top-bar-phone svg { color: var(--accent); flex-shrink: 0; }
 .lang-switch { display: flex; align-items: center; gap: 2px; }
-.lang-switch button { background: transparent; border: none; color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; padding: 4px 8px; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
+.lang-switch button { background: transparent; border: none; color: rgba(255,255,255,0.75); font-size: 0.78rem; font-weight: 600; letter-spacing: 1px; padding: 5px 10px; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
 .lang-switch button:hover { color: var(--accent); background: rgba(255,255,255,0.05); }
-.lang-switch button.active { color: var(--accent); background: rgba(255,255,255,0.08); }
-@media (max-width: 768px) { .top-bar { display: none; } }
+.lang-switch button.active { color: var(--accent); background: rgba(201,169,110,0.12); font-weight: 700; }
+@media (max-width: 768px) { .top-bar { display: none; } .navbar { top: 0 !important; } }
 
 /* CHAT WIDGET */
 .chat-widget-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 4px 20px rgba(201,169,110,0.4); transition: all 0.3s ease; }
@@ -105,7 +105,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* NAVBAR — Ultra Premium Luxury Minimal */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 38px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -113,6 +113,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.navbar::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, rgba(201,169,110,0.12) 50%, transparent 90%);
+  pointer-events: none;
 }
 .navbar::after {
   content: '';
@@ -160,10 +170,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-logo-icon::before {
   content: '';
   position: absolute;
-  inset: -4px;
+  inset: -6px;
   border-radius: 50%;
-  border: 1px solid rgba(201,169,110,0.15);
-  transition: all 0.6s ease;
+  border: 0.5px solid rgba(201,169,110,0.3);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-logo-icon::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(201,169,110,0.04), transparent 70%);
+  transition: background 0.6s ease;
 }
 .nav-logo:hover .nav-logo-icon::before {
   border-color: rgba(201,169,110,0.4);
@@ -181,12 +199,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-logo-title {
   font-family: 'Cormorant Garamond', serif;
   color: var(--primary);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
   line-height: 1;
-  max-width: 280px;
+  max-width: 360px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -199,13 +217,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-logo-sub {
   font-family: 'DM Sans', sans-serif;
   color: var(--accent);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   font-weight: 500;
-  letter-spacing: 5px;
+  letter-spacing: 4.5px;
   text-transform: uppercase;
   position: relative;
-  padding-left: 22px;
-  opacity: 0.85;
+  padding-left: 24px;
+  opacity: 0.9;
 }
 .nav-logo-sub::before {
   content: '';
@@ -221,21 +239,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ═══ Nav Links — Merkez ═══ */
 .nav-links {
   display: flex;
-  gap: 34px;
+  gap: 40px;
   align-items: center;
   justify-self: center;
 }
 .nav-links a {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 450;
   color: var(--text-muted);
-  font-size: 0.72rem;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 2.8px;
   text-transform: uppercase;
   position: relative;
-  padding: 8px 0;
+  padding: 10px 0;
   white-space: nowrap;
-  transition: color 0.5s ease;
+  transition: color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-links a:hover { color: var(--primary); }
 
@@ -294,18 +312,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 36px;
+  min-width: 190px;
+  padding: 15px 32px;
   font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 3px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--primary);
   border: 0.5px solid var(--primary);
   background: transparent;
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+.nav-cta:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(201,169,110,0.3), 0 8px 24px rgba(13,33,55,0.08);
+  transform: translateY(-1px);
 }
 .nav-cta::before {
   content: '';
@@ -604,43 +630,64 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   /* ─── TOP BAR ─── */
   .top-bar { display: none; }
 
-  /* ─── NAVBAR ─── */
-  .nav-links, .nav-phone, .nav-btn, .lang-switch, .nav-divider { display: none; }
-  .mobile-toggle { display: block; }
+  /* ─── NAVBAR — Mobile Premium ─── */
+  .nav-links, .nav-phone, .nav-btn, .lang-switch, .nav-divider, .nav-cta { display: none; }
+  .mobile-toggle { display: flex; }
   .navbar {
     padding: 0;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    background: rgba(255,255,255,0.98);
   }
   .navbar .container {
-    height: 56px;
-    padding: 0 16px;
+    height: 64px;
+    padding: 0 18px;
+    display: flex !important;
+    grid-template-columns: unset !important;
+    justify-content: space-between;
   }
   .nav-logo {
-    max-width: 220px;
+    max-width: calc(100vw - 90px);
     overflow: hidden;
+    gap: 12px;
   }
+  .nav-logo-icon { width: 38px; height: 38px; }
+  .nav-logo-icon svg { width: 32px; height: 32px; }
+  .nav-logo-icon::before { inset: -3px; }
+  .nav-logo-icon::after { display: none; }
+  .nav-logo-text { gap: 2px; }
   .nav-logo-title {
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .nav-logo-sub {
-    font-size: 0.55rem;
-    letter-spacing: 2px;
+    font-size: 0.54rem;
+    letter-spacing: 3px;
+    padding-left: 18px;
   }
+  .nav-logo-sub::before { width: 12px; }
+  .nav-right { gap: 0; }
   .mobile-toggle {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    transition: background 0.2s;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: transparent;
+    border: 0.5px solid rgba(201,169,110,0.25);
   }
-  .mobile-toggle:active { background: rgba(201, 169, 110, 0.1); }
+  .mobile-toggle:active {
+    background: rgba(201, 169, 110, 0.1);
+    border-color: rgba(201,169,110,0.5);
+  }
+  .mobile-toggle svg { width: 18px; height: 18px; stroke: var(--primary); }
 
   /* ─── HERO ─── */
   .hero {
@@ -1159,13 +1206,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-de="Kontakt">İletişim</a>
     </div>
     <div class="nav-right">
-      <div class="nav-lang-switch">
-        <button data-lang="de" onclick="setLang('de')">DE</button>
-        <span class="nav-lang-sep">·</span>
-        <button data-lang="en" onclick="setLang('en')">EN</button>
-        <span class="nav-lang-sep">·</span>
-        <button data-lang="tr" onclick="setLang('tr')">TR</button>
-      </div>
       <a href="https://wa.me/4316993168?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="nav-cta" data-tr="Randevu Al" data-en="Book Now" data-de="Termin buchen">Randevu Al</a>
       <button class="mobile-toggle" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -1185,7 +1225,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <span data-tr="4.7/5 · 143 Google Yorumu" data-en="4.7/5 · 143 Google Reviews" data-de="4.7/5 · 143 Google-Bewertungen">4.7/5 · 143 Google Yorumu</span>
       </div>
       <h1 data-tr="Gülüşünüzü Yeniden Tasarlıyoruz" data-en="Redesigning Your Smile" data-de="Wir gestalten Ihr Lächeln neu">Gülüşünüzü<br>Yeniden Tasarlıyoruz</h1>
-      <p data-tr="Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği." data-en="Expert dentistry at Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya." data-de="Spezialisierte Zahnheilkunde in Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya.">Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği.</p>
+      <p data-tr="Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği." data-en="Expert dentistry at Karl-Tornay-Gasse 45-47, 1230 Wien, Austria." data-de="Spezialisierte Zahnheilkunde in Karl-Tornay-Gasse 45-47, 1230 Wien, Österreich.">Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği.</p>
       <div class="hero-btns">
         <a href="https://wa.me/4316993168?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="pill-btn accent" data-tr="Randevu Al" data-en="Book Appointment" data-de="Termin buchen">Randevu Al</a>
         <a href="#tedaviler" class="pill-btn outline-white" data-tr="Tedavilerimiz" data-en="Our Treatments" data-de="Unsere Behandlungen">Tedavilerimiz</a>
@@ -1273,7 +1313,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section class="counters container gs-reveal">
   <div class="demo-note" style="margin-bottom:20px;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    <p>Bu bölümdeki sayılar demo amaçlıdır. Sizden alacağımız gerçek veriler (hasta sayısı, deneyim yılı, tedavi sayısı vb.) doğrultusunda güncellenecektir.</p>
+    <p data-tr="Bu bölümdeki sayılar demo amaçlıdır. Sizden alacağımız gerçek veriler (hasta sayısı, deneyim yılı, tedavi sayısı vb.) doğrultusunda güncellenecektir." data-en="The numbers shown here are for demonstration purposes. They will be updated with your actual figures (patient count, years of experience, treatment volume, etc.)." data-de="Die hier angezeigten Zahlen dienen nur zu Demonstrationszwecken. Sie werden mit Ihren tatsächlichen Werten (Patientenzahl, Berufsjahre, Behandlungsvolumen usw.) aktualisiert.">Bu bölümdeki sayılar demo amaçlıdır. Sizden alacağımız gerçek veriler (hasta sayısı, deneyim yılı, tedavi sayısı vb.) doğrultusunda güncellenecektir.</p>
   </div>
   <div class="counter-grid">
     <div class="counter-card">
@@ -1530,7 +1570,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <p class="wt-sub" data-tr="Şeffaf, planlı ve sürpriz maliyetler olmadan." data-en="Transparent, planned, and without surprise costs." data-de="Transparent, strukturiert – und ohne versteckte Kosten.">Şeffaf, planlı ve sürpriz maliyetler olmadan.</p>
       <div class="demo-note" style="margin-bottom:20px;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-        <p>Bu bölüm demo içerik barındırmaktadır. Kliniğinizin çalışma prensipleri ve kullandığınız teknolojiler doğrultusunda sizden alacağımız bilgilerle revize edilecektir.</p>
+        <p data-tr="Bu bölüm demo içerik barındırmaktadır. Kliniğinizin çalışma prensipleri ve kullandığınız teknolojiler doğrultusunda sizden alacağımız bilgilerle revize edilecektir." data-en="This section contains demo content. It will be revised based on your clinic's workflow and the technologies you use." data-de="Dieser Bereich enthält Demo-Inhalte und wird entsprechend den Arbeitsabläufen Ihrer Ordination und den eingesetzten Technologien aktualisiert.">Bu bölüm demo içerik barındırmaktadır. Kliniğinizin çalışma prensipleri ve kullandığınız teknolojiler doğrultusunda sizden alacağımız bilgilerle revize edilecektir.</p>
       </div>
       <div class="timeline">
         <div class="timeline-item">
@@ -1639,11 +1679,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hekim-info">
         <h3>Dr. Goran Tanasic</h3>
-        <p class="hekim-uzmanlik">Diş Hekimi</p>
+        <p class="hekim-uzmanlik" data-tr="Diş Hekimi" data-en="Dentist" data-de="Zahnarzt">Diş Hekimi</p>
         <div class="hekim-edu">
           <span></span>
         </div>
-        <a href="#iletisim" class="pill-btn">Randevu Al</a>
+        <a href="#iletisim" class="pill-btn" data-tr="Randevu Al" data-en="Book Appointment" data-de="Termin vereinbaren">Randevu Al</a>
       </div>
     </div>
   </div>
@@ -1658,7 +1698,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
     <div class="demo-note gs-reveal" style="margin-bottom:16px;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <p>Blog bölümünüz yapay zeka ajanımız tarafından yönetilecektir. Her ay diş sağlığı alanındaki en güncel akademik makaleler, dergiler ve sektörel gelişmeler takip edilerek yeni içerikler otomatik olarak yayınlanacak, böylece siteniz her zaman güncel ve bilgilendirici kalacaktır.</p>
+      <p data-tr="Blog bölümünüz yapay zeka ajanımız tarafından yönetilecektir. Her ay diş sağlığı alanındaki en güncel akademik makaleler, dergiler ve sektörel gelişmeler takip edilerek yeni içerikler otomatik olarak yayınlanacak, böylece siteniz her zaman güncel ve bilgilendirici kalacaktır." data-en="Your blog section will be managed by our AI agent. Every month the latest academic papers, journals and industry developments in dental health are tracked and new content is published automatically, keeping your website always current and informative." data-de="Ihr Blog-Bereich wird von unserem KI-Agenten verwaltet. Jeden Monat werden aktuelle wissenschaftliche Publikationen, Fachzeitschriften und Branchenentwicklungen im Bereich Zahngesundheit ausgewertet und neue Beiträge automatisch veröffentlicht – so bleibt Ihre Website stets aktuell und informativ.">Blog bölümünüz yapay zeka ajanımız tarafından yönetilecektir. Her ay diş sağlığı alanındaki en güncel akademik makaleler, dergiler ve sektörel gelişmeler takip edilerek yeni içerikler otomatik olarak yayınlanacak, böylece siteniz her zaman güncel ve bilgilendirici kalacaktır.</p>
     </div>
     <div class="gs-reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px;">
 
@@ -1669,7 +1709,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div style="padding:24px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <span style="font-size:0.78rem;color:#888;">📅 09 Mar 2026</span>
-            <span style="font-size:0.78rem;color:#888;">📄 Genel</span>
+            <span style="font-size:0.78rem;color:#888;" data-tr="📄 Genel" data-en="📄 General" data-de="📄 Allgemein">📄 Genel</span>
           </div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--dark);line-height:1.5;margin-bottom:0;" data-tr="Lamina Diş Nedir? Daha Estetik Bir Gülüş İçin Porselen Yaprak Diş Uygulaması" data-en="What is a Dental Veneer? Porcelain Veneers for a More Aesthetic Smile" data-de="Was sind Veneers? Keramik-Verblendschalen für ein ästhetisches Lächeln">Lamina Diş Nedir? Daha Estetik Bir Gülüş İçin Porselen Yaprak Diş Uygulaması</h3>
         </div>
@@ -1682,7 +1722,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div style="padding:24px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <span style="font-size:0.78rem;color:#888;">📅 09 Mar 2026</span>
-            <span style="font-size:0.78rem;color:#888;">📄 Genel</span>
+            <span style="font-size:0.78rem;color:#888;" data-tr="📄 Genel" data-en="📄 General" data-de="📄 Allgemein">📄 Genel</span>
           </div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--dark);line-height:1.5;margin-bottom:0;" data-tr="Diş Taşı Temizliği Ne Sıklıkla Yapılmalı? Sağlıklı Dişler İçin Doğru Zamanlama" data-en="How Often Should You Get Teeth Scaling? The Right Timing for Healthy Teeth" data-de="Wie oft sollte man eine professionelle Zahnreinigung machen? Das richtige Intervall für gesunde Zähne">Diş Taşı Temizliği Ne Sıklıkla Yapılmalı? Sağlıklı Dişler İçin Doğru Zamanlama</h3>
         </div>
@@ -1695,7 +1735,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div style="padding:24px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <span style="font-size:0.78rem;color:#888;">📅 09 Mar 2026</span>
-            <span style="font-size:0.78rem;color:#888;">📄 Genel</span>
+            <span style="font-size:0.78rem;color:#888;" data-tr="📄 Genel" data-en="📄 General" data-de="📄 Allgemein">📄 Genel</span>
           </div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--dark);line-height:1.5;margin-bottom:0;" data-tr="Diş Çekimi Sonrası Nelere Dikkat Edilmeli? Hızlı İyileşme İçin Önemli Öneriler" data-en="What to Consider After Tooth Extraction? Important Tips for Fast Recovery" data-de="Was ist nach einer Zahnextraktion zu beachten? Wichtige Hinweise für eine schnelle Heilung">Diş Çekimi Sonrası Nelere Dikkat Edilmeli? Hızlı İyileşme İçin Önemli Öneriler</h3>
         </div>
@@ -1759,11 +1799,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 data-tr="4.7/5 — 78 Gerçek Hasta Yorumu" data-en="4.7/5 — 78 Real Patient Reviews" data-de="4.7/5 — 78 echte Patientenbewertungen">4.7/5 — 78 Gerçek Hasta Yorumu</h2>
     <div class="reviews-slider">
       <div class="reviews-track" id="reviews-track">
-        <div class="review-card"><div class="review-avatar">S</div><div class="stars">★★★★★</div><p class="review-text">"Ali Can hocamla tanışıklığımız yıllar öncesine dayanıyor. Benim, eşimin, annemin ve babamın dişleri yıllardır kendisine emanet. Dürüstlüğüyle, üstün bilgi ve birikimiyle bizim için vazgeçilmez bir diş hekimi oldu. Ağrısız da diş işlemleri oluyormuş dedirten doktorumuz iyi ki varsınız."</p><div class="review-author">— Sema Çiçek</div></div>
-<div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Kızımın dişler için gelmiştik yaklaşık 1 yıl önce. Tedavi yapıldı kızımın dişlerine. Hemen yorum yapmadım özellikle bekledim. Herhangi bir sorun oluşmadı. Ali can işinin erbabı. Saygılı, bilgili ve ilgili. Teşekkürler. Soyadım KAYAP..."</p><div class="review-author">— berk kaya</div></div>
-<div class="review-card"><div class="review-avatar">C</div><div class="stars">★★★★★</div><p class="review-text">"Diş dokturu olarak tavsiye üzerine gittim Alican Hocamın kliniğine. Gerçekten de söylenildiği gibi doğru tedavi ile dişlerimi tedavi etti. Dolgu, porselen kaplama ve kanal tedavisi yaptırdım.  Çok memnun kaldım.  Doğal görüntüsü o kadar iyi ki porselen kaplama olduğu asla belli olmuyor. İşini iyi yapmasının dışında güler yüzü ve samimiyeti için ayrıca teşekkür ederim. Başarılı bir klinik, tavsiye edilir..."</p><div class="review-author">— Cihan Manav</div></div>
-<div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Yaklaşık 6 yıldır Ali Hocam’a gidiyorum ve her seferinde aynı memnuniyetle ayrılıyorum. Kendisi son derece sakin, sabırlı, güven verici ve profesyonel bir hekim. Dişçi korkusu olan biri olarak her gittiğimde beni anlayışla karşılaması, işlemler öncesinde beni güzelce sakinleştirmesi ve uygulayacağı her adımı tek tek açıklayarak ilerlemesi benim için çok büyük bir rahatlık. Bugüne kadar kanal tedavisinden yirmilik diş çekimine kadar bir çok işlem yaptırdım. Fakat ne işlemler sırasında ne de sonrasında herhangi bir diş ağrısı yaşamadım, Ali hocamın eli gerçekten çok hafif. Kendisi hem profesyonelliğiyle hem de insani yaklaşımıyla kesinlikle alanında fark yaratan bir hekim. Herkese gözüm kapalı tavsiye ederim."</p><div class="review-author">— Berfin Şahin</div></div>
-<div class="review-card"><div class="review-avatar">T</div><div class="stars">★★★★★</div><p class="review-text">"Diş temizliği, dolgu ve implant işlemleri için Ali Can Hoca’ya başvurdum. Tüm süreç boyunca eli gerçekten çok hafifti, hiçbir işlemde ağrı ya da rahatsızlık yaşamadım. İşini severek yaptığı o kadar belli ki, yıllardır ilk defa dişçiye giderken kendimi bu kadar rahat hissettim. Hem profesyonel hem de güven veren bir yaklaşımı var. Tüm işlemlerden son derece memnun kaldım. Gözüm kapalı tavsiye ederim."</p><div class="review-author">— Tuğba Taşova</div></div>
+        <div class="review-card"><div class="review-avatar">M</div><div class="stars">★★★★★</div><p class="review-text">"Durch Dr. Tanasic habe ich meine Angst vor dem Zahnarzt überwunden und mache mir sogar freiwillig Termine aus, was vor einigen Jahren undenkbar war. Er ist wirklich der beste und einfühlsamste Zahnarzt, welcher sehr auf seine Patienten achtet. Die Praxis ist sehr sauber und man wartet auch nie lange in einem vollen Wartezimmer, weil die Terminvergabe sehr gut funktioniert. Auch wenn man einen dringenden Termin benötigt, versucht man eine gemeinsame Lösung zu finden und selbst da sind die Wartezeiten vollkommen in Ordnung. Danke an das gesamte Team!"</p><div class="review-author">— Maja Nedeljković-Čorikić</div></div>
+<div class="review-card"><div class="review-avatar">A</div><div class="stars">★★★★★</div><p class="review-text">"Sehr nett und professionell, kann nur empfehlen!"</p><div class="review-author">— Alessia Zekic</div></div>
+<div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Super toller Zahnarzt. Bin das erste mal vor paar Wochen da gewesen durch Empfehlung meines Bruders. Alles wird einem erklärt und gezeigt.. bin sehr zufrieden und froh so einen kompetenten Zahnarzt gefunden zu haben."</p><div class="review-author">— Bina Jk</div></div>
 
       </div>
     </div>
@@ -1831,7 +1869,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <div class="footer-grid">
       <div>
         <a href="/" class="footer-logo">Dr. Goran Tanasic</a>
-        <p data-tr="Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz." data-en="Expert dentistry at Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya. Redesigning your smile." data-de="Spezialisierte Zahnheilkunde in Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya. Wir gestalten Ihr Lächeln neu.">Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz.</p>
+        <p data-tr="Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz." data-en="Expert dentistry at Karl-Tornay-Gasse 45-47, 1230 Wien, Austria. Redesigning your smile." data-de="Spezialisierte Zahnheilkunde in Karl-Tornay-Gasse 45-47, 1230 Wien, Österreich. Wir gestalten Ihr Lächeln neu.">Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz.</p>
       </div>
       <div>
         <h4 data-tr="Hızlı Linkler" data-en="Quick Links" data-de="Schnellzugriff">Hızlı Linkler</h4>
@@ -1872,7 +1910,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <span style="position:absolute;top:16px;right:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;">Sonra</span>
       <div class="ba-lb-before" style="position:absolute;top:0;left:0;width:50%;height:100%;overflow:hidden;z-index:2;">
         <img class="ba-lb-before-img" src="" alt="Önce" style="position:absolute;top:0;left:0;width:200%;max-width:none;height:100%;object-fit:cover;">
-        <span style="position:absolute;top:16px;left:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;">Önce</span>
+        <span style="position:absolute;top:16px;left:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;" data-tr="Önce" data-en="Before" data-de="Vorher">Önce</span>
       </div>
       <div class="ba-lb-handle" style="position:absolute;top:0;left:50%;width:4px;height:100%;background:var(--accent);z-index:5;transform:translateX(-50%);">
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 16px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.4);">
