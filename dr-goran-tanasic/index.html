@@ -1796,7 +1796,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <div class="footer-grid">
       <div>
         <a href="/" class="footer-logo">Dr. Goran Tanasic</a>
-        <p data-tr="Kavaklıdere, Tunalı Hilmi Cd. No: 81/3 adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz." data-en="Expert dentistry at Kavaklıdere, Tunalı Hilmi. Redesigning your smile." data-de="Spezialisierte Zahnheilkunde in Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya. Wir gestalten Ihr Lächeln neu.">Kavaklıdere, Tunalı Hilmi Cd. No: 81/3 adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz.</p>
+        <p data-tr="Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz." data-en="Expert dentistry at Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya. Redesigning your smile." data-de="Spezialisierte Zahnheilkunde in Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya. Wir gestalten Ihr Lächeln neu.">Karl-Tornay-Gasse 45-47, 1230 Wien, Avusturya adresinde uzman diş hekimliği. Gülüşünüzü yeniden tasarlıyoruz.</p>
       </div>
       <div>
         <h4 data-tr="Hızlı Linkler" data-en="Quick Links" data-de="Schnellzugriff">Hızlı Linkler</h4>
@@ -1885,7 +1885,7 @@ const translations = {
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = translations[lang].dir;
-  localStorage.setItem('clinic_lang', lang);
+  localStorage.setItem('clinic_lang_gorantanasic', lang);
   
   // Text content translation via data-{lang}
   document.querySelectorAll('[data-' + lang + ']').forEach(el => {
@@ -2268,7 +2268,7 @@ function toggleDetay(btn) {
 
 // Lenis Scroll & GSAP Initialization
 document.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('clinic_lang') || 'de';
+  const savedLang = localStorage.getItem('clinic_lang_gorantanasic') || 'de';
   setLang(savedLang);
   document.documentElement.style.scrollBehavior = 'auto';
   if(typeof Lenis !== 'undefined') {
