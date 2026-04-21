@@ -221,7 +221,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ═══ Nav Links — Merkez ═══ */
 .nav-links {
   display: flex;
-  gap: 48px;
+  gap: 34px;
   align-items: center;
   justify-self: center;
 }
@@ -230,10 +230,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 400;
   color: var(--text-muted);
   font-size: 0.72rem;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
   padding: 8px 0;
+  white-space: nowrap;
   transition: color 0.5s ease;
 }
 .nav-links a:hover { color: var(--primary); }
@@ -259,7 +260,34 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   justify-self: end;
+  gap: 22px;
 }
+.nav-lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.nav-lang-switch button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  padding: 4px 6px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav-lang-switch button:hover { color: var(--primary); }
+.nav-lang-switch button.active { color: var(--accent); font-weight: 600; }
+.nav-lang-sep {
+  color: var(--border);
+  font-size: 0.6rem;
+  user-select: none;
+  pointer-events: none;
+}
+@media (max-width: 900px) { .nav-lang-switch { display: none; } }
 .nav-cta {
   font-family: 'DM Sans', sans-serif;
   position: relative;
@@ -1131,6 +1159,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-de="Kontakt">İletişim</a>
     </div>
     <div class="nav-right">
+      <div class="nav-lang-switch">
+        <button data-lang="de" onclick="setLang('de')">DE</button>
+        <span class="nav-lang-sep">·</span>
+        <button data-lang="en" onclick="setLang('en')">EN</button>
+        <span class="nav-lang-sep">·</span>
+        <button data-lang="tr" onclick="setLang('tr')">TR</button>
+      </div>
       <a href="https://wa.me/4316993168?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="nav-cta" data-tr="Randevu Al" data-en="Book Now" data-de="Termin buchen">Randevu Al</a>
       <button class="mobile-toggle" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -1901,8 +1936,8 @@ function setLang(lang) {
   const bookedLabels = { tr: 'Dolu', en: 'Booked', de: 'Belegt' };
   document.documentElement.style.setProperty('--booked-label', "'" + (bookedLabels[lang] || 'Dolu') + "'");
   
-  // Active button highlight
-  document.querySelectorAll('.lang-switch button').forEach(b => {
+  // Active button highlight (top-bar + navbar)
+  document.querySelectorAll('.lang-switch button, .nav-lang-switch button').forEach(b => {
     b.classList.remove('active');
     if(b.getAttribute('data-lang') === lang) b.classList.add('active');
   });
