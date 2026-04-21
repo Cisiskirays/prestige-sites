@@ -58,7 +58,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pill-btn.outline-white:hover { background: var(--bg-white); color: var(--primary); transform: translateY(-2px); }
 
 /* TOP BAR */
-.top-bar { background: var(--primary); color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.3px; }
+body { padding-top: 128px; } @media (max-width: 768px) { body { padding-top: 90px; } } .top-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1001; background: var(--primary); color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.3px; }
 .top-bar .container { display: flex; align-items: center; justify-content: space-between; height: 38px; }
 .top-bar-left { display: flex; align-items: center; gap: 16px; }
 .top-bar-socials { display: flex; align-items: center; gap: 10px; }
@@ -72,10 +72,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .top-bar-phone:hover { color: var(--accent); }
 .top-bar-phone svg { color: var(--accent); flex-shrink: 0; }
 .lang-switch { display: flex; align-items: center; gap: 2px; }
-.lang-switch button { background: transparent; border: none; color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; padding: 4px 8px; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
+.lang-switch button { background: transparent; border: none; color: rgba(255,255,255,0.75); font-size: 0.78rem; font-weight: 600; letter-spacing: 1px; padding: 5px 10px; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
 .lang-switch button:hover { color: var(--accent); background: rgba(255,255,255,0.05); }
 .lang-switch button.active { color: var(--accent); background: rgba(255,255,255,0.08); }
-@media (max-width: 768px) { .top-bar { display: none; } }
+@media (max-width: 768px) { .top-bar { display: none; } .navbar { top: 0 !important; } }
 
 /* CHAT WIDGET */
 .chat-widget-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 4px 20px rgba(201,169,110,0.4); transition: all 0.3s ease; }
@@ -105,7 +105,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* NAVBAR — Ultra Premium Luxury Minimal */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 38px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -221,7 +221,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ═══ Nav Links — Merkez ═══ */
 .nav-links {
   display: flex;
-  gap: 34px;
+  gap: 40px;
   align-items: center;
   justify-self: center;
 }
@@ -294,7 +294,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 36px;
+  min-width: 180px;
+  padding: 14px 32px;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 3px;
@@ -1159,13 +1160,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <a href="#iletisim" data-tr="İletişim" data-en="Contact" data-de="Kontakt">İletişim</a>
     </div>
     <div class="nav-right">
-      <div class="nav-lang-switch">
-        <button data-lang="de" onclick="setLang('de')">DE</button>
-        <span class="nav-lang-sep">·</span>
-        <button data-lang="en" onclick="setLang('en')">EN</button>
-        <span class="nav-lang-sep">·</span>
-        <button data-lang="tr" onclick="setLang('tr')">TR</button>
-      </div>
       <a href="https://wa.me/4316626214?text=Merhaba%2C%20bilgi%20almak%20istiyorum" class="nav-cta" data-tr="Randevu Al" data-en="Book Now" data-de="Termin buchen">Randevu Al</a>
       <button class="mobile-toggle" aria-label="Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -1273,7 +1267,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <section class="counters container gs-reveal">
   <div class="demo-note" style="margin-bottom:20px;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    <p>Bu bölümdeki sayılar demo amaçlıdır. Sizden alacağımız gerçek veriler (hasta sayısı, deneyim yılı, tedavi sayısı vb.) doğrultusunda güncellenecektir.</p>
+    <p data-tr="Bu bölümdeki sayılar demo amaçlıdır. Sizden alacağımız gerçek veriler (hasta sayısı, deneyim yılı, tedavi sayısı vb.) doğrultusunda güncellenecektir." data-en="The numbers shown here are for demonstration purposes. They will be updated with your actual figures (patient count, years of experience, treatment volume, etc.)." data-de="Die hier angezeigten Zahlen dienen nur zu Demonstrationszwecken. Sie werden mit Ihren tatsächlichen Werten (Patientenzahl, Berufsjahre, Behandlungsvolumen usw.) aktualisiert.">Bu bölümdeki sayılar demo amaçlıdır. Sizden alacağımız gerçek veriler (hasta sayısı, deneyim yılı, tedavi sayısı vb.) doğrultusunda güncellenecektir.</p>
   </div>
   <div class="counter-grid">
     <div class="counter-card">
@@ -1530,7 +1524,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <p class="wt-sub" data-tr="Şeffaf, planlı ve sürpriz maliyetler olmadan." data-en="Transparent, planned, and without surprise costs." data-de="Transparent, strukturiert – und ohne versteckte Kosten.">Şeffaf, planlı ve sürpriz maliyetler olmadan.</p>
       <div class="demo-note" style="margin-bottom:20px;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-        <p>Bu bölüm demo içerik barındırmaktadır. Kliniğinizin çalışma prensipleri ve kullandığınız teknolojiler doğrultusunda sizden alacağımız bilgilerle revize edilecektir.</p>
+        <p data-tr="Bu bölüm demo içerik barındırmaktadır. Kliniğinizin çalışma prensipleri ve kullandığınız teknolojiler doğrultusunda sizden alacağımız bilgilerle revize edilecektir." data-en="This section contains demo content. It will be revised based on your clinic's workflow and the technologies you use." data-de="Dieser Bereich enthält Demo-Inhalte und wird entsprechend den Arbeitsabläufen Ihrer Ordination und den eingesetzten Technologien aktualisiert.">Bu bölüm demo içerik barındırmaktadır. Kliniğinizin çalışma prensipleri ve kullandığınız teknolojiler doğrultusunda sizden alacağımız bilgilerle revize edilecektir.</p>
       </div>
       <div class="timeline">
         <div class="timeline-item">
@@ -1639,11 +1633,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
       <div class="hekim-info">
         <h3>Dr. Philipp Vogel</h3>
-        <p class="hekim-uzmanlik">Diş Hekimi</p>
+        <p class="hekim-uzmanlik" data-tr="Diş Hekimi" data-en="Dentist" data-de="Zahnarzt">Diş Hekimi</p>
         <div class="hekim-edu">
           <span></span>
         </div>
-        <a href="#iletisim" class="pill-btn">Randevu Al</a>
+        <a href="#iletisim" class="pill-btn" data-tr="Randevu Al" data-en="Book Appointment" data-de="Termin vereinbaren">Randevu Al</a>
       </div>
     </div>
   </div>
@@ -1658,7 +1652,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
     <div class="demo-note gs-reveal" style="margin-bottom:16px;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <p>Blog bölümünüz yapay zeka ajanımız tarafından yönetilecektir. Her ay diş sağlığı alanındaki en güncel akademik makaleler, dergiler ve sektörel gelişmeler takip edilerek yeni içerikler otomatik olarak yayınlanacak, böylece siteniz her zaman güncel ve bilgilendirici kalacaktır.</p>
+      <p data-tr="Blog bölümünüz yapay zeka ajanımız tarafından yönetilecektir. Her ay diş sağlığı alanındaki en güncel akademik makaleler, dergiler ve sektörel gelişmeler takip edilerek yeni içerikler otomatik olarak yayınlanacak, böylece siteniz her zaman güncel ve bilgilendirici kalacaktır." data-en="Your blog section will be managed by our AI agent. Every month the latest academic papers, journals and industry developments in dental health are tracked and new content is published automatically, keeping your website always current and informative." data-de="Ihr Blog-Bereich wird von unserem KI-Agenten verwaltet. Jeden Monat werden aktuelle wissenschaftliche Publikationen, Fachzeitschriften und Branchenentwicklungen im Bereich Zahngesundheit ausgewertet und neue Beiträge automatisch veröffentlicht – so bleibt Ihre Website stets aktuell und informativ.">Blog bölümünüz yapay zeka ajanımız tarafından yönetilecektir. Her ay diş sağlığı alanındaki en güncel akademik makaleler, dergiler ve sektörel gelişmeler takip edilerek yeni içerikler otomatik olarak yayınlanacak, böylece siteniz her zaman güncel ve bilgilendirici kalacaktır.</p>
     </div>
     <div class="gs-reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px;">
 
@@ -1669,7 +1663,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div style="padding:24px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <span style="font-size:0.78rem;color:#888;">📅 09 Mar 2026</span>
-            <span style="font-size:0.78rem;color:#888;">📄 Genel</span>
+            <span style="font-size:0.78rem;color:#888;" data-tr="📄 Genel" data-en="📄 General" data-de="📄 Allgemein">📄 Genel</span>
           </div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--dark);line-height:1.5;margin-bottom:0;" data-tr="Lamina Diş Nedir? Daha Estetik Bir Gülüş İçin Porselen Yaprak Diş Uygulaması" data-en="What is a Dental Veneer? Porcelain Veneers for a More Aesthetic Smile" data-de="Was sind Veneers? Keramik-Verblendschalen für ein ästhetisches Lächeln">Lamina Diş Nedir? Daha Estetik Bir Gülüş İçin Porselen Yaprak Diş Uygulaması</h3>
         </div>
@@ -1682,7 +1676,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div style="padding:24px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <span style="font-size:0.78rem;color:#888;">📅 09 Mar 2026</span>
-            <span style="font-size:0.78rem;color:#888;">📄 Genel</span>
+            <span style="font-size:0.78rem;color:#888;" data-tr="📄 Genel" data-en="📄 General" data-de="📄 Allgemein">📄 Genel</span>
           </div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--dark);line-height:1.5;margin-bottom:0;" data-tr="Diş Taşı Temizliği Ne Sıklıkla Yapılmalı? Sağlıklı Dişler İçin Doğru Zamanlama" data-en="How Often Should You Get Teeth Scaling? The Right Timing for Healthy Teeth" data-de="Wie oft sollte man eine professionelle Zahnreinigung machen? Das richtige Intervall für gesunde Zähne">Diş Taşı Temizliği Ne Sıklıkla Yapılmalı? Sağlıklı Dişler İçin Doğru Zamanlama</h3>
         </div>
@@ -1695,7 +1689,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div style="padding:24px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
             <span style="font-size:0.78rem;color:#888;">📅 09 Mar 2026</span>
-            <span style="font-size:0.78rem;color:#888;">📄 Genel</span>
+            <span style="font-size:0.78rem;color:#888;" data-tr="📄 Genel" data-en="📄 General" data-de="📄 Allgemein">📄 Genel</span>
           </div>
           <h3 style="font-size:1rem;font-weight:700;color:var(--dark);line-height:1.5;margin-bottom:0;" data-tr="Diş Çekimi Sonrası Nelere Dikkat Edilmeli? Hızlı İyileşme İçin Önemli Öneriler" data-en="What to Consider After Tooth Extraction? Important Tips for Fast Recovery" data-de="Was ist nach einer Zahnextraktion zu beachten? Wichtige Hinweise für eine schnelle Heilung">Diş Çekimi Sonrası Nelere Dikkat Edilmeli? Hızlı İyileşme İçin Önemli Öneriler</h3>
         </div>
@@ -1759,11 +1753,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 data-tr="3.9/5 — 78 Gerçek Hasta Yorumu" data-en="3.9/5 — 78 Real Patient Reviews" data-de="3.9/5 — 78 echte Patientenbewertungen">3.9/5 — 78 Gerçek Hasta Yorumu</h2>
     <div class="reviews-slider">
       <div class="reviews-track" id="reviews-track">
-        <div class="review-card"><div class="review-avatar">S</div><div class="stars">★★★★★</div><p class="review-text">"Ali Can hocamla tanışıklığımız yıllar öncesine dayanıyor. Benim, eşimin, annemin ve babamın dişleri yıllardır kendisine emanet. Dürüstlüğüyle, üstün bilgi ve birikimiyle bizim için vazgeçilmez bir diş hekimi oldu. Ağrısız da diş işlemleri oluyormuş dedirten doktorumuz iyi ki varsınız."</p><div class="review-author">— Sema Çiçek</div></div>
-<div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Kızımın dişler için gelmiştik yaklaşık 1 yıl önce. Tedavi yapıldı kızımın dişlerine. Hemen yorum yapmadım özellikle bekledim. Herhangi bir sorun oluşmadı. Ali can işinin erbabı. Saygılı, bilgili ve ilgili. Teşekkürler. Soyadım KAYAP..."</p><div class="review-author">— berk kaya</div></div>
-<div class="review-card"><div class="review-avatar">C</div><div class="stars">★★★★★</div><p class="review-text">"Diş dokturu olarak tavsiye üzerine gittim Alican Hocamın kliniğine. Gerçekten de söylenildiği gibi doğru tedavi ile dişlerimi tedavi etti. Dolgu, porselen kaplama ve kanal tedavisi yaptırdım.  Çok memnun kaldım.  Doğal görüntüsü o kadar iyi ki porselen kaplama olduğu asla belli olmuyor. İşini iyi yapmasının dışında güler yüzü ve samimiyeti için ayrıca teşekkür ederim. Başarılı bir klinik, tavsiye edilir..."</p><div class="review-author">— Cihan Manav</div></div>
-<div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Yaklaşık 6 yıldır Ali Hocam’a gidiyorum ve her seferinde aynı memnuniyetle ayrılıyorum. Kendisi son derece sakin, sabırlı, güven verici ve profesyonel bir hekim. Dişçi korkusu olan biri olarak her gittiğimde beni anlayışla karşılaması, işlemler öncesinde beni güzelce sakinleştirmesi ve uygulayacağı her adımı tek tek açıklayarak ilerlemesi benim için çok büyük bir rahatlık. Bugüne kadar kanal tedavisinden yirmilik diş çekimine kadar bir çok işlem yaptırdım. Fakat ne işlemler sırasında ne de sonrasında herhangi bir diş ağrısı yaşamadım, Ali hocamın eli gerçekten çok hafif. Kendisi hem profesyonelliğiyle hem de insani yaklaşımıyla kesinlikle alanında fark yaratan bir hekim. Herkese gözüm kapalı tavsiye ederim."</p><div class="review-author">— Berfin Şahin</div></div>
-<div class="review-card"><div class="review-avatar">T</div><div class="stars">★★★★★</div><p class="review-text">"Diş temizliği, dolgu ve implant işlemleri için Ali Can Hoca’ya başvurdum. Tüm süreç boyunca eli gerçekten çok hafifti, hiçbir işlemde ağrı ya da rahatsızlık yaşamadım. İşini severek yaptığı o kadar belli ki, yıllardır ilk defa dişçiye giderken kendimi bu kadar rahat hissettim. Hem profesyonel hem de güven veren bir yaklaşımı var. Tüm işlemlerden son derece memnun kaldım. Gözüm kapalı tavsiye ederim."</p><div class="review-author">— Tuğba Taşova</div></div>
+        <div class="review-card"><div class="review-avatar">D</div><div class="stars">★★★★★</div><p class="review-text">"Ich wurde ohne Termin wegen einem Notfall drangenommen und das am letzten offenen Tag vor Weihnachten. Der Doktor ist super freundlich und äußerst kompetent! Absolute Empfehlung"</p><div class="review-author">— Denis Stacha</div></div>
+<div class="review-card"><div class="review-avatar">L</div><div class="stars">★★★★★</div><p class="review-text">"Ein kaputter Weisheitszahn war zu entfernen, wurde schnell und professionell erledigt. Top Arbeit von Dr. Vogel und seinem Team. Vom Einchecken, Röntgen machen bis über die Nachsorge aufgeklärt und von dem einen Zahn befreit heimzugehen, hat's keine 3/4 Stunde gedauert."</p><div class="review-author">— Lupo Luciolli</div></div>
+<div class="review-card"><div class="review-avatar">B</div><div class="stars">★★★★★</div><p class="review-text">"Wir waren vorher bei Frau Dr. Handler, der Vorgängerin, und sehr zufrieden mit ihr. Als sie in Pension ging, blieben wir bei Dr. Vogel!! Die ganze Familie ist dort Patient und wir sind alle sehr zufrieden! Mit unserer Tochter waren wir anfangs bei Sleep&Smile, weil wir die ersten Behandlungen mit Narkose machen lassen mussten! Als das nicht mehr nötig war, probierten wir es bei Dr. Vogel. Durch seine einfühlsame und ruhige Art, geht sie wirklich gerne zum Zahnarzt und es ist ohne zusätzliches Lachgas oder dergleichen möglich!! Wir ziehen bald um, aber Zahnarztwechsel kommt für uns nicht in Frage. Das gesamte Team arbeitet gut zusammen und wir fühlen uns sehr wohl in der Praxis"</p><div class="review-author">— Barbara Ka</div></div>
 
       </div>
     </div>
@@ -1872,7 +1864,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <span style="position:absolute;top:16px;right:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;">Sonra</span>
       <div class="ba-lb-before" style="position:absolute;top:0;left:0;width:50%;height:100%;overflow:hidden;z-index:2;">
         <img class="ba-lb-before-img" src="" alt="Önce" style="position:absolute;top:0;left:0;width:200%;max-width:none;height:100%;object-fit:cover;">
-        <span style="position:absolute;top:16px;left:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;">Önce</span>
+        <span style="position:absolute;top:16px;left:16px;background:rgba(13,33,55,0.8);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:600;z-index:4;pointer-events:none;" data-tr="Önce" data-en="Before" data-de="Vorher">Önce</span>
       </div>
       <div class="ba-lb-handle" style="position:absolute;top:0;left:50%;width:4px;height:100%;background:var(--accent);z-index:5;transform:translateX(-50%);">
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 16px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.4);">
