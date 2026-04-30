@@ -16,10 +16,6 @@
 <link rel="preload" as="image" href="https://raw.githubusercontent.com/volkancatak1309-max/premium-3d-assets/main/projects/insaat-pool/gallery-1.jpg" />
 <link rel="preload" as="video" type="video/mp4" href="https://raw.githubusercontent.com/volkancatak1309-max/premium-3d-assets/main/projects/insaat-pool/bauprozess-1.mp4" />
 
-/* ─── PARÇA 1 SONU — buradan sonra Bölüm A (style + nav + hero + stats) gelecek ─── */
-/* ─── PARÇA 1 SONUNDAN DEVAM EDİYOR — burayı Parça 1'in altına yapıştır ─── */
-
-<style>
 <style>
 :root {
   /* ═══════════════════════════════════════════════════════════════
@@ -2560,11 +2556,27 @@ body.menu-open .float-menu { display: none; }
   .hero-media video { display: none; }
   * { animation: none !important; transition-duration: 0.01ms !important; }
 }
-</style>
-</style>
-</head>
-<body>
 
+/* LOADER */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s var(--ease-out);
+}
+.loader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 </style>
 </head>
 <body>
@@ -3161,11 +3173,6 @@ body.menu-open .float-menu { display: none; }
     </div>
   </div>
 </section>
-
-<!-- GOOGLE REVIEWS -->
-
-/* ─── PARÇA 2 SONU — buradan sonra Parça 3 (Reviews + CTA + Contact + Footer + JS + Closing) gelecek ─── */
-/* ─── PARÇA 2 SONUNDAN DEVAM EDİYOR — burayı Parça 2'nin altına yapıştır ─── */
 
 <!-- GOOGLE REVIEWS -->
 <section class="reviews">
