@@ -2557,26 +2557,7 @@ body.menu-open .float-menu { display: none; }
   * { animation: none !important; transition-duration: 0.01ms !important; }
 }
 
-/* LOADER */
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.8s var(--ease-out);
-}
-.loader.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.loader-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 </style>
 </head>
 <body>
@@ -2692,12 +2673,7 @@ body.menu-open .float-menu { display: none; }
   </div>
 </div>
 
-<!-- LOADER — loader-21.mp4 saf hali, hiç filter yok -->
-<div class="loader" id="loader">
-  <video class="loader-video" id="loaderVideo" autoplay muted playsinline preload="auto" aria-hidden="true">
-    <source src="https://raw.githubusercontent.com/volkancatak1309-max/premium-3d-assets/main/loaders/3d-abstract/loader-21.mp4" type="video/mp4" />
-  </video>
-</div>
+
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -3345,7 +3321,7 @@ body.menu-open .float-menu { display: none; }
       </div>
       <div class="contact-info-block reveal reveal-d3">
         <div class="contact-info-label" data-i18n="ctc_hours">Sprechzeit</div>
-        <div class="contact-info-value" style="font-size: 0.95rem; font-family: var(--font-body); font-weight: 400;">Perşembe: 08:00 to 12:00, 13:00 to 17:00 <br> Cuma: 08:00 to 12:00 <br> Cumartesi: Kapalı <br> Pazar: Kapalı <br> Pazartesi: 08:00 to 12:00, 13:00 to 17:00 <br> Salı: 08:00 to 12:00, 13:00 to 17:00 <br> Çarşamba: 08:00 to 12:00, 13:00 to 17:00</div>
+        <div class="contact-info-value" style="font-size: 0.95rem; font-family: var(--font-body); font-weight: 400;">Cuma: 08:00 to 12:00 <br> Cumartesi: Kapalı <br> Pazar: Kapalı <br> Pazartesi: 08:00 to 12:00, 13:00 to 17:00 <br> Salı: 08:00 to 12:00, 13:00 to 17:00 <br> Çarşamba: 08:00 to 12:00, 13:00 to 17:00 <br> Perşembe: 08:00 to 12:00, 13:00 to 17:00</div>
       </div>
     </div>
 
@@ -4028,49 +4004,25 @@ if (brieftaubeLabel && brieftaubeMsg) {
   });
 }
 
-// LOADER — Premium 3D GIF intro
-(function initLoader(){
-  const loader = document.getElementById('loader');
-  if(!loader) return;
-
-  const DURATION = 6000;       // Video 6 saniye oynar, sonra fade out
-  const FADE_DELAY = 250;
-  let hidden = false;
-
-  function hideLoader(){
-    if(hidden) return;
-    hidden = true;
-    setTimeout(() => {
-      loader.classList.add('is-hidden');
-      setTimeout(()=>{
-        const heroOverline = document.getElementById('heroOverline');
-        const heroTitle = document.getElementById('heroTitle');
-        if(heroOverline) heroOverline.classList.add('is-visible');
-        if(heroTitle) heroTitle.classList.add('is-visible');
-      }, 200);
-      setTimeout(()=>{
-        const heroSub = document.getElementById('heroSub');
-        const heroActions = document.getElementById('heroActions');
-        if(heroSub) heroSub.classList.add('is-visible');
-        if(heroActions) heroActions.classList.add('is-visible');
-      }, 700);
-      setTimeout(()=>{
-        const heroSpec = document.getElementById('heroSpec');
-        const scrollIndicator = document.getElementById('scrollIndicator');
-        if(heroSpec) heroSpec.classList.add('is-visible');
-        if(scrollIndicator) scrollIndicator.classList.add('is-visible');
-      }, 1200);
-    }, FADE_DELAY);
-  }
-
-  // GIF süresi sonunda fade out
-  setTimeout(hideLoader, DURATION);
-
-  // Failsafe — her ihtimale karşı 8 saniye sonra zorla kapat
-  setTimeout(() => {
-    if(!hidden) hideLoader();
-  }, 8000);
-})();
+// HERO ENTRY ANIMATIONS — anında tetikle (loader yok)
+window.addEventListener('DOMContentLoaded', () => {
+  const heroOverline = document.getElementById('heroOverline');
+  const heroTitle = document.getElementById('heroTitle');
+  if(heroOverline) heroOverline.classList.add('is-visible');
+  if(heroTitle) heroTitle.classList.add('is-visible');
+  setTimeout(()=>{
+    const heroSub = document.getElementById('heroSub');
+    const heroActions = document.getElementById('heroActions');
+    if(heroSub) heroSub.classList.add('is-visible');
+    if(heroActions) heroActions.classList.add('is-visible');
+  }, 300);
+  setTimeout(()=>{
+    const heroSpec = document.getElementById('heroSpec');
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    if(heroSpec) heroSpec.classList.add('is-visible');
+    if(scrollIndicator) scrollIndicator.classList.add('is-visible');
+  }, 600);
+});
 
 </script>
 
